@@ -1,0 +1,15 @@
+{
+  "name": "bash-sandbox",
+  "version": "1.0.0",
+  "description": "bash",
+  "main": "index.js",
+  "dependencies": {
+    "fb-watchman": "^1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
