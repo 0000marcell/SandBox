@@ -1,2 +1,4 @@
-var name = 'marcell';
-console.log(`my is ${ name }`);
+"use strict";
+
+var test = new Test();
+test.doIt();

@@ -1,2 +1,2 @@
-var name = 'marcell';
-console.log(`my is ${name}`);
+var test = new Test();
+test.doIt();
