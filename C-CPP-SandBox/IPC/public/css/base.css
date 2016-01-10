@@ -1,0 +1,28 @@
+#draw-area{
+  border: 1px solid black;
+  width: 580px;
+  height: 580px;
+}
+
+.cell10{
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+}
+
+.cell20{
+  border: 0.5px solid black;
+  width: 25px;
+  height: 25px;
+}
+
+.cell40{
+  border: 0.5px solid black;
+  width: 12.5px;
+  height: 12.5px;
+}
+
+span{
+  display: inline-block;
+  border: 1px solid black;
+}

@@ -1,0 +1,22 @@
+{
+  "main": "index.html",
+  "name": "Fill_Matrix",
+  "node-remote": "localhost",
+  "description": "Fill Matrix",
+  "version": "0.0.1",
+  "keywords": [ "Fill", "Matrix" ],
+  "window": {
+    "title": "Fill Matrx",
+    "toolbar": true,
+    "frame": true,
+    "width": 615,
+    "height": 590,
+    "position": "center"
+  },
+  "webkit": {
+    "plugin": true
+  },
+  "dependencies": {
+    "deck":"latest"
+  }
+}
