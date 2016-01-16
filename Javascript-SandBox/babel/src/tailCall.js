@@ -1,0 +1,8 @@
+function factorial(n, acc = 1){
+	"use strict"; 
+	if(n <= 1) return acc;
+	console.log(acc);
+	return factorial(n - 1, n * acc);
+}
+
+factorial(100);
