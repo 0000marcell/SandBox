@@ -1,13 +1,10 @@
 var gulp = require('gulp');
-var del = require('del');
+var watch = require('gulp-watch');
 
-gulp.task('clean:mobile', function (){
-	return del([
-			'dist/report.csv', 
-			'dist/mobile/**/*',
-			'!dist/mobile/deplay.json'		 
-		]);
+gulp.task('stream', function(){
+	return gulp.src('C/*.c')
+											.pipe(watch('C/*.c'))
+											.pipe(test());
 });
 
-gulp.task('default', ['clean:mobile']);
-
+gulp.task('default', ['stream']);
