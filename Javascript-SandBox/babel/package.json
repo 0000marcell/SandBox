@@ -4,12 +4,14 @@
   "description": "Babel Sandbox",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -d build",
+		"test": "babel src -d build && mocha --compilers js:babel-register"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.4.0",
-    "qunit-cli": "^0.2.0"
+    "babel-preset-es2015": "^6.5.0",
+    "babel-register": "^6.5.1"
   }
 }
