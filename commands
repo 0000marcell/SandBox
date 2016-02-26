@@ -1,0 +1,138 @@
+rails _5.0.0.beta1.1_ new app-name --api --edge
+cd app-name
+echo "gem 'ember-cli-rails'" >> Gemfile
+bundle install
+ember new frontend --skip-git
+rails generate ember:init
+cd frontend
+ember install ember-cli-rails-addon
+cd ..
+printf "Rails.application.routes.draw do\n\tmount_ember_app :frontend, to: '/'\nend" > config/routes.rb
+rake ember:install
+rails generate ember:heroku
+git init
+echo "frontend/node_modules/*" >> .gitignore
+echo "frontend/bower_components/*" >> .gitignore
+git add --all
+git commit -m 'new ember rails app'
+heroku create app-name
+heroku buildpacks:clear
+heroku buildpacks:add --index 1 heroku/nodejs
+heroku buildpacks:add --index 2 heroku/ruby
+heroku config:set NPM_CONFIG_PRODUCTION=false
+heroku config:unset SKIP_EMBER
+git push heroku master
+
+rails g scaffold todo title isCompleted:boolean
+rake db:migrate
+remove require action_cabble from config.ru
+touch config/initializers/ams_json_adapter.rb
+
+echo 'ActiveModel::Serializer.config.adapter = :json' > config/initializers/ams_json_adapter.rb
+cd frontend
+# adapter
+ember generate adapter application
+echo "import DS from 'ember-data';export default DS.RESTAdapter.extend({namespace: 'api',shouldReloadAll: function(){return true;},shouldBackgroundReloadRecord:function(){return false;}});" > "app/adapters/application.js"
+ember install ember-data 
+ember generate route application
+changed application route to have the model 
+include gem active_model_serializer and bundle
+include the file for configuration diferently
+echo "gem 'rack-cors'" >> Gemfile
+change config to allow any origin
+cp config/application
+
+# rails part todo
+rails g scaffold api/todo title isCompleted:boolean
+# todo/controller
+echo "class Api::TodosController < ApplicationController before_action :set_api_todo, only: [:show, :edit, :update, :destroy] def index @api_todos = Api::Todo.all render json: @api_todos end def show end def new @api_todo = Api::Todo.new end def edit end def create @api_todo = Api::Todo.new(api_todo_params) if @api_todo.save redirect_to @api_todo, notice: 'Todo was successfully created.' else render :new end end def update if @api_todo.update(api_todo_params) redirect_to @api_todo, notice: 'Todo was successfully updated.' else render :edit end end def destroy @api_todo.destroy redirect_to api_todos_url, notice: 'Todo was successfully destroyed.' end private def set_api_todo @api_todo = Api::Todo.find(params[:id]) end def api_todo_params params.require(:api_todo).permit(:title, :isCompleted) end end" > "app/controllers/api/todos_controller.rb"
+rake db:migrate
+mkdir app/serializers
+mkdir app/serializers/api
+echo "class Api::TodoSerializer < ActiveModel::Serializer atributes :id, :title, :isCompleted end" > "app/serializers/api/todo_serializer.rb"
+cd frontend
+ember g model todo title:string isCompleted:boolean
+ember g adapter application
+echo "import ApplicationAdapter from './application';\n export default ApplicationAdapter.extend({namespace: 'api', shouldReloadAll: function(){return true;},shouldBackgroundReloadRecord:function(){return false;}});" > "app/adapters/application.js"
+
+#index
+#index/template
+ember g route todos/index
+echo "<h1>Index</h1><ul><li>{{#each model as |todo|}}<p>{{todo.title}}</p><p>{{todo.isCompleted}}</p>{{#link-to 'todos.show' todo}}Show{{/link-to}}{{#link-to 'todos.edit' todo}}Edit{{/link-to}}<button {{action 'deleteTodo'}}>delete</button>{{/each}}</li></ul>{{#link-to 'todos.create'}}Create{{/link-to}}" > "app/templates/todos/index.hbs"
+<button {{action 'crateTodo'}}>create</button>" > "app/templates/todos/index.hbs"
+
+#index/route
+echo "import Ember from 'ember';export default Ember.Route.extend({model(){return this.store.findAll('todo');}});" > "app/templates/todos/index.js"
+
+#create
+ember g route todos/create
+#create/template
+echo "<label>title</label>{{input type='text' value=title}}<label>is completed</label>{{input type='text' value=isCompleted}}<button {{action 'createTodo'}}>create</button>" > app/templates/todos/create.hbs
+# create/controller
+ember g controller todos/create
+echo "import Ember from 'ember';export default Ember.Controller.extend({title: null,isCompleted: null,actions: {createTodo(){var todo = this.store.createRecord('todo', {title: this.get('title'),isCompleted: this.get('isCompleted')});	todo.save();}}});" > "app/controllers/todos/create.js" 
+
+#delete
+ember g controller todos
+echo "import Ember from 'ember';export default Ember.Controller.extend({actions: {deleteTodo(id){this.store.findRecord('todo', id).then(todo => {todo.destroyRecord();});}}});" > "app/controllers/todos.js"
+
+#show 
+ember g route todos/show path=:id
+#show/template
+echo "<h1>Show</h1><h1>{{model.title}}</h1>" > "app/templates/todos/show.hbs"
+
+#show/route
+echo "import Ember from 'ember';export default Ember.Route.extend({model(params){return this.store.find('todo', params.id);}});" > "app/routes/todos/show.js"
+
+#edit
+ember g route todos/edit path=:id
+#edit/template
+echo "<label>title</label>{{input type='text' value=title placeholder=model.title}}<label>is completed</label>{{input type='text' value=isCompleted placeholder=model.isCompleted}<button {{action 'editTodo' model}}>Edit</button>" > "app/templates/edit.hbs"
+"
+
+#edit/route
+echo "import Ember from 'ember';export default Ember.Route.extend({model(params){return this.store.find('todo', params.id);}});" > "app/routes/todos/edit.js"
+
+#edit/controller
+ember g controller todos/edit
+echo "import Ember from 'ember';export default Ember.Controller.extend({actions: {editTodo(model){this.store.findRecord('todo', model.id).then(todo => {todo.set('title', this.get('title'));todo.set('isCompleted', this.get('isCompleted'));todo.save();});}}});" > "app/controllers/todos/edit.js"
+
+creating user login
+create model with validations 
+create the tests too
+create the migrations 
+put gem bcrypt 
+take care of the tests
+create new, show and shared helper 
+add ssl in config/enviroments/production.rb
+added puma gem in production
+added config/puma.rb file
+
+creating the login in log out 
+rails generate controller Sessions new
+rails generate integration_test users_login
+create remember digest to users 
+show all users make pagination
+use gem faker to create sample users
+seeds.rb modified to create fake users
+rails g migration add_admin_to_users admin:boolean
+add default: false to the migration
+making change in the production database
+bundle exec rake test
+git push heroku
+heroku pg:reset DATABASE
+heroku run rake db:migrate
+heroku run rake db:seed
+heroku restart
+put activation_token on users model
+change the seeds and users.yml to have activation true
+rails generate mailer UserMailer account_activation password_reset
+password reset 
+rails generate controller PasswordResets new edit --no-test-framework
+rails generate migration add_reset_to_users reset_digest:string reset_sent_at:datetime
+rails generate integration_test password_resets
+use sendgrid to send emails in production
+generating the microposts
+rails generate model Micropost content:text user:references
+
+
