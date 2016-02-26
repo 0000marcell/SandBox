@@ -1,6 +1,6 @@
 require 'thor'
 
-module MyGem
+module EmberRails
 	VERSION = '0.1.0'
 
 	class Cli < Thor
@@ -20,17 +20,14 @@ module MyGem
 			say "MyGem #{VERSION}"
 		end
 
-		desc 'new PATH', 'Create a new static website'
-		option :javascript_engine, :default => 'babeljs', :aliases => '-j'
-		option :file, :type => :array, :aliases => :files
-		option :force, :type => :boolean, :default => false
+		desc 'new PATH', 'Create a new ember-rails app'
+		#option :javascript_engine, :default => 'babeljs', :aliases => '-j'
+		#option :file, :type => :array, :aliases => :files
+		#option :force, :type => :boolean, :default => false
 		#option :database, :required => true
-		def new(path)
-			path = File.expand_path(path)
-			raise Error, set_color("ERROR: #{path} already exists.", :red) if File.exist?(path)
-
-			say "Creating site at #{path}"
-			say options
+		def new(app_name)
+			say "instaling rails app", set_color(:magenta)
+			run "rails new #{app_name} --skip-bundle"
 		end
 	end
 end
