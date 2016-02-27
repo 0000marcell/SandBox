@@ -1,0 +1,70 @@
+# @class_name			-- ex: Api::Todos
+# @resource_s			-- ex: api_todo 
+# @resources			-- ex: @api_todos 
+# @resource				-- ex: @api_todo 
+# @db							-- ex: Api::Todo 
+# @resource_key		-- ex: :todo 
+# @resource_args	-- ex: :title, :isCompleted 
+
+# Controller
+class <%= @class_name %> < ApplicationController
+	protect_from_forgery :except => :create
+  before_action :set_<%= @resource_s %>, only: [:show, :edit, :update, :destroy]
+
+	# GET /controller/
+  def index
+    <%= @resources %> = <%= @db %>.all
+		render json: <%= @resources %> 
+  end
+
+  # GET /controller/1
+  def show
+		render json: <%= @resource %>
+  end
+
+  # GET /controller/new
+  def new
+    <%= @resource %> = <%= @db %>.new
+  end
+
+  # GET /controller/1/edit
+  def edit
+  end
+
+  # POST /controller/
+  def create
+    <%= @resource %> = <%= @db %>.new(<%= @resource_s %>_params)
+    if <%= @resource %>.save
+			render json: <%= @resource %>
+    else
+			render json: <%= @resource %>, status: :created, location: <%= @resource %>
+    end
+  end
+
+  # PATCH/PUT /api/todos/1
+  def update
+		<%= @resource %> = <%= @db %>.find(params[:id])
+    if <%= @resource %>.update(<%= @resource_s_ %>_params)
+			head :no_content
+    else
+			render json: <%= @resource %>.errors, status: :unprocessable_entity
+    end
+  end
+
+  # DELETE /api/todos/1
+  def destroy
+    <%= @resource %>.destroy
+		head :no_content
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_<%= @resource_s %>
+      <%= @resource %> = <%= @db %>.find(params[:id])
+    end
+
+    # Only allow a trusted parameter white list through.
+    def <%= @resource_s %>_params
+      params.require(<%= @resource_key %>).permit(<%= @resource_args %>)
+    end
+end
