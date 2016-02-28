@@ -1,6 +1,7 @@
 require 'thor'
 require 'active_support/core_ext/string/inflections'
-require '../lib/string'
+require '/Users/marcell/Documents/github/SandBox/thor-sandbox/lib/string'
+
 
 module EmberRails
 	VERSION = '0.1.0'
@@ -75,7 +76,9 @@ module EmberRails
 
 		desc 'resource RESOURCE_NAME, ARGS', 'creates a new resource'
 		def resource(resource_name, args)
-			resource_s = resource_name.gsub('/', '_')
+			rails g scaffold #{resource_name} title isCompleted:boolean
+			args						= args.split(':')
+			resource_s			= resource_name.gsub('/', '_')
 			@class_name			= resource_name.camelize.pluralize
 			@resource_s			= resource_s
 			@resources			= "@#{resource_s.pluralize}"

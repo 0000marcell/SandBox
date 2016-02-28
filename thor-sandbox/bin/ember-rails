@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../src/cli'
+require '/Users/marcell/Documents/github/SandBox/thor-sandbox/src/cli'
 EmberRails::Cli.start
 
