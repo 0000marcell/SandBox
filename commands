@@ -134,5 +134,8 @@ rails generate integration_test password_resets
 use sendgrid to send emails in production
 generating the microposts
 rails generate model Micropost content:text user:references
+make the relation between users and microposts
+rails generate controller Microposts
+
 
 

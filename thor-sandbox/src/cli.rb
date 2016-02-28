@@ -1,4 +1,6 @@
 require 'thor'
+require 'active_support/core_ext/string/inflections'
+require '../lib/string'
 
 module EmberRails
 	VERSION = '0.1.0'
@@ -71,21 +73,17 @@ module EmberRails
 			run "heroku open"
 		end
 
-		desc 'resource RESOURCE_NAME', 'creates a new resource'
-		def resource(resource_name)
-			@class_name
-			@resource_s		
-			@resources 
-			@resource			
-			@db							
-			@resource_key		
-			@resource_args
-
-			@class_name = 
-			@resource_s = 
-			@name = resource_name
-			template('new/controller.tt', 'test/test.rb')
-			say "Changing controller", set_color(:magenta)
+		desc 'resource RESOURCE_NAME, ARGS', 'creates a new resource'
+		def resource(resource_name, args)
+			resource_s = resource_name.gsub('/', '_')
+			@class_name			= resource_name.camelize.pluralize
+			@resource_s			= resource_s
+			@resources			= "@#{resource_s.pluralize}"
+			@resource				= "@#{resource_s}"			
+			@db							= resource_name.camelize 							
+			@resource_key   = resource_name.json_key
+			@resource_args  = args
+			template('new/controller.erb', 'test/test.rb')
 		end
 	end
 end

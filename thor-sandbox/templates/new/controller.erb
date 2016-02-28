@@ -44,7 +44,7 @@ class <%= @class_name %> < ApplicationController
   # PATCH/PUT /api/todos/1
   def update
 		<%= @resource %> = <%= @db %>.find(params[:id])
-    if <%= @resource %>.update(<%= @resource_s_ %>_params)
+    if <%= @resource %>.update(<%= @resource_s %>_params)
 			head :no_content
     else
 			render json: <%= @resource %>.errors, status: :unprocessable_entity
