@@ -46,7 +46,16 @@ class String
 		args = self.split(',')
 		string = ""
 		args.each do |arg|
-			string << "<p>{{#{model}.#{arg.split(':')[0]}}}</p>/n"
+			string << "<p>{{#{model}.#{arg.split(':')[0]}}}</p>\n"
+		end
+		string
+	end
+
+	def fields_show
+		args = self.split(',')
+		string = ""
+		args.each do |arg|
+			string << "<p>{{model.#{arg.split(':')[0]}}}</p>\n"
 		end
 		string
 	end
@@ -57,7 +66,7 @@ class String
 		string = ""
 		args.each do |arg|
 			tag = arg.split(':')[0]
-			string << "#{model}.set('#{tag}', this.get('#{tag}'));/n"
+			string << "#{model}.set('#{tag}', this.get('#{tag}'));\n"
 		end
 		string
 	end
@@ -67,8 +76,8 @@ class String
 		args = self.split(',')
 		string = ""
 		args.each do |arg|
-			string << "<label>#{arg.split(':')[0]}</label>/n"
-			string << "{{input type='text' value=#{arg.split(':')[0]}}}/n"
+			string << "<label>#{arg.split(':')[0]}</label>\n"
+			string << "{{input type='text' value=#{arg.split(':')[0]}}}\n"
 		end
 		string
 	end
@@ -79,9 +88,21 @@ class String
 		args.each do |arg|
 			tag = arg.split(':')[0]
 			place_holder = "placeholder=model.#{tag}"
-			string << "<label>#{tag}</label>/n"
-			string << "{{input type='text' value=#{tag} #{place_holder}}}/n"
+			string << "<label>#{tag}</label>\n"
+			string << "{{input type='text' value=#{tag} #{place_holder}}}\n"
 		end
 		string
+	end
+
+	def ember_view(route)
+		"app/templates/#{self}/#{route}.hbs"
+	end
+
+	def ember_route(route)
+		"app/routes/#{self}/#{route}.js"
+	end
+
+	def ember_controller(route)
+		"app/controllers/#{self}/#{route}.js"
 	end
 end

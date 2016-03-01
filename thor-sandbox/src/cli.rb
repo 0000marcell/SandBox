@@ -25,7 +25,7 @@ module EmberRails
 			say "MyGem #{VERSION}"
 		end
 		
-		desc 'new PATH', 'create a new dir'
+		desc 'just for testing', 'just for testing'
 		def do_something
 			@model = 'todo'
 			template('new/test.erb', 'test.js')
@@ -60,7 +60,7 @@ module EmberRails
 			say Draw::Lenny, set_color(:green)
 		end
 
-		desc 'deplay-to-heroku APP_NAME', 'deploy the current app to heroku'	
+		desc 'deploy-to-heroku APP_NAME', 'deploy the current app to heroku'	
 		def deploy_to_heroku(app_name)
 			run "rails generate ember:heroku"
 			run "git add --all"
@@ -76,7 +76,7 @@ module EmberRails
 			say Draw::Lenny, set_color(:green)
 		end
 
-		desc 'resource_backend RESOURCE_NAME, ARGS', 'creates a new resource backend'
+		desc 'resource_backend api/todo title:string,name:string', 'creates a new resource in the backend'
 		def resource_backend(resource_name, args)
 			say "generating rails scaffold", set_color(:magenta)
 			run "rails g scaffold #{resource_name} #{args.rails}"
@@ -94,23 +94,28 @@ module EmberRails
 			say Draw::Lenny, set_color(:green)
 		end
 
-		desc 'resource_frontend RESOURCE_NAME plural', 'args'
+		desc 'resource_frontend todos name:string,title:string', 'creates a new resource in the frontend'
 		def resource_frontend(resource_name, args)
 			@model = resource_name.singularize
 			@args = args
 			path = 'new/ember/'
-			say "generating route for #{resource_name}", set_color(:margenta)
+			say "generating route for #{resource_name}", set_color(:magenta)
 			run "ember g resource #{resource_name} #{args.rails}"
 			['index', 'create', 'show', 'edit'].each do |ember|
-				run "ember g route #{resource_name}/#{ember}" 
+				ds = "" # Dynamic Segment
+				if ember == 'show' or ember == 'edit' then ds = "--path=/#{ember}/:id" end
+				run "ember g route #{resource_name}/#{ember} #{ds}" 
 				template("#{path}#{ember}_hbs.erb", resource_name.ember_view(ember))
-				template("#{path}#{ember}_js.erb",  resource_name.ember_route(ember))
+				if ember != 'create' and ember != 'edit'
+					template("#{path}#{ember}_js.erb",  resource_name.ember_route(ember))
+				end
 				if ember != 'show'
 					run "ember g controller #{resource_name}/#{ember}"
 					template("#{path}#{ember}_controller.erb", 
 									 resource_name.ember_controller(ember))	
 				end
 			end
+			say Draw::Lenny, set_color(:green)
 		end
 	end
 end

@@ -1,12 +1,12 @@
 <h1>Index</h1>
 <ul>
-	<li>
 	{{#each model as |<%= @model %>|}}
-			<%= @args.fields %>
+		<li>
+			<%= @args.fields(@model) %>
 			{{#link-to '<%= @model.pluralize %>.show' <%= @model %>}}Show{{/link-to}}
 			{{#link-to '<%= @model.pluralize %>.edit' <%= @model %>}}Edit{{/link-to}}
 			<button {{action 'delete<%= @model.camelize %>' <%= @model %>.id}}>delete</button>
-		{{/each}}
-	</li>
+		</li>
+	{{/each}}
 </ul>
 {{#link-to '<%= @model.pluralize %>.create'}}Create{{/link-to}}

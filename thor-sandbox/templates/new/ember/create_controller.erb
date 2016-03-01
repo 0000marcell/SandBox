@@ -5,8 +5,8 @@ export default Ember.Controller.extend({
 	create<%= @model.camelize %>(){
 			var <%= @model %> = this.store.createRecord('<%= @model %>');	
 			<%= @args.set(@model) %>
-			<%= @model %>.save().then((resp) => {
-				this.transitionToRoute('<%= @model %>.index');
+			<%= @model %>.save().then( => {
+				this.transitionToRoute('<%= @model.pluralize %>.index');
 			}).catch((err) => {
 				alert('something went wrong when saving');		
 				console.log(err.responseJSON.errors);

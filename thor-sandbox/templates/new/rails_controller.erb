@@ -7,7 +7,7 @@
 # @resource_args	-- ex: :title, :isCompleted 
 
 # Controller
-class <%= @class_name %> < ApplicationController
+class <%= @class_name %>Controller < ApplicationController
 	protect_from_forgery :except => :create
   before_action :set_<%= @resource_s %>, only: [:show, :edit, :update, :destroy]
 
