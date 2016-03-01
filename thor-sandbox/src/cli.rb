@@ -104,7 +104,7 @@ module EmberRails
 			['index', 'create', 'show', 'edit'].each do |ember|
 				run "ember g route #{resource_name}/#{ember}" 
 				template("#{path}#{ember}_hbs.erb", resource_name.ember_view(ember))
-				template("#{path}#{ember}_js.erb", resource_name.ember_route(ember))
+				template("#{path}#{ember}_js.erb",  resource_name.ember_route(ember))
 				if ember != 'show'
 					run "ember g controller #{resource_name}/#{ember}"
 					template("#{path}#{ember}_controller.erb", 

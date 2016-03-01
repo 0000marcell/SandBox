@@ -42,6 +42,27 @@ class String
 		end
 	end
 
+	def fields(model)
+		args = self.split(',')
+		string = ""
+		args.each do |arg|
+			string << "<p>{{#{model}.#{arg.split(':')[0]}}}</p>/n"
+		end
+		string
+	end
+
+	
+	def set(model) 
+		args = self.split(',')
+		string = ""
+		args.each do |arg|
+			tag = arg.split(':')[0]
+			string << "#{model}.set('#{tag}', this.get('#{tag}'));/n"
+		end
+		string
+	end
+	
+
 	def input
 		args = self.split(',')
 		string = ""
@@ -49,6 +70,18 @@ class String
 			string << "<label>#{arg.split(':')[0]}</label>/n"
 			string << "{{input type='text' value=#{arg.split(':')[0]}}}/n"
 		end
-		return string
+		string
+	end
+
+	def input_edit(model)
+		args = self.split(',')
+		string = ""
+		args.each do |arg|
+			tag = arg.split(':')[0]
+			place_holder = "placeholder=model.#{tag}"
+			string << "<label>#{tag}</label>/n"
+			string << "{{input type='text' value=#{tag} #{place_holder}}}/n"
+		end
+		string
 	end
 end
