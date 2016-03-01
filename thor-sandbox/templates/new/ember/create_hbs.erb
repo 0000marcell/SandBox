@@ -1,0 +1,8 @@
+<label>title</label>
+{{input type='text' value=title}}
+<label>is completed</label>
+{{input type='text' value=isCompleted}}
+
+<%= @input %>
+<button {{action 'create<%= @model.camelize %>'}}>Create</button>
+

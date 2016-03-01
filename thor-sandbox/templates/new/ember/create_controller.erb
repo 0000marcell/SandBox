@@ -1,0 +1,19 @@
+import Ember from 'ember';
+
+export default Ember.Controller.extend({
+	actions: {
+	create<%= @model %>(){
+			var <%= @model %> = this.store.createRecord('<%= @model %>');	
+			<%= @set %>
+			todo.set('title', this.get('title'));
+			todo.set('isCompleted', this.get('isCompleted'));
+			<%= @model %>.save().then((resp) => {
+			this.transitionToRoute('<%= @model %>.index');
+			}).catch((err) => {
+				alert('something went wrong when saving');		
+				console.log(err.responseJSON.errors);
+			});
+		}
+	}
+}); 
+

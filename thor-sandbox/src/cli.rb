@@ -1,7 +1,6 @@
 require 'thor'
-require 'active_support/core_ext/string/inflections'
 require '/Users/marcell/Documents/github/SandBox/thor-sandbox/lib/string'
-
+require '/Users/marcell/Documents/github/SandBox/thor-sandbox/lib/draw'
 
 module EmberRails
 	VERSION = '0.1.0'
@@ -28,7 +27,8 @@ module EmberRails
 		
 		desc 'new PATH', 'create a new dir'
 		def do_something
-			template('new/template.tt', "test/#{name}.js")
+			@model = 'todo'
+			template('new/test.erb', 'test.js')
 		end
 
 		desc 'new PATH', 'Create a new ember-rails app'
@@ -57,6 +57,7 @@ module EmberRails
 			say "including node modules in git ignore", set_color(:magenta)
 			run "cd #{app_name} && git add --all"
 			run "cd #{app_name} && git commit -m 'new ember rails app'"
+			say Draw::Lenny, set_color(:green)
 		end
 
 		desc 'deplay-to-heroku APP_NAME', 'deploy the current app to heroku'	
@@ -72,12 +73,14 @@ module EmberRails
 			run "git push heroku master"
 			run "heroku run rake db:schema:load"
 			run "heroku open"
+			say Draw::Lenny, set_color(:green)
 		end
 
-		desc 'resource RESOURCE_NAME, ARGS', 'creates a new resource'
-		def resource(resource_name, args)
-			rails g scaffold #{resource_name} title isCompleted:boolean
-			args						= args.split(':')
+		desc 'resource_backend RESOURCE_NAME, ARGS', 'creates a new resource backend'
+		def resource_backend(resource_name, args)
+			say "generating rails scaffold", set_color(:magenta)
+			run "rails g scaffold #{resource_name} #{args.rails}"
+			say "change controller", set_color(:magenta)
 			resource_s			= resource_name.gsub('/', '_')
 			@class_name			= resource_name.camelize.pluralize
 			@resource_s			= resource_s
@@ -85,8 +88,29 @@ module EmberRails
 			@resource				= "@#{resource_s}"			
 			@db							= resource_name.camelize 							
 			@resource_key   = resource_name.json_key
-			@resource_args  = args
-			template('new/controller.erb', 'test/test.rb')
+			@resource_args  = args.params
+			template('new/rails_controller.erb', resource_name.controller)
+			run "rake db:migrate"
+			say Draw::Lenny, set_color(:green)
+		end
+
+		desc 'resource_frontend RESOURCE_NAME plural', 'args'
+		def resource_frontend(resource_name, args)
+			@model = resource_name.singularize
+			@args = args
+			path = 'new/ember/'
+			say "generating route for #{resource_name}", set_color(:margenta)
+			run "ember g resource #{resource_name} #{args.rails}"
+			['index', 'create', 'show', 'edit'].each do |ember|
+				run "ember g route #{resource_name}/#{ember}" 
+				template("#{path}#{ember}_hbs.erb", resource_name.ember_view(ember))
+				template("#{path}#{ember}_js.erb", resource_name.ember_route(ember))
+				if ember != 'show'
+					run "ember g controller #{resource_name}/#{ember}"
+					template("#{path}#{ember}_controller.erb", 
+									 resource_name.ember_controller(ember))	
+				end
+			end
 		end
 	end
 end
