@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
 		delete<%= @model.camelize %>(id){
 		this.store.findRecord('<%= @model %>', id).then(<%= @model %> => {
 				<%= @model %>.destroyRecord().then((resp) => {
+					console.log(resp);
 				}).catch((err) => {
 					console.log(err);
 				});

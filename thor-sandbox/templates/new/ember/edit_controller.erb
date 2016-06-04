@@ -6,7 +6,8 @@ export default Ember.Controller.extend({
 		this.store.findRecord('<%= @model %>', model.id).then(<%= @model %> => {
 				<%= @args.set(@model) %>
 				<%= @model %>.save().then((resp) => {
-				this.transitionToRoute('<%= @model.pluralize %>.index');
+					console.log(resp)
+					this.transitionToRoute('<%= @model.pluralize %>.index');
 				}, (err) => {
 					console.log(err);
 				});
