@@ -1,6 +1,7 @@
-module SeatSaver where
+module SeatSaver exposing (..) 
 
-import Html
+import Html exposing (text, Html)
 
+main : Html a
 main =
-  Html.text "Hello from Elm"
+    text "Hello from Elm"
