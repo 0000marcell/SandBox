@@ -1,0 +1,84 @@
+{
+    "project": {},
+    "files": {
+        "store.js": {
+            "name": "store.js",
+            "modules": {
+                "Store": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "Store": {
+            "name": "Store",
+            "submodules": {},
+            "elements": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "store.js",
+            "line": 1,
+            "description": "This module contains classes for running a store"
+        }
+    },
+    "classes": {},
+    "elements": {},
+    "classitems": [
+        {
+            "file": "store.js",
+            "line": 8,
+            "description": "`TAX_RATE` is stored as a percentage. Value is 13.\n\t* @property TAX_RATE",
+            "static": 1,
+            "final": 1,
+            "type": "Number",
+            "class": "",
+            "module": "Store"
+        },
+        {
+            "file": "store.js",
+            "line": 19,
+            "itemtype": "property",
+            "name": "name",
+            "type": "String",
+            "class": "",
+            "module": "Store"
+        },
+        {
+            "file": "store.js",
+            "line": 25,
+            "itemtype": "property",
+            "name": "price",
+            "type": "String",
+            "class": "",
+            "module": "Store"
+        },
+        {
+            "file": "store.js",
+            "line": 31,
+            "itemtype": "property",
+            "name": "quantity",
+            "type": "Number",
+            "class": "",
+            "module": "Store"
+        },
+        {
+            "file": "store.js",
+            "line": 37,
+            "itemtype": "property",
+            "name": "id",
+            "type": "Number",
+            "class": "",
+            "module": "Store"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\n`TAX_RATE` is stored as a percentage. Value is 13.\n\t* @property TAX_RATE",
+            "line": " store.js:8"
+        }
+    ]
+}
