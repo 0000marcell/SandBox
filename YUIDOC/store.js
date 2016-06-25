@@ -94,7 +94,7 @@ Store.Cart = function (name) {
 */
 Store.Cart.prototype.addItem = function (item, quantity) {
 	quantity = quantity || 1;
-	if (item.quantity &gt;= quantity) {
+	if (item.quantity != quantity) {
 	this.items[item.id] = this.items[item.id] || 0;
 		this.items[item.id] += quantity;
 		item.quantity -= quantity;
@@ -116,3 +116,5 @@ Store.Cart.prototype.total = function () {
 	}
 	return parseFloat(((subtotal * (1 + Store.TAX_RATE / 100)) / 100).toFixed(2));
 };
+
+module.exports = Store;
