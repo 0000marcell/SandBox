@@ -6,7 +6,10 @@
             "modules": {
                 "Store": 1
             },
-            "classes": {},
+            "classes": {
+                "Item": 1,
+                "Cart": 1
+            },
             "fors": {},
             "namespaces": {}
         }
@@ -16,69 +19,200 @@
             "name": "Store",
             "submodules": {},
             "elements": {},
-            "classes": {},
+            "classes": {
+                "Item": 1,
+                "Cart": 1
+            },
             "fors": {},
             "namespaces": {},
             "tag": "module",
             "file": "store.js",
-            "line": 1,
+            "line": 67,
             "description": "This module contains classes for running a store"
         }
     },
-    "classes": {},
+    "classes": {
+        "Item": {
+            "name": "Item",
+            "shortname": "Item",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Store",
+            "namespace": "",
+            "file": "store.js",
+            "line": 17,
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "name",
+                    "description": "Item name",
+                    "type": "String"
+                },
+                {
+                    "name": "price",
+                    "description": "Item price",
+                    "type": "Number"
+                },
+                {
+                    "name": "quantity",
+                    "description": "Item quantity (the number available to buy)",
+                    "type": "Number"
+                }
+            ]
+        },
+        "Cart": {
+            "name": "Cart",
+            "shortname": "Cart",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Store",
+            "namespace": "",
+            "file": "store.js",
+            "line": 67,
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "name",
+                    "description": "Customer name",
+                    "type": "String"
+                }
+            ]
+        }
+    },
     "elements": {},
     "classitems": [
         {
             "file": "store.js",
             "line": 8,
-            "description": "`TAX_RATE` is stored as a percentage. Value is 13.\n\t* @property TAX_RATE",
+            "description": "`TAX_RATE` is stored as a percentage. Value is 13.",
+            "itemtype": "property",
+            "name": "TAX_RATE",
             "static": 1,
             "final": 1,
             "type": "Number",
-            "class": "",
-            "module": "Store"
-        },
-        {
-            "file": "store.js",
-            "line": 19,
-            "itemtype": "property",
-            "name": "name",
-            "type": "String",
-            "class": "",
+            "class": "Item",
             "module": "Store"
         },
         {
             "file": "store.js",
             "line": 25,
             "itemtype": "property",
-            "name": "price",
+            "name": "name",
             "type": "String",
-            "class": "",
+            "class": "Item",
             "module": "Store"
         },
         {
             "file": "store.js",
             "line": 31,
             "itemtype": "property",
-            "name": "quantity",
-            "type": "Number",
-            "class": "",
+            "name": "price",
+            "type": "String",
+            "class": "Item",
             "module": "Store"
         },
         {
             "file": "store.js",
             "line": 37,
             "itemtype": "property",
+            "name": "quantity",
+            "type": "Number",
+            "class": "Item",
+            "module": "Store"
+        },
+        {
+            "file": "store.js",
+            "line": 43,
+            "itemtype": "property",
             "name": "id",
             "type": "Number",
-            "class": "",
+            "class": "Item",
+            "module": "Store"
+        },
+        {
+            "file": "store.js",
+            "line": 51,
+            "description": "`_id` is incremented when a new item is created, so every item has a unique ID",
+            "itemtype": "property",
+            "name": "id",
+            "type": "Number",
+            "static": 1,
+            "access": "private",
+            "tagname": "",
+            "class": "Item",
+            "module": "Store"
+        },
+        {
+            "file": "store.js",
+            "line": 60,
+            "itemtype": "property",
+            "name": "list",
+            "static": 1,
+            "type": "Object",
+            "class": "Item",
+            "module": "Store"
+        },
+        {
+            "file": "store.js",
+            "line": 73,
+            "itemtype": "property",
+            "name": "name",
+            "type": "String",
+            "class": "Cart",
+            "module": "Store"
+        },
+        {
+            "file": "store.js",
+            "line": 78,
+            "itemtype": "property",
+            "name": "items",
+            "type": "Object",
+            "default": "{}",
+            "class": "Cart",
+            "module": "Store"
+        },
+        {
+            "file": "store.js",
+            "line": 86,
+            "description": "Adds 1 or more of a given item to the cart, if the chosen quantity \nis available. If not, none are added.",
+            "itemtype": "method",
+            "name": "addItem",
+            "params": [
+                {
+                    "name": "item",
+                    "description": "An `Item` Object",
+                    "type": "Object"
+                },
+                {
+                    "name": "quantity",
+                    "description": "The number of items to add to the cart",
+                    "type": "Number",
+                    "optional": true,
+                    "optdefault": "1"
+                }
+            ],
+            "chainable": 1,
+            "class": "Cart",
+            "module": "Store"
+        },
+        {
+            "file": "store.js",
+            "line": 105,
+            "itemtype": "method",
+            "name": "total",
+            "return": {
+                "description": "tax-included total value of cart contents",
+                "type": "Number"
+            },
+            "class": "Cart",
             "module": "Store"
         }
     ],
-    "warnings": [
-        {
-            "message": "Missing item type\n`TAX_RATE` is stored as a percentage. Value is 13.\n\t* @property TAX_RATE",
-            "line": " store.js:8"
-        }
-    ]
+    "warnings": []
 }

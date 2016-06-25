@@ -14,6 +14,13 @@ var Store = Store || {};
 */
 Store.TAX_RATE = 13;
 
+/**
+* @class Item
+* @constructor
+* @param name {String} Item name
+* @param price {Number} Item price
+* @param quantity {Number} Item quantity (the number available to buy)
+*/
 Store.Item = function (name, price, quantity) {
 	/**
 	* @property name
@@ -101,14 +108,11 @@ Store.Cart.prototype.addItem = function (item, quantity) {
 */
 Store.Cart.prototype.total = function () {
 	var subtotal, id;
-			    subtotal = 0;
-					for (id in this.items) {
-					if(this.items.hasOwnProperty(id)) {
-							        subtotal += Store.Item.list[id].price * this.items[id];
-													    
-					}
-						
-					}
-					    return parseFloat(((subtotal * (1 + Store.TAX_RATE / 100)) / 100).toFixed(2));
-
+	subtotal = 0;
+	for (id in this.items) {
+		if(this.items.hasOwnProperty(id)) {
+			subtotal += Store.Item.list[id].price * this.items[id];
+		}
+	}
+	return parseFloat(((subtotal * (1 + Store.TAX_RATE / 100)) / 100).toFixed(2));
 };
