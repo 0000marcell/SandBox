@@ -2,7 +2,6 @@
 * This module contains classes for running a store
 * @module Store
 */
-
 var Store = Store || {};
 
 /**
@@ -94,8 +93,8 @@ Store.Cart = function (name) {
 */
 Store.Cart.prototype.addItem = function (item, quantity) {
 	quantity = quantity || 1;
-	if (item.quantity != quantity) {
-	this.items[item.id] = this.items[item.id] || 0;
+	if (item.quantity >= quantity) {
+		this.items[item.id] = this.items[item.id] || 0;
 		this.items[item.id] += quantity;
 		item.quantity -= quantity;
 	}
