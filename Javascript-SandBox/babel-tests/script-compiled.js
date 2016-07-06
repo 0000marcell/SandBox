@@ -1,22 +1,32 @@
-"use strict";
+'use strict';
 
-let errorProps = ['description', 'fileName', 'lineNumber', 'message', 'name', 'number', 'stack'];
+var _assign2 = require('lodash/object/assign');
 
-function MirageError() {
-  let tmp = Error.apply(this, arguments);
-  for (let idx = 0; idx < errorProps.length; idx++) {
-    let prop = errorProps[idx];
+var _assign3 = _interopRequireDefault(_assign2);
 
-    if (['description', 'message', 'stack'].indexOf(prop) > -1) {
-      this[prop] = `Mirage: ${ tmp[prop] }`;
-    } else {
-      this[prop] = tmp[prop];
-    }
+var _isArray2 = require('lodash/lang/isArray');
+
+var _isArray3 = _interopRequireDefault(_isArray2);
+
+var _isEqual2 = require('lodash/lang/isEqual');
+
+var _isEqual3 = _interopRequireDefault(_isEqual2);
+
+var _sortBy2 = require('lodash/collection/sortBy');
+
+var _sortBy3 = _interopRequireDefault(_sortBy2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var data = { car: 'honda' };
+var result = [];
+function duplicate(data) {
+  debugger;
+  if ((0, _isArray3.default)(data)) {
+    return data.map(duplicate);
+  } else {
+    return (0, _assign3.default)({}, data);
   }
-
-  console.error(this.message);
-  console.error(this);
 }
-
-MirageError.prototype = Object.create(Error.prototype);
+duplicate(data);
 debugger;
