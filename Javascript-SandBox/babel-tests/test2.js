@@ -6,14 +6,11 @@ import _sortBy from 'lodash/collection/sortBy';
 let data = [{ car: 'honda'}, { food: 'beans' }];
 
 function duplicate(data) {
+	debugger;
   if (_isArray(data)) {
     return data.map(duplicate);
   } else {
     return _assign({}, data);
   }
 }
-
 let val = duplicate(data); 
-console.log(val);
-debugger
-
