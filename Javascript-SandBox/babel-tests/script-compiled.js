@@ -18,10 +18,9 @@ var _sortBy3 = _interopRequireDefault(_sortBy2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var data = [{ car: 'honda' }, { food: 'beans' }];
-
+var data = [{ car: 'honda' }, { food: 'beans' }, [{ car1: 'car' }, { food1: 'food' }]];
+var test = (0, _assign3.default)({}, { car: 'honda' });
 function duplicate(data) {
-  debugger;
   if ((0, _isArray3.default)(data)) {
     return data.map(duplicate);
   } else {
@@ -29,3 +28,4 @@ function duplicate(data) {
   }
 }
 var val = duplicate(data);
+debugger;
