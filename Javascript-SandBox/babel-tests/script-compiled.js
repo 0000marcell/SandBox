@@ -16,16 +16,25 @@ var _sortBy2 = require('lodash/collection/sortBy');
 
 var _sortBy3 = _interopRequireDefault(_sortBy2);
 
+var _colors = require('colors');
+
+var _colors2 = _interopRequireDefault(_colors);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var data = [{ car: 'honda' }, { food: 'beans' }, [{ car1: 'car' }, { food1: 'food' }]];
-var test = (0, _assign3.default)({}, { car: 'honda' });
+var data = [{ car: 'honda' }, { food: 'beans' }];
+
 function duplicate(data) {
+  debugger;
+  console.log(_colors2.default.green(JSON.stringify(data)));
   if ((0, _isArray3.default)(data)) {
     return data.map(duplicate);
   } else {
-    return (0, _assign3.default)({}, data);
+    return data;
   }
 }
 var val = duplicate(data);
-debugger;
+var val2 = data;
+console.log(_colors2.default.magenta(JSON.stringify(val)));
+console.log(_colors2.default.magenta(val));
+console.log(_colors2.default.cyan(val2));
