@@ -25,7 +25,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var data = [{ car: 'honda' }, { food: 'beans' }];
 
 function duplicate(data) {
-  debugger;
   console.log(_colors2.default.green(JSON.stringify(data)));
   if ((0, _isArray3.default)(data)) {
     return data.map(duplicate);
@@ -33,6 +32,7 @@ function duplicate(data) {
     return data;
   }
 }
+
 var val = duplicate(data);
 var val2 = data;
 console.log(_colors2.default.magenta(JSON.stringify(val)));

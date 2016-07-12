@@ -7,7 +7,6 @@ import colors from 'colors';
 let data = [{ car: 'honda'}, { food: 'beans' }];
 
 function duplicate(data) {
-	debugger;
 	console.log(colors.green(JSON.stringify(data)));
   if (_isArray(data)) {
     return data.map(duplicate);
@@ -15,6 +14,7 @@ function duplicate(data) {
     return data;
   }
 }
+
 let val = duplicate(data); 
 let val2 = data;
 console.log(colors.magenta(JSON.stringify(val)));
