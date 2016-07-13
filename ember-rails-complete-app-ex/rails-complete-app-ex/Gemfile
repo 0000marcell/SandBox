@@ -1,0 +1,31 @@
+source 'https://rubygems.org'
+
+gem 'rails', '4.2.5'
+gem 'jquery-rails'
+gem 'uglifier'
+gem 'doorkeeper'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', tag: 'v0.10.0.rc4'
+gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'faker'
+group :development, :test do
+  gem 'byebug'
+	gem "codeclimate-test-reporter"
+end
+group :development do
+	gem 'minitest-reporters'
+	gem 'minitest-rails-capybara'
+	gem 'guard'
+	gem 'guard-minitest'
+  gem 'web-console', '~> 2.0'
+  gem 'sqlite3'
+  gem 'spring'
+end
+group :production do 
+	gem 'pg'
+	gem 'puma'
+	gem "codeclimate-test-reporter"
+end
+ruby '2.3.1'
+gem 'rails_12factor', group: [:staging, :production]
+gem 'bcrypt'

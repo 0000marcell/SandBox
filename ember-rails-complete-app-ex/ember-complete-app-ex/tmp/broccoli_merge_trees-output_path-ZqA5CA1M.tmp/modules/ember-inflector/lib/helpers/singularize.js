@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/broccoli_merge_trees-input_base_path-hC9W7W31.tmp/16/modules/ember-inflector/lib/helpers/singularize.js

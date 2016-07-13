@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-cFKkpId1.tmp/0/make-promise.js

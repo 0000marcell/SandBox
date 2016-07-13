@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/ember-rails-tests/app4/node_modules/ember-cli-mirage/node_modules/ember-lodash/node_modules/lodash-es/internal/baseProperty.js

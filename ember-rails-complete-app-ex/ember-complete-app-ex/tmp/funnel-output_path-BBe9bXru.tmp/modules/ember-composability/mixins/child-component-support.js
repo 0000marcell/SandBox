@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-FYuZ8dqA.tmp/0/mixins/child-component-support.js

@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-W2hOu1cL.tmp/0/lib/system/inflector.js

@@ -1,0 +1,33 @@
+{{#if modalIsOpen}}
+	{{#md-modal close='closeModal' class="test-modal"}}
+		<div class="modal-content">
+			<h4>Delete Todo!</h4>
+			<p>Are you sure you wanna delete this todo?</p>
+    </div>
+    <div class="modal-footer">
+    <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
+        Yes
+      </a>
+      <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
+				Cancel
+      </a>
+    </div>
+	{{/md-modal}}
+{{/if}}
+	{{#md-card id="image-card"}}
+		<h5>todo</h5>
+		{{#if loadingModel}}
+			{{md-loader mode="circular"}}	
+		{{else}}
+			{{#link-to 'users.user.todos.new'}}New{{/link-to}}
+			{{#md-collection content=model.todos as |item|}}
+				<div id='item' class='collection-item'>
+					{{#link-to 'users.user.todos.todo' item}}{{item.title}}{{/link-to}}
+					<div class='secondary-content'>
+						{{#link-to 'users.user.todos.todo.edit' item}}Edit{{/link-to}}
+						<a id='delete' {{action 'delete' item}}>Delete</a>
+					</div>
+				</div>
+			{{/md-collection}}
+		{{/if}}
+	{{/md-card}}

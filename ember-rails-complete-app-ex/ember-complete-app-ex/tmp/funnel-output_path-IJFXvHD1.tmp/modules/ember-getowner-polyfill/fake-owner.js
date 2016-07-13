@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-mV7VvCC7.tmp/0/fake-owner.js

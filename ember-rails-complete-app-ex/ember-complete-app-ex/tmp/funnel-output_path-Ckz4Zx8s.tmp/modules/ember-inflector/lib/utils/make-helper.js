@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-NhcPmT4a.tmp/0/lib/utils/make-helper.js

@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/ember-rails-tests/app4/app/components/session-component.js

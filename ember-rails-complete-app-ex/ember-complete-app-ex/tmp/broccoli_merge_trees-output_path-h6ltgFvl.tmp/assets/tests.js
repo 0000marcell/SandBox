@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/source_map_concat-output_path-gKyGEbfd.tmp/assets/tests.js

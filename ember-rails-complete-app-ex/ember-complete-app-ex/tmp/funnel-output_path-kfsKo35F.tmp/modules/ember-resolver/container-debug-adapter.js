@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-uhcSUqH3.tmp/0/container-debug-adapter.js

@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-KmtKT5mG.tmp/0/components/labeled-radio-button.js
