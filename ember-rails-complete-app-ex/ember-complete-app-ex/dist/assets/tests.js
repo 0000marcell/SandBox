@@ -604,6 +604,15 @@ define('app4/tests/routes/login.jshint', ['exports'], function (exports) {
     assert.ok(true, 'routes/login.js should pass jshint.');
   });
 });
+define('app4/tests/routes/not-found.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/not-found.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/not-found.js should pass jshint.');
+  });
+});
 define('app4/tests/routes/password-reset.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -973,6 +982,27 @@ define('app4/tests/unit/routes/login-test.jshint', ['exports'], function (export
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/login-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/not-found-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:not-found', 'Unit | Route | not found', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/not-found-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/not-found-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/not-found-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/routes/password-reset-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
