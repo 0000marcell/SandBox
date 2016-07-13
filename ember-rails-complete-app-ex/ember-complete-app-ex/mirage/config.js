@@ -44,7 +44,6 @@ export default function() {
 	this.post('/users');
 	this.get('/todos', { coalesce: true });
 	this.get('/todos/:todo_url', (schema, request) => {
-		debugger;
 		 return schema.todos.where({ 
 			todo_url: request.params.todo_url
 		}).models[0];
@@ -52,4 +51,14 @@ export default function() {
 	this.post('/todos');
 	this.del('/todos/:id');
 	this.patch('/todos/:id');
+
+	this.get('/tasks', { coalesce: true });
+	this.get('/tasks/:task_url', (schema, request) => {
+		 return schema.tasks.where({ 
+			task_url: request.params.task_url
+		}).models[0];
+	});
+	this.post('/tasks');
+	this.del('/tasks/:id');
+	this.patch('/tasks/:id');
 }

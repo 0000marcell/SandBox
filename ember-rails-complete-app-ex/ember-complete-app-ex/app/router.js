@@ -10,12 +10,13 @@ Router.map(function() {
   this.route('signup');
   this.route('users', function() {
     this.route('user', {path: '/:user_username'}, function() {
-			this.route('todos', function() {
-        this.route('todo', { path: ':slug' }, function() {
-        this.route('edit');
-      });
-        this.route('new');
-      });
+      this.route('todos', function() {
+  this.route('todo', { path: ':id' }, function() {
+  this.route('edit');
+});
+  this.route('new');
+});
+      this.route('dashboard');
     });
   });
   this.route('password-reset');

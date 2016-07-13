@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/ember-complete-app-ex/tmp/template_compiler-output_path-NLcFA1oe.tmp/app4/templates/users/user/index.js

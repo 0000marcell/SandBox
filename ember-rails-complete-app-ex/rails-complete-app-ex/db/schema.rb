@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712171840) do
+ActiveRecord::Schema.define(version: 20160711135848) do
 
   create_table "oauth_access_grants", force: :cascade do |t|
     t.integer  "resource_owner_id", null: false
@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 20160712171840) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "slug"
   end
 
   add_index "todos", ["user_id"], name: "index_todos_on_user_id"

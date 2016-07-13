@@ -6,5 +6,6 @@ export default function(server) {
     Make sure to define a factory for each model you want to create.
   */
 	let user = server.create('user');
-	server.createList('todo', 50, { user });
+	server.createList('todo', 10, { user });
+	server.createList('task', 10, { user });
 }

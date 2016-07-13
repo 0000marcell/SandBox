@@ -1,0 +1,26 @@
+define('app4/serializers/application', ['exports', 'ember', 'ember-data'], function (exports, _ember, _emberData) {
+   var __cov_EB_XJFCy$GrR6CZlbL89bg = Function('return this')();
+   if (!__cov_EB_XJFCy$GrR6CZlbL89bg.__coverage__) {
+      __cov_EB_XJFCy$GrR6CZlbL89bg.__coverage__ = {};
+   }
+   __cov_EB_XJFCy$GrR6CZlbL89bg = __cov_EB_XJFCy$GrR6CZlbL89bg.__coverage__;
+   if (!__cov_EB_XJFCy$GrR6CZlbL89bg['app/serializers/application.js']) {
+      __cov_EB_XJFCy$GrR6CZlbL89bg['app/serializers/application.js'] = { "path": "app/serializers/application.js", "s": { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0 }, "b": { "1": [0, 0], "2": [0, 0], "3": [0, 0], "4": [0, 0], "5": [0, 0] }, "f": { "1": 0, "2": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 5, "loc": { "start": { "line": 5, "column": 10 }, "end": { "line": 5, "column": 13 } } }, "2": { "name": "(anonymous_2)", "line": 9, "loc": { "start": { "line": 9, "column": 33 }, "end": { "line": 9, "column": 52 } } } }, "statementMap": { "1": { "start": { "line": 6, "column": 2 }, "end": { "line": 8, "column": 42 } }, "2": { "start": { "line": 9, "column": 2 }, "end": { "line": 19, "column": 11 } }, "3": { "start": { "line": 10, "column": 3 }, "end": { "line": 10, "column": 31 } }, "4": { "start": { "line": 11, "column": 3 }, "end": { "line": 11, "column": 40 } }, "5": { "start": { "line": 12, "column": 3 }, "end": { "line": 14, "column": 4 } }, "6": { "start": { "line": 13, "column": 4 }, "end": { "line": 13, "column": 32 } }, "7": { "start": { "line": 15, "column": 3 }, "end": { "line": 17, "column": 4 } }, "8": { "start": { "line": 16, "column": 4 }, "end": { "line": 16, "column": 78 } }, "9": { "start": { "line": 18, "column": 3 }, "end": { "line": 18, "column": 14 } } }, "branchMap": { "1": { "line": 7, "type": "binary-expr", "locations": [{ "start": { "line": 7, "column": 11 }, "end": { "line": 7, "column": 33 } }, { "start": { "line": 7, "column": 37 }, "end": { "line": 7, "column": 39 } }] }, "2": { "line": 8, "type": "binary-expr", "locations": [{ "start": { "line": 8, "column": 10 }, "end": { "line": 8, "column": 35 } }, { "start": { "line": 8, "column": 39 }, "end": { "line": 8, "column": 41 } }] }, "3": { "line": 12, "type": "if", "locations": [{ "start": { "line": 12, "column": 3 }, "end": { "line": 12, "column": 3 } }, { "start": { "line": 12, "column": 3 }, "end": { "line": 12, "column": 3 } }] }, "4": { "line": 15, "type": "if", "locations": [{ "start": { "line": 15, "column": 3 }, "end": { "line": 15, "column": 3 } }, { "start": { "line": 15, "column": 3 }, "end": { "line": 15, "column": 3 } }] }, "5": { "line": 15, "type": "binary-expr", "locations": [{ "start": { "line": 15, "column": 6 }, "end": { "line": 15, "column": 10 } }, { "start": { "line": 15, "column": 14 }, "end": { "line": 15, "column": 23 } }] } }, "code": ["import Ember from 'ember';", "import DS from 'ember-data';", "", "export default DS.JSONAPISerializer.extend({", "\tserialize() {", "\t\tconst result = this._super(...arguments),", "\t\t\t attr = result.data.attributes || {},", "\t\t\t rel = result.data.relationships || {};", "\t\treturn Object.keys(rel).reduce(function(acc, elem){", "\t\t\tconst data = rel[elem].data;", "\t\t\telem = Ember.String.underscore(elem);", "\t\t\tif(data){", "\t\t\t\tacc[elem + \"_id\"] = data.id;", "\t\t\t}", "\t\t\tif(data && data.type){", "\t\t\t\tacc[elem + \"_type\"] = data.type[0].toUpperCase() + data.type.slice(1, -1);", "\t\t\t}", "\t\t\treturn acc;", "\t\t}, attr);", "\t}", "});", ""] };
+   }
+   __cov_EB_XJFCy$GrR6CZlbL89bg = __cov_EB_XJFCy$GrR6CZlbL89bg['app/serializers/application.js'];
+   exports['default'] = _emberData['default'].JSONAPISerializer.extend({ serialize: function serialize() {
+         __cov_EB_XJFCy$GrR6CZlbL89bg.f['1']++;__cov_EB_XJFCy$GrR6CZlbL89bg.s['1']++;var result = this._super.apply(this, arguments),
+             attr = (__cov_EB_XJFCy$GrR6CZlbL89bg.b['1'][0]++, result.data.attributes) || (__cov_EB_XJFCy$GrR6CZlbL89bg.b['1'][1]++, {}),
+             rel = (__cov_EB_XJFCy$GrR6CZlbL89bg.b['2'][0]++, result.data.relationships) || (__cov_EB_XJFCy$GrR6CZlbL89bg.b['2'][1]++, {});__cov_EB_XJFCy$GrR6CZlbL89bg.s['2']++;return Object.keys(rel).reduce(function (acc, elem) {
+            __cov_EB_XJFCy$GrR6CZlbL89bg.f['2']++;__cov_EB_XJFCy$GrR6CZlbL89bg.s['3']++;var data = rel[elem].data;__cov_EB_XJFCy$GrR6CZlbL89bg.s['4']++;elem = _ember['default'].String.underscore(elem);__cov_EB_XJFCy$GrR6CZlbL89bg.s['5']++;if (data) {
+               __cov_EB_XJFCy$GrR6CZlbL89bg.b['3'][0]++;__cov_EB_XJFCy$GrR6CZlbL89bg.s['6']++;acc[elem + '_id'] = data.id;
+            } else {
+               __cov_EB_XJFCy$GrR6CZlbL89bg.b['3'][1]++;
+            }__cov_EB_XJFCy$GrR6CZlbL89bg.s['7']++;if ((__cov_EB_XJFCy$GrR6CZlbL89bg.b['5'][0]++, data) && (__cov_EB_XJFCy$GrR6CZlbL89bg.b['5'][1]++, data.type)) {
+               __cov_EB_XJFCy$GrR6CZlbL89bg.b['4'][0]++;__cov_EB_XJFCy$GrR6CZlbL89bg.s['8']++;acc[elem + '_type'] = data.type[0].toUpperCase() + data.type.slice(1, -1);
+            } else {
+               __cov_EB_XJFCy$GrR6CZlbL89bg.b['4'][1]++;
+            }__cov_EB_XJFCy$GrR6CZlbL89bg.s['9']++;return acc;
+         }, attr);
+      } });
+});

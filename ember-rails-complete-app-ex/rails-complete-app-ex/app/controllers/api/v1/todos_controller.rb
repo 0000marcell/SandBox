@@ -25,7 +25,7 @@ class Api::V1::TodosController < ApplicationController
 
   # PATCH/PUT /api/v1/todos/1
   def update
-	@api_v1_todo = current_resource_owner.todos.find(params[:id])
+		@api_v1_todo = current_resource_owner.todos.find(params[:id])
     if @api_v1_todo.update(api_v1_todo_params)
 			render json: @api_v1_todo	
 		else
@@ -42,12 +42,11 @@ class Api::V1::TodosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_api_v1_todo
-			debugger
-      @api_v1_todo = Todo.find_by_slug(params[:id])
+      @api_v1_todo = Todo.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def api_v1_todo_params
-			params.require(:todo).permit(:title, :slug,:user_id)
+			params.require(:todo).permit(:title,:user_id)
     end
 end

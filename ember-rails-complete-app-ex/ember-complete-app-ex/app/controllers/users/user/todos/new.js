@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
 			let model = this.get('model');
 			let title = model.get('title');
 			model.set('user_id', this.get('authManager.data.authenticated.user.id'));
-			model.set('slug', 
+			model.set('id', 
 				Ember.String.dasherize(title.toLowerCase()));
 			model.save().then((model) => {
 				this.set('msgVisible', false);
