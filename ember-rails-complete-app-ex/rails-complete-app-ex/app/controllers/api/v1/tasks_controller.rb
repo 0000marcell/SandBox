@@ -4,7 +4,11 @@ class Api::V1::TasksController < ApplicationController
 
 	# GET /api/v1/tasks
   def index
-	@api_v1_tasks = Task.all
+		if params[:page]
+			@api_v1_tasks = Task.page(params[:page][:number]).per(params[:page][:size])
+		else
+			@api_v1_tasks = Task.all
+		end
 		render json: @api_v1_tasks 
   end
 

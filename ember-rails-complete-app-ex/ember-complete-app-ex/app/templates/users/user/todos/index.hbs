@@ -20,7 +20,7 @@
 			{{md-loader mode="circular"}}	
 		{{else}}
 			{{#link-to 'users.user.todos.new'}}New{{/link-to}}
-			{{#md-collection content=model.todos as |item|}}
+			{{#md-collection content=model as |item|}}
 				<div id='item' class='collection-item'>
 					{{#link-to 'users.user.todos.todo' item}}{{item.title}}{{/link-to}}
 					<div class='secondary-content'>
@@ -29,5 +29,7 @@
 					</div>
 				</div>
 			{{/md-collection}}
+			{{md-pagination min=1 max=model.meta.pagination.last.number 
+				current=page range=5}}
 		{{/if}}
 	{{/md-card}}

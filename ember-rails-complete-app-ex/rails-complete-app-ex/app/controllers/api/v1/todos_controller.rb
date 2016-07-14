@@ -4,7 +4,11 @@ class Api::V1::TodosController < ApplicationController
 
 	# GET /api/v1/todos
   def index
-		@api_v1_todos = Todo.all
+		if params[:page]
+			@api_v1_todos = Todo.page(params[:page][:number]).per(params[:page][:size])
+		else
+			@api_v1_todos = Todo.all
+		end
 		render json: @api_v1_todos 
   end
 

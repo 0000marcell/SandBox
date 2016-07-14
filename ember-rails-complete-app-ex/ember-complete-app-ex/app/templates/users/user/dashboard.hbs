@@ -1,8 +1,22 @@
-{{#each model.tasks as |task|}}
-	<p>{{task.title}}</p>
-{{/each}}
-<hr>
-{{#each model.todos as |todo|}}
-	<p>{{todo.title}}</p>
-{{/each}}
+<div class='dashboard-main'>
+	{{#md-card class='dashboard-tasks-card'}}
+		{{#md-collection content=model.tasks as |item|}}
+			<div id='item' class='collection-item'>
+				{{#link-to 'users.user'}}{{item.title}}{{/link-to}}
+				<div class='secondary-content'>
+				</div>
+			</div>
+		{{/md-collection}}
+	{{/md-card}}
+	{{#md-card class='dashboard-todos-card'}}
+		{{#md-collection content=model.todos as |item|}}
+			<div id='item' class='collection-item'>
+				{{#link-to 'users.user.todos.todo' item}}{{item.title}}{{/link-to}}
+				<div class='secondary-content'>
+				</div>
+			</div>
+		{{/md-collection}}
+	{{/md-card}}
+</div>
+
 

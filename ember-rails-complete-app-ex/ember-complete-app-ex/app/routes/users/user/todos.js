@@ -1,8 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	actions: {
-		loading(){
+	model(params){
+		return this.store.query('todo', { page: {
+			number: params.page,
+			size: params.size
+		}});
+	},
+	queryParams: {
+		page: {
+			refreshModel: true
+		},
+		size: {
+			refreshModel: true
 		}
 	}
 });
