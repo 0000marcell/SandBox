@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/ember-complete-app-ex/tmp/source_map_concat-output_path-bfFPv4IL.tmp/assets/app4.js

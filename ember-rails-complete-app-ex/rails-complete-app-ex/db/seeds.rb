@@ -13,3 +13,7 @@ User.create!(name:		'Admin',
 						admin: true,
 						activated: true,
 						activated_at: Time.zone.now)
+
+10.times do |i|
+	Task.create!(title: "Task #{i}", user_id: 1)	
+end
