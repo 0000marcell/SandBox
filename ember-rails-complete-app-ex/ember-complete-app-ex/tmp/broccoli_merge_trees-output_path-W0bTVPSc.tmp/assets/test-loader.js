@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/bower_components/ember-cli-test-loader/test-loader.js

@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-TFahGloD.tmp/0/mixins/application-route-mixin.js

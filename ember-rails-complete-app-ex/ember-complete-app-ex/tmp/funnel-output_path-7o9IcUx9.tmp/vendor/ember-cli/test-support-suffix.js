@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-JiSetknZ.tmp/0//test-support-suffix.js

@@ -667,6 +667,15 @@ define('app4/tests/routes/users/user/index.jshint', ['exports'], function (expor
     assert.ok(true, 'routes/users/user/index.js should pass jshint.');
   });
 });
+define('app4/tests/routes/users/user/todos/index.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/users/user/todos/index.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/users/user/todos/index.js should pass jshint.');
+  });
+});
 define('app4/tests/routes/users/user/todos/new.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -1149,6 +1158,27 @@ define('app4/tests/unit/routes/users/user/index-test.jshint', ['exports'], funct
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/users/user/index-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/users/user/todos/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:users/user/todos/index', 'Unit | Route | users/user/todos/index', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/users/user/todos/index-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/users/user/todos/index-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/users/user/todos/index-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/routes/users/user/todos/new-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

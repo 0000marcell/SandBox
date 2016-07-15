@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/source_map_concat-output_path-zXF1j02E.tmp/assets/vendor.js

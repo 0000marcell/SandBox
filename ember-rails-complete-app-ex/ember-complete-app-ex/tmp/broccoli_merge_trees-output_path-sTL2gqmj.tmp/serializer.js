@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/broccoli_merge_trees-input_base_path-Iym6cSQJ.tmp/1/serializer.js

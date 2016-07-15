@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-NhunSgUS.tmp/0/components/app-version.js

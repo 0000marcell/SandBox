@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-nxSiOw6b.tmp/0/components/ember-wormhole.js

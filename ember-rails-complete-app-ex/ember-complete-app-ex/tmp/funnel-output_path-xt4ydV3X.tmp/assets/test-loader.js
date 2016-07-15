@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-TdFbst7m.tmp/0/bower_components/ember-cli-test-loader/test-loader.js

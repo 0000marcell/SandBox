@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/node_modules/ember-modal-dialog/app/templates/components/tether-dialog.js

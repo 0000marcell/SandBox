@@ -26,7 +26,6 @@ export default DS.JSONAPISerializer.extend({
 		if(payload.links){
 			result.meta.pagination = this.createPageMeta(payload.links);
 		}
-
 		return result;
 	},
 	

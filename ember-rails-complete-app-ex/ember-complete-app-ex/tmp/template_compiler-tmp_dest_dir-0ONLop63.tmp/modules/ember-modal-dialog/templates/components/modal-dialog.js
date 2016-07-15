@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/template_compiler-tmp_cache_dir-eOCYaGWX.tmp/0

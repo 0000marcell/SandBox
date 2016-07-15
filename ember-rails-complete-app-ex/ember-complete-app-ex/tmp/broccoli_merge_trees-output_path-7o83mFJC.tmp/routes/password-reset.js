@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/app/routes/password-reset.js

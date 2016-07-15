@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/broccoli_merge_trees-input_base_path-4zWk1Cof.tmp/22/components/modal-dialog.js

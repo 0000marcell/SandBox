@@ -7,7 +7,7 @@ $roboto-font-path: '../assets/';
 // ember-cli-materialize styles
 @import 'ember-cli-materialize';
 
-@import "dashboard";
+@import 'dashboard';
 
 .card{
 	text-align: left;
@@ -29,8 +29,4 @@ footer.page-footer{
 	position: fixed;
 	width: 100%;
 	bottom: 0;
-}
-
-li.active{
-	background-color: #3f51b5 !important;
 }

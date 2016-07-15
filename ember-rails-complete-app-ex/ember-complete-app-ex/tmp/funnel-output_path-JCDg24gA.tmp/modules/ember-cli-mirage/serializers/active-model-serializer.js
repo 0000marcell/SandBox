@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/ember-rails-tests/app4/tmp/funnel-input_base_path-LBcGBfEl.tmp/0/serializers/active-model-serializer.js
