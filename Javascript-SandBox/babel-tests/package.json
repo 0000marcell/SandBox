@@ -13,6 +13,8 @@
     "babel-cli": "^6.10.1",
     "babel-preset-es2015": "^6.9.0",
     "colors": "^1.1.2",
+    "ember": "^1.0.0-pre.2",
+    "ember-inflector": "^1.9.4",
     "lodash": "^3.10.1"
   }
 }
