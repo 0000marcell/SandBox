@@ -14,5 +14,3 @@ function camelize(str) {
 }
 
 export { camelize };
-
-
