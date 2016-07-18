@@ -1,4 +1,4 @@
-import EmptyObject from 'ember-metal/empty_object';
+import EmptyObject from './empty_object';
 export default Cache;
 
 function Cache(limit, func) {
@@ -22,7 +22,6 @@ Cache.prototype = {
 				this.store[key] = value;
 			}
 		}
-
 		return value;
 	},
 

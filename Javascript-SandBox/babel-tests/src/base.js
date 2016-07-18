@@ -1,6 +1,8 @@
 import _isArray from 'lodash/lang/isArray';
 import assert from './assert';
-import { camelize, singularize, dasherize } from './inflector';
+import camelize from './camelize';
+import dasherize from './dasherize';
+import { singularize, pluralize } from './inflections';
 
 export default class BaseRouteHandler {
 

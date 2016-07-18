@@ -1,3 +1,5 @@
+import Cache from './cache';
+
 const STRING_CAMELIZE_REGEXP_1 = (/(\-|\_|\.|\s)+(.)?/g);
 const STRING_CAMELIZE_REGEXP_2 = (/(^|\/)([A-Z])/g);
 
@@ -13,4 +15,4 @@ function camelize(str) {
 	return CAMELIZE_CACHE.get(str);
 }
 
-export { camelize };
+export default camelize;
