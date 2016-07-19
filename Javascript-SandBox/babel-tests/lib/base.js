@@ -22,7 +22,7 @@ var _dasherize = require('./dasherize');
 
 var _dasherize2 = _interopRequireDefault(_dasherize);
 
-var _inflections = require('./inflections');
+var _string = require('./inflections/string');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47,7 +47,7 @@ var BaseRouteHandler = function () {
           break;
         }
       }
-      var modelName = (0, _dasherize2.default)((0, _camelize2.default)((0, _inflections.singularize)(lastPath)));
+      var modelName = (0, _dasherize2.default)((0, _camelize2.default)((0, _string.singularize)(lastPath)));
       return modelName;
     }
   }, {

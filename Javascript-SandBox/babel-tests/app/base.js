@@ -1,6 +1,8 @@
 import _isArray from 'lodash/lang/isArray';
-import assert from 'ember-cli-mirage/assert';
-import { camelize, singularize, dasherize } from 'ember-cli-mirage/utils/inflector';
+import assert from './assert';
+import camelize from './camelize';
+import dasherize from './dasherize';
+import { singularize, pluralize } from './inflections/string';
 
 export default class BaseRouteHandler {
 
