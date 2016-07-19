@@ -1,5 +1,5 @@
 <div class='dashboard-main'>
-	{{#md-card class='dashboard-tasks-card'}}
+	{{#md-card class='pull-left'}}
 		{{#md-collection content=model.tasks as |item|}}
 			<div id='item' class='collection-item'>
 				{{#link-to 'users.user'}}{{item.title}}{{/link-to}}
@@ -8,7 +8,7 @@
 			</div>
 		{{/md-collection}}
 	{{/md-card}}
-	{{#md-card class='dashboard-todos-card'}}
+	{{#md-card class='pull-right'}}
 		{{#md-collection content=model.todos as |item|}}
 			<div id='item' class='collection-item'>
 				{{#link-to 'users.user.todos.todo' item}}{{item.title}}{{/link-to}}
@@ -16,6 +16,9 @@
 				</div>
 			</div>
 		{{/md-collection}}
+	{{/md-card}}
+	{{#md-card class='pull-left'}}
+		{{simple-chat}}
 	{{/md-card}}
 </div>
 

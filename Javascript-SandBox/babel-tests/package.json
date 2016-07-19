@@ -17,6 +17,8 @@
     "ember-inflector": "^1.9.4",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-print": "^2.0.1",
+    "gulp-webserver": "^0.9.1",
     "lodash": "^3.10.1"
   }
 }

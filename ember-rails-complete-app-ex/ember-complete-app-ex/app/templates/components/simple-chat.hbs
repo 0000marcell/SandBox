@@ -1,0 +1,10 @@
+{{#md-card}}
+	{{md-input value=username class="col s12"}}
+	{{md-input value=body class="col s12"}}
+	{{md-btn text='Send'
+		action='sendMessage'
+		class='indigo darken-2'}}
+	{{#each messages as |message|}}
+		<p>{{message.username}} -> {{message.body}}</p>
+	{{/each}}
+{{/md-card}}
