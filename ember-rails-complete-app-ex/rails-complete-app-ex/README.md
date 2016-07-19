@@ -1,1 +1,0 @@
-# tci-cc-rails

@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/ember-complete-app-ex/tmp/source_map_concat-output_path-XLnK2D1p.tmp/assets/tests.js
