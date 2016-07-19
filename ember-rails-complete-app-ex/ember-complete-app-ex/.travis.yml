@@ -1,0 +1,26 @@
+---
+language: node_js
+node_js:
+  - "5.0"
+sudo: false
+addons:
+  code_climate:
+    repo_token: ac4f87e7c0f5405f5912d40dc93380db05d8fa2372bde3632fa50d75b78a60be
+cache:
+  directories:
+    - node_modules
+before_install:
+  - mkdir travis-phantomjs
+  - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -O $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+  - tar -xvf $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -C $PWD/travis-phantomjs
+  - export PATH=$PWD/travis-phantomjs:$PATH
+  - "npm config set spin false"
+  - "npm install -g npm@^2"
+install:
+  - npm install -g bower
+  - npm install
+  - bower install
+after_script:
+  - codeclimate-test-reporter < lcov.info
+script:
+  - npm test

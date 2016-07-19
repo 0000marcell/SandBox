@@ -1,0 +1,12 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  title: 'Todo 1' 
+  user_id: 1 
+
+two:
+  id: 2
+  title: 'Todo 2' 
+  user_id: 1

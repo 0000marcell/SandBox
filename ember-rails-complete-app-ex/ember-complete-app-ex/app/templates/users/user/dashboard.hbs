@@ -1,0 +1,11 @@
+<div class='default-pad height-3'>
+	<div class='pull-left'>
+		{{pag-table model=model.todos search=searchTodo page=pageTodo total=totalTodos deleteAction=('action' 'deleteTodos')}}
+	</div>
+	<div class='pull-left'>
+		{{pag-table model=model.tasks search=searchTask page=pageTask total=totalTasks deleteAction=('action' 'deleteTasks')}}
+	</div>
+	<div class='pull-left'>
+		{{simple-chat}}		
+	</div>
+</div>
