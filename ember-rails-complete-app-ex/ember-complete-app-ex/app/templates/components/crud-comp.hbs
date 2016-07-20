@@ -1,0 +1,65 @@
+<!-- MODAL -->
+{{#if modalIsOpen}}
+	{{#md-modal close='closeModal' class="test-modal"}}
+		<div class="modal-content">
+			<h5>Delete Task!</h5>
+			<p>{{modalText}}</p>
+    </div>
+    <div class="modal-footer">
+    <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
+        Yes
+      </a>
+      <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
+				Cancel
+      </a>
+    </div>
+	{{/md-modal}}
+{{/if}}
+
+{{#md-card class='height-3'}}
+	{{#if loadingModel}}
+		{{md-loader mode="circular"}}	
+	{{else if main}}
+		{{md-input value=search label='Search' class="col s12" validate=true}}
+		{{md-btn icon='mdi-action-favorite'
+			action='createItem' buttonType='floating'
+			class='btn-small indigo darken-2'}}
+		{{#md-collection content=model as |item|}}
+			<div id='item' class='collection-item'>
+				{{#link-to 'users.user.todos.todo' item}}{{item.title}}{{/link-to}}
+				<div class='secondary-content'>
+					<a data-autoId='edit' {{action 'editItem' item}}>Edit</a>
+					<a data-autoId='delete' {{action 'delete' item}}>Delete</a>
+				</div>
+			</div>
+		{{/md-collection}}
+		{{md-pagination min=1 max=total current=page range=5}}
+	{{else if create}}
+		{{md-btn icon='mdi-action-favorite'
+			action='closeView' buttonType='floating'
+			class='btn-small red accent-4 pull-right'}}
+		<h5>New Task</h5>	
+		{{#if msgVisible}}
+			{{#md-card-panel class=(readonly msgColor)
+				bodyClass="white-text"
+				id="card-panel"}}
+					{{msgContent}}
+			{{/md-card-panel}}	
+		{{/if}}
+		{{md-input value=selectedItem.title label='Title' class="col s12" validate=true}}
+		{{md-btn text='Save'
+			action='saveItem'
+			class='indigo darken-2'}}
+	{{else if update}}
+		{{md-btn icon='mdi-action-favorite'
+			action='closeView' buttonType='floating'
+			class='btn-small red accent-4 pull-right'}}
+		<h5>Edit todo</h5>
+		{{md-input label='Name' 
+			type="text" class="col s12" value=selectedItem.title validate=true}}
+		{{md-btn-submit class='indigo'
+			id='form-submit'
+			action='saveItem'
+			text='Save'}}
+	{{/if}}
+{{/md-card}}

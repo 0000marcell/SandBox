@@ -8,4 +8,10 @@
 	<div class='pull-left'>
 		{{simple-chat}}		
 	</div>
+	<div class='pull-left'>
+		{{crud-comp model=model.tasks search=searchTask 
+							  page=pageTask total=totalTask 
+								store=store
+								deleteAction=('action' 'deleteTasks')}}
+	</div>
 </div>

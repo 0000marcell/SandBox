@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/ember-complete-app-ex/tmp/funnel-input_base_path-dtOG4U2s.tmp/0/index.js
