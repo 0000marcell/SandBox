@@ -19,6 +19,7 @@
     "gulp-babel": "^6.1.2",
     "gulp-print": "^2.0.1",
     "gulp-webserver": "^0.9.1",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "systemjs": "^0.19.31"
   }
 }

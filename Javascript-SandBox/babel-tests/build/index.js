@@ -1,6 +1,6 @@
 'use strict';
 
-var _base = require('./base');
+var _base = require('./libs/addon/route-handlers/base');
 
 var _base2 = _interopRequireDefault(_base);
 

@@ -1,0 +1,127 @@
+'use strict';
+
+var _base = require('ember-cli-mirage/route-handlers/shorthands/base');
+
+var _base2 = _interopRequireDefault(_base);
+
+var _qunit = require('qunit');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _qunit.module)('Unit | Route handlers | Shorthands | BaseShorthandRouteHandler', {
+  beforeEach: function beforeEach() {
+    this.handler = new _base2.default();
+    this.request = { params: { id: '' } };
+  }
+});
+
+(0, _qunit.test)('it returns a number if it\'s a number', function (assert) {
+  this.request.params.id = 2;
+  assert.equal(this.handler._getIdForRequest(this.request), 2, 'it returns a number');
+});
+
+(0, _qunit.test)('it returns a number if it\'s a string represented number', function (assert) {
+  this.request.params.id = '2';
+  assert.equal(this.handler._getIdForRequest(this.request), 2, 'it returns a number');
+});
+
+(0, _qunit.test)('it returns a string it\'s a dasherized number', function (assert) {
+  this.request.params.id = '2-1';
+  assert.equal(this.handler._getIdForRequest(this.request), '2-1', 'it returns a number');
+});
+
+(0, _qunit.test)('it returns a string if it\'s a string', function (assert) {
+  this.request.params.id = 'someID';
+  assert.equal(this.handler._getIdForRequest(this.request), 'someID', 'it returns a number');
+});
+
+(0, _qunit.test)('getModelClassFromPath works', function (assert) {
+  var urlWithSlash = '/api/fancy-users';
+  var urlWithIdAndSlash = '/api/fancy-users/:id';
+
+  assert.equal(this.handler.getModelClassFromPath(urlWithSlash), 'fancy-user', 'it returns a singular model name');
+  assert.equal(this.handler.getModelClassFromPath(urlWithIdAndSlash, true), 'fancy-user', 'it returns a singular model name');
+});
+
+(0, _qunit.test)('it can read the id from the url', function (assert) {
+  var request = { params: { id: 'test-id' } };
+  assert.equal(this.handler._getIdForRequest(request), 'test-id', 'it returns id from url parameters.');
+});
+
+(0, _qunit.test)('it can read the id from the request body', function (assert) {
+  var request = { params: {} };
+  var jsonApiDoc = { data: { id: 'jsonapi-id' } };
+  assert.equal(this.handler._getIdForRequest(request, jsonApiDoc), 'jsonapi-id', 'it returns id from json api data.');
+});
+
+(0, _qunit.test)('_getAttrsForRequest works with attributes and relationships', function (assert) {
+  var payload = {
+    'data': {
+      'attributes': {
+        'does-mirage': true,
+        'name': 'Sam'
+      },
+      'relationships': {
+        'company': {
+          'data': {
+            'id': '1',
+            'type': 'companies'
+          }
+        },
+        'github-account': {
+          'data': {
+            'id': '1',
+            'type': 'github-accounts'
+          }
+        },
+        'something': {
+          'data': null
+        },
+        'many-things': {
+          'data': []
+        }
+      },
+      'type': 'github-account'
+    }
+  };
+
+  this.handler._getJsonApiDocForRequest = function (request, modelName) {
+    return payload;
+  };
+
+  var attrs = this.handler._getAttrsForRequest(this.request, 'user');
+
+  assert.deepEqual(attrs, {
+    name: 'Sam',
+    doesMirage: true,
+    companyId: '1',
+    githubAccountId: '1',
+    somethingId: null
+  }, 'it normalizes data correctly.');
+});
+
+(0, _qunit.test)('_getAttrsForRequest works with just relationships', function (assert) {
+  var payload = {
+    'data': {
+      'relationships': {
+        'company': {
+          'data': {
+            'id': '1',
+            'type': 'companies'
+          }
+        }
+      },
+      'type': 'github-account'
+    }
+  };
+
+  this.handler._getJsonApiDocForRequest = function (request, modelName) {
+    return payload;
+  };
+
+  var attrs = this.handler._getAttrsForRequest(this.request, 'user');
+
+  assert.deepEqual(attrs, {
+    companyId: '1'
+  }, 'it normalizes data correctly.');
+});
