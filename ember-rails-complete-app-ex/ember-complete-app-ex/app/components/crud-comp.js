@@ -21,21 +21,11 @@ export default Ember.Component.extend({
 	},
 	actions: {
 		createItem(){
+			this.get('createAction')();
 			this.showView('create');
-			let newItem = this.get('store').createRecord('task');	
-			this.set('selectedItem', newItem);
 		},
 		saveItem(){
-			let model = this.get('selectedItem');
-			model.set('user_id', this.get('authManager.data.authenticated.user.id'));
-			model.save().then((model) => {
-				this.set('msgVisible', false);
-				this.set('msgColor', 'green accent 4');
-				//this.get('todos').reload();
-				this.showView('main');
-			}).catch(() => {
-				this.set('msgColor', 'red accent 4');
-				this.set('msgVisible', true);
+			this.get('saveAction')().then(() => {
 			});
 		},
 		editItem(item){
