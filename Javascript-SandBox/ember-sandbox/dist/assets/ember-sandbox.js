@@ -32,6 +32,51 @@ define('ember-sandbox/components/app-version', ['exports', 'ember-cli-app-versio
     name: name
   });
 });
+define('ember-sandbox/controllers/application', ['exports', 'ember', 'ember-cli-mirage/route-handlers/shorthands/base'], function (exports, _ember, _emberCliMirageRouteHandlersShorthandsBase) {
+	exports['default'] = _ember['default'].Controller.extend({
+		actions: {
+			test: function test() {
+				var payload = {
+					'data': {
+						'attributes': {
+							'does-mirage': true,
+							'name': 'Sam'
+						},
+						'relationships': {
+							'company': {
+								'data': {
+									'id': '1',
+									'type': 'companies'
+								}
+							},
+							'github-account': {
+								'data': {
+									'id': '1',
+									'type': 'github-accounts'
+								}
+							},
+							'something': {
+								'data': null
+							},
+							'many-things': {
+								'data': []
+							}
+						},
+						'type': 'github-account'
+					}
+				};
+
+				var base = new _emberCliMirageRouteHandlersShorthandsBase['default']();
+				debugger;
+				base._getJsonApiDocForRequest = function (request, modelName) {
+					return payload;
+				};
+				this.request = { params: { id: '' } };
+				var attrs = base._getAttrsForRequest(this.request, 'user');
+			}
+		}
+	});
+});
 define('ember-sandbox/helpers/pluralize', ['exports', 'ember-inflector/lib/helpers/pluralize'], function (exports, _emberInflectorLibHelpersPluralize) {
   exports['default'] = _emberInflectorLibHelpersPluralize['default'];
 });
@@ -320,7 +365,7 @@ define("ember-sandbox/templates/application", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 4,
+            "line": 3,
             "column": 0
           }
         },
@@ -332,12 +377,11 @@ define("ember-sandbox/templates/application", ["exports"], function (exports) {
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createElement("h2");
-        dom.setAttribute(el1, "id", "title");
-        var el2 = dom.createTextNode("Welcome to Ember");
+        var el1 = dom.createElement("button");
+        var el2 = dom.createTextNode("test");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
+        var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
@@ -346,11 +390,13 @@ define("ember-sandbox/templates/application", ["exports"], function (exports) {
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 2, 2, contextualElement);
+        var element0 = dom.childAt(fragment, [0]);
+        var morphs = new Array(2);
+        morphs[0] = dom.createElementMorph(element0);
+        morphs[1] = dom.createMorphAt(fragment, 2, 2, contextualElement);
         return morphs;
       },
-      statements: [["content", "outlet", ["loc", [null, [3, 0], [3, 10]]]]],
+      statements: [["element", "action", ["test"], [], ["loc", [null, [1, 8], [1, 25]]]], ["content", "outlet", ["loc", [null, [2, 0], [2, 10]]]]],
       locals: [],
       templates: []
     };
@@ -409,7 +455,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("ember-sandbox/app")["default"].create({"name":"ember-sandbox","version":"0.0.0+ff3b7b1f"});
+  require("ember-sandbox/app")["default"].create({"name":"ember-sandbox","version":"0.0.0+0940c04b"});
 }
 
 /* jshint ignore:end */
