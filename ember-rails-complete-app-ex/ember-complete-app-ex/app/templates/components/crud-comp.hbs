@@ -24,12 +24,12 @@
 		{{md-btn icon='mdi-action-favorite'
 			action='createItem' buttonType='floating'
 			class='btn-small indigo darken-2'}}
-		{{#md-collection content=model as |item|}}
+			{{#md-collection content=model as |item|}}
 			<div id='item' class='collection-item'>
 				{{#link-to 'users.user.todos.todo' item}}{{item.title}}{{/link-to}}
 				<div class='secondary-content'>
 					<a data-autoId='edit' {{action 'editItem' item}}>Edit</a>
-					<a data-autoId='delete' {{action 'delete' item}}>Delete</a>
+					<a data-autoId='delete' {{action 'deleteItem' item}}>Delete</a>
 				</div>
 			</div>
 		{{/md-collection}}
@@ -46,7 +46,7 @@
 					{{msgContent}}
 			{{/md-card-panel}}	
 		{{/if}}
-		{{md-input value=selectedItem.title label='Title' class="col s12" validate=true}}
+				{{md-input value=selectedItem.title label='Title' class="col s12" validate=true}}
 		{{md-btn text='Save'
 			action='saveItem'
 			class='indigo darken-2'}}
@@ -55,8 +55,11 @@
 			action='closeView' buttonType='floating'
 			class='btn-small red accent-4 pull-right'}}
 		<h5>Edit todo</h5>
-		{{md-input label='Name' 
-			type="text" class="col s12" value=selectedItem.title validate=true}}
+		{{#each modelAttrs as |key|}}
+			{{md-input label=key 
+				type="text" class="col s12" value=(lookup (concat 'selectedItem.' key))}}
+				validate=true}}
+		{{/each}}
 		{{md-btn-submit class='indigo'
 			id='form-submit'
 			action='saveItem'

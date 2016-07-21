@@ -5,8 +5,12 @@ export default Ember.Component.extend({
 	msgColor: '',
 	modalIsOpen: '',
 	modalText: '',
+	modelAttrs: Ember.computed('model', function(){
+		let obj = this.get('model').toArray()[0].toJSON();
+		return Object.keys(obj);
+	}),
 	store: null,
-	msgContent: 'Task not saved!',
+	msgContent: '',
 	main: true,
 	views: ['main', 'create'],
 	selectedItem: null,
@@ -21,11 +25,19 @@ export default Ember.Component.extend({
 	},
 	actions: {
 		createItem(){
-			this.get('createAction')();
+			let newItem = this.get('createAction')();
+			this.set('selectedItem', newItem);
 			this.showView('create');
 		},
 		saveItem(){
-			this.get('saveAction')().then(() => {
+			let model = this.get('selectedItem');
+			this.get('saveAction')(model).then(() => {
+				this.set('msgVisible', false);
+				this.set('msgColor', 'green accent 4');
+				this.showView('main');
+			}).catch(() => {
+				this.set('msgColor', 'red accent 4');
+				this.set('msgVisible', true);
 			});
 		},
 		editItem(item){
@@ -35,16 +47,15 @@ export default Ember.Component.extend({
 		closeView(){
 			this.showView('main');
 		},
-		delete(item){
+		deleteItem(item){
 			this.set('modalText', 
 					`Are you sure you wanna delete ${item.get('title')} ?`);
 			this.toggleProperty('modalIsOpen');	
 			this.item = item;
 		},
 		agree(){
+			this.get('deleteAction')(this.item);
 			this.toggleProperty('modalIsOpen');
-			this.get('item').destroyRecord();
-			//this.get('deleteAction')(this.item);
 		},
 		closeModal(){
 			this.toggleProperty('modalIsOpen');
