@@ -35,12 +35,14 @@ export default Ember.Controller.extend({
 			};
 			
 			let base = new BaseHandler();
-			debugger;
+			/*
 			base._getJsonApiDocForRequest = function(request, modelName){
 				return payload;	
 			};
+			*/
 			this.request = { params: { id: '' } };
 			let attrs = base._getAttrsForRequest(this.request, 'user');
+			debugger;
 		}
 	}
 });

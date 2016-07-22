@@ -13,7 +13,7 @@ define('ember-sandbox/tests/controllers/application.jshint', ['exports'], functi
   QUnit.module('JSHint | controllers/application.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/application.js should pass jshint.\ncontrollers/application.js: line 38, col 13, Forgotten \'debugger\' statement?\ncontrollers/application.js: line 39, col 63, \'modelName\' is defined but never used.\ncontrollers/application.js: line 39, col 54, \'request\' is defined but never used.\ncontrollers/application.js: line 43, col 17, \'attrs\' is defined but never used.\n\n4 errors');
+    assert.ok(false, 'controllers/application.js should pass jshint.\ncontrollers/application.js: line 45, col 13, Forgotten \'debugger\' statement?\ncontrollers/application.js: line 7, col 17, \'payload\' is defined but never used.\ncontrollers/application.js: line 44, col 17, \'attrs\' is defined but never used.\n\n3 errors');
   });
 });
 define('ember-sandbox/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {

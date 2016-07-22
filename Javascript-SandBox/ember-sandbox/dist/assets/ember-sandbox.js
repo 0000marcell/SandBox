@@ -67,12 +67,14 @@ define('ember-sandbox/controllers/application', ['exports', 'ember', 'ember-cli-
 				};
 
 				var base = new _emberCliMirageRouteHandlersShorthandsBase['default']();
-				debugger;
-				base._getJsonApiDocForRequest = function (request, modelName) {
-					return payload;
-				};
+				/*
+    base._getJsonApiDocForRequest = function(request, modelName){
+    	return payload;	
+    };
+    */
 				this.request = { params: { id: '' } };
 				var attrs = base._getAttrsForRequest(this.request, 'user');
+				debugger;
 			}
 		}
 	});
@@ -455,7 +457,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("ember-sandbox/app")["default"].create({"name":"ember-sandbox","version":"0.0.0+0940c04b"});
+  require("ember-sandbox/app")["default"].create({"name":"ember-sandbox","version":"0.0.0+dc14b810"});
 }
 
 /* jshint ignore:end */

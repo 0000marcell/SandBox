@@ -33580,3 +33580,47 @@ Processing by Api::V1::TodosController#index as JSON
 Completed 200 OK in 21ms (Views: 15.4ms | ActiveRecord: 1.1ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/rails-complete-app-ex/config/initializers/doorkeeper.rb:1)
+Started POST "/oauth/token" for ::ffff:127.0.0.1 at 2016-07-21 21:40:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started POST "/oauth/token" for ::ffff:127.0.0.1 at 2016-07-21 21:40:49 -0300
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoorkeeper::AccessToken Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "29b7c2f3ce500b2cdb197b86ea3df4b850d172155abecdcf6b30c6252b29c451"], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "oauth_access_tokens" ("resource_owner_id", "token", "expires_in", "created_at", "scopes") VALUES (?, ?, ?, ?, ?)[0m  [["resource_owner_id", 1], ["token", "29b7c2f3ce500b2cdb197b86ea3df4b850d172155abecdcf6b30c6252b29c451"], ["expires_in", 7200], ["created_at", 2016-07-22 00:40:49 UTC], ["scopes", ""]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/api/v1/users/admin" for ::ffff:127.0.0.1 at 2016-07-21 21:40:50 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"admin"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "29b7c2f3ce500b2cdb197b86ea3df4b850d172155abecdcf6b30c6252b29c451"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.6ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModel::Serializer::Adapter::JsonApi (89.23ms)
+Completed 200 OK in 113ms (Views: 101.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/v1/users" for ::ffff:127.0.0.1 at 2016-07-21 21:40:50 -0300
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mDoorkeeper::AccessToken Load (0.6ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "29b7c2f3ce500b2cdb197b86ea3df4b850d172155abecdcf6b30c6252b29c451"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (11.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (46.01ms)
+Completed 200 OK in 60ms (Views: 37.7ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-07-21 21:40:56 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.5ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "29b7c2f3ce500b2cdb197b86ea3df4b850d172155abecdcf6b30c6252b29c451"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (53.93ms)
+Completed 200 OK in 65ms (Views: 57.1ms | ActiveRecord: 1.1ms)
+
+
