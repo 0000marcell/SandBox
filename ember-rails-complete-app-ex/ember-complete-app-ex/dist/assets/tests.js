@@ -244,7 +244,7 @@ define('app4/tests/components/crud-comp.jshint', ['exports'], function (exports)
   QUnit.module('JSHint | components/crud-comp.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/crud-comp.js should pass jshint.\ncomponents/crud-comp.js: line 22, col 24, Expected \'!==\' and instead saw \'!=\'.\ncomponents/crud-comp.js: line 23, col 17, Expected \'{\' and instead saw \'this\'.\n\n2 errors');
+    assert.ok(false, 'components/crud-comp.js should pass jshint.\ncomponents/crud-comp.js: line 2, col 8, \'_\' is defined but never used.\n\n1 error');
   });
 });
 define('app4/tests/components/pag-table.jshint', ['exports'], function (exports) {

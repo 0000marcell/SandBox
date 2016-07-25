@@ -24,15 +24,35 @@
 		{{md-btn icon='mdi-action-favorite'
 			action='createItem' buttonType='floating'
 			class='btn-small indigo darken-2'}}
-			{{#md-collection content=model as |item|}}
-			<div id='item' class='collection-item'>
-				{{#link-to 'users.user.todos.todo' item}}{{item.title}}{{/link-to}}
-				<div class='secondary-content'>
-					<a data-autoId='edit' {{action 'editItem' item}}>Edit</a>
-					<a data-autoId='delete' {{action 'deleteItem' item}}>Delete</a>
-				</div>
-			</div>
-		{{/md-collection}}
+		{{#md-table content=model as |row|}}
+			{{#md-table-col row=row key='title' header='Title'}}
+				{{#link-to 'users.user.todos.todo' row}}{{row.title}}{{/link-to}}
+				<a data-autoId='edit' {{action 'editItem' row}}>Edit</a>
+				<a data-autoId='delete' {{action 'deleteItem' row}}>Delete</a>
+			{{/md-table-col}}
+		{{/md-table}}
+		{{!--
+			{{#md-table content=model class='responsive-table' as |row|}}
+				{{#md-table-col row=row valueBindingPath='title' header='Title'}}
+					{{#link-to 'users.user.todos.todo' row}}{{row.title}}{{/link-to}}
+				{{/md-table-col}}
+				{{#md-table-col row=row header='Options'}}
+					<a data-autoId='edit' {{action 'editItem' row}}>Edit</a>
+					<a data-autoId='delete' {{action 'deleteItem' row}}>Delete</a>
+				{{/md-table-col}}
+			{{/md-table}}	
+		--}}
+			{{!--
+				{{#md-collection content=model as |item|}}
+					<div id='item' class='collection-item'>
+						{{#link-to 'users.user.todos.todo' item}}{{item.title}}{{/link-to}}
+						<div class='secondary-content'>
+							<a data-autoId='edit' {{action 'editItem' item}}>Edit</a>
+							<a data-autoId='delete' {{action 'deleteItem' item}}>Delete</a>
+						</div>
+					</div>
+				{{/md-collection}}
+			--}}
 		{{md-pagination min=1 max=total current=page range=5}}
 	{{else if create}}
 		{{md-btn icon='mdi-action-favorite'
@@ -55,10 +75,9 @@
 			action='closeView' buttonType='floating'
 			class='btn-small red accent-4 pull-right'}}
 		<h5>Edit todo</h5>
-		{{#each modelAttrs as |key|}}
-			{{md-input label=key 
-				type="text" class="col s12" value=(lookup (concat 'selectedItem.' key))}}
-				validate=true}}
+		{{#each modelToArray as |item|}}
+			{{md-input label=item.key
+				type="text" class="col s12" value=item.value validate=true}}
 		{{/each}}
 		{{md-btn-submit class='indigo'
 			id='form-submit'

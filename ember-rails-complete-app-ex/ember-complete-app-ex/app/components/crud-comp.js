@@ -1,13 +1,25 @@
 import Ember from 'ember';
+import _ from 'lodash';
 
 export default Ember.Component.extend({
 	msgVisible: false,
 	msgColor: '',
 	modalIsOpen: '',
 	modalText: '',
-	modelAttrs: Ember.computed('model', function(){
-		let obj = this.get('model').toArray()[0].toJSON();
-		return Object.keys(obj);
+	modelToArray: Ember.computed('selectedItem', function(){
+		let obj = this.get('selectedItem').toJSON(),
+			  array = [];
+		Object.keys(obj).forEach((key) => {
+			array.push({key: key, value: obj[key]});
+		});
+		return array;
+	}),
+	arrayToModel: Ember.computed('modelToArray', function(){
+		let model = this.get('selectedItem');
+		this.get('modelToArray').forEach((obj) => {
+			model.set(obj.key, obj.value);
+		});
+		return model;
 	}),
 	store: null,
 	msgContent: '',
@@ -19,8 +31,9 @@ export default Ember.Component.extend({
 		this.set(item, true);	
 		let views = this.get('views');
 		views.forEach((value) => {
-			if(value != item)
+			if(value !== item){
 				this.set(value, false);	
+			}
 		});
 	},
 	actions: {
@@ -30,7 +43,7 @@ export default Ember.Component.extend({
 			this.showView('create');
 		},
 		saveItem(){
-			let model = this.get('selectedItem');
+			let model = this.get('arrayToModel');
 			this.get('saveAction')(model).then(() => {
 				this.set('msgVisible', false);
 				this.set('msgColor', 'green accent 4');
