@@ -24,12 +24,22 @@
 		{{md-btn icon='mdi-action-favorite'
 			action='createItem' buttonType='floating'
 			class='btn-small indigo darken-2'}}
+		{{md-hl-table content=model}}
 		{{#md-table content=model as |row|}}
-			{{#md-table-col row=row key='title' header='Title'}}
-				{{#link-to 'users.user.todos.todo' row}}{{row.title}}{{/link-to}}
+			{{#each columns as |column|}}
+				{{md-table-col row=row key='title' header=column}}	
+				{{!--
+					{{#md-table-col row=row key=column header=column}}
+						{{#link-to 'users.user.todos.todo' row}}{{row.title}}{{/link-to}}
+					{{/md-table-col}}
+				--}}
+			{{/each}}
+			{{!--
+				{{#md-table-col row=row key='user_id' header='Options'}}
 				<a data-autoId='edit' {{action 'editItem' row}}>Edit</a>
 				<a data-autoId='delete' {{action 'deleteItem' row}}>Delete</a>
 			{{/md-table-col}}
+			--}}
 		{{/md-table}}
 		{{!--
 			{{#md-table content=model class='responsive-table' as |row|}}
