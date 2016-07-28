@@ -1,4 +1,4 @@
-import Pretender from 'pretender';
+import Pretender from '../pretender';
 
 let PHOTOS = {
   "10": {
