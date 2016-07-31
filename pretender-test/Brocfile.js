@@ -1,34 +1,47 @@
-/* Brocfile.js */
-var compileES6 = require('broccoli-es6-concatenator')
-var pickFiles = require('broccoli-funnel')
-var mergeTrees = require('broccoli-merge-trees')
+const funnel = require('broccoli-funnel');
+const concat = require('broccoli-concat');
+const mergeTrees = require('broccoli-merge-trees');
+const esTranspiler = require('broccoli-babel-transpiler');
+const pkg = require('./package.json');
 
+const src = 'src';
 
-// create tree for files in the app folder
-var app = 'app'
-app = pickFiles(app, {
-  srcDir: '/',
-  destDir: 'app' // move under app namespace
-})
+const indexHtml = funnel(src, {
+  files: ['index.html']
+});
 
-// include app, styles and vendor trees
-var sourceTrees = [app]
+const js = esTranspiler(src, {
+  stage: 0,
+  moduleIds: true,
+  modules: 'amd',
 
-// merge array into tree
-var appAndDependencies = new mergeTrees(sourceTrees, { overwrite: true })
+  // Transforms /index.js files to use their containing directory name
+  getModuleId: function (name) { 
+    name = pkg.name + '/' + name;
+    return name.replace(/\/index$/, '');
+  },
 
-// Transpile ES6 modules and concatenate them,
-// recursively including modules referenced by import statements.
-var appJs = compileES6(appAndDependencies, {
-  // Prepend contents of vendor/loader.js
-  //loaderFile: 'loader.js',
+  // Fix relative imports inside /index's
+  resolveModuleSource: function (source, filename) {
+    var match = filename.match(/(.+)\/index\.\S+$/i);
+
+    // is this an import inside an /index file?
+    if (match) {
+      var path = match[1];
+      return source
+        .replace(/^\.\//, path + '/')
+        .replace(/^\.\.\//, '');
+    } else {
+      return source;
+    }
+  }
+});
+
+const main = concat(js, {
   inputFiles: [
-    'app/**/*.js'
+    '**/*.js'
   ],
-  outputFile: '/assets/app.js'
-})
+  outputFile: '/' + pkg.name + '.js'
+});
 
-var publicFiles = 'public'
-
-// merge js, css and public file trees, and export them
-module.exports = mergeTrees([appJs, publicFiles])
+module.exports = mergeTrees([main, indexHtml]);
