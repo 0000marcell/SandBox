@@ -7,7 +7,7 @@ const pkg = require('./package.json');
 const src = 'src';
 
 const indexHtml = funnel(src, {
-  files: ['index.html']
+  files: ['index.html', 'require.js']
 });
 
 const js = esTranspiler(src, {
@@ -41,7 +41,7 @@ const main = concat(js, {
   inputFiles: [
     '**/*.js'
   ],
-  outputFile: '/' + pkg.name + '.js'
+  outputFile: '/modules.js'
 });
 
 module.exports = mergeTrees([main, indexHtml]);

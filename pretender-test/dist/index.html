@@ -15,19 +15,7 @@
     </style>
     <body>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.18/require.min.js"></script>
-			<script src="pretender-test.js"></script>
-			<script>
-				requirejs.config({
-					paths: {
-						jquery: '//code.jquery.com/jquery-2.1.4.min'
-					}
-				});
-				require(['jquery'], function($) {
-					alert('main!');
-					$.get('/photos/12', {success: function(data){ 
-						console.log('sucess');
-					}});
-				});
-			</script>	
-    </body>
+			<script src="modules.js"></script>
+			<script data-main="scripts/main" src="require.js"></script>
+			</body>
 </html>
