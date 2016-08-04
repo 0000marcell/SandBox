@@ -8,7 +8,12 @@ const pkg = require('./package.json');
 // COMPILE BOWER
 const bower = mergeRecursive('./src/test/**/*.js');
 
-const bowerDependencies = concat(bower, {
+const bowerTranspiled = babel(bower, {
+	moduleIds: true,
+	modules: 'amd'	
+});
+
+const bowerDependencies = concat(bowerTranspiled, {
 	inputFiles: ['**/*.js'],
 	outputFile: '/bower.js'
 });
