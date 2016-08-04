@@ -1,3 +1,10 @@
-require(['doit'], function (doit){
-	doit();	
+requirejs.config({
+	baseUrl: 'js/lib',
+	paths: {
+		"jquery": "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min"	
+}
+});
+
+require(['jquery', 'server'], function ($){
+	server();
 });
