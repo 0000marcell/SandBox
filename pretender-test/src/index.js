@@ -1,10 +1,9 @@
 requirejs.config({
-	baseUrl: 'js/lib',
 	paths: {
-		"jquery": "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min"	
-}
+		jquery: "https://code.jquery.com/jquery-2.2.4.min.js"
+	}
 });
 
-require(['jquery', 'server'], function ($){
+require([ 'fake_xml_http_request','route-recognizer', 'jquery', 'server'], function (server){
 	server();
 });

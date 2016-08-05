@@ -1,13 +1,13 @@
 const funnel = require('broccoli-funnel');
 const concat = require('broccoli-concat');
 const mergeTrees = require('broccoli-merge-trees');
-const mergeRecursive = require('./broccoli-merge-recursive');
+const mergeRecursive = require('broccoli-merge-recursive');
 const babel = require('broccoli-babel-transpiler');
 const pkg = require('./package.json');
 
 // COMPILE BOWER
-const bower = mergeRecursive('./src/test/**/*.js');
-
+const bowerPaths = mergeRecursive('./bower_components/**/*.js');
+const bower = mergeTrees(bowerPaths, { overwrite: true });
 const bowerTranspiled = babel(bower, {
 	moduleIds: true,
 	modules: 'amd'	
