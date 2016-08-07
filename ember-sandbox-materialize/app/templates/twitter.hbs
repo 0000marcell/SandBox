@@ -1,8 +1,45 @@
 {{#md-navbar class='grey lighten-5'}}
-{{md-btn text='Button'
-	icon='mdi-action-favorite'
-	action='debug'
-	class='deep-purple darken-3'}}
+<div class='row'>
+	<div class='col l9 m5 l5'>
+		<ul>
+			<li>
+				<a>
+					<span><i class="large material-icons">home</i>Inicio</span>
+				</a>
+			</li>
+			<li>
+				<a>
+					<span><i class="large material-icons">star</i>Inicio</span>
+					<i class="large material-icons">star</i>
+					Moments
+				</a>
+			</li>
+			<li>
+				<a>
+					<i class="large material-icons">add_alert</i>
+					Notificaçoes
+				</a>
+			</li>
+			<li>
+				<a>
+					<i class="large material-icons">email</i>
+					Mensagens
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class='col s3 m3 l3'>
+		<i class="large material-icons">twitter</i>		
+	</div>
+	<div class='col s4 m4 l4'>
+		{{input type='pesquisa' value=''}}
+		<img class='responsive-img' src="https://pbs.twimg.com/profile_images/631135139913965568/ojAeKgTD_bigger.jpg">
+		<button>
+		<i class='medium material-icon'>create</i>
+		</button>
+	</div>
+</div>
+
 {{/md-navbar}}
 <div class='container max-h'>
 	<div class='row max-h'>

@@ -1,9 +1,0 @@
-make icons work in this repo
-verify if you can install a brand new version with the lastest materialize(follow the instruction on the ember-cli-materialize site)
-implementing layouts of famous sites(each one is a route):
-  twitter: 
-implementing carousell component in ember
-http://materializecss.com/carousel.html
-
-done:
-create shortcut for all materialize components
