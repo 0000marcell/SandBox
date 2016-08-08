@@ -1,0 +1,12 @@
+.twitter-navbar{
+	background-color: red;
+	a{
+		@extend .valign-wrapper;
+		height: 55px;
+		transition: all .15s ease-in-out;
+	}
+
+	a:hover{
+		border-bottom: 4px solid blue;
+	}
+}
