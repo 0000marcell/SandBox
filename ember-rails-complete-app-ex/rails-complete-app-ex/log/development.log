@@ -37066,3 +37066,661 @@ Processing by Api::V1::TodosController#index as JSON
 Completed 200 OK in 26ms (Views: 18.0ms | ActiveRecord: 2.9ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/rails-complete-app-ex/config/initializers/doorkeeper.rb:1)
+Started POST "/oauth/token" for ::ffff:127.0.0.1 at 2016-08-10 09:08:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoorkeeper::AccessToken Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "oauth_access_tokens" ("resource_owner_id", "token", "expires_in", "created_at", "scopes") VALUES (?, ?, ?, ?, ?)[0m  [["resource_owner_id", 1], ["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["expires_in", 7200], ["created_at", 2016-08-10 12:08:14 UTC], ["scopes", ""]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/api/v1/users/admin" for ::ffff:127.0.0.1 at 2016-08-10 09:08:14 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"admin"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModel::Serializer::Adapter::JsonApi (82.82ms)
+Completed 200 OK in 104ms (Views: 96.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/v1/users" for ::ffff:127.0.0.1 at 2016-08-10 09:08:15 -0300
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (13.39ms)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:08:16 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (62.51ms)
+Completed 200 OK in 69ms (Views: 65.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:08:19 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.37ms)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=3&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:08:19 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"3", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 10]]
+[active_model_serializers]   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.19ms)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:08:21 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.8ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (12.75ms)
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:08:22 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.58ms)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/users" for ::ffff:127.0.0.1 at 2016-08-10 09:08:32 -0300
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (21.72ms)
+Completed 200 OK in 30ms (Views: 24.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/users/admin" for ::ffff:127.0.0.1 at 2016-08-10 09:08:33 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"admin"}
+  [1m[36mDoorkeeper::AccessToken Load (0.9ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModel::Serializer::Adapter::JsonApi (14.49ms)
+Completed 200 OK in 21ms (Views: 14.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:08:33 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+Started GET "/api/v1/tasks?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:08:33 -0300
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.7ms)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 1.3ms)
+
+
+Processing by Api::V1::TasksController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (2.7ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (26.39ms)
+Completed 200 OK in 38ms (Views: 28.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-08-10 09:08:34 -0300
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-08-10 09:08:34 -0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+MessagesChannel#receive({"username"=>"guest", "body"=>"message body"})
+[ActionCable] Broadcasting to messages: {"username"=>"guest", "body"=>"message body"}
+MessagesChannel transmitting {"username"=>"guest", "body"=>"message body"} (via streamed from messages)
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:08:43 -0300
+Started GET "/api/v1/tasks?page%5Bnumber%5D=3&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:08:43 -0300
+Processing by Api::V1::TodosController#index as JSON
+Processing by Api::V1::TasksController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  Parameters: {"page"=>{"number"=>"3", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 10]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.76ms)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 1.1ms)
+
+
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (15.49ms)
+Completed 200 OK in 35ms (Views: 17.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:08:46 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+Started GET "/api/v1/tasks?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:08:46 -0300
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+Processing by Api::V1::TasksController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mDoorkeeper::AccessToken Load (0.5ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (9.14ms)
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+Completed 200 OK in 29ms (Views: 19.6ms | ActiveRecord: 1.0ms)
+
+
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (17.75ms)
+Completed 200 OK in 38ms (Views: 20.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:08:54 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.98ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 1.0ms)
+
+
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-08-10 09:12:34 -0300
+MessagesChannel stopped streaming from messages
+Started GET "/api/v1/users" for ::ffff:127.0.0.1 at 2016-08-10 09:12:35 -0300
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.6ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (28.95ms)
+Completed 200 OK in 45ms (Views: 32.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/v1/users/admin" for ::ffff:127.0.0.1 at 2016-08-10 09:12:36 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"admin"}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.5ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModel::Serializer::Adapter::JsonApi (13.73ms)
+Completed 200 OK in 20ms (Views: 13.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:12:36 -0300
+Started GET "/api/v1/tasks?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:12:36 -0300
+Processing by Api::V1::TasksController#index as JSON
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (8.47ms)
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 0.8ms)
+
+
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (29.84ms)
+Completed 200 OK in 38ms (Views: 32.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-08-10 09:12:37 -0300
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-08-10 09:12:37 -0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:12:47 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+Started GET "/api/v1/tasks?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=1" for ::ffff:127.0.0.1 at 2016-08-10 09:12:47 -0300
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+Processing by Api::V1::TasksController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"1"}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+  [1m[36mTask Load (1.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE (title LIKE '%1%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (10.77ms)
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 16.7ms | ActiveRecord: 1.6ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.49ms)
+Completed 200 OK in 22ms (Views: 7.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:12:47 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+Started GET "/api/v1/tasks?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:12:47 -0300
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+Processing by Api::V1::TasksController#index as JSON
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.18ms)
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 16.4ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (12.19ms)
+Completed 200 OK in 21ms (Views: 15.0ms | ActiveRecord: 1.4ms)
+
+
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-08-10 09:21:20 -0300
+MessagesChannel stopped streaming from messages
+Started GET "/api/v1/users" for ::ffff:127.0.0.1 at 2016-08-10 09:21:21 -0300
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mDoorkeeper::AccessToken Load (0.8ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.97ms)
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/users/admin" for ::ffff:127.0.0.1 at 2016-08-10 09:21:21 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"admin"}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.07ms)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:21:21 -0300
+Processing by Api::V1::TodosController#index as JSON
+Started GET "/api/v1/tasks?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:21:21 -0300
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+Processing by Api::V1::TasksController#index as JSON
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.58ms)
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.7ms)
+
+
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (13.1ms)
+Completed 200 OK in 23ms (Views: 15.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-08-10 09:21:22 -0300
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-08-10 09:21:22 -0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-08-10 09:21:35 -0300
+MessagesChannel stopped streaming from messages
+Started GET "/api/v1/users" for ::ffff:127.0.0.1 at 2016-08-10 09:21:36 -0300
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (13.83ms)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/users/admin" for ::ffff:127.0.0.1 at 2016-08-10 09:21:36 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"admin"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModel::Serializer::Adapter::JsonApi (8.63ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:21:36 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+Started GET "/api/v1/tasks?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:21:36 -0300
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+Processing by Api::V1::TasksController#index as JSON
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.85ms)
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (14.49ms)
+Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-08-10 09:21:37 -0300
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-08-10 09:21:37 -0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-08-10 09:24:22 -0300
+MessagesChannel stopped streaming from messages
+Started GET "/api/v1/users" for ::ffff:127.0.0.1 at 2016-08-10 09:24:23 -0300
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mDoorkeeper::AccessToken Load (26.6ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (15.07ms)
+Completed 200 OK in 53ms (Views: 20.0ms | ActiveRecord: 27.9ms)
+
+
+Started GET "/api/v1/users/admin" for ::ffff:127.0.0.1 at 2016-08-10 09:24:23 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"admin"}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModel::Serializer::Adapter::JsonApi (10.37ms)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:24:23 -0300
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+Started GET "/api/v1/tasks?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-08-10 09:24:23 -0300
+  [1m[36mDoorkeeper::AccessToken Load (1.0ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+Processing by Api::V1::TasksController#index as JSON
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "c9f2ddf034abccc93db53422673694655c9a1ab4a15128a3295ab3f0d2549f79"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.45ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 1.8ms)
+
+
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (18.29ms)
+Completed 200 OK in 32ms (Views: 20.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-08-10 09:24:24 -0300
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-08-10 09:24:24 -0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-08-10 09:24:40 -0300
+MessagesChannel stopped streaming from messages
+Started GET "/" for 192.168.1.8 at 2016-08-10 09:55:26 -0300
+Cannot render console from 192.168.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0/lib/rails/templates/rails/welcome/index.html.erb (8.0ms)
+Completed 200 OK in 29ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apple-touch-icon-precomposed.png" for 192.168.1.8 at 2016-08-10 09:55:26 -0300
+Cannot render console from 192.168.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.0) lib/puma/configuration.rb:225:in `call'
+puma (3.5.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.0) lib/puma/server.rb:406:in `process_client'
+puma (3.5.0) lib/puma/server.rb:271:in `block in run'
+puma (3.5.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered collection of /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (85.6ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.4ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (244.1ms)
+Started GET "/apple-touch-icon.png" for 192.168.1.8 at 2016-08-10 09:55:27 -0300
+Cannot render console from 192.168.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.0) lib/puma/configuration.rb:225:in `call'
+puma (3.5.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.0) lib/puma/server.rb:406:in `process_client'
+puma (3.5.0) lib/puma/server.rb:271:in `block in run'
+puma (3.5.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (147.0ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (252.0ms)
+Started GET "/" for 192.168.1.8 at 2016-08-10 09:55:27 -0300
+Cannot render console from 192.168.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0/lib/rails/templates/rails/welcome/index.html.erb (5.6ms)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apple-touch-icon-precomposed.png" for 192.168.1.8 at 2016-08-10 09:55:27 -0300
+Cannot render console from 192.168.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.0) lib/puma/configuration.rb:225:in `call'
+puma (3.5.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.0) lib/puma/server.rb:406:in `process_client'
+puma (3.5.0) lib/puma/server.rb:271:in `block in run'
+puma (3.5.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (123.1ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.2ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (380.4ms)
+Started GET "/apple-touch-icon.png" for 192.168.1.8 at 2016-08-10 09:55:28 -0300
+Cannot render console from 192.168.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.0) lib/puma/configuration.rb:225:in `call'
+puma (3.5.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.0) lib/puma/server.rb:406:in `process_client'
+puma (3.5.0) lib/puma/server.rb:271:in `block in run'
+puma (3.5.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered collection of /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (75.9ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (220.5ms)
+Started POST "/oauth/token" for ::ffff:127.0.0.1 at 2016-08-10 11:35:50 -0300
+Processing by CustomTokensController#create as JSON
+  Parameters: {"grant_type"=>"refresh_token"}
+Completed 401 Unauthorized in 730ms
+
+
