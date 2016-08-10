@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/SandBox/pretender-test/tmp/funnel-input_base_path-kO1A2Bxd.tmp/0/index.js

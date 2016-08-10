@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/SandBox/ember-sandbox-materialize/tmp/funnel-input_base_path-72V52FHC.tmp/0/utils/can-use-new-syntax.js

@@ -6482,16 +6482,6 @@ jQuery(document).ready(function() {
   }, 250);
 });
 
-define('ember-qunit', ['exports', 'ember-qunit/module-for', 'ember-qunit/module-for-component', 'ember-qunit/module-for-model', 'ember-qunit/test', 'ember-qunit/only', 'ember-test-helpers'], function (exports, _emberQunitModuleFor, _emberQunitModuleForComponent, _emberQunitModuleForModel, _emberQunitTest, _emberQunitOnly, _emberTestHelpers) {
-  'use strict';
-
-  exports.moduleFor = _emberQunitModuleFor['default'];
-  exports.moduleForComponent = _emberQunitModuleForComponent['default'];
-  exports.moduleForModel = _emberQunitModuleForModel['default'];
-  exports.test = _emberQunitTest['default'];
-  exports.only = _emberQunitOnly['default'];
-  exports.setResolver = _emberTestHelpers.setResolver;
-});
 define('ember-qunit/module-for-component', ['exports', 'ember-qunit/qunit-module', 'ember-test-helpers'], function (exports, _emberQunitQunitModule, _emberTestHelpers) {
   'use strict';
 
@@ -6668,20 +6658,15 @@ define('ember-qunit/test', ['exports', 'ember-qunit/test-wrapper', 'qunit'], fun
     _emberQunitTestWrapper['default'].apply(null, args);
   }
 });
-define('ember-test-helpers', ['exports', 'ember', 'ember-test-helpers/test-module', 'ember-test-helpers/test-module-for-acceptance', 'ember-test-helpers/test-module-for-integration', 'ember-test-helpers/test-module-for-component', 'ember-test-helpers/test-module-for-model', 'ember-test-helpers/test-context', 'ember-test-helpers/test-resolver'], function (exports, _ember, _emberTestHelpersTestModule, _emberTestHelpersTestModuleForAcceptance, _emberTestHelpersTestModuleForIntegration, _emberTestHelpersTestModuleForComponent, _emberTestHelpersTestModuleForModel, _emberTestHelpersTestContext, _emberTestHelpersTestResolver) {
+define('ember-qunit', ['exports', 'ember-qunit/module-for', 'ember-qunit/module-for-component', 'ember-qunit/module-for-model', 'ember-qunit/test', 'ember-qunit/only', 'ember-test-helpers'], function (exports, _emberQunitModuleFor, _emberQunitModuleForComponent, _emberQunitModuleForModel, _emberQunitTest, _emberQunitOnly, _emberTestHelpers) {
   'use strict';
 
-  _ember['default'].testing = true;
-
-  exports.TestModule = _emberTestHelpersTestModule['default'];
-  exports.TestModuleForAcceptance = _emberTestHelpersTestModuleForAcceptance['default'];
-  exports.TestModuleForIntegration = _emberTestHelpersTestModuleForIntegration['default'];
-  exports.TestModuleForComponent = _emberTestHelpersTestModuleForComponent['default'];
-  exports.TestModuleForModel = _emberTestHelpersTestModuleForModel['default'];
-  exports.getContext = _emberTestHelpersTestContext.getContext;
-  exports.setContext = _emberTestHelpersTestContext.setContext;
-  exports.unsetContext = _emberTestHelpersTestContext.unsetContext;
-  exports.setResolver = _emberTestHelpersTestResolver.setResolver;
+  exports.moduleFor = _emberQunitModuleFor['default'];
+  exports.moduleForComponent = _emberQunitModuleForComponent['default'];
+  exports.moduleForModel = _emberQunitModuleForModel['default'];
+  exports.test = _emberQunitTest['default'];
+  exports.only = _emberQunitOnly['default'];
+  exports.setResolver = _emberTestHelpers.setResolver;
 });
 define('ember-test-helpers/-legacy-overrides', ['exports', 'ember', 'ember-test-helpers/has-ember-version'], function (exports, _ember, _emberTestHelpersHasEmberVersion) {
   'use strict';
@@ -8081,6 +8066,21 @@ define('ember-test-helpers/wait', ['exports', 'ember'], function (exports, _embe
       }, 10);
     });
   }
+});
+define('ember-test-helpers', ['exports', 'ember', 'ember-test-helpers/test-module', 'ember-test-helpers/test-module-for-acceptance', 'ember-test-helpers/test-module-for-integration', 'ember-test-helpers/test-module-for-component', 'ember-test-helpers/test-module-for-model', 'ember-test-helpers/test-context', 'ember-test-helpers/test-resolver'], function (exports, _ember, _emberTestHelpersTestModule, _emberTestHelpersTestModuleForAcceptance, _emberTestHelpersTestModuleForIntegration, _emberTestHelpersTestModuleForComponent, _emberTestHelpersTestModuleForModel, _emberTestHelpersTestContext, _emberTestHelpersTestResolver) {
+  'use strict';
+
+  _ember['default'].testing = true;
+
+  exports.TestModule = _emberTestHelpersTestModule['default'];
+  exports.TestModuleForAcceptance = _emberTestHelpersTestModuleForAcceptance['default'];
+  exports.TestModuleForIntegration = _emberTestHelpersTestModuleForIntegration['default'];
+  exports.TestModuleForComponent = _emberTestHelpersTestModuleForComponent['default'];
+  exports.TestModuleForModel = _emberTestHelpersTestModuleForModel['default'];
+  exports.getContext = _emberTestHelpersTestContext.getContext;
+  exports.setContext = _emberTestHelpersTestContext.setContext;
+  exports.unsetContext = _emberTestHelpersTestContext.unsetContext;
+  exports.setResolver = _emberTestHelpersTestResolver.setResolver;
 });
 define('klassy', ['exports'], function (exports) {
   /**

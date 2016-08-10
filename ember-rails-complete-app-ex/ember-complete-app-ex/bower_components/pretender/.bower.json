@@ -32,5 +32,6 @@
   },
   "_source": "https://github.com/trek/pretender.git",
   "_target": "~1.1.0",
-  "_originalSource": "pretender"
+  "_originalSource": "pretender",
+  "_direct": true
 }

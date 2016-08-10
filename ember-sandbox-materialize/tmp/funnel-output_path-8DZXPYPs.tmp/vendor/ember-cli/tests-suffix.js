@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/SandBox/ember-sandbox-materialize/tmp/funnel-input_base_path-iFxL8dlR.tmp/0//tests-suffix.js

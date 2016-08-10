@@ -34,5 +34,6 @@
   },
   "_source": "https://github.com/alex-seville/blanket.git",
   "_target": "5e94fc30f2e694bb5c3718ddcbf60d467f4b4d26",
-  "_originalSource": "blanket"
+  "_originalSource": "blanket",
+  "_direct": true
 }

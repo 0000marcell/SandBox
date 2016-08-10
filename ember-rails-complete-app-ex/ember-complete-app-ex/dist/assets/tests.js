@@ -67,62 +67,6 @@ define('app4/tests/acceptance/signup-test.jshint', ['exports'], function (export
     assert.ok(true, 'acceptance/signup-test.js should pass jshint.');
   });
 });
-define('app4/tests/acceptance/users-test', ['exports', 'qunit', 'app4/tests/helpers/module-for-acceptance'], function (exports, _qunit, _app4TestsHelpersModuleForAcceptance) {
-
-	(0, _app4TestsHelpersModuleForAcceptance['default'])('Acceptance | users');
-
-	(0, _qunit.test)('visiting /users', function (assert) {
-		visit('/users');
-		andThen(function () {
-			assert.equal(currentURL(), '/users');
-		});
-	});
-
-	(0, _qunit.test)('I can view the users', function (assert) {
-		var users = server.createList('user', 3);
-		visit('/users');
-		andThen(function () {
-			assert.equal(find('div#item').length, 3);
-			assert.equal(find('div#item:first').text(), users[0].name);
-		});
-	});
-});
-define('app4/tests/acceptance/users-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | acceptance/users-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'acceptance/users-test.js should pass jshint.');
-  });
-});
-define('app4/tests/acceptance/users/user-test', ['exports', 'qunit', 'app4/tests/helpers/module-for-acceptance'], function (exports, _qunit, _app4TestsHelpersModuleForAcceptance) {
-
-	(0, _app4TestsHelpersModuleForAcceptance['default'])('Acceptance | users/user');
-
-	(0, _qunit.test)('visiting /users/user', function (assert) {
-		var user = server.create('user');
-		visit('/login');
-		andThen(function () {
-			fillIn(find('input[type=email]'), 'user0@gmail.com');
-			fillIn(find('input[type=password]'), '123456');
-			click('button#login');
-			andThen(function () {
-				assert.equal(currentURL(), '/users/1');
-				assert.equal(find('h5').text(), user.name);
-			});
-		});
-	});
-});
-define('app4/tests/acceptance/users/user-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | acceptance/users/user-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'acceptance/users/user-test.js should pass jshint.');
-  });
-});
 define('app4/tests/acceptance/users/user/todos-test', ['exports', 'ember', 'qunit', 'app4/tests/helpers/start-app', 'ember-complete-app-ex/tests/helpers/module-for-acceptance', 'ember-complete-app-ex/tests/helpers/ember-simple-auth'], function (exports, _ember, _qunit, _app4TestsHelpersStartApp, _emberCompleteAppExTestsHelpersModuleForAcceptance, _emberCompleteAppExTestsHelpersEmberSimpleAuth) {
 
 	var application = undefined,
@@ -193,6 +137,62 @@ define('app4/tests/acceptance/users/user/todos-test.jshint', ['exports'], functi
     assert.ok(true, 'acceptance/users/user/todos-test.js should pass jshint.');
   });
 });
+define('app4/tests/acceptance/users/user-test', ['exports', 'qunit', 'app4/tests/helpers/module-for-acceptance'], function (exports, _qunit, _app4TestsHelpersModuleForAcceptance) {
+
+	(0, _app4TestsHelpersModuleForAcceptance['default'])('Acceptance | users/user');
+
+	(0, _qunit.test)('visiting /users/user', function (assert) {
+		var user = server.create('user');
+		visit('/login');
+		andThen(function () {
+			fillIn(find('input[type=email]'), 'user0@gmail.com');
+			fillIn(find('input[type=password]'), '123456');
+			click('button#login');
+			andThen(function () {
+				assert.equal(currentURL(), '/users/1');
+				assert.equal(find('h5').text(), user.name);
+			});
+		});
+	});
+});
+define('app4/tests/acceptance/users/user-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | acceptance/users/user-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'acceptance/users/user-test.js should pass jshint.');
+  });
+});
+define('app4/tests/acceptance/users-test', ['exports', 'qunit', 'app4/tests/helpers/module-for-acceptance'], function (exports, _qunit, _app4TestsHelpersModuleForAcceptance) {
+
+	(0, _app4TestsHelpersModuleForAcceptance['default'])('Acceptance | users');
+
+	(0, _qunit.test)('visiting /users', function (assert) {
+		visit('/users');
+		andThen(function () {
+			assert.equal(currentURL(), '/users');
+		});
+	});
+
+	(0, _qunit.test)('I can view the users', function (assert) {
+		var users = server.createList('user', 3);
+		visit('/users');
+		andThen(function () {
+			assert.equal(find('div#item').length, 3);
+			assert.equal(find('div#item:first').text(), users[0].name);
+		});
+	});
+});
+define('app4/tests/acceptance/users-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | acceptance/users-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'acceptance/users-test.js should pass jshint.');
+  });
+});
 define('app4/tests/adapters/application.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -236,24 +236,6 @@ define('app4/tests/authorizers/application.jshint', ['exports'], function (expor
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'authorizers/application.js should pass jshint.');
-  });
-});
-define('app4/tests/components/crud-comp.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | components/crud-comp.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(false, 'components/crud-comp.js should pass jshint.\ncomponents/crud-comp.js: line 2, col 8, \'_\' is defined but never used.\n\n1 error');
-  });
-});
-define('app4/tests/components/md-hl-table.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | components/md-hl-table.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'components/md-hl-table.js should pass jshint.');
   });
 });
 define('app4/tests/components/pag-table.jshint', ['exports'], function (exports) {
@@ -328,22 +310,13 @@ define('app4/tests/controllers/users/user/dashboard.jshint', ['exports'], functi
     assert.ok(true, 'controllers/users/user/dashboard.js should pass jshint.');
   });
 });
-define('app4/tests/controllers/users/user/todos.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | controllers/users/user/todos.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'controllers/users/user/todos.js should pass jshint.');
-  });
-});
 define('app4/tests/controllers/users/user/todos/index.jshint', ['exports'], function (exports) {
   'use strict';
 
   QUnit.module('JSHint | controllers/users/user/todos/index.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/users/user/todos/index.js should pass jshint.\ncontrollers/users/user/todos/index.js: line 22, col 17, Expected \'{\' and instead saw \'model\'.\ncontrollers/users/user/todos/index.js: line 24, col 36, \'model\' is defined but never used.\n\n2 errors');
+    assert.ok(true, 'controllers/users/user/todos/index.js should pass jshint.');
   });
 });
 define('app4/tests/controllers/users/user/todos/new.jshint', ['exports'], function (exports) {
@@ -355,6 +328,15 @@ define('app4/tests/controllers/users/user/todos/new.jshint', ['exports'], functi
     assert.ok(true, 'controllers/users/user/todos/new.js should pass jshint.');
   });
 });
+define('app4/tests/controllers/users/user/todos/todo/edit.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/users/user/todos/todo/edit.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/users/user/todos/todo/edit.js should pass jshint.');
+  });
+});
 define('app4/tests/controllers/users/user/todos/todo.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -364,13 +346,13 @@ define('app4/tests/controllers/users/user/todos/todo.jshint', ['exports'], funct
     assert.ok(true, 'controllers/users/user/todos/todo.js should pass jshint.');
   });
 });
-define('app4/tests/controllers/users/user/todos/todo/edit.jshint', ['exports'], function (exports) {
+define('app4/tests/controllers/users/user/todos.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint | controllers/users/user/todos/todo/edit.js');
+  QUnit.module('JSHint | controllers/users/user/todos.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'controllers/users/user/todos/todo/edit.js should pass jshint.');
+    assert.ok(true, 'controllers/users/user/todos.js should pass jshint.');
   });
 });
 define('app4/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
@@ -547,304 +529,6 @@ define('app4/tests/instance-initializers/global.jshint', ['exports'], function (
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'instance-initializers/global.js should pass jshint.');
-  });
-});
-define('app4/tests/integration/components/crud-comp-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleForComponent)('crud-comp', 'Integration | Component | crud comp', {
-    integration: true
-  });
-
-  (0, _emberQunit.test)('it renders', function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });
-
-    this.render(Ember.HTMLBars.template((function () {
-      return {
-        meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
-          'loc': {
-            'source': null,
-            'start': {
-              'line': 1,
-              'column': 0
-            },
-            'end': {
-              'line': 1,
-              'column': 13
-            }
-          }
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createComment('');
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-          dom.insertBoundary(fragment, 0);
-          dom.insertBoundary(fragment, null);
-          return morphs;
-        },
-        statements: [['content', 'crud-comp', ['loc', [null, [1, 0], [1, 13]]]]],
-        locals: [],
-        templates: []
-      };
-    })()));
-
-    assert.equal(this.$().text().trim(), '');
-
-    // Template block usage:
-    this.render(Ember.HTMLBars.template((function () {
-      var child0 = (function () {
-        return {
-          meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
-            'loc': {
-              'source': null,
-              'start': {
-                'line': 2,
-                'column': 4
-              },
-              'end': {
-                'line': 4,
-                'column': 4
-              }
-            }
-          },
-          isEmpty: false,
-          arity: 0,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode('      template block text\n');
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes() {
-            return [];
-          },
-          statements: [],
-          locals: [],
-          templates: []
-        };
-      })();
-
-      return {
-        meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
-          'loc': {
-            'source': null,
-            'start': {
-              'line': 1,
-              'column': 0
-            },
-            'end': {
-              'line': 5,
-              'column': 2
-            }
-          }
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode('\n');
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment('');
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode('  ');
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
-          return morphs;
-        },
-        statements: [['block', 'crud-comp', [], [], 0, null, ['loc', [null, [2, 4], [4, 18]]]]],
-        locals: [],
-        templates: [child0]
-      };
-    })()));
-
-    assert.equal(this.$().text().trim(), 'template block text');
-  });
-});
-define('app4/tests/integration/components/crud-comp-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | integration/components/crud-comp-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'integration/components/crud-comp-test.js should pass jshint.');
-  });
-});
-define('app4/tests/integration/components/md-hl-table-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleForComponent)('md-hl-table', 'Integration | Component | md hl table', {
-    integration: true
-  });
-
-  (0, _emberQunit.test)('it renders', function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });
-
-    this.render(Ember.HTMLBars.template((function () {
-      return {
-        meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
-          'loc': {
-            'source': null,
-            'start': {
-              'line': 1,
-              'column': 0
-            },
-            'end': {
-              'line': 1,
-              'column': 15
-            }
-          }
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createComment('');
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-          dom.insertBoundary(fragment, 0);
-          dom.insertBoundary(fragment, null);
-          return morphs;
-        },
-        statements: [['content', 'md-hl-table', ['loc', [null, [1, 0], [1, 15]]]]],
-        locals: [],
-        templates: []
-      };
-    })()));
-
-    assert.equal(this.$().text().trim(), '');
-
-    // Template block usage:
-    this.render(Ember.HTMLBars.template((function () {
-      var child0 = (function () {
-        return {
-          meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
-            'loc': {
-              'source': null,
-              'start': {
-                'line': 2,
-                'column': 4
-              },
-              'end': {
-                'line': 4,
-                'column': 4
-              }
-            }
-          },
-          isEmpty: false,
-          arity: 0,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode('      template block text\n');
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes() {
-            return [];
-          },
-          statements: [],
-          locals: [],
-          templates: []
-        };
-      })();
-
-      return {
-        meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
-          'loc': {
-            'source': null,
-            'start': {
-              'line': 1,
-              'column': 0
-            },
-            'end': {
-              'line': 5,
-              'column': 2
-            }
-          }
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode('\n');
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment('');
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode('  ');
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
-          return morphs;
-        },
-        statements: [['block', 'md-hl-table', [], [], 0, null, ['loc', [null, [2, 4], [4, 20]]]]],
-        locals: [],
-        templates: [child0]
-      };
-    })()));
-
-    assert.equal(this.$().text().trim(), 'template block text');
-  });
-});
-define('app4/tests/integration/components/md-hl-table-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | integration/components/md-hl-table-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'integration/components/md-hl-table-test.js should pass jshint.');
   });
 });
 define('app4/tests/integration/components/pag-table-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -1290,24 +974,6 @@ define('app4/tests/routes/signup.jshint', ['exports'], function (exports) {
     assert.ok(true, 'routes/signup.js should pass jshint.');
   });
 });
-define('app4/tests/routes/users.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | routes/users.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'routes/users.js should pass jshint.');
-  });
-});
-define('app4/tests/routes/users/user.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | routes/users/user.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'routes/users/user.js should pass jshint.');
-  });
-});
 define('app4/tests/routes/users/user/dashboard.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -1324,15 +990,6 @@ define('app4/tests/routes/users/user/index.jshint', ['exports'], function (expor
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/users/user/index.js should pass jshint.');
-  });
-});
-define('app4/tests/routes/users/user/todos.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | routes/users/user/todos.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'routes/users/user/todos.js should pass jshint.');
   });
 });
 define('app4/tests/routes/users/user/todos/index.jshint', ['exports'], function (exports) {
@@ -1353,15 +1010,6 @@ define('app4/tests/routes/users/user/todos/new.jshint', ['exports'], function (e
     assert.ok(true, 'routes/users/user/todos/new.js should pass jshint.');
   });
 });
-define('app4/tests/routes/users/user/todos/todo.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | routes/users/user/todos/todo.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'routes/users/user/todos/todo.js should pass jshint.');
-  });
-});
 define('app4/tests/routes/users/user/todos/todo/edit.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -1378,6 +1026,42 @@ define('app4/tests/routes/users/user/todos/todo/index.jshint', ['exports'], func
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/users/user/todos/todo/index.js should pass jshint.');
+  });
+});
+define('app4/tests/routes/users/user/todos/todo.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/users/user/todos/todo.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/users/user/todos/todo.js should pass jshint.');
+  });
+});
+define('app4/tests/routes/users/user/todos.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/users/user/todos.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/users/user/todos.js should pass jshint.');
+  });
+});
+define('app4/tests/routes/users/user.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/users/user.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/users/user.js should pass jshint.');
+  });
+});
+define('app4/tests/routes/users.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/users.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/users.js should pass jshint.');
   });
 });
 define('app4/tests/serializers/application.jshint', ['exports'], function (exports) {
@@ -1521,28 +1205,6 @@ define('app4/tests/unit/controllers/users/user/dashboard-test.jshint', ['exports
     assert.ok(true, 'unit/controllers/users/user/dashboard-test.js should pass jshint.');
   });
 });
-define('app4/tests/unit/controllers/users/user/todos-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleFor)('controller:users/user/todos', 'Unit | Controller | users/user/todos', {
-    // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
-  });
-
-  // Replace this with your real tests.
-  (0, _emberQunit.test)('it exists', function (assert) {
-    var controller = this.subject();
-    assert.ok(controller);
-  });
-});
-define('app4/tests/unit/controllers/users/user/todos-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | unit/controllers/users/user/todos-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/controllers/users/user/todos-test.js should pass jshint.');
-  });
-});
 define('app4/tests/unit/controllers/users/user/todos/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleFor)('controller:users/user/todos/index', 'Unit | Controller | users/user/todos/index', {
@@ -1587,6 +1249,28 @@ define('app4/tests/unit/controllers/users/user/todos/new-test.jshint', ['exports
     assert.ok(true, 'unit/controllers/users/user/todos/new-test.js should pass jshint.');
   });
 });
+define('app4/tests/unit/controllers/users/user/todos/todo/edit-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:users/user/todos/todo/edit', 'Unit | Controller | users/user/todos/todo/edit', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('app4/tests/unit/controllers/users/user/todos/todo/edit-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/users/user/todos/todo/edit-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/users/user/todos/todo/edit-test.js should pass jshint.');
+  });
+});
 define('app4/tests/unit/controllers/users/user/todos/todo-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleFor)('controller:users/user/todos/todo', 'Unit | Controller | users/user/todos/todo', {
@@ -1609,9 +1293,9 @@ define('app4/tests/unit/controllers/users/user/todos/todo-test.jshint', ['export
     assert.ok(true, 'unit/controllers/users/user/todos/todo-test.js should pass jshint.');
   });
 });
-define('app4/tests/unit/controllers/users/user/todos/todo/edit-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+define('app4/tests/unit/controllers/users/user/todos-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
-  (0, _emberQunit.moduleFor)('controller:users/user/todos/todo/edit', 'Unit | Controller | users/user/todos/todo/edit', {
+  (0, _emberQunit.moduleFor)('controller:users/user/todos', 'Unit | Controller | users/user/todos', {
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']
   });
@@ -1622,13 +1306,13 @@ define('app4/tests/unit/controllers/users/user/todos/todo/edit-test', ['exports'
     assert.ok(controller);
   });
 });
-define('app4/tests/unit/controllers/users/user/todos/todo/edit-test.jshint', ['exports'], function (exports) {
+define('app4/tests/unit/controllers/users/user/todos-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint | unit/controllers/users/user/todos/todo/edit-test.js');
+  QUnit.module('JSHint | unit/controllers/users/user/todos-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'unit/controllers/users/user/todos/todo/edit-test.js should pass jshint.');
+    assert.ok(true, 'unit/controllers/users/user/todos-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/models/task-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -1781,27 +1465,6 @@ define('app4/tests/unit/routes/signup-test.jshint', ['exports'], function (expor
     assert.ok(true, 'unit/routes/signup-test.js should pass jshint.');
   });
 });
-define('app4/tests/unit/routes/users/user-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleFor)('route:users/user', 'Unit | Route | users/user', {
-    // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
-  });
-
-  (0, _emberQunit.test)('it exists', function (assert) {
-    var route = this.subject();
-    assert.ok(route);
-  });
-});
-define('app4/tests/unit/routes/users/user-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | unit/routes/users/user-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/routes/users/user-test.js should pass jshint.');
-  });
-});
 define('app4/tests/unit/routes/users/user/dashboard-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleFor)('route:users/user/dashboard', 'Unit | Route | users/user/dashboard', {
@@ -1842,27 +1505,6 @@ define('app4/tests/unit/routes/users/user/index-test.jshint', ['exports'], funct
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/users/user/index-test.js should pass jshint.');
-  });
-});
-define('app4/tests/unit/routes/users/user/todos-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleFor)('route:users/user/todos', 'Unit | Route | users/user/todos', {
-    // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
-  });
-
-  (0, _emberQunit.test)('it exists', function (assert) {
-    var route = this.subject();
-    assert.ok(route);
-  });
-});
-define('app4/tests/unit/routes/users/user/todos-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | unit/routes/users/user/todos-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/routes/users/user/todos-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/routes/users/user/todos/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -1907,27 +1549,6 @@ define('app4/tests/unit/routes/users/user/todos/new-test.jshint', ['exports'], f
     assert.ok(true, 'unit/routes/users/user/todos/new-test.js should pass jshint.');
   });
 });
-define('app4/tests/unit/routes/users/user/todos/todo-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleFor)('route:users/user/todos/todo', 'Unit | Route | users/user/todos/todo', {
-    // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
-  });
-
-  (0, _emberQunit.test)('it exists', function (assert) {
-    var route = this.subject();
-    assert.ok(route);
-  });
-});
-define('app4/tests/unit/routes/users/user/todos/todo-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | unit/routes/users/user/todos/todo-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/routes/users/user/todos/todo-test.js should pass jshint.');
-  });
-});
 define('app4/tests/unit/routes/users/user/todos/todo/edit-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleFor)('route:users/user/todos/todo/edit', 'Unit | Route | users/user/todos/todo/edit', {
@@ -1968,6 +1589,69 @@ define('app4/tests/unit/routes/users/user/todos/todo/index-test.jshint', ['expor
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/users/user/todos/todo/index-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/users/user/todos/todo-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:users/user/todos/todo', 'Unit | Route | users/user/todos/todo', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/users/user/todos/todo-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/users/user/todos/todo-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/users/user/todos/todo-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/users/user/todos-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:users/user/todos', 'Unit | Route | users/user/todos', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/users/user/todos-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/users/user/todos-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/users/user/todos-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/users/user-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:users/user', 'Unit | Route | users/user', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/users/user-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/users/user-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/users/user-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/serializers/application-test', ['exports', 'ember-qunit', 'ember', 'ember-data'], function (exports, _emberQunit, _ember, _emberData) {

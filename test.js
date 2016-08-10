@@ -1,2 +1,0 @@
-doorkeeper
-gem 'byebug'

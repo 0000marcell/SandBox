@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/SandBox/ember-sandbox-materialize/tmp/funnel-input_base_path-wukFzRXt.tmp/0/components/modal-dialog.js
