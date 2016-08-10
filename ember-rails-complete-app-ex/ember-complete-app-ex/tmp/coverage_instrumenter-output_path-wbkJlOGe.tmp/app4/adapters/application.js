@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/ember-complete-app-ex/tmp/coverage_instrumenter-cache_path-4qjM7gbx.tmp/app4/adapters/application.js

@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/ember-complete-app-ex/tmp/funnel-input_base_path-aim5tc4q.tmp/0/bower_components/ember-cli-test-loader/test-loader.js
