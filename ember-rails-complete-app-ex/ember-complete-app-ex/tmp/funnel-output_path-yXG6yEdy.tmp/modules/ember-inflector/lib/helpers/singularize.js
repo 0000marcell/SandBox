@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/ember-complete-app-ex/tmp/funnel-input_base_path-5kzmDhrm.tmp/0/lib/helpers/singularize.js
