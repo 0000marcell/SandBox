@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/SandBox/pretender-test/tmp/babel-cache_path-Araj6HCD.tmp/app.js
