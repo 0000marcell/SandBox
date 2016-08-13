@@ -1,10 +1,14 @@
 nav{
 	ul{
+		color: blue;
 		a{
 			font-size: 10px;
 			color: black;		
 			span{
 				display: inline-block;
+			}
+			p{
+				@extend .hide-on-small-only
 			}
 		}
 	}
