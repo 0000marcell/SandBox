@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/SandBox/ember-sandbox-materialize/node_modules/ember-data/addon/attr.js
