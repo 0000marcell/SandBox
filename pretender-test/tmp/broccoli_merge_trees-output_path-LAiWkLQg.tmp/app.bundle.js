@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/SandBox/pretender-test/tmp/broccoli_merge_trees-input_base_path-QMYR39s5.tmp/0/app.bundle.js

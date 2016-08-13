@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">7.14% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>2/28</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">16.67% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>3/18</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">25% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>1/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">7.14% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>2/28</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -67,52 +67,142 @@
 22
 23
 24
-25</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//import Ember from 'ember';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Ember from 'ember';
 import DS from 'ember-data';
 &nbsp;
 export default DS.JSONAPISerializer.extend({
-	/*
 	serialize() {
 		const result = this._super(...arguments),
-			 attr = result.data.attributes || {},
+			 attr = result.data.attributes || <span class="branch-1 cbranch-no" title="branch not covered" >{},</span>
 			 rel = result.data.relationships || {};
-		return Object.keys(rel).reduce(function(acc, elem){
-			const data = rel[elem].data;
-			elem = Ember.String.underscore(elem);
-			if(data){
-				acc[elem + "_id"] = data.id;
+		return Object.keys(rel).reduce(<span class="fstat-no" title="function not covered" >function(acc, elem){</span>
+<span class="cstat-no" title="statement not covered" >			const data = rel[elem].data;</span>
+<span class="cstat-no" title="statement not covered" >			elem = Ember.String.underscore(elem);</span>
+<span class="cstat-no" title="statement not covered" >			if(data){</span>
+<span class="cstat-no" title="statement not covered" >				acc[elem + "_id"] = data.id;</span>
 			}
-			if(data &amp;&amp; data.type){
-				acc[elem + "_type"] = data.type[0].toUpperCase() + data.type.slice(1, -1);
+<span class="cstat-no" title="statement not covered" >			if(data &amp;&amp; data.type){</span>
+<span class="cstat-no" title="statement not covered" >				acc[elem + "_type"] = data.type[0].toUpperCase() + data.type.slice(1, -1);</span>
 			}
-			return acc;
+<span class="cstat-no" title="statement not covered" >			return acc;</span>
 		}, attr);
+	},
+&nbsp;
+	normalizeQueryResponse<span class="fstat-no" title="function not covered" >(store, clazz, payload){</span>
+<span class="cstat-no" title="statement not covered" >		const result = this._super(...arguments);</span>
+<span class="cstat-no" title="statement not covered" >		result.meta = result.meta || {};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		if(payload.links){</span>
+<span class="cstat-no" title="statement not covered" >			result.meta.pagination = this.createPageMeta(payload.links);</span>
+		}
+<span class="cstat-no" title="statement not covered" >		return result;</span>
+	},
+	
+	createPageMeta<span class="fstat-no" title="function not covered" >(data){</span>
+<span class="cstat-no" title="statement not covered" >		let meta = {};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		Object.keys(data).forEach(type =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			const link = data[type];</span>
+<span class="cstat-no" title="statement not covered" >			meta[type] = {};</span>
+<span class="cstat-no" title="statement not covered" >			let a = document.createElement('a');</span>
+<span class="cstat-no" title="statement not covered" >			a.href = link;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			a.search.slice(1).split('&amp;').forEach(pairs =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >				const [param, value] = pairs.split('=');</span>
+<span class="cstat-no" title="statement not covered" >				if (param === 'page%5Bnumber%5D') {</span>
+<span class="cstat-no" title="statement not covered" >					meta[type].number = parseInt(value);</span>
+				}<span class="cstat-no" title="statement not covered" >if (param === 'page%5Bsize%5D') {</span>
+<span class="cstat-no" title="statement not covered" >					meta[type].size = parseInt(value);</span>
+				}
+			});
+<span class="cstat-no" title="statement not covered" >			a = null;</span>
+		});
+<span class="cstat-no" title="statement not covered" >		return meta;	</span>
 	}
-	*/
 });
 &nbsp;
 &nbsp;</pre></td></tr>
@@ -121,7 +211,7 @@ export default DS.JSONAPISerializer.extend({
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 06 2016 08:33:54 GMT-0300 (BRT)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Aug 12 2016 17:12:39 GMT-0300 (BRT)
 </div>
 </div>
 <script src="../../prettify.js"></script>

@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>64/64</span>
+        <span class='fraction'>69/69</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>64/64</span>
+        <span class='fraction'>69/69</span>
       </div>
     </div>
   </div>
@@ -213,7 +213,13 @@
 168
 169
 170
-171</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+171
+172
+173
+174
+175
+176
+177</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -252,9 +258,9 @@
 <span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">22×</span>
-<span class="cline-any cline-yes">22×</span>
-<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -299,7 +305,7 @@
 <span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">7×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -363,15 +369,21 @@
 <span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11×</span>
-<span class="cline-any cline-yes">11×</span>
-<span class="cline-any cline-yes">11×</span>
-<span class="cline-any cline-yes">11×</span>
-<span class="cline-any cline-yes">11×</span>
-<span class="cline-any cline-yes">11×</span>
-<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -441,11 +453,11 @@
         "loc": {
           "source": null,
           "start": {
-            "line": 8,
+            "line": 15,
             "column": 1
           },
           "end": {
-            "line": 14,
+            "line": 21,
             "column": 1
           }
         },
@@ -494,7 +506,7 @@
           "column": 0
         },
         "end": {
-          "line": 18,
+          "line": 25,
           "column": 0
         }
       },
@@ -510,7 +522,11 @@
       dom.appendChild(el0, el1);
       var el1 = dom.createComment("");
       dom.appendChild(el0, el1);
-      var el1 = dom.createTextNode("\n");
+      var el1 = dom.createTextNode("\n\n");
+      dom.appendChild(el0, el1);
+      var el1 = dom.createComment("");
+      dom.appendChild(el0, el1);
+      var el1 = dom.createTextNode("\n\n\n\n\n\n");
       dom.appendChild(el0, el1);
       var el1 = dom.createElement("footer");
       dom.setAttribute(el1,"class","page-footer indigo white-text");
@@ -535,19 +551,21 @@
       return el0;
     },
     buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-      var morphs = new Array(4);
+      var morphs = new Array(5);
       morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
       morphs[1] = dom.createMorphAt(fragment,1,1,contextualElement);
-      morphs[2] = dom.createMorphAt(dom.childAt(fragment, [3]),3,3);
-      morphs[3] = dom.createMorphAt(fragment,5,5,contextualElement);
+      morphs[2] = dom.createMorphAt(fragment,3,3,contextualElement);
+      morphs[3] = dom.createMorphAt(dom.childAt(fragment, [5]),3,3);
+      morphs[4] = dom.createMorphAt(fragment,7,7,contextualElement);
       dom.insertBoundary(fragment, 0);
       return morphs;
     },
     statements: [
       ["block","md-navbar",[],["name","","class","indigo"],0,null,["loc",[null,[1,0],[3,14]]]],
       ["content","outlet",["loc",[null,[4,0],[4,10]]]],
-      ["block","md-copyright",[],["text","Ember Test","startYear",2015,"class","indigo darken-2 white-text"],1,null,["loc",[null,[8,1],[14,18]]]],
-      ["content","md-modal-container",["loc",[null,[17,0],[17,22]]]]
+      ["content","carousel-album",["loc",[null,[6,0],[6,18]]]],
+      ["block","md-copyright",[],["text","Ember Test","startYear",2015,"class","indigo darken-2 white-text"],1,null,["loc",[null,[15,1],[21,18]]]],
+      ["content","md-modal-container",["loc",[null,[24,0],[24,22]]]]
     ],
     locals: [],
     templates: [child0, child1]
@@ -559,7 +577,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 06 2016 08:33:54 GMT-0300 (BRT)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Aug 12 2016 17:12:39 GMT-0300 (BRT)
 </div>
 </div>
 <script src="../../prettify.js"></script>

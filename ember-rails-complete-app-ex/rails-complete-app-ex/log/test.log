@@ -2491,3 +2491,280 @@ UserTest: test_verify_if_the_password_has_expired
   [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-07-14 11:45:58', '2016-07-14 11:45:58', 298486374)[0m
   [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "tasks"
   [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "api_v1_tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX "index_api_v1_tasks_on_user_id" ON "api_v1_tasks" ("user_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "oauth_access_grants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "resource_owner_id" integer NOT NULL, "application_id" integer NOT NULL, "token" varchar NOT NULL, "expires_in" integer NOT NULL, "redirect_uri" text NOT NULL, "created_at" datetime NOT NULL, "revoked_at" datetime, "scopes" varchar)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_oauth_access_grants_on_token" ON "oauth_access_grants" ("token")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "oauth_access_tokens" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "resource_owner_id" integer, "application_id" integer, "token" varchar NOT NULL, "refresh_token" varchar, "expires_in" integer, "revoked_at" datetime, "created_at" datetime NOT NULL, "scopes" varchar, "previous_refresh_token" varchar DEFAULT '' NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_oauth_access_tokens_on_refresh_token" ON "oauth_access_tokens" ("refresh_token")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_oauth_access_tokens_on_refresh_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_oauth_access_tokens_on_refresh_token' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX "index_oauth_access_tokens_on_resource_owner_id" ON "oauth_access_tokens" ("resource_owner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_oauth_access_tokens_on_resource_owner_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_oauth_access_tokens_on_resource_owner_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_oauth_access_tokens_on_refresh_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_oauth_access_tokens_on_refresh_token' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_oauth_access_tokens_on_token" ON "oauth_access_tokens" ("token")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "oauth_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "uid" varchar NOT NULL, "secret" varchar NOT NULL, "redirect_uri" text NOT NULL, "scopes" varchar DEFAULT '' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_oauth_applications_on_uid" ON "oauth_applications" ("uid")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_user_id" ON "tasks" ("user_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "todos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX "index_todos_on_user_id" ON "todos" ("user_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "admin" boolean, "activated" boolean, "activation_digest" varchar, "reset_digest" varchar, "activated_at" datetime, "reset_sent_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160714114545')[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160704125250'), ('20160704125253'), ('20160711125850'), ('20160711135848'), ('20160714114430');
+
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", 2016-08-12 14:03:46 UTC], ["updated_at", 2016-08-12 14:03:46 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.082842', '2016-08-12 14:03:47.082842', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.082842', '2016-08-12 14:03:47.082842', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.099146', '2016-08-12 14:03:47.099146', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.099146', '2016-08-12 14:03:47.099146', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.109474', '2016-08-12 14:03:47.109474', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.109474', '2016-08-12 14:03:47.109474', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.119411', '2016-08-12 14:03:47.119411', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.119411', '2016-08-12 14:03:47.119411', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.128456', '2016-08-12 14:03:47.128456', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.128456', '2016-08-12 14:03:47.128456', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.138572', '2016-08-12 14:03:47.138572', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.138572', '2016-08-12 14:03:47.138572', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.148467', '2016-08-12 14:03:47.148467', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.148467', '2016-08-12 14:03:47.148467', 298486374)[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.158933', '2016-08-12 14:03:47.158933', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.158933', '2016-08-12 14:03:47.158933', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.166706', '2016-08-12 14:03:47.166706', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.166706', '2016-08-12 14:03:47.166706', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.178687', '2016-08-12 14:03:47.178687', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.178687', '2016-08-12 14:03:47.178687', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.187870', '2016-08-12 14:03:47.187870', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.187870', '2016-08-12 14:03:47.187870', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.197435', '2016-08-12 14:03:47.197435', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.197435', '2016-08-12 14:03:47.197435', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.208671', '2016-08-12 14:03:47.208671', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.208671', '2016-08-12 14:03:47.208671', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.221676', '2016-08-12 14:03:47.221676', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.221676', '2016-08-12 14:03:47.221676', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.230719', '2016-08-12 14:03:47.230719', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.230719', '2016-08-12 14:03:47.230719', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.240331', '2016-08-12 14:03:47.240331', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.240331', '2016-08-12 14:03:47.240331', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.249367', '2016-08-12 14:03:47.249367', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.249367', '2016-08-12 14:03:47.249367', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.259067', '2016-08-12 14:03:47.259067', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.259067', '2016-08-12 14:03:47.259067', 298486374)[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.271013', '2016-08-12 14:03:47.271013', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.271013', '2016-08-12 14:03:47.271013', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.281802', '2016-08-12 14:03:47.281802', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.281802', '2016-08-12 14:03:47.281802', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.291857', '2016-08-12 14:03:47.291857', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.291857', '2016-08-12 14:03:47.291857', 298486374)[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.305235', '2016-08-12 14:03:47.305235', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.305235', '2016-08-12 14:03:47.305235', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.316841', '2016-08-12 14:03:47.316841', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.316841', '2016-08-12 14:03:47.316841', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.366816', '2016-08-12 14:03:47.366816', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.366816', '2016-08-12 14:03:47.366816', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.377166', '2016-08-12 14:03:47.377166', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.377166', '2016-08-12 14:03:47.377166', 298486374)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.386782', '2016-08-12 14:03:47.386782', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.386782', '2016-08-12 14:03:47.386782', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.394501', '2016-08-12 14:03:47.394501', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.394501', '2016-08-12 14:03:47.394501', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.403126', '2016-08-12 14:03:47.403126', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.403126', '2016-08-12 14:03:47.403126', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.412224', '2016-08-12 14:03:47.412224', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.412224', '2016-08-12 14:03:47.412224', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.421249', '2016-08-12 14:03:47.421249', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.421249', '2016-08-12 14:03:47.421249', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.430983', '2016-08-12 14:03:47.430983', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.430983', '2016-08-12 14:03:47.430983', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.441025', '2016-08-12 14:03:47.441025', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.441025', '2016-08-12 14:03:47.441025', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.450119', '2016-08-12 14:03:47.450119', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.450119', '2016-08-12 14:03:47.450119', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.461815', '2016-08-12 14:03:47.461815', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.461815', '2016-08-12 14:03:47.461815', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.470971', '2016-08-12 14:03:47.470971', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.470971', '2016-08-12 14:03:47.470971', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.479237', '2016-08-12 14:03:47.479237', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.479237', '2016-08-12 14:03:47.479237', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "api_v1_tasks"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.490508', '2016-08-12 14:03:47.490508', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "api_v1_tasks" ("title", "created_at", "updated_at", "id") VALUES ('MyString', '2016-08-12 14:03:47.490508', '2016-08-12 14:03:47.490508', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tasks"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
