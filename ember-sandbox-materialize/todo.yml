@@ -1,4 +1,3 @@
-change the color os the icons
 resize nav
 change the size of the right side image
 puts a search bar
@@ -11,6 +10,7 @@ put ul with many lis each one is a twitte with time and photo
 install ember mirage and create randon data to feed to the twitter
 
 done:
+change the color os the icons
 hide moments on mobile
 hide names of links when in mobile
 
