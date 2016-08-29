@@ -1,0 +1,6 @@
+{
+	"frameword": "qunit",
+	"launch_in_dev": [
+		"PhantomJS"
+	]
+}
