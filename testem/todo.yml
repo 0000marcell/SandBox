@@ -1,5 +1,8 @@
+create the header component and test with:
 testing qunit with testem
 testing mocha with testem 
 testing jasmine with testem
 testing ava with testem
+
+done:
 

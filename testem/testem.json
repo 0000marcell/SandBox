@@ -1,6 +1,6 @@
 {
-	"frameword": "qunit",
+	"test_page": "qunit.html",
 	"launch_in_dev": [
-		"PhantomJS"
+		"Chrome"
 	]
 }
