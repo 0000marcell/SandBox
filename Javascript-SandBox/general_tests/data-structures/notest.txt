@@ -1,0 +1,65 @@
+primitive types: 
+boolean, null, undefined, number, string, symbol
+
+
+symbols:
+are uniq and imutable
+
+object: 
+object is a value in memory that can be referenced by a identifier
+
+identifier: 
+are a sequence of character in memory that identifies a variable, function or property
+
+a js object:
+can be seens as a collection of properties
+
+the object literal syntax:
+initializes a object with a set of properties 
+
+the types of object properties are:
+data property and acessor property
+
+data property:
+associates a key with a value have the attributes writabble, enumerable and configurable
+
+acessor property:
+associates a key with a setter and getter, have enumerable and configurable as attributes
+
+define property:
+we can define a property with Object.defineProperty(obj, 'key', {opts}) 
+
+delete property:
+we can delete a property with delete object.key
+
+when to use Maps:
+are easy to keep track of size, the key and value can be anything,
+
+Set:
+collection of uniq values of any type wheter primitive values or object reference 
+
+Difference for of and for in:
+for of used to iterate over enumerable, for in used to iterate over object 
+
+itarable object:
+object that implements the itarable protocol object[Symbol.itarable] returns a method used to iterate over its values 
+
+itarator:
+itarator protocol is a standard way of producing a sequence of values
+
+generator:
+functions that provides a easy way of creating itarator/iterables
+
+arrays:
+arays are regular object integer-keyed
+
+typed arrays:
+are used to manipulate raw data
+
+Maps:
+key/value pairs where the key and map can be anything, easier to manipulate than arrays
+
+Difference between iterator and iterable:
+iterator has a next method that follows the protocol returns {done: boolean, value: string}
+iterable is a object that have object[Symbol.iterator]
+WeakMap/Set: weakly referenced key/value pairs, gc friendly, not enumerable
