@@ -1,6 +1,3 @@
-:-dynamic(here/1). 
-likes(alice,Who).
-Who = bob.
 likes(bob,carol).
 likes(james,mary).
 likes(mary,james).
