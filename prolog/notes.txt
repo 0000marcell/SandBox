@@ -1,0 +1,37 @@
+prolog: prolog, is a logic programming language, prolog programs are a set of sentences in logical form, expressing facts and rules about some problem domain
+
+facts: are  simple clauses that matches a stateman.
+
+clauses: are facts or rules.
+
+rules: use a logical connection between two facts.
+
+modus ponens: is the deduction of a fact.
+
+unify: when we use a variable in prolog, the interpreter searchs top to bottom
+and return the first one found
+
+':-': means if in prolog
+
+';': semi-colon means or in prolog
+
+',': comma mens and in prolog
+
+knowledge base: are a group of facts and rules
+
+terms: terms are the building blocks of the language, this includes (atoms, number, variables, complex terms)
+
+atoms: are any string of characters with single quotes or not, even ; and ,
+are atoms 
+
+numbers: are pretty obvious in prolog and aren't very important
+
+Variables: are strings that starts with upper-case letter, variable started with _ are called anonymous variables
+
+functor: maps values in a collection of enumerables to a function, aplies this function to all the values in the collection
+
+complex terms: complex terms are build out of functors, followed by a sequence of arguments
+
+arity: the number of arguments that a complex term have is called arity is common to see love/3 love/2 where the number is the arity of the complex term
+
+
