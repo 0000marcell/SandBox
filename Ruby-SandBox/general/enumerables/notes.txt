@@ -1,0 +1,10 @@
+word array: use %w{ marcell monteiro cruz } 
+
+arbitraty number of arguments:
+def method(*args) asterostic before a argument transforms the argument in a array, this is also called starred argument or splat names
+
+named parameter: we can use hash in the last parameter to simulate named parameters
+
+inject: inject is similar to reduce in js, you pass a initial value and the result of each black call is passed to the next
+
+bang !: in enumerables methods in most enumerables means change in place

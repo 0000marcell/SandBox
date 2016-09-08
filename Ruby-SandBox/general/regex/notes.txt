@@ -1,0 +1,37 @@
+letters and numbers: letters and numbers match them selves and are case sensitive
+
+punctuation characters: have special meaning in regex
+
+dot: match any single character string using .. will match any two characters
+
+backlash(/): turn off the special meaning of punctuation characters \. will match a dot.
+
+matching one character at a time: we can match one character at a time using (dot), letters on numbers and backlash to deactivate special meaing for the rest of the characters
+
+Sets, ranges and alternatives:
+sets are determined by [] and will match any single character that pertence to the set 
+
+range: ranges are determined by - and creates a range between two values [A-Z] will match any single maiscule letter
+
+comman sets: \d match any digit, \w match any letter number or underscore
+\s match any white space, tab and new line
+
+alternative: | can be understood as or A|B will match any A or B 
+
+parentheses: can be used to separate statements (A|B)\d will match A or B and any digit
+
+star character: match zero or more of the previous character [a-z]* will match zero or more letters and .* will match anything 
+
+=~ test match: /PM/ =~ '10:24 PM' will return 6 the index of the first match
+
+turn off case sensitive: /AM/i using i in the end of the expression will turn case sensitiviness off 
+
+starts off: \A will match any string that starts off with the following match /\Amarcell\ 
+
+ends with: \z will match any string that ends with the regex e.g /cruz\z/
+
+starts with any line: ^ starts after any new line /^once upon a time/ will match any line in the string that starts with this 
+
+ends with any line: $ will match in any line /cruz$/ will match any new line that ends with cruz
+
+turn off new lines: m after the expression will turn off separation of newlines when match /^once upon a time.* happily ever after $ /m

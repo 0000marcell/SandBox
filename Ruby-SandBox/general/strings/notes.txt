@@ -1,0 +1,14 @@
+quotes: %q{} can be used when there is a lot of quotes and double quotes on the string
+
+multilined strings: we can avoid newlines in multilined strings using a backlash "this do not have newline \
+ok!"
+
+here documents: <<EOF
+this is a here documents
+EOF
+
+index: index can be used to search a string "this is a string".index("string")
+will return the char index
+
+mutable strings: ruby have mutable strings, strings referencing another strings
+will be changed if you alter the original, create another reference if thats the case
