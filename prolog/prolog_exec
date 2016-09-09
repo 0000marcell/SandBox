@@ -1,0 +1,2 @@
+#!/usr/bin/pl -q -g main -s
+write('this a test').
