@@ -9,11 +9,12 @@ backlash(/): turn off the special meaning of punctuation characters \. will matc
 matching one character at a time: we can match one character at a time using (dot), letters on numbers and backlash to deactivate special meaing for the rest of the characters
 
 Sets, ranges and alternatives:
-sets are determined by [] and will match any single character that pertence to the set 
+sets are determined by [] and will match any single character that pertence to the set so /abc/ will match the string "abc" and /[abc]/ will match any string
+with a b or c in it 
 
 range: ranges are determined by - and creates a range between two values [A-Z] will match any single maiscule letter
 
-comman sets: \d match any digit, \w match any letter number or underscore
+common sets: \d match any digit, \w match any letter number or underscore
 \s match any white space, tab and new line
 
 alternative: | can be understood as or A|B will match any A or B 
