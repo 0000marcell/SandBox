@@ -1,1 +1,55 @@
+Programming Paradigms: is a way of classifying programming languages according
+to their styles.
+
+Execution model: Specifies how execution takes place in a programming language
+, implemented in interpreters or compilers , often having a runtime system.
+
+Runtime system: any behavior that are dynamically determined during execution
+
+Machine code: lowest level programing paradigm, directly represents structures
+with assembly language and sequence of numbers 
+
+Procedural programming: is also imperative, based on procedure calls, structure programming and modular programming. usually in procedure languages 
+language and data are coupled resulting in shared data, procedural programing
+languages are subjective and highly dependent on programmer experience.
+
+Object oriented programming: based on objects that interact with each other,
+objects have fields also known as attributes and procedures also known as methods, OOP is usually class-based but it can also be prototype-based
+
+Prototype-based: Behavior reuse is performed via reuse of objects, object inherent from other objects, making the whole system much more dynamic and composable than class-based systems, objects are rarely created in prototyped based languages cloning objects are much more common.
+
+Delegation: evaluation of a object proerty in context of another, a language runtime can do this via delegation pointers (from objects to its prototypes) 
+classes in ES6 are just syntax sugar
+
+Role: can be seen as object that serves diferent purposes based on context, the shared behavior between roles is handled by the delegation mechanism
+
+Trait: trait is a concept in OOP, which represents a set of methods that can be used to extend the functionality of class. traits can be used to simulate multiple inheritance.
+
+Interface: also known as protocol is a comman means for unrelated objects to comunicate with each other, these are definitions of methods and values which the objects agree upon in order to co-operate 
+
+Mixin: is another way of solving multiple inheritance problems (like traits and interfaces) a mixim can be seen as a interface with implemented methods, mixin a pattern enforcing the dependency inversion principle.
+
+Difference between traits mixins and interfaces: 
+traits are more composable generally dont share state and resolve naming conflicts
+Mixins are more loolely implemented can be included in other mixins, manage state and implement methods 
+Interface dont implement methods and only serves as a means of communication between two classes
+
+Diammond problem: is a ambiguity that arises when two classes B and C inherit from A, and class D inherits from both B and C if there is a method in A that B and C have overridden, and D does not override it, then which version of the method does D inherrit that of B, or that of C?
+
+Prototype chain: is the way that objects make references of properties or methods in the prototype of other objects.
+
+Factory function: in javascript any function can return a new object, when its not a constructor function or class, its called a factory function, different from constructor, different from constructors factory functions returns a prototype taht can't be altered, you can extend the object but since you dont know the prototype you can't alter it, factory functions creates a hieranchy based on has-a instead of is-a 
+
+composition-vs-inheritance: using composition we design types based on that they do not what they are
+
+composability: composability is a system design principal that deals with inter-relationship of components. A highly composable system provides recombinant components that can be selected and assembled in various combinations to satisfy, user requirements.
+
+duck typing: is concerned with stablishing the suitability of an object for some purpose, type checking is deferred to runtime and is implemented by means of dynamic typing or reflection 
+
+concatenation prototyping: pure prototyping the prototype (parent) is copied 
+rather than linked to, changes to the prototype will not be reflected in cloned objects 
+
+declarative programing: a style of building the structure and elements of a computer program, that expresses the logic of a computation without describing its control flow. languages that applies this style minimize side effects by describing what the program must acomplish rather than describing how to acomplish
+
+logic programing: logic programing paradigm viwes computation as automated reasoning over a corpus of knowledge, facts about the program domain are expressed as logic formulae and programs are executed by applying inference rules over them until an answer to the problem is found or the collection of formulae is provided incosistent.
 
