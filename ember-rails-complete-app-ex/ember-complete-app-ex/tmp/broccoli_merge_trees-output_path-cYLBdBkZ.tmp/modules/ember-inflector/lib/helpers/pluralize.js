@@ -1,1 +1,0 @@
-/Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/ember-complete-app-ex/tmp/broccoli_merge_trees-input_base_path-hZlmWSLE.tmp/17/modules/ember-inflector/lib/helpers/pluralize.js

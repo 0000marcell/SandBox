@@ -1,14 +1,30 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-	elems: [],
-	elemOffSet: 0,
-	carouselLength: 0,
-	centerT: 0,
-	tX: [],
-	tY: [-5, 0, 0, 0, -5],
-	tZ: [-80, -20, 0, -20, -80],
-	opacity: [0.5, 0.85, 1, 0.85, 0.5],
+	elems: [], //Array with Jquery object of each element
+	elemOffSet: 0, // x distance between two elements
+	carouselLength: 0, // Number of elements in the carousel, starting 0
+	centerT: 0, // x pos of the center elem, not the center
+	tX: [], // x pos of the 5 elems in view
+	tY: [-5, 0, 0, 0, -5], // y pos of the 5 elems in view
+	tZ: [-80, -20, 0, -20, -80], // z pos of the 5 elems in view
+	opacity: [0.5, 0.85, 1, 0.85, 0.5], // op of the 5 elems in view
+	didInsertElement(){
+		let carousel = this.$('.carousel'),
+				elem = this.$('.carousel-item:eq(0)'),
+				centerT;
+		this.set('elemOffSet', (elem.width() * 0.75));
+		this.set('carouselLength', (this.$('.carousel-item').length - 1));
+		centerT= ((carousel.width()/2) - (elem.width()/2));
+		this.set('centerT', 
+						((carousel.width()/2) - (elem.width()/2)));
+		this.setUpTX();
+		this.setUpElem();
+		let _this = this;
+		this.$('.carousel-item').click(function() {
+			_this.clickHandler(Ember.$(this));	
+		});
+	},
 	setUpElem(){
 		let elem, elems = [];
 		for(let i = 0; i <= this.get('carouselLength'); i++) {
@@ -27,22 +43,6 @@ export default Ember.Component.extend({
 			tX.push(value);
 		}
 		this.set('tX', tX);
-	},
-	didInsertElement(){
-		let carousel = this.$('.carousel'),
-				elem = this.$('.carousel-item:eq(0)'),
-				centerT;
-		this.set('elemOffSet', (elem.width() * 0.75));
-		this.set('carouselLength', (this.$('.carousel-item').length - 1));
-		centerT= ((carousel.width()/2) - (elem.width()/2));
-		this.set('centerT', 
-						((carousel.width()/2) - (elem.width()/2)));
-		this.setUpTX();
-		this.setUpElem();
-		let _this = this;
-		this.$('.carousel-item').click(function() {
-			_this.clickHandler(Ember.$(this));	
-		});
 	},
 	clickHandler(elem){
 		if(elem.position().left > this.get('centerT')){
