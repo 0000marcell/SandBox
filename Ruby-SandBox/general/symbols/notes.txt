@@ -1,0 +1,5 @@
+Ruby Symbols: ruby symbols are very similar to strings, the difference is in how they are used, strings are used for data, symbols are used to "stand for something"
+symbls are imutable and uniq
+
+Difference between strings and symbols: 
+when you create two strings with the same characters, these two strings are differents objects, thats not the case with symbols, symbols are also imutable and because of these things have a much quicker look up

@@ -41,7 +41,7 @@ export default Ember.Component.extend({
 		this.setUpElem();
 		let _this = this;
 		this.$('.carousel-item').click(function() {
-			_this.clickHandler($(this));	
+			_this.clickHandler(Ember.$(this));	
 		});
 	},
 	clickHandler(elem){
@@ -77,7 +77,8 @@ export default Ember.Component.extend({
 		for (let i = 0; i < elems.length; i++) {
 			elem = elems[i];
 			console.log(i);
-			(pos === 'left') ? id = i - 1 : id = i + 1;
+			if(pos === 'left'){ id = i - 1;
+			}else{ id = i + 1; } 			
 			newPos = this.translateElem(elem, id);
 			newArr[newPos] = elem;
 		}

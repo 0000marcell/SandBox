@@ -1,0 +1,9 @@
+everything is a object: in ruby everything is a object, strings, number etc...
+
+Classes, Instances, methods: classes serves two purposes, container for methods and factory of objects, every class inherit from a super class when not defined, it will inherit from object
+
+Objects all the way down: in ruby if you can reference it with a variable it is a object even true, false and nil are objects.
+
+Importance of being a object: becase everything is a object every instance inherit object methods like 'instance_of' 'class' and 'to_s'
+
+Public, Private and protected: methods are public by default, public methods can be called by any instance of the object, private methods can only be called inside the class or in a subclass, protected methods can be called on any instance of the class or subclasses, you can still call any private methods using 'send'(method from the object class)

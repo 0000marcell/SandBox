@@ -1,0 +1,1 @@
+/Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/ember-complete-app-ex/tmp/template_compiler-output_path-v6e8XFJo.tmp/app4/templates/components/simple-chat.js
