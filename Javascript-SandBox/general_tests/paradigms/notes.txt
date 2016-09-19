@@ -66,3 +66,25 @@ Lazy evaluation: lazy evaluation or call-by-need is a evaluation strategy which 
 memoization: after a function is computed for that parameter or a set of parameters the result is stored in a lookup table taht is indexed by the values of those parameters 
 
 fold: also know as reduce accumulate, agregate, compress or inject, refers to a family of higher order functions that analyse a recursive data structure and though use of a given combining operation, recombine the results of recursively processing its constituent parts, building up a return value
+
+corecursion: corecursive algorithms use the data that themselves produce, bit by bit as they become available, and needed, to produce further bits of data
+
+functional programming: is a programming paradign that treats computation as the evaluation of mathematical functions and avoid changing state and mutable data. is declarative which means taht programs are made using expressions or declarations instead of statements, the result of the functions only depend of the arguments passed, this is called refferencial transparency the return value dont depent on the state of the executing program
+
+curryng: is a technique of translating the evaluation of a function that takes multiple arguments into evaluating a sequence of functions each with a single argument.
+
+higher-order functions: is a function that does at least one of the following. returns one or more functions as its result, or takes one or more function as arguments, hof is also known as functors
+
+closures: closures are related with static scoping also known as lexical scope, a closure function references the outer scope of where it was defined.
+
+pure functions: functions with no side effects. have several useful properties 
+if the result of a pure function is not used it can be removed 
+allow for memoization and other caching strategies
+if there is no data dependency between 
+two functions they can be executed in parallel
+the evaluation of any pure expression is thread safe
+more complex evolution strategies can be used by the compiler like deforestation
+
+strict and non-strict: a.k.a eager and lazy evaluation strict(eager) always fully evaluates function arguments before invoking the function, lazy evaluation does not evaluate functional arguments unless their values are required to evaluate the function call it self
+
+type inference: automatic dedution of data types used in fp and other languages like Go, Rust, etc..
