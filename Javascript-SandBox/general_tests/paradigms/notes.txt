@@ -53,3 +53,16 @@ declarative programing: a style of building the structure and elements of a comp
 
 logic programing: logic programing paradigm viwes computation as automated reasoning over a corpus of knowledge, facts about the program domain are expressed as logic formulae and programs are executed by applying inference rules over them until an answer to the problem is found or the collection of formulae is provided incosistent.
 
+expressions and statements: 
+a expression is a combination of one or more explicit values, constructs, variables, operations and functions that the programming language interprets or computes to produce another value
+statement is the smallest element of an imperative lenguage taht expresses some action to be carried out many statements are introduced by identifiers like (if, for etc)
+
+Differences between statements and expressions: statements are executed expressions are evaluated
+statement do not return results and are executed solely for their side effects
+expressions always return a result and often do not have side effects
+
+Lazy evaluation: lazy evaluation or call-by-need is a evaluation strategy which delays the evaluation of an expression until its value is needed 
+
+memoization: after a function is computed for that parameter or a set of parameters the result is stored in a lookup table taht is indexed by the values of those parameters 
+
+fold: also know as reduce accumulate, agregate, compress or inject, refers to a family of higher order functions that analyse a recursive data structure and though use of a given combining operation, recombine the results of recursively processing its constituent parts, building up a return value
