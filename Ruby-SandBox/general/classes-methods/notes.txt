@@ -1,0 +1,47 @@
+construct your classes from short, focused methods: ruby programers favor very short methods, methods that stick to doing one 
+thing and doing well, breaking up your code in to many short, single-purpose methods plays to the strength of ruby and also make your code
+more testable.
+
+compressing specifications: we can transform parts of our code into short, single purpose functions that tells what the 
+function is doing with the name of the function
+
+composing methods for humans:
+the composed method technique advocate dividing your class up into methods that have three characteristics
+1. do a single thing 
+2. each method operate in a single conceptual level, dont mix high level stuff with low level stuff
+3. each method needs to have a name that reflects its purpose
+
+composing ruby methods:
+ruby is a good language to do composed method style, because the cost for a new methods in ruby is very low, 
+composable methods in ruby are also more testable
+
+create classes that understands equality?:
+determine object equality is hard but it is also key to create well-behaved objects
+
+equal method?: the equal method is a excelent way to determine if two variables point to the same object
+
+equal? ==: both tests for object identity
+
+object equality: override the equals == definition on your class if you need to test for object equality
+
+testing for behavior not class: we can override the == sign and make him test for methods not the same class, using .respond_to(:<method_name>)
+
+singletons and class methods:
+singleton methods allow us to create objects with a independent streak, objects whose behavior is not completely controlled by their class
+
+singleton method: a singleton method is a method defined for exactly one object instance, we can declare singleton methods with def <instance>.<methodname> end
+
+another way to define singleton methods: you can also use the class << instance ... end method to reopen the class to add singleton methods
+
+the singleton class: every instance of a method have a singleton class his class serves as a shell for singleton methods and is always between
+the instance and his class. Object -> Singleton -> stub_printer
+
+class methods: class methods are just singleton methods in disguise
+
+common mistake with class methods: a common mistake with class methods is thinking that instances of the class
+know anything about the class methods, if you create a class method only the class will know about the method 
+the only way to access the method via the instance of the class is using class_instance.class.method
+
+self is class methods: self in class methods is always the class where the method was called 
+
+

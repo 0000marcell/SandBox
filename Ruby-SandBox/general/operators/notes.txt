@@ -1,0 +1,9 @@
+Define operators respectfully: sometimes defining your own operator can be a good idea a exemple of that is overwriting the []
+operator to use it differently in a enumerable.
+
+unary operator: ! is a unary operator and have this name because it operates in just one object
+
+when is ok to use defined operators?:
+when your class has a natural tendency for one or other operator, when it depends on indexing 
+
+the format operator: we can specify a format using % and "%d" % 42, just like in C

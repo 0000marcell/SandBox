@@ -1,3 +1,5 @@
+how to compile: $gplc hello.pl 
+
 prolog: prolog, is a logic programming language, prolog programs are a set of sentences in logical form, expressing facts and rules about some problem domain
 
 facts: are  simple clauses that matches a stateman.
