@@ -1,0 +1,27 @@
+Use class instance variables:
+class variables @@ are not a pratical solution to store class data, class instance variables to a much better job
+
+Wandering variables, why class variables are bad:
+everytime you define a class variable ruby will look up its values first in the inheritance tree, so if you have a class parent that set a class variable @@name and the another class child that also sets a @@name variables the @@name from the parent will be look up first and ignore the @@name variable in child
+
+Getting control of the data in your class:
+instance class variables work in a much more reasonable way, you can declare it with @variable and access with Class.variables and the value will work as expected because self in ruby is always the class
+
+Adding some convenience to your class instance variables:
+we can add attr_accessor to class instance variables though the singleton class, every class have a singleton class 
+we can define our attr_accessor on the singleton class and use it to set and get the instance class variable
+
+use modules as name spaces:
+use modules to organize classes and constants(and modules) into a easy to use hieranchy
+
+a place for your stuff, with a name:
+module can hold methods, constants, classes and even other modules, modules allows us to group together similar classes
+
+a home for those utility methods:
+modules are usefull to hold utility methods that dont fit in a class
+
+building modules a little at a time:
+we can declare a module in more than one class, we can then add more classes or methods to it reopen the module like if we were declaring it for the first time
+
+treat modules like the objects that they are:
+everything in ruby is a object and that includes modules, we can reference a method in a variable and use different modules with similar api interchanbly
