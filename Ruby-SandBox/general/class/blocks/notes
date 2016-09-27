@@ -1,0 +1,42 @@
+use blocks to iterate:
+one of the simplest uses of blocks are as iterators
+
+block arguments: we can pass arguments to blocks class with yield(argument) and then use it in the block with do |argument|
+
+value of yield:
+the value of yield is always the last expression in the block given
+
+block iterator on a class: we can easily create a iterator in a class yield values in a array
+
+naming iterators: use each_.... to name your iterators
+
+mixin in Enumerable: Enumerable has a lot of usefull methods for Enumerable classes, we can override the each methods and include Enumerable, this way the include? methods will the the overridden each of our class and return true for what we want
+
+the ensure clause: begin ensure clauses quarantees that the code runs even if the block given breaks or raises a exception
+
+using blocks to do stuff with the given block: we can use blocks to add aditional functionality to our code like executing a logging mechanism and the piece of code given to the block
+
+execute around: the name of the technique describe above is called execute around
+
+use execute around to initailize: 
+execute around is also usefull to do expecific taks when initializing a object
+in this case it works a lot like cb
+
+code block access: code blocks have access to external variables where it was declared, only pass arguments that will be used in the definition of the block it self
+
+exceptions in execute around: be mindfull of exception in execute around blocks
+
+save blocks to execute later:
+use code blocks as cb and execute it when you need it 
+
+explicit blocks:
+impleciting passing is not the only way to use blocks, we can also use it explicitly with the & operator, we stick & on the parameter definition and call that block with block.call
+
+using code blocks as cb: we can easily create callback functionality with explicit blocks saved to be called later, using the call method of the block
+
+lazy evaluation: we can also use explict code blocks for lazy evaluation, putting slow code on the block and only calling when needed
+
+Difference between Proc.new and lambda:
+proc.new behave much more like a general block than lambda, lambda is more like a simple method, proc.new will rase a execption if you break inside the block but accept wrong number of arguments, lambda will not accept wrong number of arguments. 
+
+spec and blocks: when a block is define he drags with him the local scope, so as long as the block is being executed the scope will be active

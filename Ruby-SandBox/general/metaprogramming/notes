@@ -1,0 +1,52 @@
+Hooks to keep your program informed:
+ruby programs can know when a class is created when a method was called, reprogram themselves etc.. a ruby hook is a way to specify what should happen after something, hook is code that tells you if something is about to happen or already happened.
+
+self.inherited: is a hoook that gets fired when a class inherit from the class where the hook is defined
+
+self.included: get called when the module where the hook was defined is included in another class or module
+one common use of this method is to include class method to the class where this module is being included
+
+at_exit(&block) : run a code block when the application is about to exit
+
+other hooks: method_added, method_missing, trace_var, set_trace_func
+
+$!: variable that sets the last exception raised
+
+error handling with method_missing:
+we can override the kernel method "method_missing" to implement our own way of dealing with missing methods in our class
+
+delegation in OO:
+delegation in OO happens when one object uses another one to do part of the job.
+
+dont do supervised delegatoin: the problem with supervised delegation, if we wrap a class with another, now we have two classes to change whenever we add something
+
+method_missing for delegation: 
+we can wrap another class using method missing and calling the methods on the class when the method_missing is fired, its also a good idea to use basic object as the super class of this method, since basic object doesn't inherit all the methods that object has.
+
+the delegate utility: ruby standard library comes with a handy delegate class called SimpleDelegator, that makes wrapping a class super easy
+
+method missing to build flexible API:
+we can use method missing to build flexible apis, 
+api that have method names that don't even exist in the original class
+in the method_missing hook we can decide what to do with these methods calls, or raise nameexception error otherwise
+
+exemples of method_missing:
+find_by_name in ActiveRecoard::Base is implemented using method_missing
+
+monkey patching: ruby have open classes, which means that you can change a class at any time, remove methods add new ones etc... this technique is called monkey patching
+
+monkey patching existing classes: we have to be carefull when monkey patching existing classes, we should create a alias for the old implementation and use it in the new one
+
+usefull methods to change classes: remove_method :word_count, private :method public :method
+
+ruby classes: ruby body class is executable ruby reads the class and execute the code inside it one step at a time, including methods (def ) and doing everything else
+
+conditional methods: because the body of the class is executed in ruby we can declare methods conditionally if something def someting ... in the body of the class and it will work
+
+reload code: we can use load(__FILE__) and a class method to reload code in a class, we have to remove all the current instance methods too
+
+tests in metaprogramming: tests are a must in metaprogramming
+
+class methods that build instance methods: we can use class_eval to evaluate chunks of code and define methods, we can also use define_method
+
+implementing attr_accessor: we can easily implement attr_accessor and attr_reader using class_eval or define_method in the object superclass

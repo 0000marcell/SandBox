@@ -1,0 +1,12 @@
+use modules as mixins:
+mixins are a good fit to include common code in unrelated classes
+
+including class methods with mixins: 
+we can include class level mixins through the singleton class class Document class << self include mixin end end
+or using class Document extend mixing end
+
+what are module-mixins:
+when you include a mixin in a class ruby create a super class with the methods of the mixins, and you can have as many of this classes as you want
+we can find out if a class includes a module with instance.kind_of?(module_name), we can also say Classname.ancestors and see the module in the list
+
+modules as containers of constants: modules are a good way to insert constants and helpers methods in your classes
