@@ -50,3 +50,7 @@ tests in metaprogramming: tests are a must in metaprogramming
 class methods that build instance methods: we can use class_eval to evaluate chunks of code and define methods, we can also use define_method
 
 implementing attr_accessor: we can easily implement attr_accessor and attr_reader using class_eval or define_method in the object superclass
+
+when to use metaprogramming: make that metaprogramming pay for itself
+
+share metaprogramming: one good way to share class-changing logic is to move this logic to a superclass

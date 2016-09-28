@@ -1,0 +1,14 @@
+Iternal and external DSL:
+internal DSL use ruby code and don't have a parser, external DSL have a unique syntax and a parser
+
+the programmer is always right is one of the principles of the ruby language.
+
+instance_eval: very usefull method when creating DSL, instead of doing block.call(self) we do instance_eval(&block), the block will be executed with a self point to the class where it was called. 
+
+instance_eval string: instance equal can also be used to read a string and evaluate as standard ruby code, we can use our dsl in another file read the file and evaluate the code inside our class
+
+finishing a simple DSL: after running code evaluation a file we can create a exec that thats as a argument the DSL file
+
+better error msg: one of the biggest problems with DSL is error handling, we can aliviate this using instance_eval(File.read(path), path), by passing the options path the error will point to this file
+
+DSL have a limit: you have to keep track of what you are doing and dont get too carried away trying to create you own language, stay with the ruby syntax dont push the DSL too far
