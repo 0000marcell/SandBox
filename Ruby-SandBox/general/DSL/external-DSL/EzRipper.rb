@@ -19,24 +19,26 @@ class EzRipper
 	end
 
 	def parse_statement(statement)
-		tokens = statement.strip.split
-		return if tokens.empty?
-
-		case tokens.first
-		when 'print'
-			@ripper.on_path(tokens[1]) do |el|
+		statement = statement.sub(/#.*/, '')
+		case statement.strip
+		when ''
+			# Skip blank lines
+		when /print\s+'(.*?)'/
+			@ripper.on_path($1) do |el|
 				puts el.text
 			end
-		when 'delete'
-			@ripper.on_path(tokens[1]){ |el| el.remove }
-		when 'replace'
-			@ripper.on_path(tokens[1]){ |el| el.text = tokens[2] }
-		when 'print_document'
+		when /delete\s+'(.*?)'/
+			@ripper.on_path($1){|el| el.remove}
+		when /replace\s+'(.*?)'\s+'(.*?)'$/
+			@ripper.on_path($1){|el| el.remove }
+		when /uppercase\s+'(.*?)'/
+			@ripper.on_path($1){|el| el.text = el.text.upcase }
+		when /print_document/
 			@ripper.after do |doc|
 				puts doc
 			end
 		else
-			raise "Unknown keyword: #{tokens.first}"
+			raise "Don't know what to do with: #{statement}"
 		end
 	end
 end

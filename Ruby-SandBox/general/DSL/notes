@@ -12,3 +12,7 @@ finishing a simple DSL: after running code evaluation a file we can create a exe
 better error msg: one of the biggest problems with DSL is error handling, we can aliviate this using instance_eval(File.read(path), path), by passing the options path the error will point to this file
 
 DSL have a limit: you have to keep track of what you are doing and dont get too carried away trying to create you own language, stay with the ruby syntax dont push the DSL too far
+
+regex have a limit: eventually only using regex will not cut it, we need something more powerfull to handle the external dsl, treetop is a good options for ruby 
+
+will it be worth it?: is the question that you always have to ask before implementing a external DSL

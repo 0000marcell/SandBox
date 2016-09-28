@@ -36,3 +36,5 @@ starts with any line: ^ starts after any new line /^once upon a time/ will match
 ends with any line: $ will match in any line /cruz$/ will match any new line that ends with cruz
 
 turn off new lines: m after the expression will turn off separation of newlines when match /^once upon a time.* happily ever after $ /m
+
+\s+: will match one or more spaces

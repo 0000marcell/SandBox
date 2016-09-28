@@ -42,3 +42,23 @@ puts "\n"
 puts "or character |"
 puts "bcd" =~ /(bcd)|123/ # 0
 puts "\n"
+
+# global variables $1 $2 etc...
+puts "global variables:"
+"ab:cd" =~ /([a-z]+):([a-z]+)/
+puts $1 # ab
+puts $2 # cd
+
+# + one or more times
+puts "+ sign one or more times:"
+"abcd" =~ /([a-z])/ # without +
+puts $1 # a
+"abcd" =~ /([a-z]+)/ # with +
+puts $1 # abcd
+
+# zero or one time
+puts "? sign zero or one time:"
+"aaa" =~ /(a*)/ # will match aaa
+puts $1
+"aba" =~ /(a?)/ # will match a
+puts $1
