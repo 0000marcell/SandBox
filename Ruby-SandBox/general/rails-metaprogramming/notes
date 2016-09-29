@@ -1,0 +1,18 @@
+rails main parts: activerecord, activesupport and actionpack(deals with web stuff)
+
+ActiveRecord::Base: has more than 300 instance methods ad 550 class methods, has no code of its own and only imports and extends other modules
+
+design techniques: Active records show us that design techniques are relative, they depend on the language that your are using
+
+include and extend trick: we use the included hook on the module being included to extend some class methods of the same module, theres a example of this trick on this repo
+
+chained include and extend: theres a problem with include and extend when including a method that already uses this trick, the module included will override the class methods of the first one
+
+ActiveSupport::Concern:
+because of the problem with chained included extend trick, rails created ActiveSupport::Concern that solves this problem
+
+Dynamic dispatch: calling methods using send is a form of dynamic dispatch
+
+append_features: ActiveSupportCorcern override append_features hook to prevent the chained include extend problem
+
+simple code: is importance to notice that metaprogramming is not about being clever is about being flexible, you don't need to use metaprogramming don't use it. 

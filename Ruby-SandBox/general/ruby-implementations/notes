@@ -1,0 +1,8 @@
+MRI: Matz Ruby Implementation written in C 
+YARV: yet another ruby VM
+JRuby: written in java to run on the JVM
+Rubinius: ruby implementaion written in ruby
+IronRuby: Ruby for the .Net plataform
+Cardinal: runs on Parrot
+AST: abstract syntax tree
+YACC: ruby uses YACC to parse ruby code
