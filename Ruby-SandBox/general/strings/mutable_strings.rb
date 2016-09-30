@@ -1,7 +1,4 @@
 name = "marcell" 
 sirname = name
-
-name = name.upcase
-puts sirname
-
-
+name.upcase!
+puts sirname # MARCELL

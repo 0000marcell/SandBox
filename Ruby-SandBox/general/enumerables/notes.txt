@@ -1,3 +1,5 @@
+enumerables: the enumerable mixin provied a collection of classes with several traversal and search methods 
+
 word array: use %w{ marcell monteiro cruz } 
 
 arbitraty number of arguments:

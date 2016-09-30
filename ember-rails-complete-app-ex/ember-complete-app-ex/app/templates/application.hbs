@@ -1,13 +1,12 @@
 {{#md-navbar name='' class='indigo' }}
-	{{session-component}}
+	{{session-component onLogin=(action "login")
+											onLogout=(action "logout")
+											onUser=(action "showUser")
+											onUsers=(action "showUsers")}}
 {{/md-navbar}}
 {{outlet}}
-
+{{login-form}}
 {{carousel-album}}
-
-
-
-
 
 <footer class='page-footer indigo white-text'>
 	<div class="container">

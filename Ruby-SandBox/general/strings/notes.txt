@@ -1,6 +1,6 @@
 quotes: %q{} can be used when there is a lot of quotes and double quotes on the string
 
-multilined strings: we can avoid newlines in multilined strings using a backlash "this do not have newline \
+multilined strings: we can avoid newlines in multilined strings using a backlash "this do not have a newline \
 ok!"
 
 here documents: <<EOF
@@ -12,3 +12,5 @@ will return the char index
 
 mutable strings: ruby have mutable strings, strings referencing another strings
 will be changed if you alter the original, create another reference if thats the case
+
+change in place methods: methods ending with ! will change the string in place 
