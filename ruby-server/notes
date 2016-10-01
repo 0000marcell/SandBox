@@ -1,0 +1,17 @@
+sockets: sockets are the endpoints of a bidirectional communicatio channel
+
+channel types: sockets can be implemented using UDP, TCP etc..
+
+socket domain: the family of protocols that will be used as transport mechanism, PF_INET, PF_UNIX, PF_X25 
+
+socket type: the type of communications between the two endpoints, SOCK_STREAM for connection-oriented and SOCK_DGRAM for connectionless protocols
+
+socket protocol: Typically zero, can be used to identify a variant of a protocol within a domain 
+
+hostname: the identifier of a network interface:
+a string, which can be a host name, a dotterd-quad address, or an IPV6 address in colon (and possibly dot) notation
+can also be a string '<broadcast>', which specifies an INADDR_BROADCAST adress, a zero-length string, which specifies INADDR_ANY or an integer, interpreted as a binary address in host byte order.
+
+port: each server listens for clients calling on one or more ports. A port may be a Fixnum port number, a string containing a port number, or the name of a service
+
+open socket: once we have a socket open we can read it line any other IO object

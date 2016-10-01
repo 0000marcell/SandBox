@@ -4,4 +4,4 @@ starting an HTTP server:
 server = WEBrick::HTTPServer.new :Port => 8000, :DocumentRoot => root 
 trap 'INT' do server.shutdown end
 server.start
-we need
+we need to provide a shutdown hook as starting the server blocks the current thread
