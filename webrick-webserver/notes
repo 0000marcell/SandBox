@@ -1,0 +1,7 @@
+webrick: is an HTTP server toolkit that can be configured as an HTTPS server, a proxy server, and a virtual-host server
+
+starting an HTTP server:
+server = WEBrick::HTTPServer.new :Port => 8000, :DocumentRoot => root 
+trap 'INT' do server.shutdown end
+server.start
+we need
