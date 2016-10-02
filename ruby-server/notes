@@ -17,3 +17,9 @@ port: each server listens for clients calling on one or more ports. A port may b
 open socket: once we have a socket open we can read it line any other IO object
 
 TCP: transmission control protocol as UDP is part of the transport layer of connection, differently from http and ftp which are part of the application layer.
+
+URL: Uniform resource locator is a specific type of URI which references a web resource with its location on a computer network and a mechanism for retrieving it.
+
+URI: Uniform resource identifier (URI) is a string of characters used to identify a resource in a network
+
+URI: Uniform resource identifier 
