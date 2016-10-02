@@ -15,3 +15,5 @@ can also be a string '<broadcast>', which specifies an INADDR_BROADCAST adress, 
 port: each server listens for clients calling on one or more ports. A port may be a Fixnum port number, a string containing a port number, or the name of a service
 
 open socket: once we have a socket open we can read it line any other IO object
+
+TCP: transmission control protocol as UDP is part of the transport layer of connection, differently from http and ftp which are part of the application layer.
