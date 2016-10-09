@@ -1,3 +1,4 @@
+
 gemfile structure: Rakefile, README, document.gemspec, lib/document.rb, spec/document_spec.rb
 
 more than one src file: if we have more than one src file we just create a folder inside lib/ with the same name as the gem and put other files there, them in require everything from the one .rb file inside lib/ ex: thor/lib/thor/ thor/lib/thor.rb <- file with the requires
@@ -13,3 +14,7 @@ automate gem creation: we can automate gem creation with hoe
 mind the paths: when requiring a file that will be used in a gem we need to be mindfull of the path of this file, use __FILE__ to avoid wrong paths in your gems
 
 wrap the gem in a module to avoid name colisions
+
+rake tasks: create rake spec, rake build and rake release
+
+history.rdoc: update this file with all the information about new releases, bugfixes, hotfixes etc using semver

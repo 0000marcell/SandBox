@@ -1,0 +1,6 @@
+singleton pattern: restrict instantiation of a class to 1 object
+allow only 1 instance of a class, like a global, but hopefully less mutable, can be lazily instantiated, much maligned.
+
+UML: MySingleton > instance: MySingleton > getInstance(): MySingleton > Create limite access
+
+

@@ -1,0 +1,4 @@
+on_path('/document/author') do
+	text = 'J.R.R. Tolkien'
+	puts text
+end

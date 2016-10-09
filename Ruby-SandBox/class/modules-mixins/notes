@@ -10,3 +10,5 @@ when you include a mixin in a class ruby create a super class with the methods o
 we can find out if a class includes a module with instance.kind_of?(module_name), we can also say Classname.ancestors and see the module in the list
 
 modules as containers of constants: modules are a good way to insert constants and helpers methods in your classes
+
+autoload: only loads a module when needed

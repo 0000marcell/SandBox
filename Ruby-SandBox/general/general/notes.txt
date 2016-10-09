@@ -1,3 +1,5 @@
+$LOAD_PATH: global array with paths used in require, we do $LOAD_PATH.unshift "./path" to add a new path to the beggining of the array
+
 everything is a object: in ruby everything is a object, strings, number etc...
 
 Classes, Instances, methods: classes serves two purposes, container for methods and factory of objects, every class inherit from a super class when not defined, it will inherit from object

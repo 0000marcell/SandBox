@@ -1,6 +1,0 @@
-on_path('/document/author') do |author|
-	author.text = 'J.R.R. Tolkien'
-	puts author.text
-end
-
-after { |doc| puts doc }

@@ -18,6 +18,8 @@ we can override the kernel method "method_missing" to implement our own way of d
 delegation in OO:
 delegation in OO happens when one object uses another one to do part of the job.
 
+delegation types: delegation by default (inherit a class and calling super), explicit delegation: calling a method in another object, strong typed languages call it protocol or interface, ruby uses duck typing, method_missing: we can also delegate with method missing and a little bit of regex, we can also use forwardable
+
 dont do supervised delegatoin: the problem with supervised delegation, if we wrap a class with another, now we have two classes to change whenever we add something
 
 method_missing for delegation: 

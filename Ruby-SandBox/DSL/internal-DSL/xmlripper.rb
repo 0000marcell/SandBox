@@ -36,7 +36,10 @@ class XmlRipper
 	def run_path_actions(document)
 		@path_actions.each do |path, block|
 			REXML::XPath.each(document, path) do |element|
-				block.call(element)
+				puts "gonna call block!"
+				instance_eval(&block)
+				#instance_exec(block.to_s)
+				#block.call(element)
 			end
 		end
 	end

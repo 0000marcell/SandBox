@@ -16,3 +16,5 @@ DSL have a limit: you have to keep track of what you are doing and dont get too 
 regex have a limit: eventually only using regex will not cut it, we need something more powerfull to handle the external dsl, treetop is a good options for ruby 
 
 will it be worth it?: is the question that you always have to ask before implementing a external DSL
+
+binding: object of class binding encapsulate the execution content at some particular place in the code and retain this context for future use, they can be created with binding(), the eval method can be used with binding to execute some piece of code in the binding context. 
