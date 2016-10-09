@@ -1,7 +1,7 @@
 require 'yaml'
 
 class Todo
-	YAML_FILE = './todo.yml'
+	YAML_FILE = './todo_tree.yml'
 
 	def initialize
 		@todo_obj = {}
@@ -10,15 +10,15 @@ class Todo
 	##
 	# load yaml file	
 	
-	def load
-		@todo_obj = YAML.load_file(YAML_FILE)
+	def load(file_path = YAML_FILE)
+		@todo_obj = YAML.load_file(file_path)
 	end
 
 	##
 	# write todo to the file
 	
-	def write
-		File.open(YAML_FILE, 'w+'){ |f| f.write(@todo_obj.to_yaml ) }
+	def write(file_path = YAML_FILE)
+		File.open(file_path, 'w+'){ |f| f.write(@todo_obj.to_yaml ) }
 	end
 
 	##
@@ -26,7 +26,11 @@ class Todo
 	# a new root todo
 	
 	def add(child, parent = nil)
-		@todo_obj[parent] = { child.to_sym }
+		if !parent
+			@todo_obj[child.to_sym] = ""
+		else
+			@todo_obj[parent] = { child => ''}
+		end
 		write
 	end
 
@@ -42,6 +46,5 @@ class Todo
 	
 	def delete
 	end
-
 end
 

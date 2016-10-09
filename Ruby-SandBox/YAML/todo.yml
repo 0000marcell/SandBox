@@ -1,5 +1,7 @@
----
-:parent:
-- :child1: child1_name
-- :child2:
-  - :child21: child21
+create a code to reference a todo like
+A1B etc .. 
+transform the yaml in html
+make it possible to reference a link in the html file by the code A1B etc ...
+save the last date the task was worked on, whe  was created
+save the completed tasks in a different file
+
