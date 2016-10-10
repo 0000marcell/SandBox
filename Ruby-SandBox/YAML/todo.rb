@@ -11,7 +11,10 @@ class Todo
 	# load yaml file	
 	
 	def load
+		debugger
 		@todo_obj = YAML.load_file(@file)
+		@todo_obj = {} if !@todo_obj  
+		@todo_obj
 	end
 
 	##
@@ -27,7 +30,7 @@ class Todo
 	
 	def add(child, parent = nil)
 		if !parent
-			@todo_obj[child.to_sym] = ""
+			@todo_obj[child] = ""
 		else
 			@todo_obj[parent] = { child => ''}
 		end
