@@ -6,6 +6,12 @@ export default Ember.Controller.extend({
 		logout(){
 			this.get('authManager').invalidate();
 			this.transitionToRoute('login');
+		},
+		login(){
+		},
+		showUsers(){
+		},
+		showUser(){
 		}
 	}
 });

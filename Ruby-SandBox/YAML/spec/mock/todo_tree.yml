@@ -1,5 +1,0 @@
----
-:parent:
-- :child1: child1_name
-- :child2:
-  - :child21: child21

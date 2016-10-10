@@ -1,6 +1,6 @@
 {{#if authManager.isAuthenticated}}
 	<a {{action 'user'}}>{{userName}}</a>
-	<a {{action 'users'}}Users</a>
+	<a {{action 'users'}}>Users</a>
 	{{#link-to 'users.user' authManager.data.authenticated.user.username }}{{authManager.data.authenticated.user.email}}{{/link-to}}
 	{{#link-to 'users'}}Users{{/link-to}}
 	<a {{action 'logout'}}>Log Out</a>

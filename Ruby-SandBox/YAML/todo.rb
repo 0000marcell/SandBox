@@ -1,24 +1,24 @@
 require 'yaml'
 
 class Todo
-	YAML_FILE = './todo_tree.yml'
 
-	def initialize
+	def initialize(file)
+		@file = file ? file : './todo_tree.yml'
 		@todo_obj = {}
 	end
 	
 	##
 	# load yaml file	
 	
-	def load(file_path = YAML_FILE)
-		@todo_obj = YAML.load_file(file_path)
+	def load
+		@todo_obj = YAML.load_file(@file)
 	end
 
 	##
 	# write todo to the file
 	
-	def write(file_path = YAML_FILE)
-		File.open(file_path, 'w+'){ |f| f.write(@todo_obj.to_yaml ) }
+	def write
+		File.open(@file, 'w+'){ |f| f.write(@todo_obj.to_yaml ) }
 	end
 
 	##
@@ -32,6 +32,14 @@ class Todo
 			@todo_obj[parent] = { child => ''}
 		end
 		write
+	end
+
+	##
+	# get a todo object 
+	
+	def get(node)
+		debugger
+		@todo_obj[node]
 	end
 
 	

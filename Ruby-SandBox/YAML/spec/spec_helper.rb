@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'byebug'
 require './todo'
 require 'fileutils'
 
