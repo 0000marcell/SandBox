@@ -22,9 +22,8 @@ describe Todo do
 	end
 
 	describe '#add #get' do
-		it 'rase error when node don't exist' do
-			@todo.get('something')
-			expect(@todo.get('something')).to 
+		it 'raise error when node dont exist' do
+			expect{ @todo.get('something')}.to raise_error(Todo::UndefinedNode)
 		end
 
 		it 'should add a todo' do

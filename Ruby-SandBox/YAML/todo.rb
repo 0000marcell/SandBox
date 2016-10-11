@@ -2,6 +2,8 @@ require 'yaml'
 
 class Todo
 
+	class UndefinedNode < StandardError; end
+
 	def initialize(file)
 		@file = file ? file : './todo_tree.yml'
 		@todo_obj = {}
@@ -11,7 +13,6 @@ class Todo
 	# load yaml file	
 	
 	def load
-		debugger
 		@todo_obj = YAML.load_file(@file)
 		@todo_obj = {} if !@todo_obj  
 		@todo_obj
@@ -41,7 +42,8 @@ class Todo
 	# get a todo object 
 	
 	def get(node)
-		debugger
+		fail Todo::UndefinedNode, 'invalid node', 
+			caller if @todo_obj[node].nil?
 		@todo_obj[node]
 	end
 
