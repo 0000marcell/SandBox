@@ -6,7 +6,7 @@ moduleFor('serializer:application', 'Unit | Serializer | application', {
 	// Specify the other units that are required for this test.
 });
 
-test('it serializes records in JSON Api format', function(assert) {
+test('it serializes records in JSON Api format serializer-01', function(assert) {
 	let DummyModel = DS.Model.extend({
 		name: DS.attr('string'),
 		address: DS.attr('string')

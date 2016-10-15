@@ -3,6 +3,7 @@ import DS from 'ember-data';
 
 export default DS.JSONAPISerializer.extend({
 	serialize() {
+		debugger;
 		const result = this._super(...arguments),
 			 attr = result.data.attributes || {},
 			 rel = result.data.relationships || {};
