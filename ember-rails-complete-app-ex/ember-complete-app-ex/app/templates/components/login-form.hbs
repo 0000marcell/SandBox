@@ -1,8 +1,18 @@
 <h5>Login</h5>
-{{#if msgProp.msg}}
-	{{msgProp.msg}}
+{{#if loading}}
+	{{md-loader id='spinner' mode='circular'}}
+{{else}}
+	{{#if error}}
+		{{#md-card-panel class="red"
+			bodyClass="white-text"
+			}}
+			<p>
+				{{error}}
+			</p>
+		{{/md-card-panel}}
+	{{/if}}
+	{{input label='Email' type="email" value=email}}
+	{{input label='Password' type="password" validate=true value=password}}
+	<button {{action 'login'}}>Login</button>
+	{{#link-to 'password-reset' }}Forgot Password?{{/link-to}}
 {{/if}}
-{{input label='Email' type="email" value=email}}
-{{input label='Password' type="password" validate=true value=password}}
-<button {{action 'login'}}>Login</button>
-{{#link-to 'password-reset' }}Forgot Password?{{/link-to}}

@@ -6248,6 +6248,16 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .easy-transition {
   transition: transform 1s ease-in-out; }
 
+.md-carousel-album {
+  border: 1px solid black;
+  height: 300px; }
+
+.md-carousel-item {
+  position: absolute;
+  border: 1px solid black;
+  min-height: 200px;
+  min-width: 200px; }
+
 .card {
   text-align: left;
   min-width: 300px;

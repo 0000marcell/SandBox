@@ -2,9 +2,6 @@ import JSONAPIAdapter from 'ember-data/adapters/json-api';
 import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 
 export default JSONAPIAdapter.extend(DataAdapterMixin, {
-	headers: {
-		"API_KEY": 'marcell'
-	},
 	namespace: 'api/v1',
 	authorizer: 'authorizer:application',
 	coalesceFindRequests: true,
