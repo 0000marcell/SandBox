@@ -497,6 +497,15 @@ define('app4/tests/helpers/ember-simple-auth', ['exports', 'ember-simple-auth/au
 
   ;
 });
+define('app4/tests/helpers/escape-css.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | helpers/escape-css.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'helpers/escape-css.js should pass jshint.');
+  });
+});
 define('app4/tests/helpers/module-for-acceptance', ['exports', 'qunit', 'app4/tests/helpers/start-app', 'app4/tests/helpers/destroy-app'], function (exports, _qunit, _app4TestsHelpersStartApp, _app4TestsHelpersDestroyApp) {
   exports['default'] = function (name) {
     var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
@@ -1985,6 +1994,25 @@ define('app4/tests/unit/controllers/users/user/todos/todo/edit-test.jshint', ['e
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/users/user/todos/todo/edit-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/helpers/escape-css-test', ['exports', 'app4/helpers/escape-css', 'qunit'], function (exports, _app4HelpersEscapeCss, _qunit) {
+
+  (0, _qunit.module)('Unit | Helper | escape css');
+
+  // Replace this with your real tests.
+  (0, _qunit.test)('it works', function (assert) {
+    var result = (0, _app4HelpersEscapeCss.escapeCSS)([42]);
+    assert.ok(result);
+  });
+});
+define('app4/tests/unit/helpers/escape-css-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/helpers/escape-css-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/helpers/escape-css-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/models/task-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

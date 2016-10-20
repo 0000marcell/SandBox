@@ -1,4 +1,4 @@
-recalculate tX based on the size of the window
+create md-carousel-album in ember.
 use for(elem of elems) instead of regular for
 write tests for the img-carousel component
 implement album-carousel component, create route to test
