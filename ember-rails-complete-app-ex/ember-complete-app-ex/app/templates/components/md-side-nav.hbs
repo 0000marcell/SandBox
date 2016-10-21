@@ -3,7 +3,7 @@
 		<nav class="deep-orange">
 			<div class='nav-wrapper'>
 				<div class='container-fluid'>
-					<a  {{action "toggleSideNavBtn"}} class="button-collapse hide-on-large-only">
+					<a class="button-collapse" data-activates="sidenav">
 						<i class="material-icons">menu</i>
 					</a>
 				</div>
@@ -11,7 +11,7 @@
 		</nav>
 	</div>
 </header>
-<ul class='side-nav fixed show-on-medium-and-up {{if slideIn 'slide-in'}}'>
+<ul id='sidenav' class='side-nav fixed'>
 	{{yield}}
 </ul>
 <div {{action 'toggleSideNavBtn' on="touchEnd"}} class='side-nav-overlay {{if slideIn 'fade-in'}}'>

@@ -1791,6 +1791,24 @@ define('app4/tests/routes/sidenav.jshint', ['exports'], function (exports) {
     assert.ok(true, 'routes/sidenav.js should pass jshint.');
   });
 });
+define('app4/tests/routes/sidenav/link1.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/sidenav/link1.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/sidenav/link1.js should pass jshint.');
+  });
+});
+define('app4/tests/routes/sidenav/link2.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/sidenav/link2.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/sidenav/link2.js should pass jshint.');
+  });
+});
 define('app4/tests/routes/signup.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -2330,6 +2348,48 @@ define('app4/tests/unit/routes/sidenav-test.jshint', ['exports'], function (expo
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/sidenav-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/sidenav/link1-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:sidenav/link1', 'Unit | Route | sidenav/link1', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/sidenav/link1-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/sidenav/link1-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/sidenav/link1-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/sidenav/link2-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:sidenav/link2', 'Unit | Route | sidenav/link2', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/sidenav/link2-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/sidenav/link2-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/sidenav/link2-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/routes/signup-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
