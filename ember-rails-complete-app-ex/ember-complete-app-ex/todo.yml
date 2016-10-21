@@ -1,3 +1,6 @@
+create side-nav
+crete page component maybe? 
+create collection component that simulates the images layout in instagram
 create md-carousel-album in ember.
 use for(elem of elems) instead of regular for
 write tests for the img-carousel component

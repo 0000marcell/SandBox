@@ -1,0 +1,18 @@
+<header>
+	<div class='navbar-fixed'>
+		<nav class="deep-orange">
+			<div class='nav-wrapper'>
+				<div class='container-fluid'>
+					<a  {{action "toggleSideNavBtn"}} class="button-collapse hide-on-large-only">
+						<i class="material-icons">menu</i>
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+<ul class='side-nav fixed show-on-medium-and-up {{if slideIn 'slide-in'}}'>
+	{{yield}}
+</ul>
+<div {{action 'toggleSideNavBtn' on="touchEnd"}} class='side-nav-overlay {{if slideIn 'fade-in'}}'>
+</div>

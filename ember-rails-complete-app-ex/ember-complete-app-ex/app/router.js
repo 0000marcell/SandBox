@@ -21,6 +21,7 @@ Router.map(function() {
   });
   this.route('password-reset');
   this.route('not-found', { path: '/*path' });
+  this.route('sidenav');
 });
 
 export default Router;
