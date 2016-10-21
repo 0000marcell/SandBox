@@ -1,6 +1,6 @@
-{{login-form}}
-<div class="row">
-	<div>
+{{!-- {{login-form}} --}}
+<div class='row'>
+	<div class='col s12'>
 		{{#md-card id="image-card"}}
 			<h5>Login</h5>
 			{{#if msgProp.msg}}
@@ -13,17 +13,16 @@
 			{{#if sendingMessage}}
 				{{md-loader id='spinner' mode="circular"}}	
 			{{else}}
-				{{md-input label='Email' type="email" class="col s12" validate=true value=email}}
-			{{md-input label='Password' type="password" class="col s12" validate=true value=password}}
-			<div class=''>
-				{{md-btn-submit class='indigo'
-					id='login'
-					action='login'
-					text='Login'}}
-				{{#link-to 'password-reset' }}Forgot Password?{{/link-to}}
-			</div>
+				<div class='col s4'>
+					{{md-input label='Email' type="email" class="col s12" validate=true value=email}}
+				{{md-input label='Password' type="password" class="col s12" validate=true value=password}}
+					{{md-btn-submit class='indigo'
+						id='login'
+						action='login'
+						text='Login'}}
+					{{#link-to 'password-reset' }}Forgot Password?{{/link-to}}
+				</div>
 			{{/if}}
 		{{/md-card}}
 	</div>
 </div>
-

@@ -1,4 +1,4 @@
-create side-nav
+create card component 
 crete page component maybe? 
 create collection component that simulates the images layout in instagram
 create md-carousel-album in ember.
@@ -8,6 +8,7 @@ implement album-carousel component, create route to test
 implement side-nav
 
 done:
+create side-nav
 implement img-carousel component, create route to test
 creating routes to test each component
 crud comp icebox
