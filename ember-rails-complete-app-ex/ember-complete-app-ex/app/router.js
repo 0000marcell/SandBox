@@ -26,6 +26,7 @@ Router.map(function() {
     this.route('link2');
   });
   this.route('card');
+  this.route('image-collenction', {path: 'image'});
 });
 
 export default Router;

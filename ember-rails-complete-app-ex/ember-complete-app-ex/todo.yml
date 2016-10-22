@@ -1,6 +1,6 @@
-create card component 
-crete page component maybe? 
+creating collection component on image-collection route
 create collection component that simulates the images layout in instagram
+crete page component maybe? 
 create md-carousel-album in ember.
 use for(elem of elems) instead of regular for
 write tests for the img-carousel component
@@ -8,6 +8,7 @@ implement album-carousel component, create route to test
 implement side-nav
 
 done:
+create card component 
 create side-nav
 implement img-carousel component, create route to test
 creating routes to test each component
