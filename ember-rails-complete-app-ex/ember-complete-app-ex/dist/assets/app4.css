@@ -6262,6 +6262,13 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   top: inherit;
   height: calc(100% - 60px); }
 
+.center-div {
+  width: 70%;
+  max-width: 550px;
+  min-width: 250px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .card {
   text-align: left;
   min-width: 300px;

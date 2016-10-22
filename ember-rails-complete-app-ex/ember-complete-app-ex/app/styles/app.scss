@@ -12,7 +12,15 @@ $roboto-font-path: '../assets/';
 @import 'components/md-carousel-album';
 @import 'components/md-carousel-item';
 @import 'components/md-side-nav';
+@import 'components/route-card';
 
+.center-div{
+	width: 70%;
+	max-width: 550px;
+	min-width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .card{
 	text-align: left;

@@ -25,6 +25,7 @@ Router.map(function() {
     this.route('link1');
     this.route('link2');
   });
+  this.route('card');
 });
 
 export default Router;
