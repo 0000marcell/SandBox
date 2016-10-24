@@ -6290,6 +6290,10 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .md-image-collection-content img {
     width: 150%; }
 
+@media only screen and (min-width: 601px) {
+  .md-image-collection {
+    padding-left: 140px; } }
+
 .content {
   overflow: hidden;
   max-width: 300px;

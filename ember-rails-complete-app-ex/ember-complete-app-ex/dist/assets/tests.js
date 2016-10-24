@@ -1922,6 +1922,15 @@ define('app4/tests/routes/card.jshint', ['exports'], function (exports) {
     assert.ok(true, 'routes/card.js should pass jshint.');
   });
 });
+define('app4/tests/routes/carousel.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/carousel.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/carousel.js should pass jshint.');
+  });
+});
 define('app4/tests/routes/image-collenction.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -1992,6 +2001,15 @@ define('app4/tests/routes/signup.jshint', ['exports'], function (exports) {
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/signup.js should pass jshint.');
+  });
+});
+define('app4/tests/routes/upload.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/upload.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/upload.js should pass jshint.');
   });
 });
 define('app4/tests/routes/users.jshint', ['exports'], function (exports) {
@@ -2463,6 +2481,27 @@ define('app4/tests/unit/routes/card-test.jshint', ['exports'], function (exports
     assert.ok(true, 'unit/routes/card-test.js should pass jshint.');
   });
 });
+define('app4/tests/unit/routes/carousel-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:carousel', 'Unit | Route | carousel', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/carousel-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/carousel-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/carousel-test.js should pass jshint.');
+  });
+});
 define('app4/tests/unit/routes/image-collenction-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleFor)('route:image-collenction', 'Unit | Route | image collenction', {
@@ -2629,6 +2668,27 @@ define('app4/tests/unit/routes/signup-test.jshint', ['exports'], function (expor
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/signup-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/upload-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:upload', 'Unit | Route | upload', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/upload-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/upload-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/upload-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/routes/users/user-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

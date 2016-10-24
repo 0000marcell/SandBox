@@ -27,6 +27,8 @@ Router.map(function() {
   });
   this.route('card');
   this.route('image-collenction', {path: 'image'});
+  this.route('upload');
+  this.route('carousel');
 });
 
 export default Router;
