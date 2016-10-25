@@ -501,18 +501,64 @@ define('app4/components/md-card-reveal', ['exports', 'ember-cli-materialize/comp
 define('app4/components/md-card', ['exports', 'ember-cli-materialize/components/md-card'], function (exports, _emberCliMaterializeComponentsMdCard) {
   exports['default'] = _emberCliMaterializeComponentsMdCard['default'];
 });
-define('app4/components/md-carousel-album', ['exports', 'ember'], function (exports, _ember) {
+define('app4/components/md-carousel-album', ['exports', 'ember', 'ember-resize/mixins/resize-aware'], function (exports, _ember, _emberResizeMixinsResizeAware) {
    var __cov_yZNGM5e9i0M0_sv5Nq0V2w = Function('return this')();
    if (!__cov_yZNGM5e9i0M0_sv5Nq0V2w.__coverage__) {
       __cov_yZNGM5e9i0M0_sv5Nq0V2w.__coverage__ = {};
    }
    __cov_yZNGM5e9i0M0_sv5Nq0V2w = __cov_yZNGM5e9i0M0_sv5Nq0V2w.__coverage__;
    if (!__cov_yZNGM5e9i0M0_sv5Nq0V2w['app/components/md-carousel-album.js']) {
-      __cov_yZNGM5e9i0M0_sv5Nq0V2w['app/components/md-carousel-album.js'] = { "path": "app/components/md-carousel-album.js", "s": { "1": 0 }, "b": {}, "f": { "1": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 12, "loc": { "start": { "line": 12, "column": 6 }, "end": { "line": 12, "column": 8 } } } }, "statementMap": { "1": { "start": { "line": 13, "column": 3 }, "end": { "line": 13, "column": 24 } } }, "branchMap": {}, "code": ["import Ember from 'ember';", "", "export default Ember.Component.extend({", "\tclassNames: ['container', 'md-carousel-album'],", "\tparent: this,", "\titems: [{x: '10px', zIndex: 1},", "\t\t\t \t  {x: '60px', zIndex: 2},", "\t\t\t \t\t{x: '110px', zIndex: 3},", "\t\t\t \t\t{x: '170px', zIndex: 2},", "\t\t\t \t\t{x: '220px', zIndex: 1}],", "\tactions: {", "\t\tmove(){", "\t\t\tconsole.log('move!');", "\t\t}", "\t}", "});", ""] };
+      __cov_yZNGM5e9i0M0_sv5Nq0V2w['app/components/md-carousel-album.js'] = { "path": "app/components/md-carousel-album.js", "s": { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0, "10": 0, "11": 0, "12": 0, "13": 0, "14": 0, "15": 0, "16": 0 }, "b": { "1": [0, 0], "2": [0, 0], "3": [0, 0] }, "f": { "1": 0, "2": 0, "3": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 10, "loc": { "start": { "line": 10, "column": 17 }, "end": { "line": 10, "column": 19 } } }, "2": { "name": "(anonymous_2)", "line": 14, "loc": { "start": { "line": 14, "column": 10 }, "end": { "line": 14, "column": 17 } } }, "3": { "name": "(anonymous_3)", "line": 43, "loc": { "start": { "line": 43, "column": 6 }, "end": { "line": 43, "column": 8 } } } }, "statementMap": { "1": { "start": { "line": 11, "column": 2 }, "end": { "line": 11, "column": 28 } }, "2": { "start": { "line": 12, "column": 2 }, "end": { "line": 12, "column": 41 } }, "3": { "start": { "line": 15, "column": 2 }, "end": { "line": 21, "column": 10 } }, "4": { "start": { "line": 22, "column": 2 }, "end": { "line": 39, "column": 3 } }, "5": { "start": { "line": 23, "column": 3 }, "end": { "line": 31, "column": 4 } }, "6": { "start": { "line": 24, "column": 4 }, "end": { "line": 24, "column": 27 } }, "7": { "start": { "line": 26, "column": 4 }, "end": { "line": 30, "column": 5 } }, "8": { "start": { "line": 27, "column": 5 }, "end": { "line": 27, "column": 46 } }, "9": { "start": { "line": 29, "column": 5 }, "end": { "line": 29, "column": 46 } }, "10": { "start": { "line": 32, "column": 3 }, "end": { "line": 36, "column": 4 } }, "11": { "start": { "line": 33, "column": 4 }, "end": { "line": 33, "column": 11 } }, "12": { "start": { "line": 35, "column": 4 }, "end": { "line": 35, "column": 11 } }, "13": { "start": { "line": 37, "column": 3 }, "end": { "line": 37, "column": 23 } }, "14": { "start": { "line": 38, "column": 3 }, "end": { "line": 38, "column": 7 } }, "15": { "start": { "line": 40, "column": 2 }, "end": { "line": 40, "column": 35 } }, "16": { "start": { "line": 44, "column": 3 }, "end": { "line": 44, "column": 24 } } }, "branchMap": { "1": { "line": 23, "type": "if", "locations": [{ "start": { "line": 23, "column": 3 }, "end": { "line": 23, "column": 3 } }, { "start": { "line": 23, "column": 3 }, "end": { "line": 23, "column": 3 } }] }, "2": { "line": 26, "type": "if", "locations": [{ "start": { "line": 26, "column": 4 }, "end": { "line": 26, "column": 4 } }, { "start": { "line": 26, "column": 4 }, "end": { "line": 26, "column": 4 } }] }, "3": { "line": 32, "type": "if", "locations": [{ "start": { "line": 32, "column": 3 }, "end": { "line": 32, "column": 3 } }, { "start": { "line": 32, "column": 3 }, "end": { "line": 32, "column": 3 } }] } }, "code": ["//REF: 0", "import Ember from 'ember';", "import ResizeAware from 'ember-resize/mixins/resize-aware';", "", "export default Ember.Component.extend(ResizeAware, {", "\tresizeWidthSensitive: true,", "\tclassNames: ['container', 'md-carousel-album'],", "\telemsProp: [{zIndex: 1},{zIndex: 2},", "\t\t\t \t\t    {zIndex: 3},{zIndex: 2},{zIndex: 1}],", "\tdidInsertElement(){", "\t\tthis._super(...arguments);", "\t\tthis.didResize(this.$(window).width());", "\t},", "\tdidResize(width){", "\t\tlet carW = width,", "\t\t\t\telemW = (carW/3),", "\t\t\t\tcenter = elemW,", "\t\t\t\telemsProp = this.get('elemsProp'),", "\t\t\t\toffI = 2,", "\t\t\t\toffSet = (elemW/1.5),", "\t\t\t\ti = 0;", "\t\tfor(let elem of elemsProp){", "\t\t\tif(i == 2){", "\t\t\t\telem.x = `${center}px`;\t", "\t\t\t}else{", "\t\t\t\tif(i > 2){", "\t\t\t\t\telem.x = `${center + (offI * offSet)}px`;", "\t\t\t\t}else{", "\t\t\t\t\telem.x = `${center - (offI * offSet)}px`;\t", "\t\t\t\t}", "\t\t\t}", "\t\t\tif(offI == 1){", "\t\t\t\toffI++;", "\t\t\t}else{", "\t\t\t\toffI--;", "\t\t\t}", "\t\t\telemsProp[i] = elem;", "\t\t\ti++;", "\t\t}", "\t\tthis.set('elemsProp', elemsProp);", "\t},", "\tactions: {", "\t\tmove(){", "\t\t\tconsole.log('move!');", "\t\t}", "\t}", "});", ""] };
    }
    __cov_yZNGM5e9i0M0_sv5Nq0V2w = __cov_yZNGM5e9i0M0_sv5Nq0V2w['app/components/md-carousel-album.js'];
-   exports['default'] = _ember['default'].Component.extend({ classNames: ['container', 'md-carousel-album'], parent: this, items: [{ x: '10px', zIndex: 1 }, { x: '60px', zIndex: 2 }, { x: '110px', zIndex: 3 }, { x: '170px', zIndex: 2 }, { x: '220px', zIndex: 1 }], actions: { move: function move() {
-            __cov_yZNGM5e9i0M0_sv5Nq0V2w.f['1']++;__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['1']++;console.log('move!');
+   exports['default'] = _ember['default'].Component.extend(_emberResizeMixinsResizeAware['default'], { resizeWidthSensitive: true, classNames: ['container', 'md-carousel-album'], elemsProp: [{ zIndex: 1 }, { zIndex: 2 }, { zIndex: 3 }, { zIndex: 2 }, { zIndex: 1 }], didInsertElement: function didInsertElement() {
+         __cov_yZNGM5e9i0M0_sv5Nq0V2w.f['1']++;__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['1']++;this._super.apply(this, arguments);__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['2']++;this.didResize(this.$(window).width());
+      }, didResize: function didResize(width) {
+         __cov_yZNGM5e9i0M0_sv5Nq0V2w.f['2']++;__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['3']++;var carW = width,
+             elemW = carW / 3,
+             center = elemW,
+             elemsProp = this.get('elemsProp'),
+             offI = 2,
+             offSet = elemW / 1.5,
+             i = 0;__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['4']++;var _iteratorNormalCompletion = true;
+         var _didIteratorError = false;
+         var _iteratorError = undefined;
+
+         try {
+            for (var _iterator = elemsProp[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+               var elem = _step.value;
+               __cov_yZNGM5e9i0M0_sv5Nq0V2w.s['5']++;if (i == 2) {
+                  __cov_yZNGM5e9i0M0_sv5Nq0V2w.b['1'][0]++;__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['6']++;elem.x = center + 'px';
+               } else {
+                  __cov_yZNGM5e9i0M0_sv5Nq0V2w.b['1'][1]++;__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['7']++;if (i > 2) {
+                     __cov_yZNGM5e9i0M0_sv5Nq0V2w.b['2'][0]++;__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['8']++;elem.x = center + offI * offSet + 'px';
+                  } else {
+                     __cov_yZNGM5e9i0M0_sv5Nq0V2w.b['2'][1]++;__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['9']++;elem.x = center - offI * offSet + 'px';
+                  }
+               }__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['10']++;if (offI == 1) {
+                  __cov_yZNGM5e9i0M0_sv5Nq0V2w.b['3'][0]++;__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['11']++;offI++;
+               } else {
+                  __cov_yZNGM5e9i0M0_sv5Nq0V2w.b['3'][1]++;__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['12']++;offI--;
+               }__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['13']++;elemsProp[i] = elem;__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['14']++;i++;
+            }
+         } catch (err) {
+            _didIteratorError = true;
+            _iteratorError = err;
+         } finally {
+            try {
+               if (!_iteratorNormalCompletion && _iterator['return']) {
+                  _iterator['return']();
+               }
+            } finally {
+               if (_didIteratorError) {
+                  throw _iteratorError;
+               }
+            }
+         }
+
+         __cov_yZNGM5e9i0M0_sv5Nq0V2w.s['15']++;this.set('elemsProp', elemsProp);
+      }, actions: { move: function move() {
+            __cov_yZNGM5e9i0M0_sv5Nq0V2w.f['3']++;__cov_yZNGM5e9i0M0_sv5Nq0V2w.s['16']++;console.log('move!');
          } } });
 });
 define('app4/components/md-carousel-item', ['exports', 'ember'], function (exports, _ember) {
@@ -1377,6 +1423,29 @@ define('app4/initializers/md-settings', ['exports', 'app4/config/environment', '
     initialize: initialize
   };
 });
+define('app4/initializers/resize', ['exports', 'ember-resize/services/resize', 'app4/config/environment'], function (exports, _emberResizeServicesResize, _app4ConfigEnvironment) {
+  exports.initialize = initialize;
+
+  function initialize() {
+    var application = arguments[1] || arguments[0];
+
+    var resizeServiceDefaults = _app4ConfigEnvironment['default'].resizeServiceDefaults;
+    var injectionFactories = resizeServiceDefaults.injectionFactories;
+
+    application.register('config:resize-service', resizeServiceDefaults, { instantiate: false });
+    application.register('service:resize', _emberResizeServicesResize['default']);
+    application.inject('service:resize', 'resizeServiceDefaults', 'config:resize-service');
+
+    injectionFactories.forEach(function (factory) {
+      application.inject(factory, 'resizeService', 'service:resize');
+    });
+  }
+
+  exports['default'] = {
+    name: 'resize',
+    initialize: initialize
+  };
+});
 define('app4/initializers/store', ['exports', 'ember'], function (exports, _ember) {
 
   /*
@@ -1589,6 +1658,14 @@ define('app4/mirage/scenarios/default', ['exports'], function (exports) {
 });
 define('app4/mirage/serializers/application', ['exports', 'ember-cli-mirage'], function (exports, _emberCliMirage) {
   exports['default'] = _emberCliMirage.JSONAPISerializer.extend({});
+});
+define('app4/mixins/resize-aware', ['exports', 'ember-resize/mixins/resize-aware'], function (exports, _emberResizeMixinsResizeAware) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberResizeMixinsResizeAware['default'];
+    }
+  });
 });
 define('app4/models/task', ['exports', 'ember-data/model', 'ember-data/attr', 'ember-data/relationships'], function (exports, _emberDataModel, _emberDataAttr, _emberDataRelationships) {
    var __cov_mmaTt2G23HVmnOauDEUBRg = Function('return this')();
@@ -2025,6 +2102,14 @@ define('app4/services/md-settings', ['exports', 'ember-cli-materialize/services/
 define('app4/services/modal-dialog', ['exports', 'ember-modal-dialog/services/modal-dialog'], function (exports, _emberModalDialogServicesModalDialog) {
   exports['default'] = _emberModalDialogServicesModalDialog['default'];
 });
+define('app4/services/resize', ['exports', 'ember-resize/services/resize'], function (exports, _emberResizeServicesResize) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _emberResizeServicesResize['default'];
+    }
+  });
+});
 define('app4/services/session', ['exports', 'ember', 'ember-simple-auth/services/session'], function (exports, _ember, _emberSimpleAuthServicesSession) {
    var __cov_8e$vB8RREZ7R5ijDvltMPg = Function('return this')();
    if (!__cov_8e$vB8RREZ7R5ijDvltMPg.__coverage__) {
@@ -2225,7 +2310,7 @@ define('app4/templates/components/md-carousel-album', ['exports'], function (exp
    }
    __cov_8647LPYc5kyvJoU5yykCjw = __cov_8647LPYc5kyvJoU5yykCjw.__coverage__;
    if (!__cov_8647LPYc5kyvJoU5yykCjw['app/templates/components/md-carousel-album.hbs']) {
-      __cov_8647LPYc5kyvJoU5yykCjw['app/templates/components/md-carousel-album.hbs'] = { "path": "app/templates/components/md-carousel-album.hbs", "s": { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0, "10": 0, "11": 0, "12": 0, "13": 0, "14": 0, "15": 0, "16": 0, "17": 0, "18": 0, "19": 0, "20": 0, "21": 0, "22": 0, "23": 0 }, "b": {}, "f": { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 1, "loc": { "start": { "line": 1, "column": 40 }, "end": { "line": 1, "column": 51 } } }, "2": { "name": "(anonymous_2)", "line": 2, "loc": { "start": { "line": 2, "column": 16 }, "end": { "line": 2, "column": 27 } } }, "3": { "name": "buildFragment", "line": 29, "loc": { "start": { "line": 29, "column": 21 }, "end": { "line": 29, "column": 49 } } }, "4": { "name": "buildRenderNodes", "line": 39, "loc": { "start": { "line": 39, "column": 24 }, "end": { "line": 39, "column": 84 } } }, "5": { "name": "buildFragment", "line": 77, "loc": { "start": { "line": 77, "column": 19 }, "end": { "line": 77, "column": 47 } } }, "6": { "name": "buildRenderNodes", "line": 83, "loc": { "start": { "line": 83, "column": 22 }, "end": { "line": 83, "column": 82 } } } }, "statementMap": { "1": { "start": { "line": 2, "column": 2 }, "end": { "line": 50, "column": 7 } }, "2": { "start": { "line": 3, "column": 4 }, "end": { "line": 49, "column": 6 } }, "3": { "start": { "line": 30, "column": 8 }, "end": { "line": 30, "column": 47 } }, "4": { "start": { "line": 31, "column": 8 }, "end": { "line": 31, "column": 42 } }, "5": { "start": { "line": 32, "column": 8 }, "end": { "line": 32, "column": 34 } }, "6": { "start": { "line": 33, "column": 8 }, "end": { "line": 33, "column": 40 } }, "7": { "start": { "line": 34, "column": 8 }, "end": { "line": 34, "column": 34 } }, "8": { "start": { "line": 35, "column": 8 }, "end": { "line": 35, "column": 44 } }, "9": { "start": { "line": 36, "column": 8 }, "end": { "line": 36, "column": 34 } }, "10": { "start": { "line": 37, "column": 8 }, "end": { "line": 37, "column": 19 } }, "11": { "start": { "line": 40, "column": 8 }, "end": { "line": 40, "column": 34 } }, "12": { "start": { "line": 41, "column": 8 }, "end": { "line": 41, "column": 70 } }, "13": { "start": { "line": 42, "column": 8 }, "end": { "line": 42, "column": 22 } }, "14": { "start": { "line": 51, "column": 2 }, "end": { "line": 95, "column": 4 } }, "15": { "start": { "line": 78, "column": 6 }, "end": { "line": 78, "column": 45 } }, "16": { "start": { "line": 79, "column": 6 }, "end": { "line": 79, "column": 38 } }, "17": { "start": { "line": 80, "column": 6 }, "end": { "line": 80, "column": 32 } }, "18": { "start": { "line": 81, "column": 6 }, "end": { "line": 81, "column": 17 } }, "19": { "start": { "line": 84, "column": 6 }, "end": { "line": 84, "column": 32 } }, "20": { "start": { "line": 85, "column": 6 }, "end": { "line": 85, "column": 68 } }, "21": { "start": { "line": 86, "column": 6 }, "end": { "line": 86, "column": 38 } }, "22": { "start": { "line": 87, "column": 6 }, "end": { "line": 87, "column": 41 } }, "23": { "start": { "line": 88, "column": 6 }, "end": { "line": 88, "column": 20 } } }, "branchMap": {}, "code": ["export default Ember.HTMLBars.template((function() {", "  var child0 = (function() {", "    return {", "      meta: {", "        \"fragmentReason\": {", "          \"name\": \"missing-wrapper\",", "          \"problems\": [", "            \"wrong-type\"", "          ]", "        },", "        \"revision\": \"Ember@2.5.1\",", "        \"loc\": {", "          \"source\": null,", "          \"start\": {", "            \"line\": 1,", "            \"column\": 0", "          },", "          \"end\": {", "            \"line\": 3,", "            \"column\": 0", "          }", "        },", "        \"moduleName\": \"app4/templates/components/md-carousel-album.hbs\"", "      },", "      isEmpty: false,", "      arity: 1,", "      cachedFragment: null,", "      hasRendered: false,", "      buildFragment: function buildFragment(dom) {", "        var el0 = dom.createDocumentFragment();", "        var el1 = dom.createTextNode(\"\t\");", "        dom.appendChild(el0, el1);", "        var el1 = dom.createComment(\"\");", "        dom.appendChild(el0, el1);", "        var el1 = dom.createTextNode(\"\t\\n\");", "        dom.appendChild(el0, el1);", "        return el0;", "      },", "      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {", "        var morphs = new Array(1);", "        morphs[0] = dom.createMorphAt(fragment,1,1,contextualElement);", "        return morphs;", "      },", "      statements: [", "        [\"inline\",\"md-carousel-item\",[],[\"move\",[\"subexpr\",\"action\",[\"move\"],[],[\"loc\",[null,[2,25],[2,40]]]],\"props\",[\"subexpr\",\"@mut\",[[\"get\",\"item\",[\"loc\",[null,[2,47],[2,51]]]]],[],[]]],[\"loc\",[null,[2,1],[2,53]]]]", "      ],", "      locals: [\"item\"],", "      templates: []", "    };", "  }());", "  return {", "    meta: {", "      \"fragmentReason\": {", "        \"name\": \"missing-wrapper\",", "        \"problems\": [", "          \"wrong-type\"", "        ]", "      },", "      \"revision\": \"Ember@2.5.1\",", "      \"loc\": {", "        \"source\": null,", "        \"start\": {", "          \"line\": 1,", "          \"column\": 0", "        },", "        \"end\": {", "          \"line\": 4,", "          \"column\": 0", "        }", "      },", "      \"moduleName\": \"app4/templates/components/md-carousel-album.hbs\"", "    },", "    isEmpty: false,", "    arity: 0,", "    cachedFragment: null,", "    hasRendered: false,", "    buildFragment: function buildFragment(dom) {", "      var el0 = dom.createDocumentFragment();", "      var el1 = dom.createComment(\"\");", "      dom.appendChild(el0, el1);", "      return el0;", "    },", "    buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {", "      var morphs = new Array(1);", "      morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);", "      dom.insertBoundary(fragment, 0);", "      dom.insertBoundary(fragment, null);", "      return morphs;", "    },", "    statements: [", "      [\"block\",\"each\",[[\"get\",\"items\",[\"loc\",[null,[1,8],[1,13]]]]],[],0,null,[\"loc\",[null,[1,0],[3,9]]]]", "    ],", "    locals: [],", "    templates: [child0]", "  };", "}()));"] };
+      __cov_8647LPYc5kyvJoU5yykCjw['app/templates/components/md-carousel-album.hbs'] = { "path": "app/templates/components/md-carousel-album.hbs", "s": { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0, "10": 0, "11": 0, "12": 0, "13": 0, "14": 0, "15": 0, "16": 0, "17": 0, "18": 0, "19": 0, "20": 0, "21": 0, "22": 0, "23": 0 }, "b": {}, "f": { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 1, "loc": { "start": { "line": 1, "column": 40 }, "end": { "line": 1, "column": 51 } } }, "2": { "name": "(anonymous_2)", "line": 2, "loc": { "start": { "line": 2, "column": 16 }, "end": { "line": 2, "column": 27 } } }, "3": { "name": "buildFragment", "line": 29, "loc": { "start": { "line": 29, "column": 21 }, "end": { "line": 29, "column": 49 } } }, "4": { "name": "buildRenderNodes", "line": 39, "loc": { "start": { "line": 39, "column": 24 }, "end": { "line": 39, "column": 84 } } }, "5": { "name": "buildFragment", "line": 77, "loc": { "start": { "line": 77, "column": 19 }, "end": { "line": 77, "column": 47 } } }, "6": { "name": "buildRenderNodes", "line": 83, "loc": { "start": { "line": 83, "column": 22 }, "end": { "line": 83, "column": 82 } } } }, "statementMap": { "1": { "start": { "line": 2, "column": 2 }, "end": { "line": 50, "column": 7 } }, "2": { "start": { "line": 3, "column": 4 }, "end": { "line": 49, "column": 6 } }, "3": { "start": { "line": 30, "column": 8 }, "end": { "line": 30, "column": 47 } }, "4": { "start": { "line": 31, "column": 8 }, "end": { "line": 31, "column": 42 } }, "5": { "start": { "line": 32, "column": 8 }, "end": { "line": 32, "column": 34 } }, "6": { "start": { "line": 33, "column": 8 }, "end": { "line": 33, "column": 40 } }, "7": { "start": { "line": 34, "column": 8 }, "end": { "line": 34, "column": 34 } }, "8": { "start": { "line": 35, "column": 8 }, "end": { "line": 35, "column": 44 } }, "9": { "start": { "line": 36, "column": 8 }, "end": { "line": 36, "column": 34 } }, "10": { "start": { "line": 37, "column": 8 }, "end": { "line": 37, "column": 19 } }, "11": { "start": { "line": 40, "column": 8 }, "end": { "line": 40, "column": 34 } }, "12": { "start": { "line": 41, "column": 8 }, "end": { "line": 41, "column": 70 } }, "13": { "start": { "line": 42, "column": 8 }, "end": { "line": 42, "column": 22 } }, "14": { "start": { "line": 51, "column": 2 }, "end": { "line": 95, "column": 4 } }, "15": { "start": { "line": 78, "column": 6 }, "end": { "line": 78, "column": 45 } }, "16": { "start": { "line": 79, "column": 6 }, "end": { "line": 79, "column": 38 } }, "17": { "start": { "line": 80, "column": 6 }, "end": { "line": 80, "column": 32 } }, "18": { "start": { "line": 81, "column": 6 }, "end": { "line": 81, "column": 17 } }, "19": { "start": { "line": 84, "column": 6 }, "end": { "line": 84, "column": 32 } }, "20": { "start": { "line": 85, "column": 6 }, "end": { "line": 85, "column": 68 } }, "21": { "start": { "line": 86, "column": 6 }, "end": { "line": 86, "column": 38 } }, "22": { "start": { "line": 87, "column": 6 }, "end": { "line": 87, "column": 41 } }, "23": { "start": { "line": 88, "column": 6 }, "end": { "line": 88, "column": 20 } } }, "branchMap": {}, "code": ["export default Ember.HTMLBars.template((function() {", "  var child0 = (function() {", "    return {", "      meta: {", "        \"fragmentReason\": {", "          \"name\": \"missing-wrapper\",", "          \"problems\": [", "            \"wrong-type\"", "          ]", "        },", "        \"revision\": \"Ember@2.5.1\",", "        \"loc\": {", "          \"source\": null,", "          \"start\": {", "            \"line\": 1,", "            \"column\": 0", "          },", "          \"end\": {", "            \"line\": 3,", "            \"column\": 0", "          }", "        },", "        \"moduleName\": \"app4/templates/components/md-carousel-album.hbs\"", "      },", "      isEmpty: false,", "      arity: 1,", "      cachedFragment: null,", "      hasRendered: false,", "      buildFragment: function buildFragment(dom) {", "        var el0 = dom.createDocumentFragment();", "        var el1 = dom.createTextNode(\"\t\");", "        dom.appendChild(el0, el1);", "        var el1 = dom.createComment(\"\");", "        dom.appendChild(el0, el1);", "        var el1 = dom.createTextNode(\"\t\\n\");", "        dom.appendChild(el0, el1);", "        return el0;", "      },", "      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {", "        var morphs = new Array(1);", "        morphs[0] = dom.createMorphAt(fragment,1,1,contextualElement);", "        return morphs;", "      },", "      statements: [", "        [\"inline\",\"md-carousel-item\",[],[\"move\",[\"subexpr\",\"action\",[\"move\"],[],[\"loc\",[null,[2,25],[2,40]]]],\"props\",[\"subexpr\",\"@mut\",[[\"get\",\"props\",[\"loc\",[null,[2,47],[2,52]]]]],[],[]]],[\"loc\",[null,[2,1],[2,54]]]]", "      ],", "      locals: [\"props\"],", "      templates: []", "    };", "  }());", "  return {", "    meta: {", "      \"fragmentReason\": {", "        \"name\": \"missing-wrapper\",", "        \"problems\": [", "          \"wrong-type\"", "        ]", "      },", "      \"revision\": \"Ember@2.5.1\",", "      \"loc\": {", "        \"source\": null,", "        \"start\": {", "          \"line\": 1,", "          \"column\": 0", "        },", "        \"end\": {", "          \"line\": 4,", "          \"column\": 0", "        }", "      },", "      \"moduleName\": \"app4/templates/components/md-carousel-album.hbs\"", "    },", "    isEmpty: false,", "    arity: 0,", "    cachedFragment: null,", "    hasRendered: false,", "    buildFragment: function buildFragment(dom) {", "      var el0 = dom.createDocumentFragment();", "      var el1 = dom.createComment(\"\");", "      dom.appendChild(el0, el1);", "      return el0;", "    },", "    buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {", "      var morphs = new Array(1);", "      morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);", "      dom.insertBoundary(fragment, 0);", "      dom.insertBoundary(fragment, null);", "      return morphs;", "    },", "    statements: [", "      [\"block\",\"each\",[[\"get\",\"elemsProp\",[\"loc\",[null,[1,8],[1,17]]]]],[],0,null,[\"loc\",[null,[1,0],[3,9]]]]", "    ],", "    locals: [],", "    templates: [child0]", "  };", "}()));"] };
    }
    __cov_8647LPYc5kyvJoU5yykCjw = __cov_8647LPYc5kyvJoU5yykCjw['app/templates/components/md-carousel-album.hbs'];
    exports['default'] = Ember.HTMLBars.template((function () {
@@ -2234,12 +2319,12 @@ define('app4/templates/components/md-carousel-album', ['exports'], function (exp
                __cov_8647LPYc5kyvJoU5yykCjw.f['3']++;__cov_8647LPYc5kyvJoU5yykCjw.s['3']++;var el0 = dom.createDocumentFragment();__cov_8647LPYc5kyvJoU5yykCjw.s['4']++;var el1 = dom.createTextNode('\t');__cov_8647LPYc5kyvJoU5yykCjw.s['5']++;dom.appendChild(el0, el1);__cov_8647LPYc5kyvJoU5yykCjw.s['6']++;var el1 = dom.createComment('');__cov_8647LPYc5kyvJoU5yykCjw.s['7']++;dom.appendChild(el0, el1);__cov_8647LPYc5kyvJoU5yykCjw.s['8']++;var el1 = dom.createTextNode('\t\n');__cov_8647LPYc5kyvJoU5yykCjw.s['9']++;dom.appendChild(el0, el1);__cov_8647LPYc5kyvJoU5yykCjw.s['10']++;return el0;
             }, buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
                __cov_8647LPYc5kyvJoU5yykCjw.f['4']++;__cov_8647LPYc5kyvJoU5yykCjw.s['11']++;var morphs = new Array(1);__cov_8647LPYc5kyvJoU5yykCjw.s['12']++;morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);__cov_8647LPYc5kyvJoU5yykCjw.s['13']++;return morphs;
-            }, statements: [['inline', 'md-carousel-item', [], ['move', ['subexpr', 'action', ['move'], [], ['loc', [null, [2, 25], [2, 40]]]], 'props', ['subexpr', '@mut', [['get', 'item', ['loc', [null, [2, 47], [2, 51]]]]], [], []]], ['loc', [null, [2, 1], [2, 53]]]]], locals: ['item'], templates: [] };
+            }, statements: [['inline', 'md-carousel-item', [], ['move', ['subexpr', 'action', ['move'], [], ['loc', [null, [2, 25], [2, 40]]]], 'props', ['subexpr', '@mut', [['get', 'props', ['loc', [null, [2, 47], [2, 52]]]]], [], []]], ['loc', [null, [2, 1], [2, 54]]]]], locals: ['props'], templates: [] };
       })();__cov_8647LPYc5kyvJoU5yykCjw.s['14']++;return { meta: { 'fragmentReason': { 'name': 'missing-wrapper', 'problems': ['wrong-type'] }, 'revision': 'Ember@2.5.1', 'loc': { 'source': null, 'start': { 'line': 1, 'column': 0 }, 'end': { 'line': 4, 'column': 0 } }, 'moduleName': 'app4/templates/components/md-carousel-album.hbs' }, isEmpty: false, arity: 0, cachedFragment: null, hasRendered: false, buildFragment: function buildFragment(dom) {
             __cov_8647LPYc5kyvJoU5yykCjw.f['5']++;__cov_8647LPYc5kyvJoU5yykCjw.s['15']++;var el0 = dom.createDocumentFragment();__cov_8647LPYc5kyvJoU5yykCjw.s['16']++;var el1 = dom.createComment('');__cov_8647LPYc5kyvJoU5yykCjw.s['17']++;dom.appendChild(el0, el1);__cov_8647LPYc5kyvJoU5yykCjw.s['18']++;return el0;
          }, buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
             __cov_8647LPYc5kyvJoU5yykCjw.f['6']++;__cov_8647LPYc5kyvJoU5yykCjw.s['19']++;var morphs = new Array(1);__cov_8647LPYc5kyvJoU5yykCjw.s['20']++;morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);__cov_8647LPYc5kyvJoU5yykCjw.s['21']++;dom.insertBoundary(fragment, 0);__cov_8647LPYc5kyvJoU5yykCjw.s['22']++;dom.insertBoundary(fragment, null);__cov_8647LPYc5kyvJoU5yykCjw.s['23']++;return morphs;
-         }, statements: [['block', 'each', [['get', 'items', ['loc', [null, [1, 8], [1, 13]]]]], [], 0, null, ['loc', [null, [1, 0], [3, 9]]]]], locals: [], templates: [child0] };
+         }, statements: [['block', 'each', [['get', 'elemsProp', ['loc', [null, [1, 8], [1, 17]]]]], [], 0, null, ['loc', [null, [1, 0], [3, 9]]]]], locals: [], templates: [child0] };
    })());
 });
 define('app4/templates/components/md-carousel-item', ['exports'], function (exports) {
@@ -3211,7 +3296,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("app4/app")["default"].create({"name":"app4","version":"0.0.0+e14813cf"});
+  require("app4/app")["default"].create({"name":"app4","version":"0.0.0+7ec779cd"});
 }
 
 /* jshint ignore:end */

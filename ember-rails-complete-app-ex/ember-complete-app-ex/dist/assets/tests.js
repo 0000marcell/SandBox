@@ -271,7 +271,7 @@ define('app4/tests/components/md-carousel-album.jshint', ['exports'], function (
   QUnit.module('JSHint | components/md-carousel-album.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'components/md-carousel-album.js should pass jshint.');
+    assert.ok(false, 'components/md-carousel-album.js should pass jshint.\ncomponents/md-carousel-album.js: line 23, col 20, Expected \'===\' and instead saw \'==\'.\ncomponents/md-carousel-album.js: line 32, col 23, Expected \'===\' and instead saw \'==\'.\n\n2 errors');
   });
 });
 define('app4/tests/components/md-carousel-item.jshint', ['exports'], function (exports) {

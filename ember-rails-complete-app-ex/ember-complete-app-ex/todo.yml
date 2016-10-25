@@ -1,4 +1,5 @@
 carousel:
+  learning a good way to comunicate with components from ember materialize
   figuring out a way to comunicate with the child componentes
   finish implementing carousel component using ember only
 implement image upload component, upload route
