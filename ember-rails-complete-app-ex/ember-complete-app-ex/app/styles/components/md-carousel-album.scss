@@ -1,4 +1,7 @@
 .md-carousel-album{
+	transition: transform 0.5s 0.0s;
+	overflow: hidden;
 	border: 1px solid black;
-	height: 300px;
+	min-height: 500px;
+	max-height: 500px;
 }

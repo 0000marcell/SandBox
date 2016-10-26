@@ -29,6 +29,7 @@ Router.map(function() {
   this.route('image-collenction', {path: 'image'});
   this.route('upload');
   this.route('carousel');
+  this.route('composable');
 });
 
 export default Router;
