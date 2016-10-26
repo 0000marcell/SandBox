@@ -23,7 +23,6 @@ export default Ember.Component.extend(ResizeAware, {
 		},
 		move(id){
 			this.get('childrens').forEach((child) => {
-				console.log('child id: ', child.get('id'));
 				if(id > 2){
 					child.decrementId();
 				}else{

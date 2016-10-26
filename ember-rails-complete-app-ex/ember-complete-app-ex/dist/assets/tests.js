@@ -289,7 +289,7 @@ define('app4/tests/components/md-carousel-item.jshint', ['exports'], function (e
   QUnit.module('JSHint | components/md-carousel-item.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/md-carousel-item.js should pass jshint.\ncomponents/md-carousel-item.js: line 8, col 53, Missing semicolon.\n\n1 error');
+    assert.ok(true, 'components/md-carousel-item.js should pass jshint.');
   });
 });
 define('app4/tests/components/md-image-collection.jshint', ['exports'], function (exports) {
