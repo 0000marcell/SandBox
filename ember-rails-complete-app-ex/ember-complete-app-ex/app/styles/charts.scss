@@ -7,8 +7,146 @@
 }
 
 .time-series{
+	.dropdown-content li > a {
+		color: #1E88E5 !important;
+	}
 	input[type=range]::-webkit-slider-thumb {
 		background: #1E88E5 !important;
 	}
+	input[type=range] + .thumb.active{
+		background: #1E88E5 !important;
+	}
+	[type="checkbox"]:checked + label:before {
+		border-right: 2px solid #1E88E5;
+		border-bottom: 2px solid #1E88E5;
+	}
+	.switch label input[type=checkbox]:checked + .lever {
+		background-color: #64B5F6;
+	} 
+	.switch label input[type=checkbox]:checked + .lever:after {
+		background-color: #1E88E5;
+	}
+	[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after {		
+		background-color: #1E88E5;
+	}
+	[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+		border: 2px solid #1E88E5;
+	}
 }
 
+.pie-chart{
+	.dropdown-content li > a {
+		color:  #fb8c00 !important;
+	}
+
+	input[type=range]::-webkit-slider-thumb {
+		background: #fb8c00 !important;
+	}
+	input[type=range] + .thumb.active{
+		background: #fb8c00 !important;
+	}
+	[type="checkbox"]:checked + label:before {
+		border-right: 2px solid #fb8c00;
+		border-bottom: 2px solid #fb8c00;
+	}
+	.switch label input[type=checkbox]:checked + .lever {
+		background-color: #ffb74d;
+	} 
+	.switch label input[type=checkbox]:checked + .lever:after {
+		background-color: #fb8c00;
+	}
+	[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after {		
+		background-color: #fb8c00;
+	}
+	[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+		border: 2px solid #fb8c00;
+	}
+}
+
+.horizontal-bar{
+	.dropdown-content li > a {
+		color: #546e7a !important;
+	}
+
+	input[type=range]::-webkit-slider-thumb {
+		background: #546e7a !important;
+	}
+	input[type=range] + .thumb.active{
+		background: #546e7a !important;
+	}
+	[type="checkbox"]:checked + label:before {
+		border-right: 2px solid #546e7a;
+		border-bottom: 2px solid #546e7a;
+	}
+	.switch label input[type=checkbox]:checked + .lever {
+		background-color: #78909c;
+	} 
+	.switch label input[type=checkbox]:checked + .lever:after {
+		background-color: #546e7a;
+	}
+	[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after {		
+		background-color: #546e7a;
+	}
+	[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+		border: 2px solid #546e7a;
+	}
+}
+.vertical-bar{
+	.dropdown-content li > a {
+		color:  #ff1744 !important;
+	}
+
+	input[type=range]::-webkit-slider-thumb {
+		background: #ff1744 !important;
+	}
+	input[type=range] + .thumb.active{
+		background: #ff1744 !important;
+	}
+	[type="checkbox"]:checked + label:before {
+		border-right: 2px solid #ff1744;
+		border-bottom: 2px solid #ff1744;
+	}
+	.switch label input[type=checkbox]:checked + .lever {
+		background-color: #ff8a80;
+	} 
+	.switch label input[type=checkbox]:checked + .lever:after {
+		background-color: #ff1744;
+	}
+	[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after {		
+		background-color: #ff1744;
+	}
+	[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+		border: 2px solid #ff1744;
+	}
+}
+.scatter-plot{
+	.dropdown-content li > a {
+		color:   #311b92 !important;
+	}
+
+	input[type=range]::-webkit-slider-thumb {
+		background:  #311b92 !important;
+	}
+	input[type=range] + .thumb.active{
+		background:  #311b92 !important;
+	}
+	[type="checkbox"]:checked + label:before {
+		border-right: 2px solid #311b92;
+		border-bottom: 2px solid #311b92;
+	}
+	.switch label input[type=checkbox]:checked + .lever {
+		background-color: #5e35b1;
+
+	} 
+	.switch label input[type=checkbox]:checked + .lever:after {
+		background-color: #311b92;
+
+	}
+	[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after {		
+		background-color: #311b92;
+
+	}
+	[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+		border: 2px solid #311b92;
+	}
+}

@@ -1,6 +1,11 @@
 import Ember from 'ember';
+import timeSeriesData from './time-series-data';
 
 export default Ember.Controller.extend({
+	period: 2015,
+	yAxisFromZero: true,
+	selectedInterval: 'M',
+	barPadding: 0.5,
 	content: [{"label": "Equity", "value": 12935781.176999997},
 						{"label": "Real Assets",
 			 		   "value": 10475849.276172025},
@@ -87,5 +92,12 @@ export default Ember.Controller.extend({
 													  time: d3.time.format('%Y-%m-%d').parse("2013-09-16"),
 														label: "Telecommunication",
 														value: 39544,
-														type: "money"}]
+														type: "money"}],
+	actions: {
+		getYear(year){
+			this.set('period', year);
+			this.set('timeSeriesBarContent', timeSeriesData.getYear(year));
+			//this.get('timeSeriesBarContent').reverseObjects();	
+		}
+	}
 });
