@@ -1,0 +1,14 @@
+.chart-controls{
+	padding-top: 50px !important;
+}
+
+.chart-control{
+	padding: 10px;
+}
+
+.time-series{
+	input[type=range]::-webkit-slider-thumb {
+		background: #1E88E5 !important;
+	}
+}
+

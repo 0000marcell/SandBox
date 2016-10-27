@@ -7,7 +7,9 @@
     "ember-qunit-notifications": "0.1.0",
     "pretender": "~1.1.0",
     "Faker": "~3.1.0",
-    "materialize": "0.97.6"
+    "materialize": "0.97.6",
+    "d3": "~3.5.3",
+    "lodash": "~3.10.0"
   },
   "devDependencies": {
     "blanket": "5e94fc30f2e694bb5c3718ddcbf60d467f4b4d26"

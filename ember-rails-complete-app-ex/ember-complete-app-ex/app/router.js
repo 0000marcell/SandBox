@@ -30,6 +30,7 @@ Router.map(function() {
   this.route('upload');
   this.route('carousel');
   this.route('composable');
+  this.route('charts');
 });
 
 export default Router;

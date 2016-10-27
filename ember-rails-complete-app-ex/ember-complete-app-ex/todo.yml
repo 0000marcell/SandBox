@@ -2,6 +2,9 @@ carousel:
   learning a good way to comunicate with components from ember materialize
   figuring out a way to comunicate with the child componentes
   finish implementing carousel component using ember only
+charts:
+  include options to select different years and change the values  
+  implement d3 calendar with ember http://bl.ocks.org/mbostock/4063318
 implement image upload component, upload route
 crete page component maybe? 
 create md-carousel-album in ember.
@@ -10,6 +13,7 @@ implement album-carousel component, create route to test
 implement side-nav
 
 done:
+ember-charts implemented on route charts
 use for(elem of elems) instead of regular for
 create collection component that simulates the images layout in instagram
 creating collection component on image-collection route

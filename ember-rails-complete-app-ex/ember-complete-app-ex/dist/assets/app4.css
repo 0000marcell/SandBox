@@ -6245,6 +6245,15 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .scroll {
   overflow: auto; }
 
+.chart-controls {
+  padding-top: 50px !important; }
+
+.chart-control {
+  padding: 10px; }
+
+.time-series input[type=range]::-webkit-slider-thumb {
+  background: #1E88E5 !important; }
+
 .easy-transition {
   transition: transform 1s ease-in-out; }
 

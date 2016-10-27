@@ -1,0 +1,53 @@
+<div class='container'>
+	<div class='row'>
+		<div class='col s3 chart-controls time-series'>
+			<div class='chart-control'>
+				{{#md-btn-dropdown class='blue darken-1' text='2016' belowOrigin=true}}
+				<li><a href="#!">2015</a></li>
+				<li><a href="#!">2014</a></li>
+				<li class="divider">2013</li>
+				<li><a href="#!">2012</a></li>
+				{{/md-btn-dropdown}}
+			</div>
+			<div class='chart-control'>
+				{{md-range value=rangeValue min=50 name="My Range"}}
+			</div>
+			<div class='chart-control'>
+				{{md-check name="A single checkbox" checked=checkboxIsSelected}}
+			</div>
+			<div class='chart-control'>
+				{{md-switch checked=switchValue}}
+			</div>
+			<div class='chart-control'>
+				{{#md-radios
+					selection=radioSelection
+					optionValuePath='id'
+					optionLabelPath='text'}}
+					<p>{{md-radio value=1 name="One"}}</p>
+						<p>{{md-radio value=2 name="Two"}}</p>
+				{{/md-radios}}
+			</div>
+			<div class='chart-control'>
+				{{md-input-date label='Birthday' value=dateValue class="col s12"}}
+			</div>
+		</div>
+		<div class='col s9'>
+			{{time-series-chart
+				selectedSeedColor="#1e88e5"
+				barData=timeSeriesBarContent
+				lineData=timeSeriesLineContent
+			}}
+		</div>
+	</div>
+			{{pie-chart maxRadius=100 data=content selectedSeedColor="#fb8c00"}}
+	{{horizontal-bar-chart data=content selectedSeedColor="#546e7a"}}
+	{{vertical-bar-chart maxBarThickness=10 data=content selectedSeedColor="#43a047"}}
+	{{scatter-chart
+		selectedSeedColor="#00897b"
+		data=scatterContent
+		xValueDisplayName="Risk"
+		yValueDisplayName="Return"
+  }}
+</div>
+
+

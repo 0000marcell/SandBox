@@ -355,6 +355,15 @@ define('app4/tests/controllers/application.jshint', ['exports'], function (expor
     assert.ok(true, 'controllers/application.js should pass jshint.');
   });
 });
+define('app4/tests/controllers/charts.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/charts.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'controllers/charts.js should pass jshint.\ncontrollers/charts.js: line 33, col 35, \'d3\' is not defined.\ncontrollers/charts.js: line 37, col 57, \'d3\' is not defined.\ncontrollers/charts.js: line 41, col 57, \'d3\' is not defined.\ncontrollers/charts.js: line 45, col 57, \'d3\' is not defined.\ncontrollers/charts.js: line 49, col 57, \'d3\' is not defined.\ncontrollers/charts.js: line 53, col 36, \'d3\' is not defined.\ncontrollers/charts.js: line 57, col 60, \'d3\' is not defined.\ncontrollers/charts.js: line 61, col 60, \'d3\' is not defined.\ncontrollers/charts.js: line 65, col 60, \'d3\' is not defined.\ncontrollers/charts.js: line 69, col 60, \'d3\' is not defined.\ncontrollers/charts.js: line 73, col 60, \'d3\' is not defined.\ncontrollers/charts.js: line 77, col 60, \'d3\' is not defined.\ncontrollers/charts.js: line 81, col 61, \'d3\' is not defined.\ncontrollers/charts.js: line 84, col 61, \'d3\' is not defined.\ncontrollers/charts.js: line 87, col 61, \'d3\' is not defined.\n\n15 errors');
+  });
+});
 define('app4/tests/controllers/index.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -2247,6 +2256,15 @@ define('app4/tests/routes/carousel.jshint', ['exports'], function (exports) {
     assert.ok(true, 'routes/carousel.js should pass jshint.');
   });
 });
+define('app4/tests/routes/charts.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/charts.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/charts.js should pass jshint.');
+  });
+});
 define('app4/tests/routes/composable.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -2500,6 +2518,28 @@ define('app4/tests/unit/controllers/application-test.jshint', ['exports'], funct
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/application-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/controllers/charts-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:charts', 'Unit | Controller | charts', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('app4/tests/unit/controllers/charts-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/charts-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/charts-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/controllers/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -2825,6 +2865,27 @@ define('app4/tests/unit/routes/carousel-test.jshint', ['exports'], function (exp
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/carousel-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/charts-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:charts', 'Unit | Route | charts', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/charts-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/charts-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/charts-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/routes/composable-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
