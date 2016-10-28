@@ -1,14 +1,16 @@
 import Ember from 'ember';
 import timeSeriesData from './time-series-data';
-import pieChartData from './pie-chart-data';
+import chartData from './chart-data';
+import scatterData from './scatter-data';
 
 export default Ember.Controller.extend({
+	dotRadius: 7,
 	pieSlices: 5,
 	period: 2015,
 	yAxisFromZero: true,
 	selectedInterval: 'M',
 	barPadding: 0.5,
-	pieContent: [{"label": "Equity", "value": 12935781.176999997},
+	data: [{"label": "Equity", "value": 12935781.176999997},
 						{"label": "Real Assets",
 			 		   "value": 10475849.276172025},
 						{"label": "Fixed Income",
@@ -19,7 +21,7 @@ export default Ember.Controller.extend({
 						 "value": 1621341.246006786},
 						{"label": "Private Equity",
 						 "value": 1574677.59}],
-  scatterContent: [{"group": "Energy",
+  scatterData: [{"group": "Energy",
 			              "xValue": 0.017440569068138557,
 			 		          "yValue": 0.029481600786463634},
 			 						 {"group": "Energy",
@@ -101,8 +103,13 @@ export default Ember.Controller.extend({
 			this.set('timeSeriesBarContent', timeSeriesData.getBarContent(year));
 			this.set('timeSeriesLineContent', timeSeriesData.getLineContent(year));
 		},
-		getPieData(){
-			this.set('pieContent', pieChartData.getData());
+		getData(year){
+			this.set('period', year);
+			this.set('data', chartData.getData());
+		},
+		getScatterData(year){
+			this.set('period', year);
+			this.set('scatterData', scatterData.getData());
 		}
 	}
 });

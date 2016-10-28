@@ -42,58 +42,56 @@
 	<div class='row'>
 		<div class='col s3 chart-controls pie-chart'>
 			<div class='chart-control'>
-				{{#md-btn-dropdown class='orange darken-1' text='2016' belowOrigin=true}}
-					<li><a {{action "getPieData"}}>2016</a></li>
-					<li><a {{action "getPieData"}}>2015</a></li>
-					<li><a {{action "getPieData"}}>2014</a></li>
-					<li><a {{action "getPieData"}}>2013</a></li>
-					<li><a {{action "getPieData"}}>2012</a></li>
+				{{#md-btn-dropdown class='orange darken-1' text=period belowOrigin=true}}
+					<li><a {{action "getData" "2016"}}>2016</a></li>
+					<li><a {{action "getData" "2015"}}>2015</a></li>
+					<li><a {{action "getData" "2014"}}>2014</a></li>
+					<li><a {{action "getData" "2013"}}>2013</a></li>
+					<li><a {{action "getData" "2012"}}>2012</a></li>
 				{{/md-btn-dropdown}}
 			</div>
 			<div class='chart-control'>
 				{{md-range value=pieRadius min=0 max=200 step=1 name="Pie Radius"}}
 			</div>
 			<div class='chart-control'>
-				{{md-range value=pieSlices min=2 max=5 step=1 name="Pie Slices"}}
+				{{#md-radios
+					selection=pieSlices
+					optionValuePath='id'
+					optionLabelPath='text'}}
+					<p>{{md-radio value=1 name="One"}}</p>
+					<p>{{md-radio value=2 name="Two"}}</p>
+					<p>{{md-radio value=3 name="Three"}}</p>
+					<p>{{md-radio value=4 name="Four"}}</p>
+					<p>{{md-radio value=5 name="Five"}}</p>
+				{{/md-radios}}
 			</div>
 		</div>
 		<div class='col s9'>
 			{{pie-chart maxRadius=pieRadius 
 				maxNumberOfSlices=pieSlices
-			  data=pieContent selectedSeedColor="#fb8c00"}}
+			  data=data selectedSeedColor="#fb8c00"}}
 		</div>
 	</div>
 	<div class='row'>
 		<div class='col s3 chart-controls horizontal-bar'>
 			<div class='chart-control'>
-				{{#md-btn-dropdown class='blue-grey darken-1' text='2016' belowOrigin=true}}
-				<li><a href="#!">2015</a></li>
-				<li><a href="#!">2014</a></li>
-				<li class="divider">2013</li>
-				<li><a href="#!">2012</a></li>
+				{{#md-btn-dropdown 
+				 class='blue-grey darken-1' text=period belowOrigin=true}}
+					<li><a {{action "getData" "2016"}}>2016</a></li>
+					<li><a {{action "getData" "2015"}}>2015</a></li>
+					<li><a {{action "getData" "2014"}}>2014</a></li>
+					<li><a {{action "getData" "2013"}}>2013</a></li>
+					<li><a {{action "getData" "2012"}}>2012</a></li>
 				{{/md-btn-dropdown}}
 			</div>
 			<div class='chart-control'>
-				{{md-range value=rangeValue min=50 name="My Range"}}
-			</div>
-			<div class='chart-control'>
-				{{md-check name="A single checkbox" checked=checkboxIsSelected}}
-			</div>
-			<div class='chart-control'>
-				{{md-switch checked=switchValue}}
-			</div>
-			<div class='chart-control'>
-				{{#md-radios
-					selection=radioSelection
-					optionValuePath='id'
-					optionLabelPath='text'}}
-					<p>{{md-radio value=1 name="One"}}</p>
-						<p>{{md-radio value=2 name="Two"}}</p>
-				{{/md-radios}}
+				{{md-range value=maxBarThickness min=20 max=60 name="Max bar thickness"}}
 			</div>
 		</div>
 		<div class='col s9'>
-			{{horizontal-bar-chart data=content selectedSeedColor="#546e7a"}}
+			{{horizontal-bar-chart 
+			  maxBarThickness=maxBarThickness
+				data=data selectedSeedColor="#546e7a"}}
 		</div>
 	</div>
 	<div class='row'>
@@ -101,36 +99,27 @@
 			<div class='chart-control'>
 				{{#md-btn-dropdown 
 					class='red accent-3' 
-					text='2016' belowOrigin=true}}
-				<li><a href="#!">2015</a></li>
-				<li><a href="#!">2014</a></li>
-				<li class="divider">2013</li>
-				<li><a href="#!">2012</a></li>
+					text=period belowOrigin=true}}
+					<li><a {{action "getData" "2016"}}>2016</a></li>
+					<li><a {{action "getData" "2015"}}>2015</a></li>
+					<li><a {{action "getData" "2014"}}>2014</a></li>
+					<li><a {{action "getData" "2013"}}>2013</a></li>
+					<li><a {{action "getData" "2012"}}>2012</a></li>
 				{{/md-btn-dropdown}}
 			</div>
 			<div class='chart-control'>
-				{{md-range value=rangeValue min=50 name="My Range"}}
+				{{md-check name="stack bars" checked=stackBars}}
 			</div>
 			<div class='chart-control'>
-				{{md-check name="A single checkbox" checked=checkboxIsSelected}}
+				<p>Stack Bars</p>
+				{{md-switch checked=stackBars}}
 			</div>
-			<div class='chart-control'>
-				{{md-switch checked=switchValue}}
-			</div>
-			<div class='chart-control'>
-				{{#md-radios
-					selection=radioSelection
-					optionValuePath='id'
-					optionLabelPath='text'}}
-					<p>{{md-radio value=1 name="One"}}</p>
-						<p>{{md-radio value=2 name="Two"}}</p>
-				{{/md-radios}}
-			</div>
-
 		</div>
 		<div class='col s9'>
 			{{vertical-bar-chart 
-				maxBarThickness=10 data=content selectedSeedColor="#ff1744"}}
+				stackBars=stackBars
+				maxBarThickness=maxBarThickness 
+				data=data selectedSeedColor="#ff1744"}}
 		</div>
 	</div>
 	<div class='row'>
@@ -138,39 +127,43 @@
 			<div class='chart-control'>
 				{{#md-btn-dropdown 
 					class='deep-purple darken-4' 
-					text='2016' belowOrigin=true}}
-				<li><a href="#!">2015</a></li>
-				<li><a href="#!">2014</a></li>
-				<li class="divider">2013</li>
-				<li><a href="#!">2012</a></li>
+					text=period belowOrigin=true}}
+					<li><a {{action "getScatterData" "2016"}}>2016</a></li>
+					<li><a {{action "getScatterData" "2015"}}>2015</a></li>
+					<li><a {{action "getScatterData" "2014"}}>2014</a></li>
+					<li><a {{action "getScatterData" "2013"}}>2013</a></li>
+					<li><a {{action "getScatterData" "2012"}}>2012</a></li>
 				{{/md-btn-dropdown}}
 			</div>
 			<div class='chart-control'>
-				{{md-range value=rangeValue min=50 name="My Range"}}
-			</div>
-			<div class='chart-control'>
-				{{md-check name="A single checkbox" checked=checkboxIsSelected}}
-			</div>
-			<div class='chart-control'>
-				{{md-switch checked=switchValue}}
-			</div>
-			<div class='chart-control'>
-				{{#md-radios
-					selection=radioSelection
-					optionValuePath='id'
-					optionLabelPath='text'}}
-					<p>{{md-radio value=1 name="One"}}</p>
-						<p>{{md-radio value=2 name="Two"}}</p>
-				{{/md-radios}}
+				{{md-range value=dotRadius min=0 max=100 step=1 name="Dot Radius"}}
 			</div>
 		</div>
 		<div class='col s9'>
 			{{scatter-chart
+				dotRadius=dotRadius
 				selectedSeedColor="#311b92"
-				data=scatterContent
+				data=scatterData
 				xValueDisplayName="Risk"
 				yValueDisplayName="Return"
 			}}
+		</div>
+	</div>	
+	<div class='row'>
+		<div class='col s3 chart-controls'>
+			<div class='chart-control'>
+				{{#md-btn-dropdown class='orange darken-1' text=period belowOrigin=true}}
+					<li><a {{action "getData" "2016"}}>2016</a></li>
+					<li><a {{action "getData" "2015"}}>2015</a></li>
+					<li><a {{action "getData" "2014"}}>2014</a></li>
+					<li><a {{action "getData" "2013"}}>2013</a></li>
+					<li><a {{action "getData" "2012"}}>2012</a></li>
+				{{/md-btn-dropdown}}
+			</div>
+		</div>
+		<div class='col s9'>
+			{{bubble-chart data=data
+				selectedSeedColor="#fb8c00"}}
 		</div>
 	</div>
 </div>

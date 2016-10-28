@@ -1,10 +1,10 @@
+orginize again the dashboard login etc
 carousel:
   learning a good way to comunicate with components from ember materialize
   figuring out a way to comunicate with the child componentes
   finish implementing carousel component using ember only
 charts:
-  include options to select different years and change the values  
-    creating fake data to feed in the years
+  orginize charts and the dash board in a side nav
   implement d3 calendar with ember http://bl.ocks.org/mbostock/4063318
 color-picker: 
   implement a color picker
@@ -17,6 +17,8 @@ implement album-carousel component, create route to test
 implement side-nav
 
 done:
+creating fake data to feed in the years
+include options to select different years and change the values  
 ember-charts implemented on route charts
 use for(elem of elems) instead of regular for
 create collection component that simulates the images layout in instagram
