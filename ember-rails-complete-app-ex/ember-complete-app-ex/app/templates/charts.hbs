@@ -5,10 +5,10 @@
 		<div class='col s3 chart-controls time-series'>
 			<div class='chart-control'>
 				{{#md-btn-dropdown class='blue darken-1' text=period belowOrigin=true}}
-					<li><a {{action "getYear" "2015"}}>2015</a></li>
-					<li><a {{action "getYear" "2014"}}>2014</a></li>
-					<li><a {{action "getYear" "2013"}}>2013</a></li>
-					<li><a {{action "getYear" "2012"}}>2012</a></li>
+					<li><a {{action "getTimeSeriesData" "2015"}}>2015</a></li>
+					<li><a {{action "getTimeSeriesData" "2014"}}>2014</a></li>
+					<li><a {{action "getTimeSeriesData" "2013"}}>2013</a></li>
+					<li><a {{action "getTimeSeriesData" "2012"}}>2012</a></li>
 				{{/md-btn-dropdown}}
 			</div>
 			<div class='chart-control'>
@@ -16,9 +16,6 @@
 			</div>
 			<div class='chart-control'>
 				{{md-check name="y axis from zero" checked=yAxisFromZero}}
-			</div>
-			<div class='chart-control'>
-				{{md-switch checked=switchValue}}
 			</div>
 			<div class='chart-control'>
 				{{#md-radios
@@ -46,33 +43,24 @@
 		<div class='col s3 chart-controls pie-chart'>
 			<div class='chart-control'>
 				{{#md-btn-dropdown class='orange darken-1' text='2016' belowOrigin=true}}
-				<li><a href="#!">2015</a></li>
-				<li><a href="#!">2014</a></li>
-				<li class="divider">2013</li>
-				<li><a href="#!">2012</a></li>
+					<li><a {{action "getPieData"}}>2016</a></li>
+					<li><a {{action "getPieData"}}>2015</a></li>
+					<li><a {{action "getPieData"}}>2014</a></li>
+					<li><a {{action "getPieData"}}>2013</a></li>
+					<li><a {{action "getPieData"}}>2012</a></li>
 				{{/md-btn-dropdown}}
 			</div>
 			<div class='chart-control'>
-				{{md-range value=rangeValue min=50 name="My Range"}}
+				{{md-range value=pieRadius min=0 max=200 step=1 name="Pie Radius"}}
 			</div>
 			<div class='chart-control'>
-				{{md-check name="A single checkbox" checked=checkboxIsSelected}}
-			</div>
-			<div class='chart-control'>
-				{{md-switch checked=switchValue}}
-			</div>
-			<div class='chart-control'>
-				{{#md-radios
-					selection=radioSelection
-					optionValuePath='id'
-					optionLabelPath='text'}}
-					<p>{{md-radio value=1 name="One"}}</p>
-						<p>{{md-radio value=2 name="Two"}}</p>
-				{{/md-radios}}
+				{{md-range value=pieSlices min=2 max=5 step=1 name="Pie Slices"}}
 			</div>
 		</div>
 		<div class='col s9'>
-			{{pie-chart maxRadius=300 data=content selectedSeedColor="#fb8c00"}}
+			{{pie-chart maxRadius=pieRadius 
+				maxNumberOfSlices=pieSlices
+			  data=pieContent selectedSeedColor="#fb8c00"}}
 		</div>
 	</div>
 	<div class='row'>

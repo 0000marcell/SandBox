@@ -3,7 +3,7 @@ let timeSeriesData = {
 		let data = [];
 		let month = 0;
 		for (var i = 0; i < 5; i++) {
-			month += 2;
+			month += 1;
 			let obj = {time: d3.time.format('%Y-%m-%d')
 				.parse(`${year}-${month}-15`),
 				label: "Financial analytics software",
@@ -11,25 +11,29 @@ let timeSeriesData = {
 				type: "money"}; 
 			data.push(obj);
 		}
-		console.log(data);
 		return data;
 	},
-	getLineContent(){
+	getLineContent(year){
 		let data = [];
 		let month = 0;
 		for (var i = 0; i < 5; i++) {
-			month += 2;
-			let obj1 = {time: d3.time.format('%Y-%m-%d').parse("2013-05-15"),
+			month += 1;
+			let obj1 = {time: d3.time.format('%Y-%m-%d')
+									.parse(`${year}-${month}-15`),
 								 label: "Software & Programming",
-								 value: 17326,
+								 value: Math.floor((Math.random() * 100) + 1) * 1000,
 								 type: "money"};
-			let obj2 = {time: d3.time.format('%Y-%m-%d').parse("2013-05-15"),
+			let obj2 = {time: d3.time.format('%Y-%m-%d')
+								  .parse(`${year}-${month}-15`),
 								 label: "Telecommunication",
-								 value: 4515,
+								 value: Math.floor((Math.random() * 100) + 1) * 1000,
 								 type: "money"};
 			data.push(obj1);
 			data.push(obj2);
 		}
+		console.log(data);
+		return data;
 	}
 }
+
 export default timeSeriesData;

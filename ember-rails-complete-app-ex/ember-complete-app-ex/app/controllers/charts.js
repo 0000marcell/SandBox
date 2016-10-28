@@ -1,12 +1,14 @@
 import Ember from 'ember';
 import timeSeriesData from './time-series-data';
+import pieChartData from './pie-chart-data';
 
 export default Ember.Controller.extend({
+	pieSlices: 5,
 	period: 2015,
 	yAxisFromZero: true,
 	selectedInterval: 'M',
 	barPadding: 0.5,
-	content: [{"label": "Equity", "value": 12935781.176999997},
+	pieContent: [{"label": "Equity", "value": 12935781.176999997},
 						{"label": "Real Assets",
 			 		   "value": 10475849.276172025},
 						{"label": "Fixed Income",
@@ -94,10 +96,13 @@ export default Ember.Controller.extend({
 														value: 39544,
 														type: "money"}],
 	actions: {
-		getYear(year){
+		getTimeSeriesData(year){
 			this.set('period', year);
-			this.set('timeSeriesBarContent', timeSeriesData.getYear(year));
-			//this.get('timeSeriesBarContent').reverseObjects();	
+			this.set('timeSeriesBarContent', timeSeriesData.getBarContent(year));
+			this.set('timeSeriesLineContent', timeSeriesData.getLineContent(year));
+		},
+		getPieData(){
+			this.set('pieContent', pieChartData.getData());
 		}
 	}
 });
