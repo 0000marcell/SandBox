@@ -1,0 +1,31 @@
+<div class='container'>
+	<h3>Login</h3>
+	{{#if msg}}
+		{{#md-card-panel class="red"
+				bodyClass="white-text"
+				}}
+			<p>
+				{{msg}}
+			</p>
+		{{/md-card-panel}}
+	{{/if}}
+	{{#if logging}}
+		{{md-loader id='spinner' mode='circular'}}
+	{{else}}	
+		<form {{action 'login'  on='submit'}}>
+			{{md-input 
+				data-autoId='email'
+				value=email
+				label='Email' class="col s12" }}
+			{{md-input 
+				data-autoId='password'
+				value=password
+				type='password'
+				label='Senha' class="col s12" }}
+			{{md-btn-submit
+					type='submit'
+					text='Entrar'}}
+			{{#link-to 'password-reset' }}Forgot Password?{{/link-to}}
+		</form>
+	{{/if}}
+</div>

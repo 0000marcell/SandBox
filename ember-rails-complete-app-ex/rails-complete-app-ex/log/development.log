@@ -37863,3 +37863,1469 @@ Processing by Api::V1::UsersController#show as JSON
 Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 1.1ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/rails-complete-app-ex/config/initializers/doorkeeper.rb:1)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/rails-complete-app-ex/config/initializers/doorkeeper.rb:1)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/rails-complete-app-ex/config/initializers/doorkeeper.rb:1)
+Started GET "/assets/ember-charts.css.map" for ::ffff:127.0.0.1 at 2016-10-28 15:35:21 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/assets/ember-charts.css.map"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.0) lib/puma/configuration.rb:225:in `call'
+puma (3.5.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.0) lib/puma/server.rb:406:in `process_client'
+puma (3.5.0) lib/puma/server.rb:271:in `block in run'
+puma (3.5.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered collection of /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (45.0ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.0ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.9ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (213.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (850.4ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (953.3ms)
+Started GET "/assets/ember-charts.css.map" for ::ffff:127.0.0.1 at 2016-10-28 15:36:45 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/assets/ember-charts.css.map"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.0) lib/puma/configuration.rb:225:in `call'
+puma (3.5.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.0) lib/puma/server.rb:406:in `process_client'
+puma (3.5.0) lib/puma/server.rb:271:in `block in run'
+puma (3.5.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered collection of /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (95.0ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (334.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (100.3ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (250.1ms)
+Started GET "/assets/ember-charts.css.map" for ::ffff:127.0.0.1 at 2016-10-28 15:36:47 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/assets/ember-charts.css.map"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.0) lib/puma/configuration.rb:225:in `call'
+puma (3.5.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.0) lib/puma/server.rb:406:in `process_client'
+puma (3.5.0) lib/puma/server.rb:271:in `block in run'
+puma (3.5.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered collection of /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (42.4ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (194.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (83.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (190.8ms)
+Started GET "/assets/ember-charts.css.map" for ::ffff:127.0.0.1 at 2016-10-28 15:37:14 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/assets/ember-charts.css.map"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.0) lib/puma/configuration.rb:225:in `call'
+puma (3.5.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.0) lib/puma/server.rb:406:in `process_client'
+puma (3.5.0) lib/puma/server.rb:271:in `block in run'
+puma (3.5.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered collection of /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (40.6ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (185.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (86.2ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (192.3ms)
+Started GET "/assets/ember-charts.css.map" for ::ffff:127.0.0.1 at 2016-10-28 15:37:44 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/assets/ember-charts.css.map"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.0) lib/puma/configuration.rb:225:in `call'
+puma (3.5.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.0) lib/puma/server.rb:406:in `process_client'
+puma (3.5.0) lib/puma/server.rb:271:in `block in run'
+puma (3.5.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered collection of /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (58.8ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (246.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (98.0ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (239.3ms)
+Started GET "/assets/ember-charts.css.map" for ::ffff:127.0.0.1 at 2016-10-28 15:39:43 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/assets/ember-charts.css.map"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.0) lib/puma/configuration.rb:225:in `call'
+puma (3.5.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.0) lib/puma/server.rb:406:in `process_client'
+puma (3.5.0) lib/puma/server.rb:271:in `block in run'
+puma (3.5.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered collection of /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (30.8ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (163.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (80.3ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (171.6ms)
+Started POST "/oauth/token" for ::ffff:127.0.0.1 at 2016-10-28 15:39:47 -0200
+Processing by CustomTokensController#create as JSON
+  Parameters: {"grant_type"=>"password", "username"=>"admin@admin.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 143ms
+
+
+  
+NoMethodError (undefined method `id' for "{\"message\":\"Invalid email/password combination\"}":String):
+  
+app/controllers/custom_tokens_controller.rb:3:in `create'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.9ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.9ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (78.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/rails-complete-app-ex/config/initializers/doorkeeper.rb:1)
+Started GET "/assets/ember-charts.css.map" for ::ffff:127.0.0.1 at 2016-10-28 15:43:40 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/assets/ember-charts.css.map"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.0) lib/puma/configuration.rb:225:in `call'
+puma (3.5.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.0) lib/puma/server.rb:406:in `process_client'
+puma (3.5.0) lib/puma/server.rb:271:in `block in run'
+puma (3.5.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered collection of /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (109.2ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (43.0ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.4ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (662.0ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (12.4ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.1ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1111.6ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1274.0ms)
+Started POST "/oauth/token" for ::ffff:127.0.0.1 at 2016-10-28 15:44:06 -0200
+Processing by CustomTokensController#create as JSON
+  Parameters: {"grant_type"=>"password", "username"=>"admin@admin.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoorkeeper::AccessToken Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "4616c29a0f66a6562bc210813f6990e66a91ddc811fc1d60a709e6834f080482"], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "oauth_access_tokens" ("resource_owner_id", "token", "expires_in", "created_at", "scopes") VALUES (?, ?, ?, ?, ?)[0m  [["resource_owner_id", 1], ["token", "4616c29a0f66a6562bc210813f6990e66a91ddc811fc1d60a709e6834f080482"], ["expires_in", 7200], ["created_at", 2016-10-28 17:44:27 UTC], ["scopes", ""]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 75991ms
+
+
+Started GET "/api/v1/users/admin" for ::ffff:127.0.0.1 at 2016-10-28 15:45:22 -0200
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"admin"}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "4616c29a0f66a6562bc210813f6990e66a91ddc811fc1d60a709e6834f080482"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModel::Serializer::Adapter::JsonApi (70.08ms)
+Completed 200 OK in 100ms (Views: 88.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/ember-charts.css.map" for ::ffff:127.0.0.1 at 2016-10-28 15:50:04 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/assets/ember-charts.css.map"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.5.0) lib/puma/configuration.rb:225:in `call'
+puma (3.5.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.5.0) lib/puma/server.rb:406:in `process_client'
+puma (3.5.0) lib/puma/server.rb:271:in `block in run'
+puma (3.5.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered collection of /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (36.1ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (186.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/marcell/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (82.4ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/marcell/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (193.1ms)
+Started POST "/oauth/token" for ::ffff:127.0.0.1 at 2016-10-28 15:50:15 -0200
+Processing by CustomTokensController#create as JSON
+  Parameters: {"grant_type"=>"password", "username"=>"admin@admin.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoorkeeper::AccessToken Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "oauth_access_tokens" ("resource_owner_id", "token", "expires_in", "created_at", "scopes") VALUES (?, ?, ?, ?, ?)[0m  [["resource_owner_id", 1], ["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["expires_in", 7200], ["created_at", 2016-10-28 17:50:22 UTC], ["scopes", ""]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 7544ms
+
+
+Started GET "/api/v1/users/admin" for ::ffff:127.0.0.1 at 2016-10-28 15:50:22 -0200
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"admin"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModel::Serializer::Adapter::JsonApi (10.37ms)
+Completed 200 OK in 18ms (Views: 11.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/users" for ::ffff:127.0.0.1 at 2016-10-28 15:50:22 -0200
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (14.04ms)
+Completed 200 OK in 23ms (Views: 15.7ms | ActiveRecord: 1.4ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/rails-complete-app-ex/config/initializers/doorkeeper.rb:1)
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:53:30 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (58.25ms)
+Completed 200 OK in 108ms (Views: 77.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:53:32 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (9.21ms)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=3&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:53:33 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"3", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 10]]
+[active_model_serializers]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.22ms)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:53:35 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.9ms)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:53:36 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.5ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.05ms)
+Completed 200 OK in 16ms (Views: 9.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:53:37 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (8.86ms)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=t" for ::ffff:127.0.0.1 at 2016-10-28 15:53:40 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"t"}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%t%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (10.4ms)
+Completed 200 OK in 20ms (Views: 14.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=to" for ::ffff:127.0.0.1 at 2016-10-28 15:53:41 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"to"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%to%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (12.51ms)
+Completed 200 OK in 23ms (Views: 15.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=too" for ::ffff:127.0.0.1 at 2016-10-28 15:53:41 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"too"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%too%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.21ms)
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=too1" for ::ffff:127.0.0.1 at 2016-10-28 15:53:41 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"too1"}
+  [1m[36mDoorkeeper::AccessToken Load (0.5ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%too1%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.17ms)
+Completed 200 OK in 10ms (Views: 2.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=too" for ::ffff:127.0.0.1 at 2016-10-28 15:53:42 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"too"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%too%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.21ms)
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=to" for ::ffff:127.0.0.1 at 2016-10-28 15:53:43 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"to"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.8ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%to%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (12.18ms)
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=tod" for ::ffff:127.0.0.1 at 2016-10-28 15:53:43 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"tod"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%tod%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (12.14ms)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=todo" for ::ffff:127.0.0.1 at 2016-10-28 15:53:43 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"todo"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%todo%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (8.31ms)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=tod" for ::ffff:127.0.0.1 at 2016-10-28 15:53:47 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"tod"}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%tod%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.73ms)
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=to" for ::ffff:127.0.0.1 at 2016-10-28 15:53:47 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"to"}
+  [1m[36mDoorkeeper::AccessToken Load (1.0ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%to%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (21.37ms)
+Completed 200 OK in 31ms (Views: 25.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=t" for ::ffff:127.0.0.1 at 2016-10-28 15:53:47 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"t"}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%t%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (12.7ms)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:53:48 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (8.51ms)
+Completed 200 OK in 18ms (Views: 12.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=7" for ::ffff:127.0.0.1 at 2016-10-28 15:53:48 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"7"}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%7%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.53ms)
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:54:02 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.23ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=5" for ::ffff:127.0.0.1 at 2016-10-28 15:54:04 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"5"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.7ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%5%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.01ms)
+Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users" for ::ffff:127.0.0.1 at 2016-10-28 15:55:10 -0200
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (80.38ms)
+Completed 200 OK in 117ms (Views: 100.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/users/admin" for ::ffff:127.0.0.1 at 2016-10-28 15:55:10 -0200
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"admin"}
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModel::Serializer::Adapter::JsonApi (9.12ms)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=5" for ::ffff:127.0.0.1 at 2016-10-28 15:55:10 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"5"}
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%5%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.53ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:55:29 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (1.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.2ms)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:55:32 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (1.0ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (8.92ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=3&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:55:34 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"3", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.6ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 10]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.3ms)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:55:35 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.86ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:55:41 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (8.58ms)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/api/v1/todos/1" for ::ffff:127.0.0.1 at 2016-10-28 15:56:00 -0200
+Processing by Api::V1::TodosController#update as JSON
+  Parameters: {"title"=>"Testing this out", "user_id"=>"1", "user_type"=>"User", "id"=>"1", "todo"=>{"title"=>"Testing this out", "user_id"=>"1"}}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.7ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."user_id" = ? AND "todos"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "todos" SET "title" = ?, "updated_at" = ? WHERE "todos"."id" = ?[0m  [["title", "Testing this out"], ["updated_at", 2016-10-28 17:56:00 UTC], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered TodoSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.99ms)
+Completed 200 OK in 20ms (Views: 1.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:56:01 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (8.58ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:59:21 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.45ms)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:59:40 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.66ms)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:59:44 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.02ms)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=3&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:59:45 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"3", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 10]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.0ms)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:59:48 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.5ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:59:49 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.51ms)
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:59:50 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.5ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.95ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=3&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:59:52 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"3", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 10]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.69ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:59:53 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.77ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 15:59:54 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.28ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:00:35 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.71ms)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:02:27 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.9ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:02:28 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.05ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=3&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:02:29 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"3", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 10]]
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.45ms)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:02:31 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.8ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:02:32 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.86ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=2&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:02:34 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"2", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.51ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=3&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:02:35 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"3", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.6ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 10]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.85ms)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=3&page%5Bsize%5D=5&search=g" for ::ffff:127.0.0.1 at 2016-10-28 16:02:37 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"3", "size"=>"5"}, "search"=>"g"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%g%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.5ms)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=3&page%5Bsize%5D=5&search=gh" for ::ffff:127.0.0.1 at 2016-10-28 16:02:42 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"3", "size"=>"5"}, "search"=>"gh"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%gh%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.16ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=3&page%5Bsize%5D=5&search=g" for ::ffff:127.0.0.1 at 2016-10-28 16:02:44 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"3", "size"=>"5"}, "search"=>"g"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%g%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.82ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=3&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:02:45 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"3", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 10]]
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.16ms)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:02:47 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.36ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=1" for ::ffff:127.0.0.1 at 2016-10-28 16:02:50 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"1"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%1%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.45ms)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:02:54 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.36ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:02:59 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.11ms)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:00 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.61ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:00 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.82ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:01 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.96ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:01 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.69ms)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:01 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.88ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:02 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.86ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:02 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.07ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:02 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.93ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:02 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.5ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.86ms)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:02 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.58ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:03 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.44ms)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:03 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.62ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:03 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.37ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:03 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.66ms)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:04 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.04ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:04 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.71ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:04 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.92ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:04 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.74ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:04 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.77ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:04 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.62ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:05 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.31ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:05 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.69ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:05 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.95ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:05 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.8ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:06 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.34ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=2" for ::ffff:127.0.0.1 at 2016-10-28 16:03:06 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>"2"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE (title LIKE '%2%') ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.96ms)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:03:06 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.85ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users" for ::ffff:127.0.0.1 at 2016-10-28 16:05:05 -0200
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (8.86ms)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/users/admin" for ::ffff:127.0.0.1 at 2016-10-28 16:05:05 -0200
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"admin"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.1ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModel::Serializer::Adapter::JsonApi (15.14ms)
+Completed 200 OK in 20ms (Views: 15.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/todos?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:05:05 -0200
+Processing by Api::V1::TodosController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+Started GET "/api/v1/tasks?page%5Bnumber%5D=1&page%5Bsize%5D=5&search=" for ::ffff:127.0.0.1 at 2016-10-28 16:05:05 -0200
+  [1m[36mDoorkeeper::AccessToken Load (4.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "todos"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.18ms)
+Completed 200 OK in 20ms (Views: 4.4ms | ActiveRecord: 4.8ms)
+
+
+Processing by Api::V1::TasksController#index as JSON
+  Parameters: {"page"=>{"number"=>"1", "size"=>"5"}, "search"=>""}
+  [1m[36mDoorkeeper::AccessToken Load (1.0ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = ? LIMIT ?[0m  [["token", "d7d7f1e534a4a7b19733f6ea4dbe439f0b218d059fbe1c4fb16cf8b31cc469fe"], ["LIMIT", 1]]
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1m[34mSELECT  "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."refresh_token" = ? LIMIT ?[0m  [["refresh_token", ""], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (17.7ms)
+Completed 200 OK in 26ms (Views: 19.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/websocket" for 127.0.0.1 at 2016-10-28 16:05:05 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-10-28 16:05:05 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/marcell/Documents/github/SandBox/ember-rails-complete-app-ex/rails-complete-app-ex/config/initializers/doorkeeper.rb:1)
+Started GET "/websocket" for 127.0.0.1 at 2016-10-28 16:06:07 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-10-28 16:06:07 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
