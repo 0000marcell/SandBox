@@ -1,0 +1,70 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(Embedded Record Mixin)
+//- is...
+block d
+  p.
+    A way to embed a record relationships inside a old JSON API 
+//- used to...
+block u
+  p.
+    embedded relationship records inside old JSON API's
+//- we need to do this and that...
+block m
+  p.
+    we need to declare a record mixin inside the serializer for the 
+    specific model
+    we can opt to use or not serialization and deserialization in 
+    specific models 
+//- this is a example... 
+block e
+  pre.
+    the json expects this 
+    {
+        "id": "1",
+        "title": "Rails is omakase",
+        "tag": "rails",
+        "authors": [
+            {
+                "id": "2",
+                "name": "Steve"
+            }
+        ]
+    }
+
+    then we create this mixin:
+    in app/serializers/post.js 
+    export default DS.JSONSerializer.extend(DS.EmbeddedRecordsMixin, {
+      attrs: {
+        author: {
+          serialize: 'records',
+          deserialize: 'records'
+        }
+      }
+    });
+
+    chossing what needs to be serialized or not:
+    export default DS.JSONSerializer.extend(DS.EmbeddedRecordsMixin, {
+      attrs: {
+        author: {
+          serialize: false,
+          deserialize: 'records'
+        },
+        comments: {
+          deserialize: 'records',
+          serialize: 'ids'
+        }
+      }
+    });
+
+//- is similar to...
+block r
+  p.
+    Models 
+    Serializers 
+    Mixins
+      

@@ -1,0 +1,38 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(reflexive relations)
+//- is...
+block d
+  p.
+    A way to tell ember the a model have relations with
+    it self
+//- used to...
+block u
+  p.
+    To specify relation inside models, when this models have 
+    relations with it self 
+//- we need to do this and that...
+block m
+  p.
+    we need to use the inserve option of the belongsTo() and
+    hasMany()
+//- this is a example... 
+block e
+  pre.
+    export default DS.Model.extend({
+      children: DS.hasMany('folder', { inverse: 'parent' }),
+      parent: DS.belongsTo('folder', { inverse: 'children' })
+    }); 
+
+    export default DS.Model.extend({
+      name: DS.attr('string'),
+      bestFriend: DS.belongsTo('user', { inverse: 'bestFriend' }),
+    });   
+//- is similar to...
+block r
+  p.
+      

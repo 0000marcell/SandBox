@@ -1,0 +1,44 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Component(creating components)
+block d
+  p.
+    Components are modularized peaces os html css and js 
+    that acts in a certain way
+block u
+  p.
+    create a utility that is reusable for the user
+block m
+  pre.
+    ember generate component blog-post (component must have a - in their name)
+    in app/templates/components/blog-post
+    <article class="blog-post">
+      <h1>{{title}}</h1>
+      <p>{{yield}}</p>
+      <p>Edit title: {{input type="text" value="title"}}</p>
+    </article>
+
+    now we can use the component 
+    {{#blog-post title=post.title}}
+      {{post.body}}
+    {{/blog-post}}
+    
+
+    OBS:you don't need to create js to make a component
+        ember uses div for components but we can change that
+        ember knows which file powers your component by its name
+    you can choose diferent compoents with the component helper 
+    {{#each model as |post|}}
+      {{component post.componentName post=post}}
+    {{/each}} 
+block e
+  p.
+   same as method
+block r
+  p.
+    Templates
+      

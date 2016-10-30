@@ -1,0 +1,49 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Template(actions)
+block d
+  p.
+    Elements that send commands to the controller
+    through the view
+block u
+  p.
+    send actions to the controller or component through the view
+block m
+  pre.
+    <p><button {{action "select" post}}>✓</button> {{post.title}}</p>
+
+    export default Ember.Component.export({
+      actions: {
+        select(post){
+          console.log(post.get('title'));
+        } 
+      }
+    })
+
+    you can specify the actions (defaults to click)
+    <p>
+      <button {{action "select" post on="mouseUp"}}>v</button>
+      {{post.title}}
+    </p>
+
+    allowing modifier keys:
+    <button {{action "anActionName" allowedKeys="alt"}}>
+      click me
+    </button>
+
+    allowing the default browser behavior 
+    <a href="newPage.htm" {{action "logClick" preventDefault=false}}>Go</a>
+
+    Changing the actions first parameter
+    <label>What's your favorite band?</label>
+    <input type="text" value={{favoriteBand}} 
+     onblur={{action "bandDidChange" value="target.value"}}/>
+block e
+  p.
+block r
+  p.
+      

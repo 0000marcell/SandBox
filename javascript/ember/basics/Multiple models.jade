@@ -1,0 +1,46 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+      Route(Multiple models)
+block d
+  p.
+    You can have a controller with multiple models with this.
+block u
+  p.
+    load more than one model in the controller 
+block m
+  pre.
+    / app/routes/songs.js
+    export default Ember.Route.extend({
+      model(){
+        return Ember.RSVP.hash({
+          songs: this.store.findAll('song'),
+          albums: this.store.findAll('album')
+        });
+      }
+    });
+
+    / in the view
+    <h1>Playlist</h1>
+
+    <ul>
+      {{#each model.songs as |song|}}
+        <li>{{song.name}} by {{song.artist}}</li>
+      {{/each}}
+    </ul>
+
+    <h1>Albuns</h1>
+
+    <ul>
+      {{#each model.albums as |album|}}
+        <li>{{album.name}} by {{album.artist}}
+      {{/each}}
+    </ul>
+block e
+  p.
+block r
+  p.
+      

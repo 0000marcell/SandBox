@@ -1,0 +1,33 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Test(wait helper)
+//- is...
+block d
+  p.
+  	A way to wait for asynchronous code to run before proceeding
+//- used to...
+block u
+  p.
+  	Wait for asynchronous code to run before proceding
+//- we need to do this and that...
+block m
+  pre.
+  	We can import the wait helper 
+  	import wait from 'ember-test-helpers/wait';
+
+  	and then use it 
+
+  	return wait().then(() => {
+  		assert.equal(this.$('.result').length, 2, 'two results rendered');
+  	});
+//- this is a example... 
+block e
+  p.
+//- is similar to...
+block r
+  p.
+      

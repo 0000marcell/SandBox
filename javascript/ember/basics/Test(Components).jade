@@ -1,0 +1,80 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Test(Components)
+//- is...
+block d
+  p.
+    A way to test components 
+//- used to...
+block u
+  p.
+    Test components
+//- we need to do this and that...
+block m
+  p.
+    Components can be tested with integration tests using the moduleForComponent
+//- this is a example... 
+block e
+  pre.
+    ember generate component pretty-color
+    in app/components/pretty-color.js
+    export default Ember.Component.extend({
+      attributeBindings: ['style'],
+
+      style: Ember.computed('name', function() {
+        const name = this.get('name');
+        return `color: ${name}`;
+      })
+    });
+
+    app/templates/components/pretty-color.hbs
+    Pretty Color: {{name}}
+    
+    tests/integration/components/pretty-color-test.js
+    the moduleForComponent will find the component by name and its template 
+    moduleForComponent('pretty-color', 'Integration | Component | pretty color', {
+      integration: true
+    });
+
+    in tests/integration/components/pretty-color-test.js
+    we have acess to the render method of the component
+    test('should change colors', function(assert) {
+      assert.expect(2);
+
+      // set the outer context to red
+      this.set('colorValue', 'red');
+
+      this.render(hbs`{{pretty-color name=colorValue}}`);
+
+      assert.equal(this.$('div').attr('style'), 'color: red', 'starts as red');
+
+      this.set('colorValue', 'blue');
+
+      assert.equal(this.$('div').attr('style'), 'color: blue', 'updates to blue');
+    });
+
+    we can also test for the content of the component
+    test('should be rendered with its color name', function(assert) {
+      assert.expect(2);
+
+      this.set('colorValue', 'orange');
+
+      this.render(hbs`{{pretty-color name=colorValue}}`);
+
+      assert.equal(this.$().text().trim(), 'Pretty Color: orange', 'text starts as orange');
+
+      this.set('colorValue', 'green');
+
+      assert.equal(this.$().text().trim(), 'Pretty Color: green', 'text switches to green');
+
+    });
+//- is similar to...
+block r
+  p.
+    Components 
+    Tests
+      

@@ -1,0 +1,95 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(JSON adapter)
+//- is...
+block d
+  p.
+    A adapter for a restfull JSON api via xhr 
+//- used to...
+block u
+  p.
+    Customize the adapter to work with diferent API's 
+//- we need to do this and that...
+block m
+  p.
+    The adapter is smart enouth to translate a request to a model 
+    in an URL, store.find('post', 1) will translate to (/post/1)
+  img(src="./img/adapter_actions.jpg")
+  p.
+    The ember inflactor is responsible for pluralizing the requests
+    we can also customize the endpoint path 
+
+    Host customization:
+    by default the target will be the curret domain 
+    if you would like to target a diferent domain you must let the adapter 
+    know about it 
+    Path customization:
+    by default JSONAPIAdapter will try to pluralize and dasherize the model name to 
+    generate the path name, we can override the pathForType method 
+    header customization:
+    headers can be set to be send with every ajax request 
+    headers can also be set via computed properties, that way we can make 
+    dynamic headers
+    we can also force headers to be recomputed with every request, instead of 
+    being cached, we do that with the volatile function
+//- this is a example... 
+block e
+  pre.
+    whit this request for person will target http://emberjs.com/api/1/people/1 
+    export default DS.JSONAPIAdapter.extend({
+      namespace: 'api/1'
+    });
+
+    Change the host:
+    Requests for person would now target https://api.example.com/people/1
+    export default DS.JSONAPIAdapter.extend({
+      host: 'https://api.example.com'
+    });
+    
+    Path customization:
+    overriding the pathForType 
+    Requests for person would now target /person/1. Requests for 
+    user-profile would now target /user_profile/1.
+    export default DS.JSONAPIAdapter.extend({
+      pathForType: function(type) {
+        return Ember.String.underscore(type);
+      }
+    });
+
+    customizing headers: 
+    export default DS.JSONAPIAdapter.extend({
+      headers: {
+        'API_KEY': 'secret key',
+        'ANOTHER_HEADER': 'Some header value'
+      }
+    });
+
+    dynamic headers:
+    export default DS.JSONAPIAdapter.extend({
+      session: Ember.inject.service('session'),
+      headers: Ember.computed('session.authToken', function() {
+        return {
+          'API_KEY': this.get('session.authToken'),
+          'ANOTHER_HEADER': 'Some header value'
+        };
+      })
+    });
+    non-cached headers:
+    export default DS.JSONAPIAdapter.extend({
+      headers: Ember.computed(function() {
+        return {
+          'API_KEY': Ember.get(document.cookie.match(/apiKey\=([^;]*)/), '1'),
+          'ANOTHER_HEADER': 'Some header value'
+        };
+      }).volatile()
+    });
+//- is similar to...
+block r
+  p.
+    Adapters 
+    Models
+      

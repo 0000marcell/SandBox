@@ -1,0 +1,97 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(create record)
+//- is...
+block d
+  p.
+    A way to create records in the model 
+//- used to...
+block u
+  p.
+    Create records on the model
+//- we need to do this and that...
+block m
+  p.
+    We need to use the store to create records and pass 
+    the model name and a option hash with the keys and values we wanna create
+    is important to notive that createRecord don't work with promises store.findRecord() inside
+    a createRecord won't work unless the record you wanna find is already load on the store 
+    to do that set the relationship after the record has been created 
+    Update records: 
+    to update the records you only need to set the new value on the record 
+    we can use all the ember object methods to change the object, like incrementProperty etc ..
+    Persist record to the DB 
+    we can call save() on the model type to persist the records in the DB, save go do 
+    a POST to the URL and update gonna make a PATCH 
+    we can check if a record wasn't saved yet by check its hasDirtyAttributes 
+    we also can roll back our changes with rollbackAttributes() 
+
+    handling validations error, if something goes wrong when saving the record 
+    the errors attribute in the model will contains the errors post.errors.title,
+    post.errors.body 
+
+    save returns a promise
+
+    deleting records:
+    deleting records is as simple as creating records we just need to call deleteRecord() on the the 
+    model and then save the changes  
+//- this is a example... 
+block e
+  pre.
+    store.createRecord('post',{
+      title: "this post",
+      body: "this body"
+    });
+
+    setting the relationship after 
+    store.findRecord('user', 1).then(function(user){
+      post.set('author', user);
+    });
+
+    update: 
+    this.store.findRecord('person', 1).then(function(tyrion){
+      tyrion.set('firstName', 'yolo'); 
+    });
+
+    persist the records in the DB 
+    var post = store.createRecord('post',{
+      name: "marcell",
+      body: "this is marcell"
+    });
+    post.save();
+    checking if a record wasn't saved 
+    post.get('hasDirtyAttributes')
+
+    handling the promise and channing methods 
+
+    var post = store.createRecord('post', {
+      title: 'Rails is Omakase',
+      body: 'Lorem ipsum'
+    });
+    var self = this;
+    function transitionToPost(post) {
+      self.transitionToRoute('posts.show', post);
+    }
+    function failure(reason) {
+      // handle the error
+    }
+    post.save().then(transitionToPost).catch(failure);
+
+    delete: 
+    store.findRecord('post', 1).then(function(post) {
+      post.deleteRecord();
+      post.get('isDeleted'); // => true
+      post.save(); // => DELETE to /posts/1
+    });
+    
+    store.findRecord('post', 2).then(function(post) {
+      post.destroyRecord(); // => DELETE to /posts/2
+    });
+//- is similar to...
+block r
+  p.
+      

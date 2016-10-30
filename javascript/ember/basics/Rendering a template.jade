@@ -1,0 +1,29 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Rendering a template
+block d
+  p.
+    We can render a template from a route, or we can just 
+    expect the template to render by it self based on the name 
+block u
+  p.
+    Render a templates diferent from the default
+block m
+  pre.
+    export default Ember.Route.extend({
+      renderTemplate(){
+        this.render('Favorites'); 
+      }
+    });
+block e
+  p.
+  same as method
+block r
+  p.
+    Templates
+    Routes
+      

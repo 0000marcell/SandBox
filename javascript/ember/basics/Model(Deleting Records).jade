@@ -1,0 +1,31 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(Deleting Records)
+//- is...
+block d
+  p.
+    A way to delete records on the store and on the backend
+//- used to...
+block u
+  p.
+    delete records
+//- we need to do this and that...
+block m
+  p.
+    we need to use find the record and delete it on the call back
+//- this is a example... 
+block e
+  pre.
+    store.find('post', 2).then(function(post){
+      post.destroyRecord();
+    });
+//- is similar to...
+block r
+  p.
+    Model
+    Store
+      

@@ -1,0 +1,35 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(Transform)
+//- is...
+block d
+  p.
+    Modifying the data fetched from the server into the Ember app
+//- used to...
+block u
+  p.
+    Modify the data fetched from the server to the application
+//- we need to do this and that...
+block m
+  pre.
+    we use the name the ember data storage type to automatically transform 
+    ember currently acepts ('date', 'string', 'boolean', 'number')
+    transformation are not required, you can leave DS.attr()
+    we can set a default value too, using defaultValue options 
+    DS.attr('boolean', {defaultValue: true})
+//- this is a example... 
+block e
+  pre.
+    export default DS.Model.extend({
+      birthDay: DS.attr('date')
+    });
+//- is similar to...
+block r
+  p.
+    Model
+
+      

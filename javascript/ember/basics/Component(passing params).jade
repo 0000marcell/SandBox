@@ -1,0 +1,48 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Component(passing params)
+block d
+  p.
+    Components are isolated from it surrounding so we need 
+    to pass params to them 
+block u
+  p.
+    render models in the component
+block m
+  pre.
+    {{#each post as |post|}}
+      {{blog-post title=post.title body=post.body}}
+    {{/each}}
+
+    these properties are bound 
+
+    you can also use positional params to pass a number of params:
+    const BlogPostComponent = Ember.Component.extend({
+      title: Ember.computed('params.[]', function(){
+        return this.get('params')[0];
+      }),
+      body: Ember.computed('params.[]', function(){
+        return this.get('params')[1];
+      })
+    });
+
+    BlogPostComponent.reopenClass({
+      positionalParams: 'params'
+    });
+
+    export default BlogPostComponent;
+
+    and then in the view 
+    {{blog-post post.title post.body}}
+block e
+  p.
+    same as method
+block r
+  p.
+    Components
+    Templates
+      

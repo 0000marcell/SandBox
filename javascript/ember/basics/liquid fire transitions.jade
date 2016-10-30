@@ -1,0 +1,33 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li
+      Route(liquid fire transitions)
+block d
+  p.
+    Animated transitions with liquid fire
+block u
+  p.
+    make animated transitions
+block m
+  pre.
+    in the template..
+    {{liquid-outlet}} 
+    in transitions.js (inside app folder)
+    export default function(){
+      this.transition(
+        this.fromRoute('timer'),
+        this.toRoute('users'),
+        this.use('toUp'),
+        this.reverse('toDown')
+      ) 
+    }
+block e
+  p.
+    same as the method
+block r
+  p.
+    transitions
+      

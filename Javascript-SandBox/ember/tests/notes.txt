@@ -1,6 +1,0 @@
-acceptance: test user interation and application flow E.G a user can login, a
-user doen't have access to restrict areas of the application
-
-integration: integration tests are a middle ground between acceptance tests and unit tests, integration tests are the recommended way of testing components in ember
-
-unit: test isolated chunks of code or "units"

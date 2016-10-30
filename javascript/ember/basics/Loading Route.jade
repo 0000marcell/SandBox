@@ -1,0 +1,34 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Loading Route
+block d
+  p.
+    Route to be rendered when a slow model is loading
+block u
+  p.
+    Give feedback to the user of whats happening
+block m
+  pre.
+    create a loading route to be used 
+    create a loading action in the route that you want 
+    to use the loading template 
+    actions: {
+      loading(transition, originRoute){
+        let controller = this.controllerFor('foo');
+        controller.set('currentlyLoading', true);
+        transition.promise.finally(function(){
+          controller.set('currentlyLoading', false);
+        });
+      }
+    }
+block e
+  p.
+    same as method
+block r
+  p.
+    routes
+      

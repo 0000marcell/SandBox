@@ -1,0 +1,59 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Factory injections
+//- is...
+block d
+  p.
+    A way to inject factories
+//- used to...
+block u
+  p.
+    Infect factories where its needed 
+//- we need to do this and that...
+block m
+  p.
+    we can inject factories based on its type:
+    As a result of this type injection, all factories of the type route will be 
+    instantiated with the property logger injected. 
+    The value of logger will come from the factory named logger:main.
+    injection can also be made in specific factories using the full key 
+    application.inject('route:index', 'logger', 'logger:main');
+    in this case the logger will only be inject in the route index route 
+    injections can be made in any class 
+//- this is a example... 
+block e
+  pre.
+    type injection:
+    in app/initializers/logger.js
+    export function initialize(application) {
+      var Logger = Ember.Object.extend({
+        log(m) {
+          console.log(m);
+        }
+      });
+
+      application.register('logger:main', Logger);
+      application.inject('route', 'logger', 'logger:main');
+    }
+
+    export default {
+      name: 'logger',
+      initialize: initialize
+    };
+
+    routes in this application now can acess logger:
+    in app/routes/index.js 
+    export default Ember.Route.extend({
+      activate() {
+        // The logger property is injected into all routes
+        this.get('logger').log('Entered the index route!');
+      }
+    });
+//- is similar to...
+block r
+  p.
+      

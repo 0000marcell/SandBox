@@ -1,0 +1,35 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Enumerables(map)
+block d
+  p.
+    We can use map in enumerables
+block u
+  p.
+    use map in a enumerable
+block m
+  pre.
+    make changes the array 
+    var words = ["goodbye", "cruel", "world"];
+    var emphaticWords = words.map(function(item){
+      return item+"!";
+    });
+
+    use map by to filter inside a array:
+    first we need to create a ember object
+    var rioDeJaneiro = Ember.Object.create({ capital: "Rio de janeiro"});
+    var saoPaulo = Ember.Object.create({ capital: "Sao paulo"});
+    var places = [rioDeJaneiro, saoPaulo];
+    var capitais = places.mapBy('capital');
+block e
+  p.
+    same as method
+block r
+  p.
+    Enumerables 
+    Array
+      

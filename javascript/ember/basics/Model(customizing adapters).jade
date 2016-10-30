@@ -1,0 +1,42 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(customizing adapters)
+//- is...
+block d
+  p.
+    A way to extend a adapter to add more functionality
+//- used to...
+block u
+  p.
+    extend a addapter to add and change its functionality 
+//- we need to do this and that...
+block m
+  p.
+    we declare override the existent adapter or create a adapter specific to 
+    one model 
+    we can create a specific adapter with ember generate adapter adapter-name
+    ember comes with diferent adapter use them as a starting point,
+    DS.Adapter, DS.JSONAPIAdapter, DS.RESTAdapter
+//- this is a example... 
+block e
+  p.
+    override the adapter 
+    export default DS.JSONAPIAdapter.extend({
+      // Application specific overrides go here
+    });
+
+    create a specific adapter 
+    export default DS.JSONAPIAdapter.extend({
+      namespace: 'api/v1'
+    });
+//- is similar to...
+block r
+  p.
+    Adapters 
+    Models 
+    JSON
+      

@@ -1,0 +1,39 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(explicit inverses)
+//- is...
+block d
+  p.
+    A way to tell ember what attribute belogs to 
+    what object in order to updated 
+//- used to...
+block u
+  p.
+    Better specify the relation between attributes 
+//- we need to do this and that...
+block m
+  p.
+    we use the inserver option in the belongsTo e hashMany functions
+//- this is a example... 
+block e
+  pre.
+    export default DS.Model.extend({
+      onePost: DS.belongsTo('post', { inverse: null }),
+      twoPost: DS.belongsTo('post'),
+      redPost: DS.belongsTo('post'),
+      bluePost: DS.belongsTo('post')
+    });
+
+    export default DS.Model.extend({
+      comments: DS.hasMany('comment', {
+        inverse: 'redPost'
+      })
+    });    
+//- is similar to...
+block r
+  p.
+      

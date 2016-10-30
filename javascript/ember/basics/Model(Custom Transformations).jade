@@ -1,0 +1,50 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(Custom Transformations)
+//- is...
+block d
+  p.
+    A way to our own transformation and DS data types
+//- used to...
+block u
+  p.
+    Create transformations and data types for the DS object
+//- we need to do this and that...
+block m
+  p.
+    we need to create a new transformation inside the transform folder,
+    after creating the transformation the data will behave as expected and will 
+    be transformed when needed 
+
+//- this is a example... 
+block e
+  pre.
+    creating a new transformation:
+    in app/transforms/coordinate-point.js
+    export default DS.Transform.extend({
+      serialize: function(value){
+        return [value.get('x'), value.get('y')]
+      }, 
+      deserialize: function(value){
+        return Ember.create({ x: value[0], y: value[1]}); 
+      }
+    });
+
+    in app/models/cursor.js 
+    export default DS.Model.extend({
+      position: DS.attr('coordinate-point')
+    });
+
+    
+//- is similar to...
+block r
+  p.
+    Adapter 
+    Models
+    Serializers 
+    Transformations 
+      

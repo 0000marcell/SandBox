@@ -1,0 +1,98 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Test(Helpers)
+//- is...
+block d
+  p.
+    Tools that help us  test asynchronous and synchronous code, and know that 
+    ember is synchronized  
+//- used to...
+block u
+  p.
+    helpers to test the applicaiton
+//- we need to do this and that...
+block m
+  pre.
+    Asynchronous are aware of and wait for asynchronous code in the application 
+    these helpers register themselves and run in the order that they are called in the application:
+      click(selector)
+      fillIn(selector, value)
+      keyEvent(selector, type, keyCode): works with 
+      triggerEvent(selector, type, options): trigger the event ex: blur, dblclick
+      visit(url);
+    Synchronous:
+      currentPath();
+      currentRouteName();
+      currentURL();
+      find(selector, contest);
+    WaitHelpers:
+      andThen(): helper will wait for all preciding asynchronous helpers to complete 
+    
+    Custom helper:
+      we can create our own helpers with ember generate test-helper shouldHaveElementWithCount
+      then we need to register the new helper with Ember.Test.registerAsyncHelper and Ember.Test.RegisterHelper
+
+    finally we need to add the tests in tests/.jshintrc and in tests/helpers/start-app.js, we need to add to the predef 
+    section 
+
+//- this is a example... 
+block e
+  pre.
+    using and then:
+      test('should add new post', function(assert) {
+        visit('/posts/new');
+        fillIn('input.title', 'My new post');
+        click('button.submit');
+        andThen(() = assert.equal(find('ul.posts li:first').text(), 'My new post'));
+      });
+    registering a helper:
+    Ember.Test.registerAsyncHelper : will await for all async helpers to be complete before proceding
+    Ember.Test.registerHelper 
+
+    non-async-helper:
+    export default Ember.Test.registerHelper('shouldHaveElementWithCount', function(app, assert, selector, n, context) {
+      const el = findWithAssert(selector, context);
+      const count = el.length;
+      assert.equal(n, count, `found ${count} times`);
+    });
+
+    async helper:
+    export default Ember.Test.registerAsyncHelper('dblclick',
+      function(app, assert, selector, context) {
+        let $el = findWithAssert(selector, context);
+        Ember.run(() => $el.dblclick());
+      }
+    );
+
+    in tests/.jshintrc 
+    {
+      "predef": [
+        "document",
+        "window",
+        "location",
+        ...
+        "shouldHaveElementWithCount",
+        "dblclick",
+        "addContact"
+      ],
+      ...
+    }
+
+    in tests/helpers/start-app 
+    import Ember from 'ember';
+    import Application from '../../app';
+    import Router from '../../router';
+    import config from '../../config/environment';
+    import './should-have-element-with-count';
+    import './dblclick';
+    import './add-contact';
+//- is similar to...
+block r
+  p.
+    Unit
+    Integration
+      

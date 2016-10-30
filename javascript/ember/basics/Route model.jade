@@ -1,0 +1,38 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Route(Model)
+block d
+  p.
+    With this we can create a model and than associate the 
+    model with the content  
+block u
+  p.
+    Associating a route to a model
+block m
+  pre.
+    First we map the route
+    /App/Router.js
+    Router.map(function(){
+      this.route('favotire-posts');
+    });
+
+    then we find and return a model when the route is called
+    /App/Routes/favourite-posts
+    export default Ember.Router.extend({
+      model(){
+        return this.store.query('posts', {favourite: 'true'});
+      }
+    });
+    OBS: ember data records are promises 
+block e
+  p.
+    same as method
+block r
+  p.
+    Routes
+    Models
+      

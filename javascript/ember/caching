@@ -1,0 +1,5 @@
+ShouldReloadAll governs the reload policy for findAll
+shouldReloadRecord governs the reload policy for findRecord
+shouldBackgroundReloadRecord reload records after some determined time period
+
+queryParams are a good way to pass around UI state

@@ -1,0 +1,35 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+      Route(Nested Routes)
+block d
+  p.
+    Routes inside other routes
+block u
+  p.
+    Create routes inside other routes
+block m
+  pre.
+    First we declare the route than we 
+    use a callback function to declare another one 
+
+    Router.map(function(){
+      this.route('posts', function(){
+        this.route('new');
+      });
+    });
+
+    make sure to use the full name when trasitioning 
+    this.transitionTo('posts.new');
+    all other templates will render indise the application template
+block e
+  p.
+    same as method 
+block r
+  p.
+    Routes
+    Transitions
+      

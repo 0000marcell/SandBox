@@ -1,0 +1,74 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(working with relationships)
+//- is...
+block d
+  p.
+    A way to create relationships between models
+//- used to...
+block u
+  p.
+    Create relationships between models
+//- we need to do this and that...
+block m
+  p.
+    first we need to declared the two models with belongsTo or hasMany depending 
+    on the situation, then when creating a new record we need to stablish the connection
+    between the two
+    we can also update the relatinship pushing new object to the 
+    hasMany relationship
+    to update relationship we just need to change the attribute 
+    to remove a belongsTo relationship, we can set it to null which will also 
+    remove it from the hashMany side 
+    we can also remove a object from the hasMany relationship with removeObject
+    relationships return promises, is important to notice that 
+    so when working with relationship we need to use .then 
+    handlebar templates will automatically resolve the promise 
+//- this is a example... 
+block e
+  p.
+    export default DS.model.extend({
+      comments: DS.hasMany('comments')
+    });
+
+    export default DS.Model.extend({
+      post: belongsTo('post')
+    });
+
+    let post = this.store.peedRecord('post', 1);
+    let comment = this.store.createRecord('comment', {
+      post: post
+    });
+    comment.save();
+
+    let post = this.store.peedRecord('post', 1);
+    let comment = this.store.createRecord('post', {
+    });
+    post.get('comments').pushObject(comment);
+    comment.save(); 
+
+    update:
+    comment.set('post', post);
+    comment.save();
+
+    remove: 
+    comment.set('post', null);
+    comment.save();
+
+    remove from hashMany: 
+    post.removeObject(coment);
+    post.save();
+    
+    working with relationships: 
+    post.get('comments').then(function(comments){
+      now we work with the comments
+    });
+
+//- is similar to...
+block r
+  p.
+      

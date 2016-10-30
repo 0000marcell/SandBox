@@ -1,0 +1,49 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(finding records)
+//- is...
+block d
+  p.
+    A way to find and retrieve records from the model
+//- used to...
+block u
+  p.
+    Find and retrieve records from the model
+//- we need to do this and that...
+block m
+  p.
+    To retrieve a single record we need to use findRecord() and pass
+    the model and id of the record 
+    to retrieve the record form the store we use peedRecord() 
+    to retrieve multiple records we use findAll() and pass only the model 
+    to retrieve all the records from the store we use peekAll()
+    peekAll return a DS.RecordArray and findAll returns a DS.PromiseArray
+    RecordArray is a Ember object that implements Enumerable 
+    we can also make a query with passing the model a option hash with the filter 
+    and using then to do something in the promise 
+    we can make query for a single object if we know that the return value will 
+    be only one object
+
+//- this is a example... 
+block e
+  pre.
+    var post = this.store.findRecord('post', 1);
+    var post = this.store.peedRecord('post', 1);
+    var posts = this.store.findAll('post');
+    var posts = this.store.peedAll('post');
+    query:
+    this.store.query('person', {filter { name: 'peter'} }).then(function(peter){
+    });
+    query one object:
+    this.store.queryRecord('person', {filter: {email: 'peter@gmail.com'}}).then(function(){
+    });
+//- is similar to...
+block r
+  p.
+    Models
+    Store
+      

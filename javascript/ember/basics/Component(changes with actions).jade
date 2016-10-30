@@ -1,0 +1,53 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Component(changes with actions)
+block d
+  p.
+    We can create a component that fires up a action
+block u
+  p.
+    reuse components that have similar behavior
+block m
+  pre.
+    create a component button-with-confirmation 
+    ember generate component button-with-confirmation
+    {{button-with-confirmation text="Click ok to delete your account"}}
+
+    in the parent component 
+    export default Ember.Component.extend({
+      login: Ember.inject.service(),
+      actions: {
+        userDidDeleteAccount(){
+          this.get('login').deleteUser(); 
+        } 
+      }
+    });
+
+    in the child component 
+    export default Ember.Component.extend({
+      tagName: 'button',
+      click(){
+        if(confirm(this.get('text'))){
+          triger action in the parent compoent
+        }
+      }
+    });
+
+    you can pass actions from one component to another 
+    {{button-with-confirmation text="Click here to delete your account."
+       onConfirm=(action 'userDidDeleteAccount')}}
+
+    OBS: actions can be properties on components 
+          Actions in components allow
+           you to decouple an event happening from
+          how it's handled, leading to modular, 
+          more reusable components.
+block e
+  p.
+block r
+  p.
+      

@@ -1,0 +1,34 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(defining atributes)
+//- is...
+block d
+  p.
+    A way to define atributes in the model to be used in the application  
+//- used to...
+block u
+  p.
+    Make records fetch from the server available in the application
+//- we need to do this and that...
+block m
+  pre.
+    the declaration is pretty similar to the way we declare atributes 
+    in Controllers, Components and objects 
+//- this is a example... 
+block e
+  p.
+    export default DS.Model.extend({
+      firstName: DS.attr(),
+      lastName: DS.attr(),
+      fullName: Ember.computed('firstName', 'LastName', function(){
+        return '${this.get('firstName')} ${this.get('lastName')'
+      })
+    });
+//- is similar to...
+block r
+  p.
+      

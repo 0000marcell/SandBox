@@ -1,0 +1,54 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(pushing records)
+//- is...
+block d
+  p.
+    A way to preload data in to the store to make the app faster
+//- used to...
+block u
+  p.
+    Preload data to the store to make the app faster 
+//- we need to do this and that...
+block m
+  p.
+    we can use the push method to load records in to the store 
+    we use the route application to preload the data on boot 
+
+//- this is a example... 
+block e
+  pre.
+    preloading data 
+    export default Ember.Route.extend({
+      model() {
+        this.store.push({
+          data: [{
+            id: 1,
+            type: 'album',
+            attributes: {
+              title: 'Fewer Moving Parts',
+              artist: 'David Bazan',
+              songCount: 10
+            },
+            relationships: {}
+          }, {
+            id: 2,
+            type: 'album',
+            attributes: {
+              title: 'Calgary',
+              artist: 'Bon Iver',
+              songCount: 2
+            },
+            relationships: {}
+          }]
+        });
+      }
+    });    
+//- is similar to...
+block r
+  p.
+      

@@ -1,0 +1,80 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Test(Unit)
+//- is...
+block d
+  p.
+    A way to test a small part of the code, the ember app don't need to be running
+//- used to...
+block u
+  p.
+    Test a chunk of code unrelated to other parts of the application
+//- we need to do this and that...
+block m
+  p.
+    To test a object we only need intantiate a object set it state and run assertions against the object 
+//- this is a example... 
+block e
+  pre.
+    Testing computed properties:
+    export default Ember.Object.extend({
+      foo: 'bar',
+
+      computedFoo: Ember.computed('foo', function() {
+        const foo = this.get('foo');
+        return `computed ${foo}`;
+      })
+    });
+
+    then we write the test:
+    import { moduleFor, test } from 'ember-qunit';
+
+    moduleFor('model:some-thing', 'Unit | some thing', {
+      unit: true
+    });
+
+    test('should correctly concat foo', function(assert) {
+      const someThing = this.subject();
+      someThing.set('foo', 'baz');
+      assert.equal(someThing.get('computedFoo'), 'computed baz');
+    });
+
+    testing a method inside a object 
+    in app/models/some-thing.js 
+    export default Ember.Object.extend({
+      foo: 'bar',
+      testMethod() {
+        this.set('foo', 'baz');
+      }
+    });
+    in app/tests/unit/models/some-thing-test.js
+    test('should update foo on testMethod', function(assert) {
+      const someThing = this.subject();
+      someThing.testMethod();
+      assert.equal(someThing.get('foo'), 'baz');
+    });
+
+    Testing a observer:
+    export default Ember.Object.extend({
+      foo: 'bar',
+      other: 'no',
+      doSomething: Ember.observer('foo', function() {
+        this.set('other', 'yes');
+      })
+    });
+
+    test('should set other prop to yes when foo changes', function(assert) {
+      const someThing = this.subject();
+      someThing.set('foo', 'baz');
+      assert.equal(someThing.get('other'), 'yes');
+    });
+//- is similar to...
+block r
+  p.
+    Unit 
+    Integration
+      

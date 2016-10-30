@@ -1,0 +1,37 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Binds (Computed Alias)
+block d
+  p.
+    You can bind one object property to another 
+block u
+  p.
+    Bind one object property to another
+block m
+  p.
+    We need to use Ember.computed.alias(<point to another object prop>) 
+block e
+  pre.
+    wife = Ember.Object.create({
+      houseHoldIncome: 8000;
+    });
+
+    husband = Ember.Object.create({
+      houseHoldIncome: Ember.computed.alias("wife.houseHoldIncome")
+    });
+
+    husband = Husband.create({
+      wife: wife
+    });
+
+    husband.get('houseHoldIncome'); // 8000
+    wife.set('houseHoldIncome', 9000);
+    husband.get('houseHoldIncome'); // 9000
+block r
+  p.
+    computed property
+      

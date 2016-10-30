@@ -1,0 +1,60 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     The Run Loop
+//- is...
+block d
+  p.
+    Its the way Ember application work, schedulling queues in the run loop 
+    the loop is used to batch and order work in a way that is most effective
+    and efficient, we can tell ember to run the loop and use it in specific ways
+//- used to...
+block u
+  p.
+    Used rarely in specific cases
+    like 
+      Dom update and event callbacks
+      postMessage and messageChanel 
+      setTimeout and setInterval callbacks
+      AJAX callback
+      websocket callbacks
+    the run loop is usefull to batch together work in order to make more efficient
+    
+//- we need to do this and that...
+block m
+  p.
+    We can schedule run loops with Ember.run.queues, the order of the queue are 
+    ["sync", "actions", "routerTransitions", "render", "afterRender", "destroy"]
+    the sync queue contains binding syncronization jobs 
+    the action queue will generally cotain schedule tasks like promises 
+    the router transition queue is sel explanatory 
+    the afterRender contain jobs to be run after all previously schedule render tasks
+    is the best way to use 3rd party lib that needs the DOM 
+    the destroy queue contain jobs to finish the teardown of objects 
+    the priority of queue in the job are the following 
+      Let the highest priority queue with pending jobs be: CURRENT_QUEUE, if there are no queues with pending jobs the run loop is complete
+      Let a new temporary queue be defined as WORK_QUEUE
+      Move jobs from CURRENT_QUEUE into WORK_QUEUE
+      Process all the jobs sequentially in WORK_QUEUE
+      Return to Step 1
+
+//- this is a example... 
+block e
+  pre.
+    Ember.run.queue 
+    use jquery and ember to handle a click event and run some code 
+    $('a').click(() => {
+      Ember.run(() => {  // begin loop
+        // Code that results in jobs being scheduled goes here
+      }); // end loop, jobs are flushed and executed
+    });
+
+//- is similar to...
+block r
+  p.
+    Schedule 
+    Queue 
+      

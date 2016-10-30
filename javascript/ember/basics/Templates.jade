@@ -1,0 +1,28 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Templates
+block d
+  p.
+    the view of the app, it can container other components 
+    some logic like {{#if }}{{/if}}
+block u
+  p.
+    show information about models and options to the
+    user
+block m
+  p.
+    when you generate a route a template is automatilly created
+block e
+  pre.
+    using handlebars .hbs 
+    {{action 'doIt'}}
+    {{#link-to 'users'}}{{/link-to}} 
+block r
+  p.
+    controllers
+    models
+      

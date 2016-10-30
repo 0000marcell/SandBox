@@ -1,0 +1,89 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Factory registration
+//- is...
+block d
+  p.
+    A way to register factories inside the Ember.Application object 
+    every part of the application like templates, routes, controllers 
+    is a factory as have its own key like templates:key and route:application 
+    Ember have several built-in factories like services, route, templates, component 
+
+//- used to...
+block u
+  p.
+    Manage factories 
+//- we need to do this and that...
+block m
+  p.
+    We can create or own factories registering in the application, 
+    application.register('user:user-to-register');
+    registering already instantiated objects:
+    by default ember will try to instantiate a register factory 
+    when its looked up we can prevent that with instantiate: false 
+
+    Registering singletons vs non-singletons:
+    by default factories are singletons and are instantiated only once 
+    we need to pass singleton: false to prevent that 
+//- this is a example... 
+block e
+  pre.
+    registering a loger factory:
+    export function initialize(application) {
+      var Logger = Ember.Object.extend({
+        log(m) {
+          console.log(m);
+        }
+      });
+
+      application.register('logger:main', Logger);
+    }
+
+    export default {
+      name: 'logger',
+      initialize: initialize
+    };
+
+    registering already instantiated objects 
+
+    export function initialize(application) {
+      var logger = {
+        log(m) {
+          console.log(m);
+        }
+      };
+
+      application.register('logger:main', logger, { instantiate: false });
+    }
+
+    export default {
+      name: 'logger',
+      initialize: initialize
+    };
+    
+    registering non-singletons:
+    in app/initializers/notifications.js
+    export function initialize(application){
+      var message = Ember.Object.extend({
+        text: ''
+      });
+
+      application.register('notification:message', Message, {singleton: false});
+    }
+
+    export default {
+      name: notification,
+      initialize: initialize
+    }
+
+//- is similar to...
+block r
+  p.
+    Applications 
+    Factories 
+    Objects
+      

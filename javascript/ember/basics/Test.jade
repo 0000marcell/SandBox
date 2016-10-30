@@ -1,0 +1,38 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Test
+//- is...
+block d
+  p.
+    A core part of the Ember workflow, there are 3 types of tests, 
+    Acceptance, Unit, Integration
+    Acceptance: tests use the app to test its functionality like a user would 
+    Unit: test isolated chunks of functionality, computed properties, formating
+    Integration: the middle between UI and control, verify that data and actions 
+    are properly passed between the application ex:
+      A author full name is properly displayed
+      A user is precented from typing more than 50 characters
+
+//- used to...
+block u
+  p.
+    Test the application logic and UI 
+//- we need to do this and that...
+block m
+  p.
+    We can run tests with ember test or every time a file is saved with 
+    ember test --server, Ember uses QUnit to write the tests 
+    and Testem to run, we can configure testem with the testem.json file
+//- this is a example... 
+block e
+  p.
+    ember test 
+    ember test --server
+//- is similar to...
+block r
+  p.
+      

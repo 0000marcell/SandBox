@@ -1,0 +1,40 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Component(lifecycle)
+block d
+  p.
+    functions that run when the components is initialized (didInsertElement) 
+    can be used to do specific things
+block u
+  p.
+    do specific things with components
+block m
+  pre.
+    we can remove a class from a component after a animation
+    didInsertElement() {
+      this._super(...arguments);
+      this.$().on('animationend', () => {
+        $(this).removeClass('.sliding-anim');
+      });
+    }
+
+    OBS: child components run their didInsertElement first thant 
+    it buble up 
+    you can't set property in didInsertElment, because it rerender the 
+    component and its not effective 
+    willDestroyElmente runs when the element is going to be destroyed
+    willDestroyElement() {
+      this.$().off('animationend');
+      this.$('input.date').myDatepickerLib().destroy();
+    }
+    there's no default implementation of willDestroyElement so _super is not 
+    necessary
+block e
+  p.
+block r
+  p.
+      

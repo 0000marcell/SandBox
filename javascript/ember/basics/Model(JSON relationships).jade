@@ -1,0 +1,53 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(JSON relationships)
+//- is...
+block d
+  p.
+    A way to save relationships in the backend 
+//- used to...
+block u
+  p.
+    save relationships in the backend
+//- we need to do this and that...
+block m
+  p.
+    in order to save the relatoinships in the backend we need 
+    to save them with the id and type 
+    using this way when we run post.get('comments') the JSON API adapter will 
+    send GET request
+//- this is a example... 
+block e
+  pre.
+    relationships in the JSON object 
+    in app/models/posts.js 
+    export default DS.Model.extend({
+      comments: DS.hasMany('comment', { async: true} )
+    });
+
+    relation ship in the JSON 
+    {
+      "data": {
+        "type": "posts",
+        "id": "1",
+        "relationships": {
+          "comments": {
+            "data": [
+              { "type": "comments", "id": "5" },
+              { "type": "comments", "id": "12" }
+            ]
+          }
+        }
+      }
+    }
+
+//- is similar to...
+block r
+  p.
+    Model 
+    Adapters 
+      

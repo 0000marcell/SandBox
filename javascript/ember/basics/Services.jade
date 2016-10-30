@@ -1,0 +1,54 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Services
+//- is...
+block d
+  p.
+    A Ember Object long lived and that can be made available in diferent 
+    parts of the application like :
+      Loggin
+      User/Session authentication 
+      Geolocation
+      Third party API 
+      Web sockets 
+      server sent events or notifications 
+      server backed API's that do not fit Ember Data
+//- used to...
+block u
+  p.
+    Create long lived Ember objects that can be injected 
+    in diferenct parts of the application
+
+    to acess a service we can use a initializer or inject directly with Ember.inject 
+//- we need to do this and that...
+block m
+  p.
+    we can use the ember-cli to create a new service 
+    ember generate service shopping-cart 
+    like any other Ember object services can be initialized
+    and have property of it's own 
+//- this is a example... 
+block e
+  p.
+    Services extend the Ember.Service class 
+    in app/services/shopping-cart.js
+    export default Ember.Service.extend({ 
+    });
+
+    injecting a service:
+    app/components/cart-component.js
+    export default Ember.Components({
+      cart: Ember.inject.service('shopping-cart')
+    });
+
+    we can than acess property and methods on the service 
+    this.get('cart').remove(item);
+//- is similar to...
+block r
+  p.
+    
+      

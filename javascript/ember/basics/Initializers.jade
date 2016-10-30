@@ -1,0 +1,77 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Initializers
+//- is...
+block d
+  p.
+    A way to configure your application as it boots
+//- used to...
+block u
+  p.
+    configure the application as it boots
+//- we need to do this and that...
+block m
+  p.
+    there are two types of applicatoins initializers 
+    applications initializers and applications instance initializers 
+    Aplications initializers provide means to configure DI(dependency injection)
+    Applications instance initializers provide means to configure the initial state 
+    of the application
+    operation inside initializers should be kept as minimal as possible, so the application can load faster
+    we can create a application initializer with the CLI 
+    ember generate initializer shopping-cart 
+    now we can customize the initializer to inject a cart property in all the routes
+
+    application instance initializers: 
+    can be created with ember cli 
+    ember generate instance-initializer logger 
+    than we can configure it 
+
+    specifying the order:
+    we can use before and after to specify the initializers order
+
+    application initializer will always run before application instance initializers 
+
+//- this is a example... 
+block e
+  pre.
+    customizing a initializer to inject a cart in all application routes
+
+    in app/initializers/shopping-cart.js
+    export function initializer(application){
+      application.inject('route', 'cart', 'service:shopping-cart');
+    };
+
+    export default{
+      name: 'shopping-cart',
+      initialize: 'initialize'  
+    };
+
+    Application instance initializer:
+    export function initializer(applicationInstance){
+      var logger = applicationInstance.lookup('logger:main');
+      logger.log('Hello from the instance initializer!');
+    }
+
+    export default {
+      name: 'logger',
+      initialize: initialize
+    };
+
+    using before and after:
+
+    export default {
+      name: 'configReader',
+      before: 'websocketInit',
+      initialize: initialize
+    };
+
+
+//- is similar to...
+block r
+  p.
+      

@@ -1,0 +1,58 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Ad Hoc Injections
+//- is...
+block d
+  p.
+    A way to inject factories directly on Ember classes 
+//- used to...
+block u
+  p.
+    inject directly in Ember classes
+//- we need to do this and that...
+block m
+  p.
+    Current we can inject controllers and services directly 
+    we can inject a service or controller in a attribute of a class 
+    we don't need to mention the service name if its the same as the class 
+    most of the time look ups will be performed implicitly, if we want 
+    to make a loop up explicity we need to use the instance-initializers 
+
+//- this is a example... 
+block e
+  pre.
+    injection directly:
+    in app/components/cart-contents.js
+    export default Ember.Component.extend({
+      cart: Ember.inject.service('shopping-cart')
+    });
+
+    injecting with the same name:
+    in app/components/cart-contents.js
+    export default Ember.Component.extend({
+      cart: Ember.inject.service('shopping-cart');
+    });
+
+    making a explicitly look up:
+    export function initialize(applicationInstance) {
+      var logger = applicationInstance.lookup('logger:main');
+
+      logger.log('Hello from the instance initializer!');
+    }
+
+    export default {
+      name: 'logger',
+      initialize: initialize
+    };
+
+//- is similar to...
+block r
+  p.
+    Initializers 
+    Services
+    Injections 
+      

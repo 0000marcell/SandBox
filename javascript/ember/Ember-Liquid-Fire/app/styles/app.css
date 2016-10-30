@@ -1,0 +1,37 @@
+#liquid-spacer-demo{
+	border: 2px solid black;
+	width: 250px;
+	color: #d13632;
+}
+
+#first{
+	height: 300px;
+	color: #FFF;
+	background-color: #45B69C;
+}
+
+#second{
+	height: 300px;
+	color: #FFF;
+	background-color: #21D19F;
+}
+
+#third{
+	height: 300px;
+	color: #FFF;
+	background-color: #7293A0;
+}
+
+#blank{
+	height: 300px;
+}
+
+.blue-div{
+	height: 300px;
+	color: #FFF;
+	background-color: blue;
+}
+
+.space{
+	height: 500px;
+}

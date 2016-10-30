@@ -1,0 +1,47 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Route(Transitions)
+block d
+  p.
+    Actions that change the route to another location
+block u
+  p.
+    Changing the route to another location
+block m
+  pre.
+    Transition before the model:
+      export default Ember.Route.extend({
+        beforeModel(){
+          this.transitionTo('posts');
+        }
+      });
+
+    Transition after the model 
+
+      export default Ember.Route.extend({
+        afterModel(model, transition){
+          if(model.get('length') == 1){
+            this.transitionTo('post', model.get('firstObject'));
+          }
+        }
+      });
+
+    Can also be used for child nodes
+    export default Ember.Route.extend({
+      redirect('model', 'transition'){
+        if(model.get('length') == 1){
+          this.transitionTo('posts.post', model.get('firstObject'));
+        }
+      }
+    });
+block e
+  p.
+    Exemplo is the same as Method
+block r
+  p.
+    transitions with liquid fire
+      

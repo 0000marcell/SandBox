@@ -1,0 +1,61 @@
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(Relationships)
+//- is...
+block d
+  p.
+    A way of defining relationships between models 
+//- used to...
+block u
+  p.
+    Define relationships between models
+//- we need to do this and that...
+block m
+  pre.
+    one-to-one: 
+    we need to use belongsTo()
+    one-to-many:
+    we need to use hasMany() in one model 
+    and belongsTo() in the other
+    many-to-many:
+    we need to use hasMany()
+//- this is a example... 
+block e
+  pre.
+    one-to-one:
+    App/models/user.js
+    export default DS.Model.extend({
+      profile: DS.belongsTo('profile')
+    });
+    App/models/profile.js
+    export default DS.Model.extend({
+      profile: DS.belongsTo('user')
+    });
+    
+    one-to-many:
+    App/models/post.js
+    export default DS.Model.extend({
+      profile: DS.hasMany('comment')
+    });
+    App/models/comment.js
+    export default DS.Model.extend({
+      tags: DS.belongsTo('post')
+    });
+    
+    many-to-many:
+    App/models/post.js
+    export default DS.Model.extend({
+      tags: DS.hasMany('tag')
+    });
+
+    App/models/tag.js
+    export default DS.Model.extend({
+      posts: DS.hasMany('post');
+    });
+//- is similar to...
+block r
+  p.
+      

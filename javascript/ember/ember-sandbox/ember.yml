@@ -1,0 +1,34 @@
+component: 
+methods:
+this.$ jquery inside component
+addObserver('key', 'target', 'method'):
+adds abserver to a property on the component
+cacheFor: returns the cached value of a computed property
+decrementProperty('property', value):
+didReceiveAttrs: called when the component is first rendered and when
+the attrs that the component receive are updated
+didRender: called when the component is rendered
+didUpdateAttrs: called only when the attributes passed to the component are rerendered
+extend: creates a subclass of the component, you override methods and acess the parent with this._super
+get: get property or computed property
+getProperties: get more than one property
+getWithDefault('property', 'default'): returns the property or a default value
+has(name): checks if a object have subscriptions to named events
+notifyPropertyChange(keyName): notify that a property changed without changing the property, internally this method call propertywillchange and propertydidchange in succeccion 
+off: cancels subscription
+on: subscribs to a named event
+prenson.on('didLoad', function(){
+});
+one: subscript a function to a named event then cancels the subscription after the first time the event is triggered
+readDOMAttr: reliable way to read DOM attributes without clobbering the component
+removeObserver: opposite to addObserver
+reopenClass: augments a constructor own property and functions
+rerender: renders the component again
+send(actionName, context): triggers a 
+named action on the actionHandler 
+sendAction(actionname): send action to the action passed to the component like {{comp-comp play=(action 'value')}}
+set: 
+
+
+
+

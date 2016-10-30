@@ -1,0 +1,32 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(defining a model)
+//- is...
+block d
+  p.
+    how you defined your model in your application
+//- used to...
+block u
+  p.
+    define a model in your application
+//- we need to do this and that...
+block m
+  pre.
+    we can create with the ember-cli or by hand 
+    after we define a model we can start working with its data
+//- this is a example... 
+block e
+  p.
+    ember generate model user 
+    export default DS.Model.extend({
+    });
+//- is similar to...
+block r
+  p.
+    Ember Data
+    Records
+      

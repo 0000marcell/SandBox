@@ -1,0 +1,30 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Template(input)
+block d
+  p.
+    helper for the input element
+block u
+  p.
+    create forms data submit data to a controller or component
+block m
+  pre.
+    unquoted atributes will be bound to the controller or component
+    {{input type="text" value=firstName disabled=entryNotAllowed size="50"}}
+
+    action on a specific event:
+    {{input value=firstName key-press="updateFirstName"}}
+
+    checkboxes 
+    {{input type="checkbox" name="isAdmin" checked=isAdmin}}
+block e
+  p.
+    same as method
+block r
+  p.
+    Templates
+      

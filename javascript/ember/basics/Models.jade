@@ -1,0 +1,46 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Models
+block d
+  p.
+    Represents persistent state in your app, 
+    you could fetch data in the controllers but then you would be violating 
+    the SOLID principle, that says that object must have a single responsability
+    Ember Data used JSON API the json API is for Ember what sql is for Rails
+block u
+  p.
+    Usually saves content to a server
+block m
+  p.
+    Ember models are subclasses of the ember data object 
+    each object
+    you also can have nested models 
+    OBS: models don't have any data themselves, they only 
+    declare atributes, relationships and behavior 
+block e
+  pre.
+    model declaration:
+    export default DS.Model.extend({
+      firstName: DS.attr('string'),
+      birthDay: DS.attr('date')
+    });
+
+    nested models:
+    app/models/order.js 
+    export default DS.Model.extend({
+      lineItems: DS.hasMany('line-items')
+    });
+
+    app/models/lineItem.js
+    export default DS.Model.extend({
+      order: DS.belongsTo('order')
+    });
+block r
+  p.
+    controllers
+    views
+      

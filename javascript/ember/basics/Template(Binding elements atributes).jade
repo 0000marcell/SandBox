@@ -1,0 +1,29 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Template(Binding elements atributes)
+block d
+  p.
+    You can bind element atributes to the controller or component 
+block u
+  p.
+    change a element atribute based on the value 
+    of a controller or component
+block m
+  pre.
+    in the specific helper:
+    Ember.LinkComponent.reopen({
+      atributeBindings: ['data-toggle']
+    });
+
+    Ember.TextField.reopen({
+      atributeBinding: ['data-toggle', 'data-placement']
+    });
+block e
+  p.
+block r
+  p.
+      

@@ -1,0 +1,33 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Computed property
+block d
+  p.
+    A property that changes based on another properties 
+block u
+  p.
+    make a property that updates it self based on another properties
+block m
+  pre.
+    you create a property with a call back and a return value
+    person = Ember.Object.extend({
+      firstName: null,
+      lastName: null,
+      fullName: Ember.computed('firstName', 'lastName', function(){
+        return '${this.get('firstName') this.get('lastName')}';
+      })
+    });
+
+
+block e
+  p.
+    same as method
+block r
+  p.
+    observers
+    binds
+      

@@ -1,0 +1,85 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Query params(sorting, pagination)
+block d
+  p.
+    everything after ? in the URL
+block u
+  p.
+    We can use this technic to paginate and sort content inside a route
+block m
+  pre.
+    Query params are declared in route driven controllers, 
+    we can specify a query param in the property and filter 
+    based on it
+    export default Ember.Controller.extend({
+      queryParams: ['category'],
+      category: null, 
+      filteredArticles: Ember.computed('category', 'model', function(){
+        var category = this.get('category');
+        var articles = this.get('articles');
+
+        if(category){
+          return articles.filterBy('category', category);
+        }else{
+          return articles;
+        }
+      });
+    });
+    this set up a binding, if the category property or the URL 
+    changes the computed property will be fired
+
+    you can also specify the query param in link-to helper 
+    {{#link-to 'posts' (query-params direction="asc")}}Sort{{/link-to}}
+
+    you can also transition to with query params:
+    this.transitionTo('users', model, { queryParms: { showDetails: true}});
+    you can also tranition without changing the route 
+    this.transitionTo({queryParams: {showDetails: true}});
+    this.transitionTo('/posts/1?sort=date&showDetails=true');
+    
+    full transition:  
+    when changing a query, events like model and setupController won't fire 
+    you can set the refreshModel to true if
+    in route
+    export default Ember.Route.extend({
+      queryParams: {
+        category: {
+          refreshModel: true
+        }
+      }, 
+      model(params){
+      }
+    });
+
+    you can also set the state by replaceState instead of pushState(default)
+    queryParams: {
+    category: {
+      replace: true
+      }
+    }
+    you can alse bind a query params to a diferent controller query param 
+    in the controllers
+    queryParams: {
+      category: 'articles_category'
+    }
+
+    you can use query params like this:
+    queryParams: ['page', 'filter', {
+      category: 'articles_category'
+    }],
+    category: null,
+    page: 1,
+    filter: 'recent'
+
+    
+block e
+  p.
+
+block r
+  p.
+      

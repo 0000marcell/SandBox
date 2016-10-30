@@ -1,0 +1,28 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Template(dev helper)
+block d
+  p.
+    Helpers that let you debug you application more easily
+block u
+  p.
+    debug and inspect 
+block m
+  pre.
+    {{log 'Name is' name}}
+    {{debugger}}
+    you can get the value after the breack points with get 
+    >get('item.name');
+    and inspect the context 
+    >context
+block e
+  p.
+    same as method
+block r
+  p.
+    Templates
+      

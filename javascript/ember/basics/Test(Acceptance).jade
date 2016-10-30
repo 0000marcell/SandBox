@@ -1,0 +1,56 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Test(Acceptance)
+//- is...
+block d
+  p.
+    Tests made for the UI, uses the application like any other user would 
+//- used to...
+block u
+  p.
+    Testing the UI 
+//- we need to do this and that...
+block m
+  p.
+    We can create Acceptance tests with the CLI, 
+    ember generate acceptance-test <name>
+    almost every test has a pattern of visiting a route interacting with
+    the page and checking for expected changes in the DOM 
+//- this is a example... 
+block e
+  pre.
+    ember g acceptance-test login
+    this file is generated: 
+    in tests/acceptance/login-test.js
+    
+    import { test } from 'qunit';
+    import moduleForAcceptance from 'people/tests/helpers/module-for-acceptance';
+
+    moduleForAcceptance('Acceptance | login');
+    
+    test('visiting /login', function(assert){
+      visit('login');
+
+      andThen(function(){
+        assert.equal(currentURL(), '/login');
+      }); 
+    });
+    
+    check for new post 
+    test('should add new post', function(assert) {
+      visit('/posts/new');
+      fillIn('input.title', 'My new post');
+      click('button.submit');
+      andThen(() => assert.equal(find('ul.posts li:first').text(), 'My new post'));
+    });
+
+
+//- is similar to...
+block r
+  p.
+    Tests
+      

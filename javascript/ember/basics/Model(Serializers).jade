@@ -1,0 +1,32 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(Serializers)
+//- is...
+block d
+  p.
+    A way to customize serializers(changes the format of the data sent and received)
+//- used to...
+block u
+  p.
+    Customize serializers
+//- we need to do this and that...
+block m
+  p.
+    There are 3 main Ember serializers:
+    JSONAPISerializer: is the default serializer and works with the JSON API backend 
+    JSONSerializer: is a simple JSON serializer to work with a single object or arrays of records
+    RESTSerializer: is a more complex serializer that supports sideloading and was the default 
+    serializer before 2.0
+//- this is a example... 
+block e
+  p.
+//- is similar to...
+block r
+  p.
+    Models
+    Adapters
+      

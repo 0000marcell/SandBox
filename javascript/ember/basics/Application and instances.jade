@@ -1,0 +1,35 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Application and instances
+//- is...
+block d
+  p.
+    the way ember treats the application, every ember 
+    application represented by a class that extends Ember.Application 
+    this class is used to declare and manage all the application objects
+    when the application is booted, a Ember.ApplicationInstante is created 
+    this object is used to manage the stateful aspects of the application
+//- used to...
+block u
+  p.
+    manage the application 
+//- we need to do this and that...
+block m
+  pre.
+    App = Ember.Application.extends({
+    });
+//- this is a example... 
+block e
+  p.
+    same as method
+//- is similar to...
+block r
+  p.
+    Ember 
+    Application 
+    Instances
+      

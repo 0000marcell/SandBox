@@ -1,0 +1,49 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Template(Iterate)
+block d
+  p.
+    you can use {{#each}}, {{#each-in}}
+    An Ember template helper, the each helper 
+    is bound to the object, every time the object updates
+    the each will update aswell
+block u
+  p.
+    Iterate through a object shows its values
+block m
+  pre.
+    {{#each people as |person|}}
+      <h1>{{peason.name}}</h1>
+    {{/each}}
+    with index
+    {{#each people as |person index|}}
+    if empty
+    {{#each people as |person|}}
+      <li>{{person.name}} 
+    {{else}}
+      sorry nobody is here 
+    {{/each}}
+    using {{#each in}}
+    {{#each-in as |category products|}}
+      <li>{{category}}
+        <ol>
+          {{#each products key="@item" as |product|}}
+            <li>{{product}}</li>
+          {{/each}}
+        </ol>
+      </li>
+    {{/each-in}}
+    OBS: {{#each-in}} will not automatically rerender the template 
+    you have to use set and manually rerender the template 
+    this.rerender();
+block e
+  p.
+    same as method
+block r
+  p.
+    Templates
+      

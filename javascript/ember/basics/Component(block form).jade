@@ -1,0 +1,31 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Component(block form)
+block d
+  p.
+    Block form can wrap aditional content in the component 
+block u
+  p.
+    wrap aditional content inside the component
+block m
+  pre.
+    {{yield}} tells ember that the content will be provided
+    when the component is used 
+    using the component 
+    {{#blog-post title=title}}
+      <p class="author">by {{author}}</p>
+      {{body}}
+    {{/blog-post}}
+
+    the component template 
+    <h1>{{title}}</h1>
+    <div class="body">{{yield}}</div>
+block e
+  p.
+block r
+  p.
+      

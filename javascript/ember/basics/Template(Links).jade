@@ -1,0 +1,47 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Template(Links)
+block d
+  p.
+    A link helper to create links in Ember  
+block u
+  p.
+    Create links
+block m
+  pre.
+    <li>{{#link-to 'photos.edit' photo}}Edit{{/link-to}}</li>
+
+    you can also pass a value directly 
+    <li>{{#link-to 'photos.edit' 1}}Edit photo 1{{/link-to}}</li>
+
+    you can have a number of nested routes and links for 
+    their resources 
+
+    Router.map(function(){
+      this.route('photos', function(){
+        this.route('photo', {path: '/:photo_id'}, function(){
+          this.route('coments');
+          this.route('coment', {path: 'comments/:comment_id'});
+        })
+      });
+    });
+
+    <p>{{#link-to "photos.photo.comment" primaryComment}}Main Comment{{/link-to}}</p>
+
+    in line link 
+    {{link_to "inline Form" "index"}}
+    <a href="/">Inline Form</a>
+
+    you can use atributes inside link helpers 
+    {{link-to "inLine Form" "index" class="thisclass"}}
+block e
+  p.
+    same as method
+block r
+  p.
+    Templates
+      

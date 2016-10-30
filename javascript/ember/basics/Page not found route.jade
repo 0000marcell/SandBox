@@ -1,0 +1,25 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+      Route(Page not found)
+block d
+  p.
+    When the URL passed doesn't find a route, you are redirected here 
+block u
+  p.
+    Redirect the user to a warning page
+block m
+  pre.
+    Route.map(function(){
+      this.route('pagenotfound', {path: '/*wildcard'});
+    });
+block e
+  p.
+    same as method
+block r
+  p.
+    Routing
+      

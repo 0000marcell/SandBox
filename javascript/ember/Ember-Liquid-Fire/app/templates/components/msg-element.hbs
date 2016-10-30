@@ -1,0 +1,10 @@
+<div id="liquid-spacer-demo">
+  <label>{{input type="checkbox" checked=showLongMessage}} Show Long Message</label>
+  {{#liquid-spacer growDuration=250}}
+    {{#if showLongMessage}}
+      {{longMessage}}
+    {{else}}
+      {{shortMessage}}
+    {{/if}}
+  {{/liquid-spacer}}
+</div>

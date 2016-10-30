@@ -1,0 +1,41 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(handling metadata)
+//- is...
+block d
+  p.
+    A way to manage records queried from the server and 
+    treating then
+//- used to...
+block u
+  p.
+    manage the records 
+//- we need to do this and that...
+block m
+  p.
+    We can limit the number of records returned from a query 
+    we can read information about the data with .get('meta')
+    meta.total can be used to know how many posts will be returned
+    //- this is a example... 
+block e
+  p.
+    let result = this.store.query('post', {
+      limit: 10,
+      offset: 0
+    });
+
+    store.query('post').then((result) => {
+      let meta = result.get('meta');
+    })
+
+    post.get('author').then((author) => {
+      let meta = author.get('meta');
+    });
+//- is similar to...
+block r
+  p.
+      

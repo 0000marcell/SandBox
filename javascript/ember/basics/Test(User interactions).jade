@@ -1,0 +1,60 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Test(User interactions)
+//- is...
+block d
+  p.
+    A way to test user interaction with components
+//- used to...
+block u
+  p.
+    Test user interactions with components
+//- we need to do this and that...
+block m
+  p.
+    We can use jquery to triggers action in the component and make assertions 
+//- this is a example... 
+block e
+  pre.
+    in app/components/magic-title.js
+    export default Ember.Component.extend({
+      title: 'Hello World',
+
+      actions: {
+        updateTitle() {
+          this.set('title', 'This is Magic');
+        }
+      }
+    });
+
+    app/templates/components/magic-title.hbs
+    <h2>{{title}}</h2>
+
+    <button {{action "updateTitle"}}>
+      Update Title
+    </button>
+
+    tests/integration/components/magic-title-test.js
+
+    test('should update title on button click', function(assert) {
+      assert.expect(2);
+
+      this.render(hbs`{{magic-title}}`);
+
+      assert.equal(this.$('h2').text(), 'Hello World', 'initial text is hello world');
+
+      //Click on the button
+      this.$('button').click();
+
+      assert.equal(this.$('h2').text(), 'This is Magic', 'title changes after click');
+    });
+//- is similar to...
+block r
+  p.
+    Components 
+    Tests
+      

@@ -1,0 +1,37 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Error Route
+block d
+  p.
+    route created to manage error in the controler, can be a 
+    nested route or not, like in the loading route
+block u
+  p.
+    handle a error in the route, you can
+    also manage the error in the application level to avoid
+    repetition
+block m
+  pre.
+    export default Ember.Route.extend({
+      model(params){
+        return this.store.findAll('nonexistendModel');
+      },
+      actions: {
+        error(error, transition){
+          if(error && error.status === 400){
+            return this.transitionTo('modelNotFound');
+          }
+        }
+      }
+    });
+block e
+  p.
+    same as method
+block r
+  p.
+    Routes
+      

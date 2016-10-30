@@ -1,0 +1,38 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Controllers
+block d
+  p.
+    Place to put the logic of the view
+    Controllers maintain state based on the current 
+    route. In general, models will have properties 
+    that are saved to the server, while controllers will 
+    have properties that your app does not need to save to the server.
+    User actions pass through the controller layer when 
+    moving from a component to a route.
+block u
+  p.
+    Logic of the view is in the controller
+block m
+  pre.
+    Using the ember-cli
+    Ember generate Controller test
+    the controler name must mactch the name of the view
+block e
+  pre.
+    export default Ember.Controller.extend({
+      actions: {
+        doit: function(){
+
+        }
+      }
+    });
+block r
+  p.
+    Model
+    View
+      

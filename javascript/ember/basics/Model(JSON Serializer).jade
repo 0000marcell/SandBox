@@ -1,0 +1,59 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(JSON Serializer)
+//- is...
+block d
+  p.
+    A way to handle older JSON API that do not conform to the standard JSONAPI
+
+//- used to...
+block u
+  p.
+    Handle old API that to not conform to JSONAPI 
+//- we need to do this and that...
+block m
+  p.
+    we need to declare it on the application adapter
+    then we need to conform to what JSONSerializer expects 
+    the JSONAPISerializer is built on top of the JSONSerializer, so they share 
+    a lot of hooks for customizing their behavior 
+//- this is a example... 
+block e
+  p.
+    in app/serializers/application.js 
+    export default DS.JSONSerializer.extend({
+      // ...
+    });
+
+    format for a single object:
+    {
+        "id": "1",
+        "title": "Rails is omakase",
+        "tag": "rails",
+        "comments": ["1", "2"]
+    }
+
+    format for multiple requests:
+    [{
+      "id": "1",
+      "title": "Rails is omakase",
+      "tag": "rails",
+      "comments": ["1", "2"]
+    }, {
+      "id": "2",
+      "title": "I'm Running to Reform the W3C's Tag",
+      "tag": "w3c",
+      "comments": ["3"]
+    }]
+
+
+//- is similar to...
+block r
+  p.
+    Serializers 
+    Models
+      

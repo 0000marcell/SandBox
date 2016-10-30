@@ -1,0 +1,30 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Template(Conditionals)
+block d
+  p.
+    An ember template helper shipped with ember 
+block u
+  p.
+    dysplay content selectively
+block m
+  pre.
+    if is a template conditional helper and can be used in a 
+    number of ways
+    {{if isFast "zomm" "putt putt putt"}} if isFast true and false 
+    nested 
+    {{if isFast (if isFulled "zoom")}} 
+    block invocation
+    {{#if}}
+    {{/if}}
+block e
+  p.
+    same as method
+block r
+  p.
+    templates
+      

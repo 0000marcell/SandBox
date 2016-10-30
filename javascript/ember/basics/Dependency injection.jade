@@ -1,0 +1,32 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Dependency injection
+//- is...
+block d
+  p.
+    The way ember manages objects classes 
+    An Ember.Application serves as a registry for dependency declarations 
+    factories(i.e classes) are registered in the application, as well as rules 
+    about injecting dependencies 
+    Ember.ApplicatoinInstance serves as a owner of the registered factories 
+//- used to...
+block u
+  p.
+    inject dependencies in the Ember.Application object
+//- we need to do this and that...
+block m
+  p.
+    App = Ember.Application();
+//- this is a example... 
+block e
+  p.
+    same as method
+//- is similar to...
+block r
+  p.
+    Applications
+      

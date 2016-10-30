@@ -1,0 +1,39 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Enumerables(filter objects)
+block d
+  p.
+    Filter the objects os a enumerable
+block u
+  p.
+    Filter the objects os a enumerable
+block m
+  pre.
+    var Todo = Ember.Object.create({
+      title: null, 
+      isDone: false
+    });
+    var todos = [Todo.create({title: "write code every day",
+                              isDone: false});
+                 Todo.create({title: "do it fast", 
+                              isDone: true})];
+    todo.filterBy('isDone', true); 
+
+    Every filter 
+    Todo.every(function(todo, index, self){
+      return todo.get('isDone');
+    });
+
+    Any filter (return true or false);
+    Todo.any('idDone', true); 
+block e
+  p.
+    same as method
+block r
+  p.
+    Enumerables
+      

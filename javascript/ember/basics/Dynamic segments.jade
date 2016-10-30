@@ -1,0 +1,30 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+      Route(Dynamic segments)
+block d
+  p.
+    A dynamic segment is a portion of a URL that starts with : and is 
+    follow by a id 
+block u
+  p.
+    route expecific things
+block m
+  pre.
+    we create another route for diferent 
+    identifiers 
+    Router.map(function(){
+      this.route('posts');
+      this.route('post', {path: 'posts/:post_id'});
+    });
+block e
+  p.
+    same as method
+block r
+  p.
+    routes 
+    URL
+      

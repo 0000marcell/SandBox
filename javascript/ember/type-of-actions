@@ -1,0 +1,4 @@
+difference between bubble up actions and closure actions, and you use
+sendAction() you are using bubling up actions to the hieranchy the actions will
+be executed in parent components or controllers 
+using click=( action 'buttonClick' ) the action is being passed down the hieranchy to be exectured

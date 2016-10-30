@@ -1,0 +1,43 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Controllers(dependencies)
+block d
+  //- is
+  p.
+    What a controller needs to show information about a certain model, 
+    we can load diferent models depending of what we need, 
+    we can also inject models
+block u
+  //- used to
+  p.
+    manage dependencies between controllers
+block m
+  //- we need to do this and that ...
+  pre.
+    we can inject an controller in another controller
+    using Ember.inject.controller('post')
+    and we can load another model afterwards
+    post: Ember.computed.reads('postController.model');
+    then we can use this model in another controller 
+block e
+  //- this is an example
+  pre.
+    export default Ember.Controller.extend({
+      postController: Ember.inject.controller('post'),
+      post: Ember.computed.reads('postController.model')
+    });
+
+    <h1>Comments for {{post.title}}</h1>
+    <ul>
+      {{#each model as |comment|}}
+        <li>{{comment.text}}</li>
+      {{/each}}
+    </ul>
+block r
+  //- is similar to
+  p.
+      

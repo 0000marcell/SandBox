@@ -1,0 +1,28 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Enumerables(filter)
+block d
+  p.
+    Filter a certain value from a enumerable
+block u
+  p.
+    filter the enumerable
+block m
+  pre.
+    var arr = [1, 2, 3, 4, 5];
+
+    arr.filter(function(item, self){
+      return item < 4; 
+    });
+block e
+  p.
+    same as method
+block r
+  p.
+    Enumerables
+    arrays
+      

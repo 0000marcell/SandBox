@@ -1,0 +1,34 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Routes
+block d
+  p.
+    changes the context URL that indicates a place in the application
+    routes load a controller and a template they can also load one or
+    more model to provide data to the controller that shows information
+    in the template
+block u
+  pre.
+    it can render a template.
+    It can load a model that is then available to the template.
+    It can redirect to a new route, such as 
+       if the user isn't allowed to visit that part of the app.
+    It can handle actions that involve changing a model or 
+       transitioning to a new route.
+block m
+  p.
+    ember generate route users    
+block e
+  pre.
+    in the router
+    this.route('users');
+
+    in the route folder users.js file 
+    export default Ember.Route.extend({});
+block r
+  p.
+      

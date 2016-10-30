@@ -1,0 +1,46 @@
+to create a addon we use "ember addon my-xbutton"
+then we proceed to categorize the addon in the package.json inside keywords
+the entry point is the same as any package 
+we can install package to the addon with npm or bower
+
+in order to allow the consuming application to use the addon component without manual import statements, put the component under the app/components/my-component.js directory
+import Ember from 'ember';
+import XButton from 'ember-xbutton/components/xbutton';
+
+export default XButton;
+
+this way we make the component available in the comsuming application namspace
+the actual code for the components goes in addon/components/xbutton.js
+
+import Ember from 'ember';
+
+export default Ember.Component.extend({
+	tagName: 'button',
+
+	setupXbutton: function() {
+		//	
+	}.on('didInsertElement'),
+
+	teardownXbutton: function(){
+		this.get('xbutton').destroy();
+	}.on('willDestroyElement'),
+});
+
+BluePrints: we can have one addon with multiple blueprints 
+we have to use the same name of the addon on the blueprint
+
+package.json is needed to allow publishing and installing via npm 
+
+index.js is the default entry point of the addon 
+
+tests/dummy/ is a dummy applicaiton 
+
+addon/ is the place for your addons code, everything within is available in the consuming applicaiton under the addons namespace 
+
+app/ and its contents gets merged into the consuming applications 
+
+the difference between the app and addon directory is that when the code is added 
+to the addon folder, the addon must be manually imported by the consuming app 
+so we put the code in app to import the addon.
+
+

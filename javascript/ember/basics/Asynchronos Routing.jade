@@ -1,0 +1,58 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Asynchronos Routing
+block d
+  p.
+    Makes extensive use of promises, much of the power
+    of promises comes from the fact that they can chained together
+  pre.
+    var usernamesPromise = Ember.$.getJSON('/usernames.json');
+
+    usernamesPromise.then(fetchPhotosOfUsers)
+                    .then(applyInstagramFilters)
+                    .then(uploadTrendyPhotoAlbum)
+                    .then(displaySuccessMessage, handleErrors);
+block u
+  p.
+    Make asynchronous Routes 
+block m
+  pre.
+    Ember will wait for the promise to resolve before moving 
+    on to the others tasks
+    export default Ember.Route.extend({
+      model(){
+        return new Ember.RSVP.Promise(function(resolve){
+          Ember.run.later(funciton(){
+            resolve({msg: 'hold your horses'}),
+            3000
+          });  
+        }); 
+      },
+      setupController(controller, model){
+        console.log(model.msg);
+      }
+    });
+
+    You can also handle the error when the promise 
+    fails 
+    export default Ember.Route.extend({
+      model(){
+        return Ember.RSVP.reject("Fail");
+      },
+      actions: {
+        error(reason){
+          alert(reason);
+          you can bubble up the error with return true
+          return true;
+        }
+      }
+    });
+block e
+  p.
+block r
+  p.
+      

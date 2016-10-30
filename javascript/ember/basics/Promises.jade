@@ -1,0 +1,35 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Promises
+block d
+  p.
+    Block of asyncronous code that runs a callback when 
+    finished and has too outcomes (failed, suceed)
+block u
+  p.
+    Run asyncronous code 
+block m
+  pre.
+    var p1 = new Promise(function(resolve, reject){
+      var count++;
+      window.setTimeout(function(resolse){
+        resolve(count);
+      }, Math.random() * 2000 + 1000);
+    });
+
+    p1.then(function(val){
+      console.log("count value ${val}"); 
+    }).cath(function(reason){
+      console.log("the promise failed ${reason}"); 
+    });
+block e
+  p.
+   same as method
+block r
+  p.
+    Asyncronous
+      

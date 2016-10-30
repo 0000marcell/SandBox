@@ -1,0 +1,30 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Model(Records)
+//- is...
+block d
+  p.
+    Data into the models from the server
+    a record is identified by its model type and id
+//- used to...
+block u
+  p.
+    load your model with data
+//- we need to do this and that...
+block m
+  pre.
+    you need to pass a model type and id to fetch a record 
+    from a model
+//- this is a example... 
+block e
+  p.
+    this.store.findRecord('post', 1);
+//- is similar to...
+block r
+  p.
+    Models 
+    Ember Data 

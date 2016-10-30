@@ -1,0 +1,51 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Preventing and Retrying transitions
+block d
+  p.
+    We can prevent transitions in specific cases
+block u
+  p.
+    Prevent transitions with willTransition
+block m
+  pre.
+    export default Ember.Route.extend({
+      actions: {
+        willTransition(transition){
+          if(logic){
+            transition.abort();
+          } 
+        }
+      } 
+    });
+
+    we can also abort transition in the model(), beforeModel and
+    afterModel() functions:
+    model(transition){
+      if(something){
+        transition.abort();
+      }
+    }
+
+    you can also retry a previously aborted transition:
+    export default Ember.Route.extend({
+      model(transition){
+        if(something){
+          transition.abort();
+          loginController.set('previousTransition', transition);
+        }
+      }
+    });
+
+    in the login 
+    previousTransition.retry(); 
+block e
+  p.
+
+block r
+  p.
+      

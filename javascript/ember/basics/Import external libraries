@@ -1,0 +1,6 @@
+we can import external libraries to ember 
+putting them in the vendor folder 
+them adding them in the ember-cli-build.js file 
+app.import('verdor/mylib.js');
+after that we need to make jshint happy putting 
+/* global MY_GLOBAL */, you don't need to import the file

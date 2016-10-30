@@ -1,0 +1,46 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Observers
+block d
+  p.
+    A process that watch changes in a repostory and run 
+    processes when that happen
+    obs: observers are syncronous 
+         observers don't work until you use .get on the property that you 
+         want to observe 
+
+block u
+  p.
+    run a callback when some change happen in a property
+block m
+  pre.
+    in this exemple we have a computed property, and a 
+    observer in that computed property bind to the change 
+
+    Person = Ember.Object.extend({
+      firstName: null,
+      lastName: null,
+      fullName: Ember.computed('firstName', 'lastName', function(){
+        return '${this.get('firstName') this.get('lastName')}';
+      }),
+      fullNameChanged: Ember.observer('fullName', function(){
+        console.log('full name changed to: ${this.get('fullName')}');
+      })
+    });
+
+    you can also add observers outside the class
+    person.addObserver('fullName', function(){
+      console.log('full name changed to: ${this.get('fullName')}');
+    });
+block e
+  p.
+   same as method
+block r
+  p.
+    binds 
+    computed alias
+      

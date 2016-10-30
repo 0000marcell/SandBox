@@ -1,0 +1,12 @@
+parallel-task:
+  learn about materialize grid after the above task:
+    implement each javascript materialize example in ember-sandbox-materialize in diferents views
+    review materialize.yml and separate in to multiple sections
+  verifying ember component send action:
+    create a component to change colos on the fly
+    
+testing all methods of all components: http://emberjs.com/api/classes/Ember.Component.html#method__
+
+done:
+verifying notifyPropertyChange on parent-comp 
+installing ember-route-action-helper reading https://dockyard.com/blog/2016/02/19/best-practices-route-actions

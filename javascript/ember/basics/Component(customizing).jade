@@ -1,0 +1,73 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Component(customizing)
+block d
+  p.
+    ember uses div for the component tag and ember-view for its class
+    we can customize that 
+block u
+  p.
+    customize generated component
+block m
+  pre.
+    we can pass a diferent tag for the component 
+    export default Ember.Component.extend({
+      tagName: 'nav'
+    });
+
+    and then in the templates
+    <ul>
+      <li>{{#link-to "home"}}Home{{/link-to}}</li>
+      <li>{{#link-to "about"}}About{{/link-to}}</li>
+    </ul>
+
+    you can specify its class with a array of strings
+    export default Ember.Component.extend({
+      className: ['primary']
+    });
+
+    class name properties 
+    export default Ember.Component.extend({
+      classNameBinds: ['isUrgent'],
+      isUrgent: true
+    }); 
+    <div class="ember-view is-urgent"></div>
+
+    we can specify the class with a column 
+    classNameBinds: ['isUrgent:urgent']
+
+    the default can also be false 
+    export default Ember.Component.extend({
+      classNameBinds: ['isUrgent'],
+      isUrgent: false
+    });
+    
+    it can be a stirng 
+    export default Ember.Component.extend({
+      classNameBinds: ['isUrgent'],
+      isUrgent: "this-class"
+    });
+
+    we can also bind attributes 
+    export default Ember.Component.extend({
+      attributeBindings: ['href'],
+      href: "http://emberjs.com"
+    });
+
+    bind to a custom ref 
+
+    export default Ember.Component.extend({
+      atributeBindings: ['Customref:href'],
+      Customref: "http://emberjs.com"
+    });
+block e
+  p.
+    same as methods
+block r
+  p.
+    Components
+      

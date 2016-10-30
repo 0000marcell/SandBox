@@ -1,0 +1,35 @@
+<button {{action 'showFirst'}}>ShowFirst</button>
+<button {{action 'showSecond'}}>ShowSecond</button>
+<button {{action 'showThird'}}>ShowThird</button>
+<section class='space'>
+</section>
+<section id='first-trigger'>
+	{{#liquid-if showFirst class='content'}}
+		<section id='first'>
+			<h1>First</h1>
+		</section>
+	{{else}}
+		<section id='blank'>
+		</section>
+	{{/liquid-if}}
+</section>
+<section id='second-trigger'>
+	{{#liquid-if showSecond class='content'}}
+		<section id='second'>
+			<h1>Second</h1>
+		</section>
+	{{else}}
+		<section id='blank'>
+		</section>
+	{{/liquid-if}}
+</section>
+<section id='third-trigger'>
+	{{#liquid-if showThird class='content'}}
+		<section id='third'>
+			<h1>Third</h1>
+		</section>
+	{{else}}
+		<section id='blank'>
+		</section>
+	{{/liquid-if}}
+</section>

@@ -1,0 +1,46 @@
+
+extends ./templates/note.jade
+
+block title
+  .title 
+    li.
+     Component(events)
+block d
+  p.
+    Components can handle events like controllers
+block u
+  p.
+    Handle events in components
+block m
+  pre.
+    export default Ember.Component.extend({
+      doubleClick(){
+        alert("double clickable component was clicked!");
+      }
+    });
+
+    if you want the event to buble up return true 
+
+    you can send actions to from a conponent 
+    export default Ember.Component.extend({
+      attributeBindings: ['draggable'],
+      draggable: 'true',
+
+      dragOver() {
+        return false;
+      },
+
+      drop(event) {
+        let id = event.dataTransfer.getData('text/data');
+        this.sendAction('action', id);
+      }
+    });
+    
+    you can register custom events using Ember.Application.customEvents
+block e
+  p.
+    same as method
+block r
+  p.
+    Components
+      
