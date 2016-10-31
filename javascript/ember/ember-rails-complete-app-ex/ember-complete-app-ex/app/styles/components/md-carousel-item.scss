@@ -1,6 +1,8 @@
 .md-carousel-item{
 	position: absolute;
-	border: 1px solid black;
-	background-color: #c8c8c8;
 	transition: transform 0.5s 0.0s; 
+	overflow: hidden;
+	img{
+		width: 150%;
+	}
 }

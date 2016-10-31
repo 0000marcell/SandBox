@@ -202,6 +202,15 @@ define('app4/tests/adapters/application.jshint', ['exports'], function (exports)
     assert.ok(true, 'adapters/application.js should pass jshint.');
   });
 });
+define('app4/tests/adapters/image.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | adapters/image.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'adapters/image.js should pass jshint.');
+  });
+});
 define('app4/tests/app.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -289,7 +298,7 @@ define('app4/tests/components/md-carousel-item.jshint', ['exports'], function (e
   QUnit.module('JSHint | components/md-carousel-item.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'components/md-carousel-item.js should pass jshint.');
+    assert.ok(false, 'components/md-carousel-item.js should pass jshint.\ncomponents/md-carousel-item.js: line 69, col 39, Missing semicolon.\ncomponents/md-carousel-item.js: line 93, col 39, Missing semicolon.\n\n2 errors');
   });
 });
 define('app4/tests/components/md-image-collection.jshint', ['exports'], function (exports) {
@@ -2378,6 +2387,15 @@ define('app4/tests/integration/components/simple-chat-test.jshint', ['exports'],
     assert.ok(true, 'integration/components/simple-chat-test.js should pass jshint.');
   });
 });
+define('app4/tests/models/image.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | models/image.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'models/image.js should pass jshint.');
+  });
+});
 define('app4/tests/models/task.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -2438,7 +2456,7 @@ define('app4/tests/routes/carousel.jshint', ['exports'], function (exports) {
   QUnit.module('JSHint | routes/carousel.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'routes/carousel.js should pass jshint.');
+    assert.ok(false, 'routes/carousel.js should pass jshint.\nroutes/carousel.js: line 9, col 10, Missing semicolon.\n\n1 error');
   });
 });
 define('app4/tests/routes/charts.jshint', ['exports'], function (exports) {
@@ -2681,6 +2699,28 @@ define('app4/tests/unit/adapters/application-test.jshint', ['exports'], function
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/adapters/application-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/adapters/image-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('adapter:image', 'Unit | Adapter | image', {
+    // Specify the other units that are required for this test.
+    // needs: ['serializer:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var adapter = this.subject();
+    assert.ok(adapter);
+  });
+});
+define('app4/tests/unit/adapters/image-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/adapters/image-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/adapters/image-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/controllers/application-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -2942,6 +2982,28 @@ define('app4/tests/unit/helpers/escape-css-test.jshint', ['exports'], function (
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/helpers/escape-css-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/models/image-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForModel)('image', 'Unit | Model | image', {
+    // Specify the other units that are required for this test.
+    needs: []
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var model = this.subject();
+    // let store = this.store();
+    assert.ok(!!model);
+  });
+});
+define('app4/tests/unit/models/image-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/models/image-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/models/image-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/models/task-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

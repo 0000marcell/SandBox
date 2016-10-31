@@ -1,10 +1,9 @@
-{{md-carousel-item id=0 move=(action 'move') 
+<div class='md-carousel-album' style={{escapeCSS carStyle}}>
+	{{#each initialImages as |image index|}}
+		{{md-carousel-item imageId=index image=image id=index move=(action 'move') 
 			 register=(action "register")}}	
-{{md-carousel-item id=1 
-			 move=(action 'move') register=(action "register")}}	
-{{md-carousel-item id=2 move=(action 'move') 
-			 register=(action "register")}}	
-{{md-carousel-item id=3 move=(action 'move') 
-       register=(action "register")}}	
-{{md-carousel-item id=4 move=(action 'move') 
-       register=(action "register")}}	
+	{{/each}}
+	<div class='description center-align' style={{escapeCSS descStyle}}>
+		<h6>{{description}}</h6>
+	</div>
+</div>

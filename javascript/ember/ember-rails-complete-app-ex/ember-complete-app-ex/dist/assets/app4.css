@@ -6385,16 +6385,25 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .md-carousel-album {
   perspective: 600px;
   transition: transform 0.5s 0.0s;
-  overflow: hidden;
-  border: 1px solid black;
-  min-height: 500px;
-  max-height: 500px; }
+  overflow: hidden; }
+  .md-carousel-album .description {
+    position: absolute;
+    width: 100%; }
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 0.5; }
+  5%, 95% {
+    opacity: 0.25; }
+  10%, 90% {
+    opacity: 0; } }
 
 .md-carousel-item {
   position: absolute;
-  border: 1px solid black;
-  background-color: #c8c8c8;
-  transition: transform 0.5s 0.0s; }
+  transition: transform 0.5s 0.0s;
+  overflow: hidden; }
+  .md-carousel-item img {
+    width: 150%; }
 
 .side-nav {
   top: inherit;

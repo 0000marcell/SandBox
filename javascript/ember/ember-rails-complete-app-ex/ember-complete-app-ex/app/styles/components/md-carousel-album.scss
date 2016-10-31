@@ -2,7 +2,14 @@
 	perspective: 600px;
 	transition: transform 0.5s 0.0s;
 	overflow: hidden;
-	border: 1px solid black;
-	min-height: 500px;
-	max-height: 500px;
+	.description{
+		position: absolute;
+		width: 100%;
+	}
+}
+
+@keyframes fade {
+	0%,100% { opacity: 0.5 }
+	5%, 95% { opacity: 0.25 }
+	10%, 90% { opacity: 0}
 }

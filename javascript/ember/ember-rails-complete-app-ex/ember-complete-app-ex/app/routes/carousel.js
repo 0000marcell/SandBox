@@ -1,4 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+	model(){
+		return {
+			loadImages: () => {
+				return this.store.findAll('image');
+			}
+		}
+	}
 });
