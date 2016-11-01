@@ -55,6 +55,7 @@
     "ember-route-action-helper": "2.0.0",
     "ember-simple-auth": "1.1.0",
     "ember-truth-helpers": "1.2.0",
+    "emberx-file-input": "1.1.0",
     "loader.js": "^4.0.1",
     "node-sass": "3.4.2"
   }

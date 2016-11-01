@@ -31,6 +31,7 @@ Router.map(function() {
   this.route('carousel');
   this.route('composable');
   this.route('charts');
+  this.route('resize');
 });
 
 export default Router;

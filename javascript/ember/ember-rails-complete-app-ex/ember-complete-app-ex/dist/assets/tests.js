@@ -418,6 +418,15 @@ define('app4/tests/controllers/password_reset.jshint', ['exports'], function (ex
     assert.ok(true, 'controllers/password_reset.js should pass jshint.');
   });
 });
+define('app4/tests/controllers/resize.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/resize.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'controllers/resize.js should pass jshint.\ncontrollers/resize.js: line 41, col 10, Missing semicolon.\ncontrollers/resize.js: line 53, col 13, \'createImageBitmap\' is not defined.\n\n2 errors');
+  });
+});
 define('app4/tests/controllers/scatter-data.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -2513,6 +2522,15 @@ define('app4/tests/routes/password-reset.jshint', ['exports'], function (exports
     assert.ok(true, 'routes/password-reset.js should pass jshint.');
   });
 });
+define('app4/tests/routes/resize.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/resize.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/resize.js should pass jshint.');
+  });
+});
 define('app4/tests/routes/sidenav.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -2809,6 +2827,28 @@ define('app4/tests/unit/controllers/login-test.jshint', ['exports'], function (e
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/login-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/controllers/resize-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:resize', 'Unit | Controller | resize', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('app4/tests/unit/controllers/resize-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/resize-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/resize-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/controllers/signup-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -3238,6 +3278,27 @@ define('app4/tests/unit/routes/password-reset-test.jshint', ['exports'], functio
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/password-reset-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/resize-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:resize', 'Unit | Route | resize', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/resize-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/resize-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/resize-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/routes/sidenav-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
