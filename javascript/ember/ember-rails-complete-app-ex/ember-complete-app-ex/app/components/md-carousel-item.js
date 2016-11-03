@@ -2,116 +2,69 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-	didReceiveAttrs(){
-		this.get('register')(this);
-	},
-	setStyle(x, y, z, width, zIndex, opacity){
-		let style = `transform: translate3d(${x}px, ${y}px, ${z}px);`;
-		style += `width: ${width}px; height: ${width}px;`;
-		style += `z-index: ${zIndex};`;
-		style += `opacity: ${opacity};`;
-		style += `animation: ${this.get('animation')}`;
-		this.set('style', style);
-	},
-	calcProp(){
-		let parentW = parseInt(this.get('parentW')),
-			  width = parentW/3,
-			 	x, y, z, zIndex, opacity;
+	tagName: '',
+	displayState: Ember.computed('loading', function(){
+		if(this.get('loading')){
+			return `display: visible;`
+		}else{
+			return `display: none;`
+		}
+	}),
+	width: Ember.computed('parentW', function(){
+		let width = this.get('parentW')/3;
 		if(width < 250){
 			width = 250;
 		}else if (width > 500){
 			width = 500;	
 		}
-		this.set('width', width);
-		let center = (parentW/2) - (width/2),
-			  offSet = width/3;
-		switch(this.get('id')){
-			case 0:
-				x = center - (2 * offSet);
-				y = -35;
-				z = -200;
-				zIndex = 0;
-				opacity = 0.5;
-				break;
-			case 1:
-				x = center - (1 * offSet);
-				y = -20;
-				z = -100;
-				zIndex = 1;
-				opacity = 0.75;
-				break;
-			case 2:
-				x =  center;
-				y = 0;
-				z = 0;
-				zIndex = 2;
-				opacity = 1;
-				break;
-			case 3:
-				x = center + (1 * offSet);
-				y = -20;
-				z = -100;
-				zIndex = 1;
-				opacity = 0.75;
-				break;
-			case 4:
-				x = center + (2 * offSet);
-				y = -35;
-				z = -200;
-				zIndex = 0;
-				opacity = 0.5;
-				break;
-		}
-		this.setStyle(x, y, z, width, zIndex, opacity);
+		return width;
+	}),
+	offSet: Ember.computed('width', function(){
+		return this.get('width')/1.25;	
+	}),
+	style: Ember.computed('offSet', 'id', function(){
+		let id = this.get('id'),
+				parentW = this.get('parentW'),
+				width = this.get('width'),
+				offSet = this.get('offSet'),
+				center = (parentW/2) - (width/2),
+				x = center + ((id - 2) * offSet),
+				y = -10*Math.pow(id, 2) + 40*id - 40,
+		    z = -50*Math.pow(id, 2) + 200*id -200,
+				zIndex = -1*Math.pow(id, 2)+4*id + 1,
+				opacity = -0.125*Math.pow(id, 2)+0.5*id + 0.5;
+		let style = `transform: translate3d(${x}px, ${y}px, ${z}px);`;
+		style += `width: ${width}px; height: ${width}px;`;
+		style += `z-index: ${zIndex};`;
+		//style += `opacity: ${opacity};`;
+		style += `animation: ${this.get('animation')}`;
+		return style;
+	}),
+	didReceiveAttrs(){
+		this.get('register')(this);
+		this.setImage(this.get('imageId'));
 	},
-	tagName: '',
 	decrementId(){
-		this.set('animation', 'none;')
-		switch(this.get('id')){
-			case 0:
-				this.set('id', 4);
-				this.setNextImage();
-				// hide the element while moving to the other side
-				this.set('animation', 'fade 0.5s linear;');
-				break;
-			case 1:
-				this.set('id', 0);
-				break;
-			case 2:
-				this.set('id', 1);
-				break;
-			case 3:
-				this.set('id', 2);
-				break;
-			case 4:
-				this.set('id', 3);
-				break;
+		this.set('animation', 'none;');
+		let id = this.get('id');
+		if(id === 0){
+			this.set('id', 4);	
+			this.set('animation', 'fade 0.5s linear;');
+			this.setNextImage();
+		}else{
+			this.set('id', id - 1);
 		}
-		this.calcProp();
 	},
 	incrementId(){
-		this.set('animation', 'none;')
-		switch(this.get('id')){
-			case 0:
-				this.set('id', 1);
-				break;
-			case 1:
-				this.set('id', 2);
-				break;
-			case 2:
-				this.set('id', 3);
-				break;
-			case 3:
-				this.set('id', 4);
-				break;
-			case 4:
-				this.set('id', 0);
-				// hides the element while moving to the other side;
-				this.set('animation', 'fade 0.5s linear;');
-				this.setPreviousImage();
-				break;
+		this.set('animation', 'none;');
+		let id = this.get('id');
+		if(id === 4){
+			this.set('id', 0);
+			this.set('animation', 'fade 0.5s linear;');
+			this.setPreviousImage();
+		}else{
+			this.set('id', id + 1);
 		}
-		this.calcProp();
 	},
 	setNextImage(){
 		let imageId = this.get('imageId'),
@@ -128,8 +81,6 @@ export default Ember.Component.extend({
 		let imageId = this.get('imageId'),
 				lastImageId = this.get('parent').get('images.length') - 1,
 				newId;
-		console.log('lastImageId', lastImageId);
-		console.log('imageId ', imageId);
 		if((imageId - 5) < 0){
 			newId = lastImageId + (imageId - 4); 
 		}else{
@@ -138,13 +89,26 @@ export default Ember.Component.extend({
 		this.setImage(newId);
 	},
 	setImage(id){
-		console.log('new image: ', id);
-		this.set('image', this.get('parent').get('images')
-				.objectAt(id));
-		this.set('imageId', id);
+		let imageItem = this.get('parent')
+								.get('images').objectAt(id);
+		if(this.get('id') === 2){
+			this.get('parent').set('description', 
+					imageItem.get('description'));
+		}
+		let image = new Image();
+		image.src = imageItem.get('url');
+		this.toggleProperty('loading');
+		image.onload = () => {
+			setTimeout(() => { 
+				this.toggleProperty('loading');
+				Ember.$(`#md-carousel-item-${this.get('id')} > .image-holder`)
+					.html(image);	
+				this.set('imageId', id);
+			}, 1000);
+		}
 	},
 	actions: {
-		_click(){
+		_click() {
 			this.get('move')(this.get('id'));
 		}
 	}

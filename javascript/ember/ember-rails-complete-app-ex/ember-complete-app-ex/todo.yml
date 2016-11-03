@@ -10,25 +10,28 @@ preparing demonstration:
 
 improve session component and navegation component
 orginize again the dashboard login etc
+create emtra md components and upload to npm
+image-upload:
+  modularize image upload 
 carousel:
-  we dont need 5 cases in the switch statement
+  mudularize carousel, make it work
   learning a good way to comunicate with components from ember materialize
-  figuring out a way to comunicate with the child componentes
-  finish implementing carousel component using ember only
 charts:
   orginize charts and the dash board in a side nav
   implement d3 calendar with ember http://bl.ocks.org/mbostock/4063318
 color-picker: 
   implement a color picker
-
 implement image upload component, upload route
 crete page component maybe? 
-create md-carousel-album in ember.
 write tests for the img-carousel component
-implement album-carousel component, create route to test
-implement side-nav
 
 done:
+implement side-nav
+implement album-carousel component, create route to test
+create md-carousel-album in ember.
+finish implementing carousel component using ember only
+figuring out a way to comunicate with the child componentes
+we dont need 5 cases in the switch statement
 creating fake data to feed in the years
 include options to select different years and change the values  
 ember-charts implemented on route charts

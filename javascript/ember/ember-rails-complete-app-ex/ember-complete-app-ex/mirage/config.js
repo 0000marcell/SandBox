@@ -34,6 +34,7 @@ export default function() {
 		};
 	});
 	this.passthrough('/write-coverage');
+	this.passthrough('http://pousada-serra-back-end.herokuapp.com/api/images');
 	this.namespace = 'api/v1';
 	this.get('/users');
 	this.get('/users/:user_username', (schema, request) => {

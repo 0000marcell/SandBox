@@ -298,7 +298,7 @@ define('app4/tests/components/md-carousel-item.jshint', ['exports'], function (e
   QUnit.module('JSHint | components/md-carousel-item.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/md-carousel-item.js should pass jshint.\ncomponents/md-carousel-item.js: line 69, col 39, Missing semicolon.\ncomponents/md-carousel-item.js: line 93, col 39, Missing semicolon.\n\n2 errors');
+    assert.ok(false, 'components/md-carousel-item.js should pass jshint.\ncomponents/md-carousel-item.js: line 8, col 39, Missing semicolon.\ncomponents/md-carousel-item.js: line 10, col 36, Missing semicolon.\ncomponents/md-carousel-item.js: line 35, col 17, \'opacity\' is defined but never used.\ncomponents/md-carousel-item.js: line 108, col 10, Missing semicolon.\n\n4 errors');
   });
 });
 define('app4/tests/components/md-image-collection.jshint', ['exports'], function (exports) {
@@ -2465,7 +2465,7 @@ define('app4/tests/routes/carousel.jshint', ['exports'], function (exports) {
   QUnit.module('JSHint | routes/carousel.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/carousel.js should pass jshint.\nroutes/carousel.js: line 9, col 10, Missing semicolon.\n\n1 error');
+    assert.ok(true, 'routes/carousel.js should pass jshint.');
   });
 });
 define('app4/tests/routes/charts.jshint', ['exports'], function (exports) {

@@ -6383,6 +6383,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   transition: transform 1s ease-in-out; }
 
 .md-carousel-album {
+  margin-top: 80px;
   perspective: 600px;
   transition: transform 0.5s 0.0s;
   overflow: hidden; }
@@ -6403,7 +6404,15 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   transition: transform 0.5s 0.0s;
   overflow: hidden; }
   .md-carousel-item img {
-    width: 150%; }
+    width: 100%; }
+  .md-carousel-item .loading-image {
+    width: 100%;
+    height: 100%; }
+    .md-carousel-item .loading-image .preloader-wrapper.big.active {
+      display: block;
+      width: 128px;
+      height: 128px;
+      margin: 30% auto; }
 
 .side-nav {
   top: inherit;

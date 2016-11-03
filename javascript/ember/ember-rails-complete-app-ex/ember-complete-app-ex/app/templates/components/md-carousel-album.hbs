@@ -1,6 +1,6 @@
 <div class='md-carousel-album' style={{escapeCSS carStyle}}>
 	{{#each initialImages as |image index|}}
-		{{md-carousel-item imageId=index image=image id=index move=(action 'move') 
+		{{md-carousel-item imageId=index id=index move=(action 'move') 
 			 register=(action "register")}}	
 	{{/each}}
 	<div class='description center-align' style={{escapeCSS descStyle}}>
