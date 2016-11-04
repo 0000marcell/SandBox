@@ -1,0 +1,22 @@
+{{#md-navbar name='example' class='indigo'}}
+  <!-- A workaround to get the "active" class
+    to apply to the active <li> automatically -->
+  {{#link-to 'home.login' tagName='li'}}
+    {{link-to 'Login' 'home.login'}}
+  {{/link-to}}
+  {{#link-to 'home.signup' tagName='li'}}
+    {{link-to 'Signup' 'home.signup'}}
+  {{/link-to}}
+{{/md-navbar}}
+{{outlet}}
+<footer class='page-footer indigo white-text'>
+	<div class="container">
+	</div>
+	{{#md-copyright text='Ember Test'
+			startYear=2015
+			class='indigo darken-2 white-text'}}
+			<a class="white-text right" href="#!">
+				Mais
+			</a>
+	{{/md-copyright}}
+</footer>

@@ -1,0 +1,44 @@
+<div class="row">
+	<div>
+		{{#md-card id="image-card"}}
+			<h5>Sign Up</h5>
+			{{#if signingup}}
+				{{md-loader mode="circular"}}	
+			{{else}}	
+				{{#if showErrors}}
+					{{#md-card-panel class="red"
+					bodyClass="white-text"
+					id="card-panel"}}
+						{{#each errors as |error|}}
+							<p>{{error}}</p>
+						{{/each}}
+						{{#each validations.messages as |error|}}
+							<p>{{error}}</p>
+						{{/each}}
+					{{/md-card-panel}}	
+				{{/if}}
+				{{md-input label='Name' 
+				  type="text" class="col s12" 
+					value=model.name validate=true}}
+				{{md-input label='Email' 
+					type="email" 
+					class="col s12" 
+					value=model.email validate=true}}
+				{{md-input label='User Name' 
+				  type="text" class="col s12" 
+					value=model.username validate=true}}
+				{{md-input label='Password' 
+					type="password" class="col s12" 
+					value=model.password validate=true}}
+				{{md-input label='Password Confirmation' 
+				 type="password" class="col s12" 
+				 value=model.passwordConfirmation validate=true}}
+				<div class=''>
+					{{md-btn-submit class='indigo'
+						action='signup'
+						text='Sign Up'}}
+				</div>
+			{{/if}}
+		{{/md-card}}
+	</div>
+</div>

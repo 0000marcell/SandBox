@@ -1,3 +1,5 @@
+import Mirage from 'ember-cli-mirage';
+
 export default function() {
   // These comments are here to help you get started. Feel free to delete them.
 
@@ -22,27 +24,35 @@ export default function() {
 
     http://www.ember-cli-mirage.com/docs/v0.2.0-beta.7/shorthands/
   */
-	this.post('/oauth/token', () => {
-		return  {"access_token":
-			"43de36e1a9266aea606265b524b82578963b9b9efdbef7e2ed003a6bb7185a4b",
-			"token_type":"bearer",
-			"expires_in":7200,
-			"created_at":1466035645,
-			"user":{"id":0,"email":"user0@gmail.com",
-				"name":"User 0",
-				"username": "user0"}
-		};
-	});
+	this.namespace = 'api/v1';
 	this.passthrough('/write-coverage');
 	this.passthrough('http://pousada-serra-back-end.herokuapp.com/api/images');
-	this.namespace = 'api/v1';
+	this.post('/oauth/token', (schema, request) => {
+		if(request.requestBody === 
+			"grant_type=password&username=0000marcell%40gmail.com&password=123456"){
+			return  {"access_token":
+				"43de36e1a9266aea606265b524b82578963b9b9efdbef7e2ed003a6bb7185a4b",
+				"token_type":"bearer",
+				"expires_in":7200,
+				"created_at":1466035645,
+				"user":{"id":0,"email":"0000marcell@gmail.com",
+					"name":"Marcell Monteiro Cruz",
+					"username": "____marcell"}
+			};
+		}else{
+			return new Mirage.Response(422, 
+				{type: 'header'}, {errors: {title: ['Wrong email/password combination']}});
+		}
+	});
+	this.post('/users', (schema, request) => {
+		debugger;
+	});
 	this.get('/users');
 	this.get('/users/:user_username', (schema, request) => {
 		return schema.users.where({ 
 			username: request.params.user_username
 		}).models[0];
 	});
-	this.post('/users');
 	this.get('/todos', { coalesce: true });
 	this.get('/todos/:todo_url', (schema, request) => {
 		 return schema.todos.where({ 
@@ -52,7 +62,6 @@ export default function() {
 	this.post('/todos');
 	this.del('/todos/:id');
 	this.patch('/todos/:id');
-
 	this.get('/tasks', { coalesce: true });
 	this.get('/tasks/:task_url', (schema, request) => {
 		 return schema.tasks.where({ 

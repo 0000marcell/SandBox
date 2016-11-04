@@ -13,8 +13,8 @@ export default Ember.Route.extend({
 					view.set('logging', false);
 					this.transitionTo('users.user', user);
 				});
-			}, () => {
-				view.set('msg', 'wrong email/password combination!');
+			}, (errors) => {
+				view.set('errors', errors);
 				view.set('logging', false);
 			});
 		}

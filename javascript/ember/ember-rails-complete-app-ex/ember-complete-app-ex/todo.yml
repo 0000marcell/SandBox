@@ -1,3 +1,19 @@
+
+materialize:
+  learning how to use contextual components https://www.mutuallyhuman.com/blog/2016/09/23/creating-an-accordion-with-contextual-components-in-ember
+check scss files and removed things that are not being used
+
+orginize again the dashboard login etc:
+  investigating what causes the error when creating a 
+    new user on home/signup
+  write validations for the signup form
+  create default route tree
+  check and delete all the extra routes
+  show validation errors on the input it self
+
+json-api messages:
+  make the backend respond with the same content as mirage
+
 making layout
 preparing demonstration:
   psd design
@@ -10,7 +26,6 @@ preparing demonstration:
   show https://www.zeitgeistminds.com/
 
 improve session component and navegation component
-orginize again the dashboard login etc
 create emtra md components and upload to npm
 image-upload:
   modularize image upload 

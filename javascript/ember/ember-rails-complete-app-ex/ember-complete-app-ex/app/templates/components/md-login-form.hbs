@@ -1,17 +1,19 @@
 <div class='container'>
 	<h3>Login</h3>
-	{{#if msg}}
-		{{#md-card-panel class="red"
-				bodyClass="white-text"
-				}}
-			<p>
-				{{msg}}
-			</p>
-		{{/md-card-panel}}
-	{{/if}}
 	{{#if logging}}
 		{{md-loader id='spinner' mode='circular'}}
 	{{else}}	
+		{{#if errors}}
+			{{#md-card-panel class="red"
+					bodyClass="white-text"
+					}}
+				{{#each errors as |error|}}
+					<p>
+						{{error}}
+					</p>
+				{{/each}}
+			{{/md-card-panel}}
+		{{/if}}
 		<form {{action 'login'  on='submit'}}>
 			{{md-input 
 				data-autoId='email'

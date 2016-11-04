@@ -5,6 +5,9 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
 	namespace: 'api/v1',
 	authorizer: 'authorizer:application',
 	coalesceFindRequests: true,
+	createRecord(store, type, snapshot){
+		debugger;
+	},
 	parseErrorResponse: function(responseText) {
 		var response = JSON.parse(responseText);
 		var json = {errors: [response.errors]};
