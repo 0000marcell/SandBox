@@ -1,4 +1,24 @@
-.side-nav {
+.md-side-nav {
 	top: inherit;
 	height: calc(100% - 60px);
+	.left-side{
+		padding: 20px;
+		width: 200px;
+		display: inline-block;
+		float: right;
+	}
 }
+
+.md-side-nav-body{
+	padding-left: 0;
+	.container{
+		max-width: 600px;
+	}
+}
+
+@media #{$large-and-up}{
+	.md-side-nav-body{
+		padding-left: 240px;
+	}
+}
+

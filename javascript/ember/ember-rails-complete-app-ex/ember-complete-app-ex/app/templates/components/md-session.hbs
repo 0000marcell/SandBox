@@ -1,0 +1,7 @@
+{{#if authManager.isAuthenticated}}
+	<a {{action 'logout'}}>Log Out</a>
+	{{yield}}
+{{else}}
+	<a {{action 'login'}}>Login</a>
+	<a {{action 'signup'}}>Signup</a>
+{{/if}}

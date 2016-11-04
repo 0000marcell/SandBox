@@ -1,2 +1,4 @@
 example on main page is not working because is not chained 
 create a error for when the ctx is not yeat defined
+the text is put on the screen based on the top left corner but its
+written based on the bottom left !?

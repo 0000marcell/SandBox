@@ -1,11 +1,17 @@
 <header>
 	<div class='navbar-fixed'>
-		<nav class="deep-orange">
+		<nav class={{class}}>
 			<div class='nav-wrapper'>
 				<div class='container-fluid'>
 					<a class="button-collapse" data-activates="sidenav">
 						<i class="material-icons">menu</i>
 					</a>
+					<div class='left-side'>
+						{{#md-session login=(route-action "login") logout=(route-action "logout")}}
+							<a {{action 'user'}}>{{userName}}</a>
+							<a {{action 'users'}}>Users</a>
+						{{/md-session}}
+					</div>
 				</div>
 			</div>
 		</nav>
