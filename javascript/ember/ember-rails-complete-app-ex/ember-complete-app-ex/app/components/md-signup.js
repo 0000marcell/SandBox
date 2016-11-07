@@ -61,19 +61,16 @@ var Validations = buildValidations({
 
 
 export default Ember.Component.extend(Validations,{
-	msgs: [],
-	errors: [],
-	activateValidations: false,
+	init(){
+		this._super(...arguments);
+		this.set('msgs', []);
+		this.set('errors', []);
+		this.set('activateValidations', false);
+	},
 	showErrors:  Ember.computed('validations.messages', 
 			'activateValidations', 'errors', function(){
-		console.log('isValid: ',
-			this.get('validations').get('isValid'));
-		console.log('errors: ',
-			this.get('errors.length'));
-		console.log('activateValidations: ', this.get('activateValidations'));
 		if((!this.get('validations').get('isValid') || this.get('errors.length')) &&
 			this.get('activateValidations')){
-			console.log('return true');
 			return true;
 		}else{
 			return false;
@@ -92,7 +89,7 @@ export default Ember.Component.extend(Validations,{
 		signup(){
 			this.set('activateValidations', true);
 			this.validateForm().then(() => {
-				this.get('signup')(this, this.get('model'));
+				this.get('signup')(this.get('model'), this);
 			});		
 		}
 	}

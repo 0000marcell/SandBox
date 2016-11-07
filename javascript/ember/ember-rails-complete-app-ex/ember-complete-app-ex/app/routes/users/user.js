@@ -10,6 +10,10 @@ export default Ember.Route.extend({
 		};
 	},
 	actions: {
+		login(){
+		},
+		logout(){
+		},
 		loading(transition){
 			let controller = this.controllerFor('users/user/todos/index');
 			controller.set('loadingModel', true);

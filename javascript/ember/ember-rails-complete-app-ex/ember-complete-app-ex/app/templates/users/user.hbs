@@ -1,10 +1,6 @@
 {{#md-side-nav class='indigo'}}
-	{{#md-session login=(route-action "login") logout=(route-action "logout")}}
-		<a {{action 'user'}}>{{userName}}</a>
-		<a {{action 'users'}}>Users</a>
-	{{/md-session}}
 {{/md-side-nav}}
-<div class='side-nav-body'>
+<div class='md-side-nav-body'>
 	{{outlet}}
 	<footer class='page-footer indigo white-text'>
 		<div class="container">

@@ -5,7 +5,7 @@ export default Ember.Route.extend({
 		return this.store.createRecord('user');
 	},
 	actions: {
-		signup(view, user){
+		signup(user, view){
 			view.set('signingup', true);
 			user.save().then(() => {
 				view.set('signingup', false);

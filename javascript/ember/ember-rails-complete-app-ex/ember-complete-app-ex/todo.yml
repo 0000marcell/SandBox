@@ -3,12 +3,13 @@ materialize:
 check scss files and removed things that are not being used
 
 orginize again the dashboard login etc:
+  form getting bigger than the window
   change md-signup to md-signup-form  
   check logging push errors
-  investigating what causes the error when creating a 
-    new user on home/signup
-  write validations for the signup form
+    write validations for the signup form
   create default route tree
+    home > signup > login
+    users/user rest of the routes
   check and delete all the extra routes
   show validation errors on the input it self
 
@@ -43,6 +44,9 @@ crete page component maybe?
 write tests for the img-carousel component
 
 done:
+reset form information when change route 
+investigating what causes the error when creating a 
+    new user on home/signup
 md-signup not properly showing errors
 learn how to check what is being serialized
 implement side-nav
