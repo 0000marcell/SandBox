@@ -1,16 +1,18 @@
-{{#md-side-nav class='indigo'}}
+{{#md-side-nav}}
+	{{#md-side-nav-opts class='indigo'}}
+		{{#md-button-dropdown class='indigo'}}
+			<li><a href="#!">one</a></li>
+			<li><a href="#!">two</a></li>
+			<li class="divider"></li>
+			<li><a href="#!">three</a></li>
+		{{/md-button-dropdown}}
+	{{/md-side-nav-opts}}
+	{{#md-side-nav-main}}
+		{{#link-to 'users.user' }}Todos{{/link-to}}
+		{{#link-to 'users.user' }}Dashboard{{/link-to}}
+		{{#link-to 'users.user' }}Chat{{/link-to}}
+	{{/md-side-nav-main}}
+	{{#md-side-nav-body}}
+		{{outlet}}
+	{{/md-side-nav-body}}
 {{/md-side-nav}}
-<div class='md-side-nav-body'>
-	{{outlet}}
-	<footer class='page-footer indigo white-text'>
-		<div class="container">
-		</div>
-		{{#md-copyright text='Ember Test'
-				startYear=2015
-				class='indigo darken-2 white-text'}}
-				<a class="white-text right" href="#!">
-					Mais
-				</a>
-		{{/md-copyright}}
-	</footer>
-</div>

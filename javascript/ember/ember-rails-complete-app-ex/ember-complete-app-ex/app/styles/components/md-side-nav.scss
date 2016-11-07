@@ -1,9 +1,10 @@
 .md-side-nav {
+	.md-button-dropdown{
+		width: 50px;
+	}
 	top: inherit;
 	height: calc(100% - 60px);
 	.left-side{
-		padding: 20px;
-		width: 200px;
 		display: inline-block;
 		float: right;
 	}

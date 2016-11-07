@@ -1,0 +1,5 @@
+<ul id='sidenav' class='side-nav fixed'>
+	{{yield}}
+</ul>
+<div {{action 'toggleSideNavBtn' on="touchEnd"}} class='side-nav-overlay {{if slideIn 'fade-in'}}'>
+</div>

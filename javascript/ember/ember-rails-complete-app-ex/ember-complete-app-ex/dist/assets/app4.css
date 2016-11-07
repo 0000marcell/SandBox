@@ -6417,9 +6417,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .md-side-nav {
   top: inherit;
   height: calc(100% - 60px); }
+  .md-side-nav .md-button-dropdown {
+    width: 50px; }
   .md-side-nav .left-side {
-    padding: 20px;
-    width: 200px;
     display: inline-block;
     float: right; }
 
