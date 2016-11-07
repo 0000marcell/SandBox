@@ -1,14 +1,13 @@
 <div class="row">
 	<div>
-		{{#md-card id="image-card"}}
+		{{#md-card}}
 			<h5>Sign Up</h5>
 			{{#if signingup}}
 				{{md-loader mode="circular"}}	
 			{{else}}	
 				{{#if showErrors}}
 					{{#md-card-panel class="red"
-					bodyClass="white-text"
-					id="card-panel"}}
+					bodyClass="white-text"}}
 						{{#each errors as |error|}}
 							<p>{{error}}</p>
 						{{/each}}
@@ -16,6 +15,15 @@
 							<p>{{error}}</p>
 						{{/each}}
 					{{/md-card-panel}}	
+				{{/if}}
+				{{#if msgs}}
+					{{#md-card-panel class="green"
+					bodyClass="white-text"
+					}}
+						{{#each msgs as |msg|}}
+							<p>{{msg}}</p>
+						{{/each}}
+					{{/md-card-panel}}
 				{{/if}}
 				{{md-input label='Name' 
 				  type="text" class="col s12" 

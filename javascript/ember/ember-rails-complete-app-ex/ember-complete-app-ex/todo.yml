@@ -1,9 +1,10 @@
-
 materialize:
   learning how to use contextual components https://www.mutuallyhuman.com/blog/2016/09/23/creating-an-accordion-with-contextual-components-in-ember
 check scss files and removed things that are not being used
 
 orginize again the dashboard login etc:
+  change md-signup to md-signup-form  
+  check logging push errors
   investigating what causes the error when creating a 
     new user on home/signup
   write validations for the signup form
@@ -42,6 +43,8 @@ crete page component maybe?
 write tests for the img-carousel component
 
 done:
+md-signup not properly showing errors
+learn how to check what is being serialized
 implement side-nav
 implement album-carousel component, create route to test
 create md-carousel-album in ember.

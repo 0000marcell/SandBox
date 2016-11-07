@@ -38,8 +38,8 @@ var Validations = buildValidations({
 				message: blankMsg 			
 			}),
 			validator('length', {
-				min: 4,
-				max: 10	
+				message: 'password must be at least 4 characters long',
+				min: 4
 			})
 		]
 	},
@@ -61,12 +61,19 @@ var Validations = buildValidations({
 
 
 export default Ember.Component.extend(Validations,{
+	msgs: [],
 	errors: [],
 	activateValidations: false,
 	showErrors:  Ember.computed('validations.messages', 
 			'activateValidations', 'errors', function(){
-		if((!this.get('validations').get('isValid') || this.get('errors')) &&
+		console.log('isValid: ',
+			this.get('validations').get('isValid'));
+		console.log('errors: ',
+			this.get('errors.length'));
+		console.log('activateValidations: ', this.get('activateValidations'));
+		if((!this.get('validations').get('isValid') || this.get('errors.length')) &&
 			this.get('activateValidations')){
+			console.log('return true');
 			return true;
 		}else{
 			return false;

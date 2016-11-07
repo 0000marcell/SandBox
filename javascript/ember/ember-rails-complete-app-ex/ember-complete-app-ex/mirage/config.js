@@ -45,7 +45,7 @@ export default function() {
 		}
 	});
 	this.post('/users', (schema, request) => {
-		debugger;
+		return schema.users.create(JSON.parse(request.requestBody));
 	});
 	this.get('/users');
 	this.get('/users/:user_username', (schema, request) => {
