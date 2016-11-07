@@ -1,0 +1,6 @@
+<div class='header' {{action headerClicked}}>
+{{item.title}} (click to {{if isExpanded 'close' 'open'}})</div>
+{{#if isExpanded}}
+  <div class='details'>{{item.details}}</div>
+{{/if}}
+{{yield}}
