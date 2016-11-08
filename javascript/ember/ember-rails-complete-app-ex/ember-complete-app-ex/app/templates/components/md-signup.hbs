@@ -1,7 +1,8 @@
 <div class="row">
 	<div>
 		{{#md-card}}
-			<h5>Sign Up</h5>
+			<div class='icon-text'>
+			 <i class='material-icons left'>account_box</i>Sign Up</div>
 			{{#if signingup}}
 				{{md-loader mode="circular"}}	
 			{{else}}	
@@ -25,27 +26,30 @@
 						{{/each}}
 					{{/md-card-panel}}
 				{{/if}}
-				{{md-input label='Name' 
-				  type="text" class="col s12" 
-					value=model.name validate=true}}
-				{{md-input label='Email' 
-					type="email" 
-					class="col s12" 
-					value=model.email validate=true}}
-				{{md-input label='User Name' 
-				  type="text" class="col s12" 
-					value=model.username validate=true}}
-				{{md-input label='Password' 
-					type="password" class="col s12" 
-					value=model.password validate=true}}
-				{{md-input label='Password Confirmation' 
-				 type="password" class="col s12" 
-				 value=model.passwordConfirmation validate=true}}
-				<div class=''>
-					{{md-btn-submit class='indigo'
-						action='signup'
-						text='Sign Up'}}
-				</div>
+				{{md-input value=model.name type='text'
+					data-autoId='name' label="Name"
+					icon="perm_identity light-blue-text"
+					class="col s12" validate=true}}
+				{{md-input value=model.email type='text'
+					data-autoId='email' label="E-mail"
+					icon="email light-blue-text"
+					class="col s12" validate=true}}
+				{{md-input value=model.username type='text'
+					data-autoId='username' label="User Name"
+					icon="perm_identity light-blue-text"
+					class="col s12" validate=true}}
+				{{md-input value=model.password type='password'
+					data-autoId='password' label="Password"
+					icon="vpn_key light-blue-text"
+					class="col s12" validate=true}}
+				{{md-input value=model.passwordConfirmation type='password'
+					data-autoId='passwordConfirmation' label="Password Confirmation"
+					icon="vpn_key light-blue-text"
+					class="col s12" validate=true}}
+				<a class="waves-effect waves-light btn blue" 
+				 {{action 'signup'}} 
+				 type='submit'>
+				 <i class="material-icons left">input</i>Sign Up</a>
 			{{/if}}
 		{{/md-card}}
 	</div>

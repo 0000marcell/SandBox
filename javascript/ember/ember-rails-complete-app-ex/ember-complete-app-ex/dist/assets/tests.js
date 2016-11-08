@@ -436,15 +436,6 @@ define('app4/tests/controllers/application.jshint', ['exports'], function (expor
     assert.ok(true, 'controllers/application.js should pass jshint.');
   });
 });
-define('app4/tests/controllers/chart-data.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | controllers/chart-data.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(false, 'controllers/chart-data.js should pass jshint.\ncontrollers/chart-data.js: line 20, col 2, Missing semicolon.\n\n1 error');
-  });
-});
 define('app4/tests/controllers/charts.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -490,15 +481,6 @@ define('app4/tests/controllers/resize.jshint', ['exports'], function (exports) {
     assert.ok(false, 'controllers/resize.js should pass jshint.\ncontrollers/resize.js: line 41, col 10, Missing semicolon.\ncontrollers/resize.js: line 53, col 13, \'createImageBitmap\' is not defined.\n\n2 errors');
   });
 });
-define('app4/tests/controllers/scatter-data.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | controllers/scatter-data.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(false, 'controllers/scatter-data.js should pass jshint.\ncontrollers/scatter-data.js: line 17, col 2, Missing semicolon.\n\n1 error');
-  });
-});
 define('app4/tests/controllers/signup.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -508,13 +490,13 @@ define('app4/tests/controllers/signup.jshint', ['exports'], function (exports) {
     assert.ok(true, 'controllers/signup.js should pass jshint.');
   });
 });
-define('app4/tests/controllers/time-series-data.jshint', ['exports'], function (exports) {
+define('app4/tests/controllers/users/user/chart-data.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint | controllers/time-series-data.js');
+  QUnit.module('JSHint | controllers/users/user/chart-data.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/time-series-data.js should pass jshint.\ncontrollers/time-series-data.js: line 37, col 2, Missing semicolon.\ncontrollers/time-series-data.js: line 7, col 30, \'d3\' is not defined.\ncontrollers/time-series-data.js: line 21, col 31, \'d3\' is not defined.\ncontrollers/time-series-data.js: line 26, col 31, \'d3\' is not defined.\n\n4 errors');
+    assert.ok(false, 'controllers/users/user/chart-data.js should pass jshint.\ncontrollers/users/user/chart-data.js: line 20, col 2, Missing semicolon.\n\n1 error');
   });
 });
 define('app4/tests/controllers/users/user/charts.jshint', ['exports'], function (exports) {
@@ -523,7 +505,7 @@ define('app4/tests/controllers/users/user/charts.jshint', ['exports'], function 
   QUnit.module('JSHint | controllers/users/user/charts.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/users/user/charts.js should pass jshint.\ncontrollers/users/user/charts.js: line 39, col 35, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 43, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 47, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 51, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 55, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 59, col 36, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 63, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 67, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 71, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 75, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 79, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 83, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 87, col 61, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 90, col 61, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 93, col 61, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 100, col 46, \'timeSeriesData\' is not defined.\ncontrollers/users/user/charts.js: line 101, col 47, \'timeSeriesData\' is not defined.\ncontrollers/users/user/charts.js: line 105, col 30, \'chartData\' is not defined.\ncontrollers/users/user/charts.js: line 109, col 37, \'scatterData\' is not defined.\n\n19 errors');
+    assert.ok(false, 'controllers/users/user/charts.js should pass jshint.\ncontrollers/users/user/charts.js: line 42, col 35, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 46, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 50, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 54, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 58, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 62, col 36, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 66, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 70, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 74, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 78, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 82, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 86, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 90, col 61, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 93, col 61, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 96, col 61, \'d3\' is not defined.\n\n15 errors');
   });
 });
 define('app4/tests/controllers/users/user/dashboard.jshint', ['exports'], function (exports) {
@@ -533,6 +515,24 @@ define('app4/tests/controllers/users/user/dashboard.jshint', ['exports'], functi
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'controllers/users/user/dashboard.js should pass jshint.');
+  });
+});
+define('app4/tests/controllers/users/user/scatter-data.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/users/user/scatter-data.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'controllers/users/user/scatter-data.js should pass jshint.\ncontrollers/users/user/scatter-data.js: line 17, col 2, Missing semicolon.\n\n1 error');
+  });
+});
+define('app4/tests/controllers/users/user/time-series-data.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/users/user/time-series-data.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'controllers/users/user/time-series-data.js should pass jshint.\ncontrollers/users/user/time-series-data.js: line 37, col 2, Missing semicolon.\ncontrollers/users/user/time-series-data.js: line 7, col 30, \'d3\' is not defined.\ncontrollers/users/user/time-series-data.js: line 21, col 31, \'d3\' is not defined.\ncontrollers/users/user/time-series-data.js: line 26, col 31, \'d3\' is not defined.\n\n4 errors');
   });
 });
 define('app4/tests/controllers/users/user/todos.jshint', ['exports'], function (exports) {

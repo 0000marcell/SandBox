@@ -1,4 +1,21 @@
 .md-side-nav {
+	.side-nav.fixed{
+		position: fixed;
+		top: 62px;
+		left: 0px;
+	}
+	.navbar-fixed{
+		z-index: 9999;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	footer.page-footer{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 9999;
+	}
 	a{
 		box-shadow: none;
 	}
@@ -22,7 +39,6 @@
 
 @media #{$large-and-up}{
 	.md-side-nav-body{
-		padding-left: 240px;
 	}
 }
 

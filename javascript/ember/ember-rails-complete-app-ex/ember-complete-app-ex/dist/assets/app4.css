@@ -6226,6 +6226,13 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   opacity: 1.0;
   z-index: 10001; }
 
+.home-login {
+  background: url("https://s3-sa-east-1.amazonaws.com/pousada/imagens/site/background_2.jpg");
+  max-height: 800px;
+  min-height: 600px;
+  overflow: hidden;
+  height: 100vh; }
+
 .height-1 {
   max-height: 200px; }
 
@@ -6417,6 +6424,20 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .md-side-nav {
   top: inherit;
   height: calc(100% - 60px); }
+  .md-side-nav .side-nav.fixed {
+    position: fixed;
+    top: 62px;
+    left: 0px; }
+  .md-side-nav .navbar-fixed {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0; }
+  .md-side-nav footer.page-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999; }
   .md-side-nav a {
     box-shadow: none; }
   .md-side-nav .md-button-dropdown {
@@ -6429,10 +6450,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   padding-left: 0; }
   .md-side-nav-body .container {
     max-width: 600px; }
-
-@media only screen and (min-width: 993px) {
-  .md-side-nav-body {
-    padding-left: 240px; } }
 
 .md-image-collection {
   flex-wrap: wrap;
@@ -6469,10 +6486,21 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .md-login-form {
   padding-top: 70px; }
   .md-login-form .container {
+    background: #fff;
     padding: 5%;
     max-width: 600px;
     min-width: 300px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+
+.icon-text {
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font: inherit;
+  font-size: 2em; }
+  .icon-text i {
+    font-size: 1.5em;
+    color: #2196F3; }
 
 .content {
   overflow: hidden;

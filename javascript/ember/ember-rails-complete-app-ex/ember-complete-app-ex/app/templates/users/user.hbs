@@ -1,6 +1,6 @@
 {{#md-side-nav}}
-	{{#md-side-nav-opts class='indigo'}}
-		{{#md-btn-dropdown class='indigo' 
+	{{#md-side-nav-opts class='blue'}}
+		{{#md-btn-dropdown class='blue' 
 			text=model.username}}
 			<li><a href="#!">one</a></li>
 			<li><a href="#!">two</a></li>
@@ -9,8 +9,13 @@
 		{{/md-btn-dropdown}}
 	{{/md-side-nav-opts}}
 	{{#md-side-nav-main}}
-		{{#link-to 'users.user.todos' model}}Todos{{/link-to}}
-		{{#link-to 'users.user.dashboard' model}}Dashboard{{/link-to}}
+		{{#link-to 'users.user.todos' model}}
+		<i class='material-icons'>alarm_on</i>
+		Todos{{/link-to}}
+		{{#link-to 'users.user.dashboard' model}}
+			<i class='material-icons'>aspect_ratio</i>
+			Dashboard
+		{{/link-to}}
 		{{#link-to 'users.user.charts' model }}Charts{{/link-to}}
 		{{#link-to 'users.user' }}Chat{{/link-to}}
 	{{/md-side-nav-main}}

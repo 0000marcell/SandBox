@@ -3,6 +3,7 @@ materialize:
 check scss files and removed things that are not being used
 
 orginize again the dashboard login etc:
+  left-icon on navbar is not showing up when the sidenav shows up
   include icons on all the buttons and sidenav links
   change drop down text color and include usefull links
   create side-nav with a left options menu

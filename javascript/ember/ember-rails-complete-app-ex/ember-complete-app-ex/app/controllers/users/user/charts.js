@@ -1,4 +1,7 @@
 import Ember from 'ember';
+import timeSeriesData from './time-series-data';
+import chartData from './chart-data';
+import scatterData from './scatter-data';
 
 export default Ember.Controller.extend({
 	dotRadius: 7,

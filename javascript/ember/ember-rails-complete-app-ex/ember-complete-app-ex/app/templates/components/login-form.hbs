@@ -13,6 +13,6 @@
 	{{/if}}
 	{{input label='Email' type="email" value=email}}
 	{{input label='Password' type="password" validate=true value=password}}
-	<button {{action 'login'}}>Login</button>
+	<button class='blue' {{action 'login'}}>Login</button>
 	{{#link-to 'password-reset' }}Forgot Password?{{/link-to}}
 {{/if}}
