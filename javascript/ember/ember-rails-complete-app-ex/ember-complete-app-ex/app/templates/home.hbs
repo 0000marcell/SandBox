@@ -1,11 +1,13 @@
-{{#md-navbar name='example' class='blue'}}
+{{#md-navbar name='Example' class='blue'}}
   <!-- A workaround to get the "active" class
     to apply to the active <li> automatically -->
   {{#link-to 'home.login' tagName='li'}}
-    {{link-to 'Login' 'home.login'}}
-  {{/link-to}}
+		<a class='icon-link'>
+			<i class='material-icons left'>account_box</i>Login</a>
+	{{/link-to}}
   {{#link-to 'home.signup' tagName='li'}}
-    {{link-to 'Signup' 'home.signup'}}
+		<a class='icon-link'>
+			<i class='material-icons left'>done</i>Sign Up</a>
   {{/link-to}}
 {{/md-navbar}}
 {{outlet}}

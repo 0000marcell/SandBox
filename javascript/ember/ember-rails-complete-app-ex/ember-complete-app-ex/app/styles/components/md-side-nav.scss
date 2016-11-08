@@ -1,36 +1,55 @@
 .md-side-nav {
-	.side-nav.fixed{
+	.image{
+		height: 200px;
+		background: url("https://material-design.storage.googleapis.com/publish/material_v_9/0Bx4BSt6jniD7VG9DQVluOFJ4Tnc/materialdesign_principles_metaphor.png") 0% 0% / 100%;
+	}
+	.side-nav.fixed {
 		position: fixed;
 		top: 62px;
 		left: 0px;
 	}
-	.navbar-fixed{
+	.navbar-fixed {
 		z-index: 9999;
 		position: fixed;
 		top: 0;
 		left: 0;
 	}
-	footer.page-footer{
+	footer.page-footer {
 		position: fixed;
 		bottom: 0;
 		left: 0;
 		z-index: 9999;
 	}
-	a{
+
+	.icon-link {
+		padding-top: 20px !important;
 		box-shadow: none;
+		line-height: inherit;
 	}
-	.md-button-dropdown{
+
+	.md-button-dropdown {
 		width: 50px;
 	}
 	top: inherit;
 	height: calc(100% - 60px);
-	.left-side{
+	.right-side {
+		padding-top: 10px;
 		display: inline-block;
 		float: right;
+		img{
+			width: 40px;		
+		}
+		a {
+			font-size: 0.9em;
+			color: inherit;
+			margin-bottom: 25px;
+			box-shadow: none !important;		
+		}
 	}
 }
 
 .md-side-nav-body{
+	padding-top: 50px;
 	padding-left: 0;
 	.container{
 		max-width: 600px;
@@ -38,7 +57,5 @@
 }
 
 @media #{$large-and-up}{
-	.md-side-nav-body{
-	}
 }
 

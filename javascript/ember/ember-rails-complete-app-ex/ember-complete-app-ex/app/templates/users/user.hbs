@@ -1,23 +1,43 @@
 {{#md-side-nav}}
-	{{#md-side-nav-opts class='blue'}}
+	{{#md-side-nav-opts name='Example' class='blue'}}
+		<img class="circle responsive-img"
+				 src='https://avatars2.githubusercontent.com/u/4584144?v=3&s=220'>
 		{{#md-btn-dropdown class='blue' 
 			text=model.username}}
-			<li><a href="#!">one</a></li>
-			<li><a href="#!">two</a></li>
+			<li>
+				<a class='icon-link'>
+				<i class='material-icons left'>account_box</i>Profile</a>
+			</li>
+			<li>
+				<a class='icon-link'>
+				<i class='material-icons left'>account_box</i>Settings</a>
+			</li>
 			<li class="divider"></li>
-			<li><a href="#!">three</a></li>
+			<li>
+				<a class='icon-link'>
+				<i class='material-icons left'>input</i>Log Out</a>
+			</li>
 		{{/md-btn-dropdown}}
 	{{/md-side-nav-opts}}
 	{{#md-side-nav-main}}
-		{{#link-to 'users.user.todos' model}}
-		<i class='material-icons'>alarm_on</i>
-		Todos{{/link-to}}
-		{{#link-to 'users.user.dashboard' model}}
-			<i class='material-icons'>aspect_ratio</i>
+		<div class='image'>
+		</div>
+		{{#link-to 'users.user.todos' model class='icon-link'}}
+			<i class='material-icons left'>account_box</i>
+			Tasks
+		{{/link-to}}
+		{{#link-to 'users.user.dashboard' model class='icon-link'}}
+			<i class='material-icons left'>aspect_ratio</i>
 			Dashboard
 		{{/link-to}}
-		{{#link-to 'users.user.charts' model }}Charts{{/link-to}}
-		{{#link-to 'users.user' }}Chat{{/link-to}}
+		{{#link-to 'users.user.charts' model class='icon-link'}}
+			<i class='material-icons left'>aspect_ratio</i>
+			Charts
+		{{/link-to}}
+		{{#link-to 'users.user' class='icon-link'}}
+			<i class='material-icons left'>aspect_ratio</i>
+			Chat
+		{{/link-to}}
 	{{/md-side-nav-main}}
 	{{#md-side-nav-body}}
 		{{outlet}}
