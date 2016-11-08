@@ -93,6 +93,7 @@ $roboto-font-path: '../assets/';
 }
 
 footer.page-footer{
+	z-index: 99;
 	position: fixed;
 	width: 100%;
 	bottom: 0;

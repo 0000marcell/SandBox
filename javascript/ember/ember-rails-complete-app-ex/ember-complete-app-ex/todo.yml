@@ -3,8 +3,12 @@ materialize:
 check scss files and removed things that are not being used
 
 orginize again the dashboard login etc:
+  include icons on all the buttons and sidenav links
+  change drop down text color and include usefull links
   create side-nav with a left options menu
-    create a dropdown icon btn to show more options
+  implement dropdown button:
+    button is not showing dropdown
+    can't extend materialize button
   change md-signup to md-signup-form  
   check logging push errors
     write validations for the signup form
@@ -45,6 +49,7 @@ crete page component maybe?
 write tests for the img-carousel component
 
 done:
+create charts page on the users routes
 form getting bigger than the window
 reset form information when change route 
 investigating what causes the error when creating a 

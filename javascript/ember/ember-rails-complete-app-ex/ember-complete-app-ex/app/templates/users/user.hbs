@@ -1,15 +1,17 @@
 {{#md-side-nav}}
 	{{#md-side-nav-opts class='indigo'}}
-		{{#md-button-dropdown class='indigo'}}
+		{{#md-btn-dropdown class='indigo' 
+			text=model.username}}
 			<li><a href="#!">one</a></li>
 			<li><a href="#!">two</a></li>
 			<li class="divider"></li>
 			<li><a href="#!">three</a></li>
-		{{/md-button-dropdown}}
+		{{/md-btn-dropdown}}
 	{{/md-side-nav-opts}}
 	{{#md-side-nav-main}}
-		{{#link-to 'users.user' }}Todos{{/link-to}}
-		{{#link-to 'users.user' }}Dashboard{{/link-to}}
+		{{#link-to 'users.user.todos' model}}Todos{{/link-to}}
+		{{#link-to 'users.user.dashboard' model}}Dashboard{{/link-to}}
+		{{#link-to 'users.user.charts' model }}Charts{{/link-to}}
 		{{#link-to 'users.user' }}Chat{{/link-to}}
 	{{/md-side-nav-main}}
 	{{#md-side-nav-body}}

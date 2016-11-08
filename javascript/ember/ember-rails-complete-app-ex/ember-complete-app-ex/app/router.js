@@ -19,6 +19,7 @@ Router.map(function() {
       this.route('new');
     });
     this.route('dashboard');
+    this.route('charts');
   });
 });
 

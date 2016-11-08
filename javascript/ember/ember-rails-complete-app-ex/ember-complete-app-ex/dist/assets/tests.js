@@ -301,15 +301,6 @@ define('app4/tests/components/login-form.jshint', ['exports'], function (exports
     assert.ok(false, 'components/login-form.js should pass jshint.\ncomponents/login-form.js: line 14, col 15, Missing semicolon.\n\n1 error');
   });
 });
-define('app4/tests/components/md-button-dropdown.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | components/md-button-dropdown.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'components/md-button-dropdown.js should pass jshint.');
-  });
-});
 define('app4/tests/components/md-carousel-album.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -524,6 +515,15 @@ define('app4/tests/controllers/time-series-data.jshint', ['exports'], function (
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(false, 'controllers/time-series-data.js should pass jshint.\ncontrollers/time-series-data.js: line 37, col 2, Missing semicolon.\ncontrollers/time-series-data.js: line 7, col 30, \'d3\' is not defined.\ncontrollers/time-series-data.js: line 21, col 31, \'d3\' is not defined.\ncontrollers/time-series-data.js: line 26, col 31, \'d3\' is not defined.\n\n4 errors');
+  });
+});
+define('app4/tests/controllers/users/user/charts.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/users/user/charts.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'controllers/users/user/charts.js should pass jshint.\ncontrollers/users/user/charts.js: line 39, col 35, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 43, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 47, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 51, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 55, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 59, col 36, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 63, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 67, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 71, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 75, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 79, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 83, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 87, col 61, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 90, col 61, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 93, col 61, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 100, col 46, \'timeSeriesData\' is not defined.\ncontrollers/users/user/charts.js: line 101, col 47, \'timeSeriesData\' is not defined.\ncontrollers/users/user/charts.js: line 105, col 30, \'chartData\' is not defined.\ncontrollers/users/user/charts.js: line 109, col 37, \'scatterData\' is not defined.\n\n19 errors');
   });
 });
 define('app4/tests/controllers/users/user/dashboard.jshint', ['exports'], function (exports) {
@@ -1508,155 +1508,6 @@ define('app4/tests/integration/components/login-form-test.jshint', ['exports'], 
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/login-form-test.js should pass jshint.');
-  });
-});
-define('app4/tests/integration/components/md-button-dropdown-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleForComponent)('md-button-dropdown', 'Integration | Component | md button dropdown', {
-    integration: true
-  });
-
-  (0, _emberQunit.test)('it renders', function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });
-
-    this.render(Ember.HTMLBars.template((function () {
-      return {
-        meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
-          'loc': {
-            'source': null,
-            'start': {
-              'line': 1,
-              'column': 0
-            },
-            'end': {
-              'line': 1,
-              'column': 22
-            }
-          }
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createComment('');
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-          dom.insertBoundary(fragment, 0);
-          dom.insertBoundary(fragment, null);
-          return morphs;
-        },
-        statements: [['content', 'md-button-dropdown', ['loc', [null, [1, 0], [1, 22]]]]],
-        locals: [],
-        templates: []
-      };
-    })()));
-
-    assert.equal(this.$().text().trim(), '');
-
-    // Template block usage:
-    this.render(Ember.HTMLBars.template((function () {
-      var child0 = (function () {
-        return {
-          meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
-            'loc': {
-              'source': null,
-              'start': {
-                'line': 2,
-                'column': 4
-              },
-              'end': {
-                'line': 4,
-                'column': 4
-              }
-            }
-          },
-          isEmpty: false,
-          arity: 0,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode('      template block text\n');
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes() {
-            return [];
-          },
-          statements: [],
-          locals: [],
-          templates: []
-        };
-      })();
-
-      return {
-        meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
-          'loc': {
-            'source': null,
-            'start': {
-              'line': 1,
-              'column': 0
-            },
-            'end': {
-              'line': 5,
-              'column': 2
-            }
-          }
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode('\n');
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment('');
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode('  ');
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
-          return morphs;
-        },
-        statements: [['block', 'md-button-dropdown', [], [], 0, null, ['loc', [null, [2, 4], [4, 27]]]]],
-        locals: [],
-        templates: [child0]
-      };
-    })()));
-
-    assert.equal(this.$().text().trim(), 'template block text');
-  });
-});
-define('app4/tests/integration/components/md-button-dropdown-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | integration/components/md-button-dropdown-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'integration/components/md-button-dropdown-test.js should pass jshint.');
   });
 });
 define('app4/tests/integration/components/md-carousel-album-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -3921,6 +3772,15 @@ define('app4/tests/routes/users/user.jshint', ['exports'], function (exports) {
     assert.ok(true, 'routes/users/user.js should pass jshint.');
   });
 });
+define('app4/tests/routes/users/user/charts.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/users/user/charts.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/users/user/charts.js should pass jshint.');
+  });
+});
 define('app4/tests/routes/users/user/dashboard.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -4198,6 +4058,28 @@ define('app4/tests/unit/controllers/signup-test.jshint', ['exports'], function (
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/signup-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/controllers/users/user/charts-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:users/user/charts', 'Unit | Controller | users/user/charts', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('app4/tests/unit/controllers/users/user/charts-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/users/user/charts-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/users/user/charts-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/controllers/users/user/dashboard-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -4899,6 +4781,27 @@ define('app4/tests/unit/routes/users/user-test.jshint', ['exports'], function (e
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/users/user-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/users/user/charts-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:users/user/charts', 'Unit | Route | users/user/charts', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/users/user/charts-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/users/user/charts-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/users/user/charts-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/routes/users/user/dashboard-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
