@@ -26,25 +26,12 @@
 		box-shadow: none;
 		line-height: inherit;
 	}
-
-	.md-button-dropdown {
-		width: 50px;
-	}
 	top: inherit;
 	height: calc(100% - 60px);
 	.right-side {
 		padding-top: 10px;
 		display: inline-block;
 		float: right;
-		img{
-			width: 40px;		
-		}
-		a {
-			font-size: 0.9em;
-			color: inherit;
-			margin-bottom: 25px;
-			box-shadow: none !important;		
-		}
 	}
 }
 

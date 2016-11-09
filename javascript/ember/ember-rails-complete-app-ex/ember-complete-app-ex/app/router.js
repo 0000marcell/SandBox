@@ -20,6 +20,7 @@ Router.map(function() {
     });
     this.route('dashboard');
     this.route('charts');
+    this.route('chat');
   });
 });
 

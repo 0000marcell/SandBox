@@ -3,9 +3,9 @@ materialize:
 check scss files and removed things that are not being used
 
 orginize again the dashboard login etc:
-  change drop down text color and include usefull links
+  create dashboard page with links and icons to all the other items
+  put a loading state when switching between routes
   include icons on all the buttons and sidenav links
-  create side-nav with a left options menu
   implement dropdown button:
     button is not showing dropdown
     can't extend materialize button
@@ -49,6 +49,8 @@ crete page component maybe?
 write tests for the img-carousel component
 
 done:
+create side-nav with a left options menu
+change drop down text color and include usefull links
 left-icon on navbar is not showing up when the sidenav shows up
 create a box with image in the main page
 put title on the side-nav header 

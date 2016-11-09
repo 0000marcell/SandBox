@@ -10,6 +10,7 @@ $roboto-font-path: '../assets/';
 @import 'home-login';
 @import 'dashboard';
 @import 'charts';
+@import 'users-user-index';
 @import 'components/carousel-album';
 @import 'components/md-carousel-album';
 @import 'components/md-carousel-item';
@@ -17,7 +18,11 @@ $roboto-font-path: '../assets/';
 @import 'components/route-card';
 @import 'components/md-image-collection';
 @import 'components/md-login-form';
+@import 'components/md-button-dropdown';
 
+.divider{
+	margin: 35px 0 35px 0;
+}
 .icon-link{
 	i{
 		font-size: 1.5em;
