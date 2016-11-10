@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+	authManager: Ember.inject.service('session'),
 	model(param){
 		return this.store.find('user', param.user_username);
 	},
@@ -10,9 +11,9 @@ export default Ember.Route.extend({
 		};
 	},
 	actions: {
-		login(){
-		},
 		logout(){
+			this.get('authManager').invalidate();
+			this.transitionTo('home.login');
 		},
 		loading(transition){
 			let controller = this.controllerFor('users/user/todos/index');

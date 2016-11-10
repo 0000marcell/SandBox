@@ -307,7 +307,7 @@ define('app4/tests/components/md-button-dropdown.jshint', ['exports'], function 
   QUnit.module('JSHint | components/md-button-dropdown.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'components/md-button-dropdown.js should pass jshint.');
+    assert.ok(false, 'components/md-button-dropdown.js should pass jshint.\ncomponents/md-button-dropdown.js: line 16, col 42, Missing semicolon.\ncomponents/md-button-dropdown.js: line 18, col 40, Missing semicolon.\n\n2 errors');
   });
 });
 define('app4/tests/components/md-carousel-album.jshint', ['exports'], function (exports) {
@@ -3966,6 +3966,15 @@ define('app4/tests/routes/users/user/index.jshint', ['exports'], function (expor
     assert.ok(true, 'routes/users/user/index.js should pass jshint.');
   });
 });
+define('app4/tests/routes/users/user/settings.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/users/user/settings.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/users/user/settings.js should pass jshint.');
+  });
+});
 define('app4/tests/routes/users/user/todos.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -5032,6 +5041,27 @@ define('app4/tests/unit/routes/users/user/index-test.jshint', ['exports'], funct
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/users/user/index-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/users/user/settings-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:users/user/settings', 'Unit | Route | users/user/settings', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/users/user/settings-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/users/user/settings-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/users/user/settings-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/routes/users/user/todos-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
