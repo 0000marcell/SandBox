@@ -6550,6 +6550,13 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
         .md-button-dropdown .md-button-dropdown-list li a.active .icon-link {
           color: #fff; }
 
+.md-user-settings-form .image-container {
+  width: 250px;
+  margin: 0 auto;
+  text-align: center; }
+  .md-user-settings-form .image-container img {
+    width: 100px; }
+
 .divider {
   margin: 35px 0 35px 0; }
 

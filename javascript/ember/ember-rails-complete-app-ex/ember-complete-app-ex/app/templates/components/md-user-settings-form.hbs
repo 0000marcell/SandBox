@@ -1,0 +1,51 @@
+{{#md-card id="image-card"}}
+	<div class='icon-text'>
+	 <i class='material-icons left'>settings</i>Settings</div>
+	{{#if editing}}
+		{{md-loader mode="circular"}}	
+	{{else}}	
+		{{#if errors}}
+			{{#md-card-panel class="red"
+				bodyClass="white-text"}}
+					{{#each errors as |error|}}
+						<p>{{error}}</p>
+					{{/each}}
+			{{/md-card-panel}}	
+		{{/if}}
+		{{#if msgs}}
+			{{#md-card-panel class="green"
+			bodyClass="white-text"
+			}}
+				{{#each msgs as |msg|}}
+					<p>{{msg}}</p>
+				{{/each}}
+			{{/md-card-panel}}
+		{{/if}}
+		<div class='image-container'>
+			<img class="circle responsive-img" 
+				src='https://avatars2.githubusercontent.com/u/4584144?v=3&s=220'>
+			<a class="waves-effect waves-light btn blue">
+			 <i class="material-icons left">present_to_all</i>Upload</a>
+		</div>
+		{{md-input value=model.name type='text'
+			data-autoId='name' label="Name"
+			icon="perm_identity light-blue-text"
+			class="col s12" validate=true}}
+		{{md-input value=model.email type='text'
+			data-autoId='email' label="E-mail"
+			icon="email light-blue-text"
+			class="col s12" validate=true}}
+		{{md-input value=model.username type='text'
+			data-autoId='username' label="User Name"
+			icon="perm_identity light-blue-text"
+			class="col s12" validate=true}}
+		{{md-input value=model.password type='password'
+			data-autoId='password' label="Password"
+			icon="vpn_key light-blue-text"
+			class="col s12" validate=true}}
+		<a class="waves-effect waves-light btn blue" 
+		 {{action 'edit'}} 
+		 type='submit'>
+		 <i class="material-icons left">settings</i>Edit</a>
+	{{/if}}
+{{/md-card}}

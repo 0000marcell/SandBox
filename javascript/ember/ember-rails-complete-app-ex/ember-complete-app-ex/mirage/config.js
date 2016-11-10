@@ -26,7 +26,6 @@ export default function() {
   */
 	this.passthrough('/write-coverage');
 	this.passthrough('http://pousada-serra-back-end.herokuapp.com/api/images');
-
 	this.post('/oauth/token', (schema, request) => {
 		let email = 
 		decodeURIComponent(request
@@ -57,6 +56,21 @@ export default function() {
 			username: request.params.user_username
 		}).models[0];
 	});
+	this.patch('/users/:id');
+	/*
+	this.patch('/users/:id', (schema, request) => {
+		let attrs = JSON.parse(request.requestBody);
+		attrs.id = 1;
+		console.log('attrs: ', attrs);
+		return schema.db.users.update({email: attrs.email}, attrs);
+		return {
+			data: [{
+				id: 1,
+				type: 'user',
+				attributes: obj 
+		}]};
+	});
+	*/
 	this.get('/todos', { coalesce: true });
 	this.get('/todos/:todo_url', (schema, request) => {
 		 return schema.todos.where({ 

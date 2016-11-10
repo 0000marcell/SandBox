@@ -4,6 +4,10 @@ materialize:
 check scss files and removed things that are not being used
 
 orginize again the dashboard login etc:
+  create settings page:
+    update mirage user model
+      add image_url
+      create update 
   put ember liquidfire effect in transitions
   put a loading state when switching between routes
   include icons on all the buttons and sidenav links
@@ -24,6 +28,7 @@ json-api messages:
 
 making layout
 preparing demonstration:
+  it takes, time, 1970
   roles, invalidate user token
   mantain session when you close the brower
   when you logout in one tab every other tab logs out too

@@ -3,10 +3,8 @@ $roboto-font-path: '../assets/';
 
 // Materialize styles
 @import "materialize";
-
 // ember-cli-materialize styles
 @import 'ember-cli-materialize';
-
 @import 'home-login';
 @import 'dashboard';
 @import 'charts';
@@ -19,6 +17,8 @@ $roboto-font-path: '../assets/';
 @import 'components/md-image-collection';
 @import 'components/md-login-form';
 @import 'components/md-button-dropdown';
+@import 'components/md-user-settings-form';
+
 
 .divider{
 	margin: 35px 0 35px 0;
