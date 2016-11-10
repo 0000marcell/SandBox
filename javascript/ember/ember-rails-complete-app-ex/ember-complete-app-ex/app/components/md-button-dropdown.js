@@ -20,7 +20,6 @@ export default Ember.Component.extend({
 	}),
 	click(e){
 		e.stopPropagation();
-		console.log('e: ', e);
 		this.toggleProperty('hideList');
 	},
 	actions: {

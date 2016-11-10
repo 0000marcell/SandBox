@@ -4,6 +4,7 @@ materialize:
 check scss files and removed things that are not being used
 
 orginize again the dashboard login etc:
+  put ember liquidfire effect in transitions
   put a loading state when switching between routes
   include icons on all the buttons and sidenav links
   implement dropdown button:
@@ -52,6 +53,7 @@ crete page component maybe?
 write tests for the img-carousel component
 
 done:
+remove effect on dropdown menu 
 create dashboard page with links and icons to all the other items
 create side-nav with a left options menu
 change drop down text color and include usefull links

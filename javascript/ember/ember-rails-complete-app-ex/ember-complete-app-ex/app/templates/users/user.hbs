@@ -5,15 +5,15 @@
 			image='https://avatars2.githubusercontent.com/u/4584144?v=3&s=220'
 			class='blue'}}
 			<li>
-				{{#link-to 'users.user' model}}
+				{{#link-to 'users.user' model current-when='users.user.index'}}
 					<a class='icon-link'>
 					<i class='material-icons left'>account_box</i>Profile</a>
 				{{/link-to}}
 			</li>
 			<li>
-				{{#link-to 'users.user.settings' model}}
+				{{#link-to 'users.user.settings' model current-when='users.user.settings'}}
 					<a class='icon-link'>
-					<i class='material-icons left'>account_box</i>Settings</a>
+					<i class='material-icons left'>settings</i>Settings</a>
 				{{/link-to}}
 			</li>
 			<li>
