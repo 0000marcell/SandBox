@@ -2,28 +2,18 @@ materialize:
   learning how to use 
     contextual components https://www.mutuallyhuman.com/blog/2016/09/23/creating-an-accordion-with-contextual-components-in-ember
 check scss files and removed things that are not being used
-
 orginize again the dashboard login etc:
-  delte todo not working
-  test everything using the new serializers
   create settings page:
-    update mirage user model
-      add image_url
-      create update 
+  update mirage user model
+    add image_url
   put ember liquidfire effect in transitions
   put a loading state when switching between routes
   include icons on all the buttons and sidenav links
-  implement dropdown button:
-    button is not showing dropdown
-    can't extend materialize button
-  change md-signup to md-signup-form  
+  check and delete all the extra routes
   check logging push errors
     write validations for the signup form
-  create default route tree
-    home > signup > login
-    users/user rest of the routes
-  check and delete all the extra routes
-  show validation errors on the input it self
+  supor for pagination in mirage
+  suport for search in mirage
 
 json-api messages:
   make the backend respond with the same content as mirage
@@ -60,6 +50,15 @@ crete page component maybe?
 write tests for the img-carousel component
 
 done:
+create default route tree
+    home > signup > login
+    users/user rest of the routes
+change md-signup to md-signup-form  
+implement dropdown button:
+  button is not showing dropdown
+  can't extend materialize button
+test everything using the new serializers
+delte todo not working
 remove tasks/ route
 solve problem with ember-data not returning valid json-api request
     verify how the data is being returned on the ember-mirage-test project
