@@ -2,6 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
+		useMirage: true,
 		modulePrefix: 'app4',
     environment: environment,
     baseURL: '/',
@@ -15,7 +16,6 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -43,7 +43,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
   }
 
   return ENV;

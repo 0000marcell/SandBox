@@ -7,5 +7,4 @@ export default function(server) {
   */
 	let user = server.create('user');
 	server.createList('todo', 10, { user });
-	server.createList('task', 10, { user });
 }

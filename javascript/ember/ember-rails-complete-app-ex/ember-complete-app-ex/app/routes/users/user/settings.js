@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 			user.save().then(() => {
 				view.set('editing', false);
 				view.get('msgs')
-				.pushObject('Confirmation message sent, check your email!');
+				.pushObject('User info edited!');
 			}).catch((errors) => {
 				view.set('editing', false);
 				view.get('errors')

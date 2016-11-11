@@ -19,5 +19,11 @@ export default Ember.Route.extend({
 		search: {
 			refreshModel: true
 	  }
+	},
+	actions: {
+		delete(todo){
+			console.log('delete action!');
+			todo.destroyRecord();
+		}
 	}
 });

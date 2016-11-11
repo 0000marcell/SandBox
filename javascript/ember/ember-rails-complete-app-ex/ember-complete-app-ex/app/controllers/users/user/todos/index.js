@@ -9,11 +9,5 @@ export default Ember.Controller.extend({
 		let total = this.get('model.meta.pagination.last.number') || 
 		this.get('model.meta.pagination.self.number');
 		return total;
-	}),
-	actions: {
-		delete(todo){
-			this.toggleProperty('modalIsOpen');
-			this.itemToDelete = todo;
-		}
-	}
+	})
 });

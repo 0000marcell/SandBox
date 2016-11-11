@@ -5,14 +5,9 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
 	namespace: 'api/v1',
 	authorizer: 'authorizer:application',
 	coalesceFindRequests: true,
-	updateRecord(){
-		this._super(...arguments);
-	}
-	/*
 	parseErrorResponse: function(responseText) {
 		var response = JSON.parse(responseText);
-		var json = {errors: [response.errors]};
-		return json;
-	}
-	*/
+	 	var json = {errors: [response.errors]};
+	 		return json;
+	 }
 });

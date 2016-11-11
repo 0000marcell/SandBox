@@ -301,6 +301,15 @@ define('app4/tests/components/login-form.jshint', ['exports'], function (exports
     assert.ok(false, 'components/login-form.js should pass jshint.\ncomponents/login-form.js: line 14, col 15, Missing semicolon.\n\n1 error');
   });
 });
+define('app4/tests/components/md-abstract-form.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | components/md-abstract-form.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/md-abstract-form.js should pass jshint.');
+  });
+});
 define('app4/tests/components/md-button-dropdown.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -796,11 +805,7 @@ define('app4/tests/integration/components/accordion-item-test', ['exports', 'emb
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -830,7 +835,7 @@ define('app4/tests/integration/components/accordion-item-test', ['exports', 'emb
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'accordion-item', ['loc', [null, [1, 0], [1, 18]]]]],
+        statements: [['content', 'accordion-item', ['loc', [null, [1, 0], [1, 18]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -843,8 +848,7 @@ define('app4/tests/integration/components/accordion-item-test', ['exports', 'emb
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -878,11 +882,7 @@ define('app4/tests/integration/components/accordion-item-test', ['exports', 'emb
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -945,11 +945,7 @@ define('app4/tests/integration/components/accordion-list-test', ['exports', 'emb
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -979,7 +975,7 @@ define('app4/tests/integration/components/accordion-list-test', ['exports', 'emb
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'accordion-list', ['loc', [null, [1, 0], [1, 18]]]]],
+        statements: [['content', 'accordion-list', ['loc', [null, [1, 0], [1, 18]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -992,8 +988,7 @@ define('app4/tests/integration/components/accordion-list-test', ['exports', 'emb
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -1027,11 +1022,7 @@ define('app4/tests/integration/components/accordion-list-test', ['exports', 'emb
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1094,11 +1085,7 @@ define('app4/tests/integration/components/carousel-album-test', ['exports', 'emb
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1128,7 +1115,7 @@ define('app4/tests/integration/components/carousel-album-test', ['exports', 'emb
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'carousel-album', ['loc', [null, [1, 0], [1, 18]]]]],
+        statements: [['content', 'carousel-album', ['loc', [null, [1, 0], [1, 18]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1141,8 +1128,7 @@ define('app4/tests/integration/components/carousel-album-test', ['exports', 'emb
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -1176,11 +1162,7 @@ define('app4/tests/integration/components/carousel-album-test', ['exports', 'emb
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1243,11 +1225,7 @@ define('app4/tests/integration/components/child-comp-test', ['exports', 'ember-q
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1277,7 +1255,7 @@ define('app4/tests/integration/components/child-comp-test', ['exports', 'ember-q
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'child-comp', ['loc', [null, [1, 0], [1, 14]]]]],
+        statements: [['content', 'child-comp', ['loc', [null, [1, 0], [1, 14]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1290,8 +1268,7 @@ define('app4/tests/integration/components/child-comp-test', ['exports', 'ember-q
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -1325,11 +1302,7 @@ define('app4/tests/integration/components/child-comp-test', ['exports', 'ember-q
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1392,11 +1365,7 @@ define('app4/tests/integration/components/login-form-test', ['exports', 'ember-q
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1426,7 +1395,7 @@ define('app4/tests/integration/components/login-form-test', ['exports', 'ember-q
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'login-form', ['loc', [null, [1, 0], [1, 14]]]]],
+        statements: [['content', 'login-form', ['loc', [null, [1, 0], [1, 14]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1439,8 +1408,7 @@ define('app4/tests/integration/components/login-form-test', ['exports', 'ember-q
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -1474,11 +1442,7 @@ define('app4/tests/integration/components/login-form-test', ['exports', 'ember-q
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1528,9 +1492,9 @@ define('app4/tests/integration/components/login-form-test.jshint', ['exports'], 
     assert.ok(true, 'integration/components/login-form-test.js should pass jshint.');
   });
 });
-define('app4/tests/integration/components/md-button-dropdown-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+define('app4/tests/integration/components/md-abstract-form-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
-  (0, _emberQunit.moduleForComponent)('md-button-dropdown', 'Integration | Component | md button dropdown', {
+  (0, _emberQunit.moduleForComponent)('md-abstract-form', 'Integration | Component | md abstract form', {
     integration: true
   });
 
@@ -1541,11 +1505,7 @@ define('app4/tests/integration/components/md-button-dropdown-test', ['exports', 
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1554,7 +1514,7 @@ define('app4/tests/integration/components/md-button-dropdown-test', ['exports', 
             },
             'end': {
               'line': 1,
-              'column': 22
+              'column': 20
             }
           }
         },
@@ -1575,7 +1535,7 @@ define('app4/tests/integration/components/md-button-dropdown-test', ['exports', 
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'md-button-dropdown', ['loc', [null, [1, 0], [1, 22]]]]],
+        statements: [['content', 'md-abstract-form', ['loc', [null, [1, 0], [1, 20]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1588,8 +1548,7 @@ define('app4/tests/integration/components/md-button-dropdown-test', ['exports', 
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -1623,11 +1582,147 @@ define('app4/tests/integration/components/md-button-dropdown-test', ['exports', 
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
+          'revision': 'Ember@2.7.3',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 5,
+              'column': 2
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode('\n');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode('  ');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          return morphs;
+        },
+        statements: [['block', 'md-abstract-form', [], [], 0, null, ['loc', [null, [2, 4], [4, 25]]]]],
+        locals: [],
+        templates: [child0]
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('app4/tests/integration/components/md-abstract-form-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/md-abstract-form-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/md-abstract-form-test.js should pass jshint.');
+  });
+});
+define('app4/tests/integration/components/md-button-dropdown-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('md-button-dropdown', 'Integration | Component | md button dropdown', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template((function () {
+      return {
+        meta: {
+          'revision': 'Ember@2.7.3',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 1,
+              'column': 22
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+          dom.insertBoundary(fragment, 0);
+          dom.insertBoundary(fragment, null);
+          return morphs;
+        },
+        statements: [['content', 'md-button-dropdown', ['loc', [null, [1, 0], [1, 22]]], 0, 0, 0, 0]],
+        locals: [],
+        templates: []
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template((function () {
+      var child0 = (function () {
+        return {
+          meta: {
+            'revision': 'Ember@2.7.3',
+            'loc': {
+              'source': null,
+              'start': {
+                'line': 2,
+                'column': 4
+              },
+              'end': {
+                'line': 4,
+                'column': 4
+              }
+            }
           },
-          'revision': 'Ember@2.5.1',
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode('      template block text\n');
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes() {
+            return [];
+          },
+          statements: [],
+          locals: [],
+          templates: []
+        };
+      })();
+
+      return {
+        meta: {
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1690,11 +1785,7 @@ define('app4/tests/integration/components/md-carousel-album-test', ['exports', '
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1724,7 +1815,7 @@ define('app4/tests/integration/components/md-carousel-album-test', ['exports', '
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'md-carousel-album', ['loc', [null, [1, 0], [1, 21]]]]],
+        statements: [['content', 'md-carousel-album', ['loc', [null, [1, 0], [1, 21]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1737,8 +1828,7 @@ define('app4/tests/integration/components/md-carousel-album-test', ['exports', '
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -1772,11 +1862,7 @@ define('app4/tests/integration/components/md-carousel-album-test', ['exports', '
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1839,11 +1925,7 @@ define('app4/tests/integration/components/md-carousel-item-test', ['exports', 'e
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1873,7 +1955,7 @@ define('app4/tests/integration/components/md-carousel-item-test', ['exports', 'e
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'md-carousel-item', ['loc', [null, [1, 0], [1, 20]]]]],
+        statements: [['content', 'md-carousel-item', ['loc', [null, [1, 0], [1, 20]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1886,8 +1968,7 @@ define('app4/tests/integration/components/md-carousel-item-test', ['exports', 'e
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -1921,11 +2002,7 @@ define('app4/tests/integration/components/md-carousel-item-test', ['exports', 'e
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -1988,11 +2065,7 @@ define('app4/tests/integration/components/md-image-collection-test', ['exports',
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2022,7 +2095,7 @@ define('app4/tests/integration/components/md-image-collection-test', ['exports',
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'md-image-collection', ['loc', [null, [1, 0], [1, 23]]]]],
+        statements: [['content', 'md-image-collection', ['loc', [null, [1, 0], [1, 23]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2035,8 +2108,7 @@ define('app4/tests/integration/components/md-image-collection-test', ['exports',
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -2070,11 +2142,7 @@ define('app4/tests/integration/components/md-image-collection-test', ['exports',
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2137,11 +2205,7 @@ define('app4/tests/integration/components/md-login-form-test', ['exports', 'embe
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2171,7 +2235,7 @@ define('app4/tests/integration/components/md-login-form-test', ['exports', 'embe
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'md-login-form', ['loc', [null, [1, 0], [1, 17]]]]],
+        statements: [['content', 'md-login-form', ['loc', [null, [1, 0], [1, 17]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2184,8 +2248,7 @@ define('app4/tests/integration/components/md-login-form-test', ['exports', 'embe
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -2219,11 +2282,7 @@ define('app4/tests/integration/components/md-login-form-test', ['exports', 'embe
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2286,11 +2345,7 @@ define('app4/tests/integration/components/md-session-test', ['exports', 'ember-q
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2320,7 +2375,7 @@ define('app4/tests/integration/components/md-session-test', ['exports', 'ember-q
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'md-session', ['loc', [null, [1, 0], [1, 14]]]]],
+        statements: [['content', 'md-session', ['loc', [null, [1, 0], [1, 14]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2333,8 +2388,7 @@ define('app4/tests/integration/components/md-session-test', ['exports', 'ember-q
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -2368,11 +2422,7 @@ define('app4/tests/integration/components/md-session-test', ['exports', 'ember-q
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2435,11 +2485,7 @@ define('app4/tests/integration/components/md-side-nav-body-test', ['exports', 'e
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2469,7 +2515,7 @@ define('app4/tests/integration/components/md-side-nav-body-test', ['exports', 'e
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'md-side-nav-body', ['loc', [null, [1, 0], [1, 20]]]]],
+        statements: [['content', 'md-side-nav-body', ['loc', [null, [1, 0], [1, 20]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2482,8 +2528,7 @@ define('app4/tests/integration/components/md-side-nav-body-test', ['exports', 'e
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -2517,11 +2562,7 @@ define('app4/tests/integration/components/md-side-nav-body-test', ['exports', 'e
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2584,11 +2625,7 @@ define('app4/tests/integration/components/md-side-nav-main-test', ['exports', 'e
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2618,7 +2655,7 @@ define('app4/tests/integration/components/md-side-nav-main-test', ['exports', 'e
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'md-side-nav-main', ['loc', [null, [1, 0], [1, 20]]]]],
+        statements: [['content', 'md-side-nav-main', ['loc', [null, [1, 0], [1, 20]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2631,8 +2668,7 @@ define('app4/tests/integration/components/md-side-nav-main-test', ['exports', 'e
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -2666,11 +2702,7 @@ define('app4/tests/integration/components/md-side-nav-main-test', ['exports', 'e
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2733,11 +2765,7 @@ define('app4/tests/integration/components/md-side-nav-opts-test', ['exports', 'e
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2767,7 +2795,7 @@ define('app4/tests/integration/components/md-side-nav-opts-test', ['exports', 'e
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'md-side-nav-opts', ['loc', [null, [1, 0], [1, 20]]]]],
+        statements: [['content', 'md-side-nav-opts', ['loc', [null, [1, 0], [1, 20]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2780,8 +2808,7 @@ define('app4/tests/integration/components/md-side-nav-opts-test', ['exports', 'e
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -2815,11 +2842,7 @@ define('app4/tests/integration/components/md-side-nav-opts-test', ['exports', 'e
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2882,11 +2905,7 @@ define('app4/tests/integration/components/md-side-nav-test', ['exports', 'ember-
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -2916,7 +2935,7 @@ define('app4/tests/integration/components/md-side-nav-test', ['exports', 'ember-
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'md-side-nav', ['loc', [null, [1, 0], [1, 15]]]]],
+        statements: [['content', 'md-side-nav', ['loc', [null, [1, 0], [1, 15]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2929,8 +2948,7 @@ define('app4/tests/integration/components/md-side-nav-test', ['exports', 'ember-
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -2964,11 +2982,7 @@ define('app4/tests/integration/components/md-side-nav-test', ['exports', 'ember-
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -3031,11 +3045,7 @@ define('app4/tests/integration/components/md-signup-test', ['exports', 'ember-qu
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -3065,7 +3075,7 @@ define('app4/tests/integration/components/md-signup-test', ['exports', 'ember-qu
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'md-signup', ['loc', [null, [1, 0], [1, 13]]]]],
+        statements: [['content', 'md-signup', ['loc', [null, [1, 0], [1, 13]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3078,8 +3088,7 @@ define('app4/tests/integration/components/md-signup-test', ['exports', 'ember-qu
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -3113,11 +3122,7 @@ define('app4/tests/integration/components/md-signup-test', ['exports', 'ember-qu
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -3180,11 +3185,7 @@ define('app4/tests/integration/components/md-user-settings-form-test', ['exports
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -3214,7 +3215,7 @@ define('app4/tests/integration/components/md-user-settings-form-test', ['exports
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'md-user-settings-form', ['loc', [null, [1, 0], [1, 25]]]]],
+        statements: [['content', 'md-user-settings-form', ['loc', [null, [1, 0], [1, 25]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3227,8 +3228,7 @@ define('app4/tests/integration/components/md-user-settings-form-test', ['exports
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -3262,11 +3262,7 @@ define('app4/tests/integration/components/md-user-settings-form-test', ['exports
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -3329,11 +3325,7 @@ define('app4/tests/integration/components/pag-table-test', ['exports', 'ember-qu
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -3363,7 +3355,7 @@ define('app4/tests/integration/components/pag-table-test', ['exports', 'ember-qu
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'pag-table', ['loc', [null, [1, 0], [1, 13]]]]],
+        statements: [['content', 'pag-table', ['loc', [null, [1, 0], [1, 13]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3376,8 +3368,7 @@ define('app4/tests/integration/components/pag-table-test', ['exports', 'ember-qu
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -3411,11 +3402,7 @@ define('app4/tests/integration/components/pag-table-test', ['exports', 'ember-qu
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -3478,11 +3465,7 @@ define('app4/tests/integration/components/parent-comp-test', ['exports', 'ember-
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -3512,7 +3495,7 @@ define('app4/tests/integration/components/parent-comp-test', ['exports', 'ember-
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'parent-comp', ['loc', [null, [1, 0], [1, 15]]]]],
+        statements: [['content', 'parent-comp', ['loc', [null, [1, 0], [1, 15]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3525,8 +3508,7 @@ define('app4/tests/integration/components/parent-comp-test', ['exports', 'ember-
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -3560,11 +3542,7 @@ define('app4/tests/integration/components/parent-comp-test', ['exports', 'ember-
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -3627,11 +3605,7 @@ define('app4/tests/integration/components/session-component-test', ['exports', '
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -3661,7 +3635,7 @@ define('app4/tests/integration/components/session-component-test', ['exports', '
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'session-component', ['loc', [null, [1, 0], [1, 21]]]]],
+        statements: [['content', 'session-component', ['loc', [null, [1, 0], [1, 21]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3691,11 +3665,7 @@ define('app4/tests/integration/components/simple-chat-test', ['exports', 'ember-
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -3725,7 +3695,7 @@ define('app4/tests/integration/components/simple-chat-test', ['exports', 'ember-
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'simple-chat', ['loc', [null, [1, 0], [1, 15]]]]],
+        statements: [['content', 'simple-chat', ['loc', [null, [1, 0], [1, 15]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3738,8 +3708,7 @@ define('app4/tests/integration/components/simple-chat-test', ['exports', 'ember-
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.5.1',
+            'revision': 'Ember@2.7.3',
             'loc': {
               'source': null,
               'start': {
@@ -3773,11 +3742,7 @@ define('app4/tests/integration/components/simple-chat-test', ['exports', 'ember-
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.5.1',
+          'revision': 'Ember@2.7.3',
           'loc': {
             'source': null,
             'start': {
@@ -4061,6 +4026,24 @@ define('app4/tests/routes/signup.jshint', ['exports'], function (exports) {
     assert.ok(true, 'routes/signup.js should pass jshint.');
   });
 });
+define('app4/tests/routes/tasks/index.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/tasks/index.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/tasks/index.js should pass jshint.');
+  });
+});
+define('app4/tests/routes/tasks/new.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/tasks/new.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/tasks/new.js should pass jshint.');
+  });
+});
 define('app4/tests/routes/upload.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -4193,7 +4176,16 @@ define('app4/tests/serializers/application.jshint', ['exports'], function (expor
   QUnit.module('JSHint | serializers/application.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'serializers/application.js should pass jshint.');
+    assert.ok(false, 'serializers/application.js should pass jshint.\nserializers/application.js: line 1, col 8, \'Ember\' is defined but never used.\n\n1 error');
+  });
+});
+define('app4/tests/serializers/rails-serializer.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | serializers/rails-serializer.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'serializers/rails-serializer.js should pass jshint.\nserializers/rails-serializer.js: line 10, col 32, \'Ember\' is not defined.\n\n1 error');
   });
 });
 define('app4/tests/services/session.jshint', ['exports'], function (exports) {
@@ -5073,6 +5065,48 @@ define('app4/tests/unit/routes/signup-test.jshint', ['exports'], function (expor
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/signup-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/tasks/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:tasks/index', 'Unit | Route | tasks/index', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/tasks/index-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/tasks/index-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/tasks/index-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/routes/tasks/new-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:tasks/new', 'Unit | Route | tasks/new', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('app4/tests/unit/routes/tasks/new-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/tasks/new-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/tasks/new-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/routes/upload-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

@@ -4,6 +4,8 @@ materialize:
 check scss files and removed things that are not being used
 
 orginize again the dashboard login etc:
+  delte todo not working
+  test everything using the new serializers
   create settings page:
     update mirage user model
       add image_url
@@ -58,6 +60,14 @@ crete page component maybe?
 write tests for the img-carousel component
 
 done:
+remove tasks/ route
+solve problem with ember-data not returning valid json-api request
+    verify how the data is being returned on the ember-mirage-test project
+      and make the same thing happen in this project
+    create a router outisde of ember simple auth.
+create another project and test it out in there.
+project created at $ghp/ember-mirage-test/, test task creationg 
+  and editing
 remove effect on dropdown menu 
 create dashboard page with links and icons to all the other items
 create side-nav with a left options menu

@@ -1,0 +1,112 @@
+{{#md-nav class='blue' as |n|}}
+  {{#n.title 'index' classNames='center'}}
+		<i class="material-icons left">input</i>
+		Ember
+	{{/n.title}}
+  {{#n.menu class='left' as |m|}}
+    {{#m.link-to 'index' (query-params a="1")}}
+      <i class="material-icons left">star</i>
+      A
+    {{/m.link-to}}
+    {{m.link-to 'B' 'index' (query-params a="2")}}
+  {{/n.menu}}
+  {{#n.menu class="right" as |m|}}
+    {{m.link-to 'C' 'index' (query-params a="3")}}
+    {{m.link-to 'D' 'index' (query-params a="4")}}
+    {{#m.btn label='E' as |b|}}
+      {{#b.dropdown as |dm|}}
+        {{dm.link-to 'F' 'index' (query-params a="5")}}
+        {{dm.link-to 'G' 'index' (query-params a="6")}}
+        <li class="divider"></li>
+        {{dm.link-to 'H' 'index' (query-params a="7")}}
+        {{dm.link-to 'I' 'index' (query-params a="8")}}
+      {{/b.dropdown}}
+    {{/m.btn}}
+  {{/n.menu}}
+{{/md-nav}}
+{{#md-sidenav style="transform: translate(0%);" params=(hash menuWidth=300) as |n|}}
+  {{n.link-to 'Blue' 'index'
+    (query-params a="1")
+    icon='star'}}
+  {{#n.collapsible as |c|}}
+      {{#c.item as |item|}}
+        {{item.header
+          icon="home"
+          text="An interesting thing!"}}
+        {{#item.body as |b|}}
+          <ul>
+          {{b.link-to 'Purple' 'index'
+            (query-params a="3")
+            icon='person'}}
+          </ul>
+        {{/item.body}}
+      {{/c.item}}
+  {{/n.collapsible}}
+{{/md-sidenav}}
+<div class='container'>
+	<div class='row'>
+		<div class='col s12'>
+			{{#md-card as |c|}}
+				{{#c.content}}
+					{{md-btn label='Click Me'}}
+					{{#md-btn class="blue"
+						icon="cloud"}}  Press
+					{{/md-btn}}
+					{{#md-btn class="red"
+						icon="play_arrow"
+						iconClass="right"
+						disabled=true}}  Poke
+					{{/md-btn}}
+					{{#md-btn
+						class="yellow black-text z-depth-4"}}
+						Push Me
+					{{/md-btn}}
+				{{/c.content}}
+			{{/md-card}}
+			<div class='divider'></div>
+			{{md-btn icon='flight_land' float=true}}
+			{{md-btn icon='person' float=true
+				class='btn-large purple'}}
+
+			{{!-- Button fixed in lower right of screen --}}
+			{{#md-fab icon='wifi' as |f|}}
+				{{f.btn icon='mode_edit' class='btn-large'}}
+				<ul>
+					<li>{{f.btn icon='flight_takeoff' class='red'}}</li>
+					<li>{{f.btn icon='wifi' class='green'}}</li>
+				</ul>
+			{{/md-fab}}
+			{{#md-collapsible accordion=true as |c|}}
+				{{#c.item as |item|}}
+					{{item.header icon="home" text="An interesting thing!"}}
+					{{item.body text="abc"}}
+				{{/c.item}}
+				{{#c.item as |item|}}
+					{{#item.header}}
+						<i class="material-icons">star</i>
+						A customized header via component block form!
+					{{/item.header}}
+					{{#item.body}}
+						<p>This is a longer body</p>
+					{{/item.body}}
+				{{/c.item}}
+				{{#c.item as |item|}}
+					{{#item.header}}
+						<i class="material-icons">person</i>
+						A customized header via component block form!
+					{{/item.header}}
+					{{#item.body}}
+						<p>This is a longer body</p>
+					{{/item.body}}
+				{{/c.item}}
+			{{/md-collapsible}}
+			{{#md-collection as |c|}}
+				{{c.link-to 'Stefan Penner' 'index' (query-params selected="stef")}}
+				{{c.link-to 'Tom Dale' 'index' (query-params selected="tom")}}
+				{{c.link-to 'Yehuda Katz' 'index' (query-params selected="yehuda")}}
+			{{/md-collection}}
+			<h1>Toards</h1>
+			{{md-btn on-click=(action "stickToast") label='Stick toast'}}
+		</div>
+	</div>
+</div>
