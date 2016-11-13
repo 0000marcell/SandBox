@@ -105,6 +105,11 @@
 				{{c.link-to 'Tom Dale' 'index' (query-params selected="tom")}}
 				{{c.link-to 'Yehuda Katz' 'index' (query-params selected="yehuda")}}
 			{{/md-collection}}
+			{{#each flashMessages.queue as |flash|}}
+				{{#md-toast}}
+					{{flash-message flash=flash}}
+				{{/md-toast}}
+			{{/each}}
 			<h1>Toards</h1>
 			{{md-btn on-click=(action "stickToast") label='Stick toast'}}
 		</div>
