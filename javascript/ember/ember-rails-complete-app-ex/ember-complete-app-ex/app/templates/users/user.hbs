@@ -33,7 +33,7 @@
 			<i class='material-icons left'>insert_chart</i>
 			Charts
 		{{/link-to}}
-		{{#link-to 'users.user' class='icon-link'}}
+		{{#link-to 'users.user.chat' model class='icon-link'}}
 			<i class='material-icons left'>aspect_ratio</i>
 			Chat
 		{{/link-to}}
@@ -53,6 +53,6 @@
 		</ul>
 	{{/md-side-nav-main}}
 	{{#md-side-nav-body}}
-		{{outlet}}
+		{{liquid-outlet}}
 	{{/md-side-nav-body}}
 {{/md-side-nav}}

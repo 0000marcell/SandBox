@@ -4280,7 +4280,7 @@ define('app4/tests/routes/users/user/todos/index.jshint', ['exports'], function 
   QUnit.module('JSHint | routes/users/user/todos/index.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'routes/users/user/todos/index.js should pass jshint.');
+    assert.ok(false, 'routes/users/user/todos/index.js should pass jshint.\nroutes/users/user/todos/index.js: line 14, col 10, Missing semicolon.\n\n1 error');
   });
 });
 define('app4/tests/routes/users/user/todos/new.jshint', ['exports'], function (exports) {
@@ -4357,6 +4357,15 @@ define('app4/tests/test-helper.jshint', ['exports'], function (exports) {
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'test-helper.js should pass jshint.');
+  });
+});
+define('app4/tests/transitions.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | transitions.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'transitions.js should pass jshint.');
   });
 });
 define('app4/tests/unit/adapters/application-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

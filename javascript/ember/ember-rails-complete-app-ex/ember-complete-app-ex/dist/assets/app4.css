@@ -6413,6 +6413,19 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .feature-item:hover {
   background-color: #1976D2; }
 
+.users-user-chat {
+  border: 1px solid black;
+  height: 760px;
+  width: 80%;
+  margin-left: 250px;
+  padding: 10px; }
+  .users-user-chat .users-user-chat-messages {
+    border: 1px solid black;
+    height: 650px; }
+  .users-user-chat .users-user-chat-input {
+    border: 1px solid black;
+    height: 100px; }
+
 .easy-transition {
   transition: transform 1s ease-in-out; }
 

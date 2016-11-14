@@ -3,23 +3,22 @@ materialize:
     contextual components https://www.mutuallyhuman.com/blog/2016/09/23/creating-an-accordion-with-contextual-components-in-ember
 check scss files and removed things that are not being used
 orginize again the dashboard login etc:
-  create settings page:
-  update mirage user model
-    add image_url
-  put ember liquidfire effect in transitions
-  put a loading state when switching between routes
+  remake the chat.
+  highlight the selected link on the side-nav.
   include icons on all the buttons and sidenav links
   check and delete all the extra routes
   check logging push errors
     write validations for the signup form
-  supor for pagination in mirage
+  suport for pagination in mirage
   suport for search in mirage
+  publish everything make everything work remote
 
 json-api messages:
   make the backend respond with the same content as mirage
 
 making layout
 preparing demonstration:
+  presenve the search state between routes
   it takes, time, 1970
   roles, invalidate user token
   mantain session when you close the brower
@@ -50,6 +49,12 @@ crete page component maybe?
 write tests for the img-carousel component
 
 done:
+bug on the todo page
+put ember liquidfire effect in transitions
+put a loading state when switching between routes
+create settings page:
+  update mirage user model
+    add image_url
 create default route tree
     home > signup > login
     users/user rest of the routes

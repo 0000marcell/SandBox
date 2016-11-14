@@ -14,21 +14,21 @@
     </div>
 	{{/md-modal}}
 {{/if}}
-	{{#md-card class='height-3'}}
-		{{#if loadingModel}}
-			{{md-loader mode="circular"}}	
-		{{else}}
-			{{md-input value=search label='Search' class="col s12" validate=true}}
-			{{#link-to 'users.user.todos.new'}}New{{/link-to}}
-				{{#md-collection content=model as |item|}}
-					<div id='item' class='collection-item'>
-						{{#link-to 'users.user.todos.todo' item}}{{item.title}}{{/link-to}}
-						<div class='secondary-content'>
-							{{#link-to 'users.user.todos.todo.edit' item}}Edit{{/link-to}}
-							<a id='delete' {{action 'delete' item}}>Delete</a>
-						</div>
+{{#md-card class='height-3'}}
+	{{md-input value=search label='Search' class="col s12" validate=true}}
+	{{#if loading}}
+		{{md-loader mode="circular"}}	
+	{{else}}
+		{{#link-to 'users.user.todos.new'}}New{{/link-to}}
+			{{#md-collection content=items as |item|}}
+				<div id='item' class='collection-item'>
+					{{#link-to 'users.user.todos.todo' item}}{{item.title}}{{/link-to}}
+					<div class='secondary-content'>
+						{{#link-to 'users.user.todos.todo.edit' item}}Edit{{/link-to}}
+						<a id='delete' {{action 'delete' item}}>Delete</a>
 					</div>
-				{{/md-collection}}
-				{{md-pagination min=1 max=total current=page range=5}}
-		{{/if}}
-	{{/md-card}}
+				</div>
+			{{/md-collection}}
+			{{md-pagination min=1 max=total current=page range=5}}
+	{{/if}}
+{{/md-card}}
