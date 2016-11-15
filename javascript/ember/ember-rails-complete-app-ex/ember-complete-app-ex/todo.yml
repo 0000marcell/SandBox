@@ -4,8 +4,12 @@ materialize:
 check scss files and removed things that are not being used
 orginize again the dashboard login etc:
   chat:
-    test the chat with two users
+    creating multiple consumer when comeing back to the chat route, 
+    avoid that, read the code for the consumer.
+    change user image to a default image
     but a message inside the chat icon to notify a message
+  settings:
+    put option to change image
   highlight the selected link on the side-nav.
   include icons on all the buttons and sidenav links
   check and delete all the extra routes
@@ -20,6 +24,7 @@ json-api messages:
 
 making layout
 preparing demonstration:
+  websocket broadcasting
   presenve the search state between routes
   it takes, time, 1970
   roles, invalidate user token
@@ -51,6 +56,7 @@ crete page component maybe?
 write tests for the img-carousel component
 
 done:
+test the chat with two users
 remake the chat.
 bug on the todo page
 put ember liquidfire effect in transitions

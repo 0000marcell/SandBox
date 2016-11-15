@@ -6458,7 +6458,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   padding: 10px; }
   .md-chat .md-chat-messages {
     overflow: scroll;
-    height: 90%; }
+    height: 80%; }
     .md-chat .md-chat-messages .md-chat-message {
       display: flex;
       padding: 10px; }
@@ -6625,6 +6625,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   width: 250px;
   margin: 0 auto;
   text-align: center; }
+  .md-user-settings-form .image-container label {
+    text-align: left; }
   .md-user-settings-form .image-container img {
     width: 100px; }
 

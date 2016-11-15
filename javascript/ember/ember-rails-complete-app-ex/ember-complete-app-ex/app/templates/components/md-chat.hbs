@@ -3,11 +3,16 @@
 		{{#each messages as |message|}}
 			<div class='md-chat-message'>
 				<div class='md-chat-img'>
-					<img class="circle responsive-img" 
-					 src='https://avatars2.githubusercontent.com/u/4584144?v=3&s=220'>
+					{{#if message.image}}
+						<img class="circle responsive-img" 
+						 src={{message.image}}>
+					{{else}}	
+						<img class="circle responsive-img" 
+						 src='https://trackmystack.com/assets/img/user.png'>
+					{{/if}}
 				</div>
 				<div class='md-chat-text'>
-					<p>Marcell Monteiro Cruz<span>12:42</span></p>
+					<p>{{message.username}}     <span>12:42</span></p>
 					<p>{{message.body}}</p>
 				</div>
 			</div>

@@ -1,5 +1,10 @@
 <a>
-	<img class="circle responsive-img" src={{image}}>
+	{{#if model.image}}
+		<img class="circle responsive-img" src={{model.image}}>
+	{{else}}	
+		<img class="circle responsive-img" 
+				 src='https://trackmystack.com/assets/img/user.png'>
+	{{/if}}
 	{{text}}
 </a>
 <ul id='md-button-dropdown-id' 

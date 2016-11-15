@@ -3,15 +3,14 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 	cableService: Ember.inject.service('cable'),
 	messages: [],
-	username: 'guest',
 	body: '',
-	setupSubscription: Ember.on('init', function(){
+	setupSubscription: Ember.on('didInsertElement', function(){
 		var consumer = this.get('cableService')
 			.createConsumer('ws://localhost:3000/websocket');
 		var subscription = consumer.subscriptions.create("MessagesChannel", {
 			received: (data) => {
-				console.log(data);
-				this.get('messages').pushObject({username: data.username, body: data.body});
+				this.get('messages').pushObject({image: data.image, 
+								username: data.username, body: data.body});
 			}
 		});
 		this.set('subscription', subscription);
@@ -23,9 +22,8 @@ export default Ember.Component.extend({
 		}
 	},
 	sendMessage() {
-		console.log('gonna send: ', this.get('body'));
 		this.get('subscription')
-			.send({ username: this.get('username'), body: this.get('body')  });
+			.send({ image: this.get('model.image'), username: this.get('model.name'), body: this.get('body')  });
 		this.set('body', '');
 	}
 });

@@ -22,9 +22,18 @@
 			{{/md-card-panel}}
 		{{/if}}
 		<div class='image-container'>
-			<img class="circle responsive-img" 
-				src='https://avatars2.githubusercontent.com/u/4584144?v=3&s=220'>
-			<a class="waves-effect waves-light btn blue">
+			{{#if model.image}}
+				<img class="circle responsive-img" 
+				 src={{model.image}}>
+			{{else}}	
+				<img class="circle responsive-img" 
+				 src='https://trackmystack.com/assets/img/user.png'>
+			{{/if}}
+			{{md-input value=model.image type='text'
+				data-autoId='name' label="URL"
+				icon="perm_identity light-blue-text"
+				class="col s9" validate=true}}
+				<a class="waves-effect waves-light btn blue">
 			 <i class="material-icons left">present_to_all</i>Upload</a>
 		</div>
 		{{md-input value=model.name type='text'

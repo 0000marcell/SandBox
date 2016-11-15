@@ -1,8 +1,8 @@
 {{#md-side-nav}}
 	{{#md-side-nav-opts model=model name='Example' class='blue'}}
 		{{#md-button-dropdown text=model.username 
-			logout=(route-action "logout")
-			image='https://avatars2.githubusercontent.com/u/4584144?v=3&s=220'
+			logout=(route-action "logout")	
+			model=model
 			class='blue'}}
 			<li>
 				{{#link-to 'users.user' model current-when='users.user.index'}}
