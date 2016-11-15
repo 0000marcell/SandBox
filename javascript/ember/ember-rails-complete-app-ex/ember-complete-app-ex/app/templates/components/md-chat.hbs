@@ -1,0 +1,26 @@
+<div class='md-chat'>
+	<div class='md-chat-messages'>
+		{{#each messages as |message|}}
+			<div class='md-chat-message'>
+				<div class='md-chat-img'>
+					<img class="circle responsive-img" 
+					 src='https://avatars2.githubusercontent.com/u/4584144?v=3&s=220'>
+				</div>
+				<div class='md-chat-text'>
+					<p>Marcell Monteiro Cruz<span>12:42</span></p>
+					<p>{{message.body}}</p>
+				</div>
+			</div>
+			<div class='divider'></div>
+		{{/each}}
+	</div>
+	<div class='md-chat-input'>
+		<div class='row'>
+			<div class="input-field col s12 m9">
+				<i class="material-icons prefix">mode_edit</i>
+				{{md-textarea
+    			value=body class="col s9"}}
+			</div>
+		</div>
+	</div>
+</div>

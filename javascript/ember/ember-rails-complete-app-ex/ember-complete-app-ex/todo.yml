@@ -3,7 +3,9 @@ materialize:
     contextual components https://www.mutuallyhuman.com/blog/2016/09/23/creating-an-accordion-with-contextual-components-in-ember
 check scss files and removed things that are not being used
 orginize again the dashboard login etc:
-  remake the chat.
+  chat:
+    test the chat with two users
+    but a message inside the chat icon to notify a message
   highlight the selected link on the side-nav.
   include icons on all the buttons and sidenav links
   check and delete all the extra routes
@@ -49,6 +51,7 @@ crete page component maybe?
 write tests for the img-carousel component
 
 done:
+remake the chat.
 bug on the todo page
 put ember liquidfire effect in transitions
 put a loading state when switching between routes

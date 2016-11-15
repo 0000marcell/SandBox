@@ -9,5 +9,5 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
 		var response = JSON.parse(responseText);
 	 	var json = {errors: [response.errors]};
 	 		return json;
-	 }
+	}
 });

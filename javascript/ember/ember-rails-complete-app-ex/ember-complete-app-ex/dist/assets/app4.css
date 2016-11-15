@@ -6414,20 +6414,78 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   background-color: #1976D2; }
 
 .users-user-chat {
-  border: 1px solid black;
-  height: 760px;
-  width: 80%;
-  margin-left: 250px;
+  margin: 20px auto;
+  height: 83vh;
+  width: 100%;
   padding: 10px; }
   .users-user-chat .users-user-chat-messages {
-    border: 1px solid black;
-    height: 650px; }
+    overflow: scroll;
+    height: 90%; }
+    .users-user-chat .users-user-chat-messages .users-user-chat-message {
+      display: flex;
+      padding: 10px; }
+      .users-user-chat .users-user-chat-messages .users-user-chat-message .users-user-chat-img {
+        flex: 1;
+        width: 40px; }
+      .users-user-chat .users-user-chat-messages .users-user-chat-message .users-user-chat-text {
+        flex: 15;
+        width: 200px; }
+      .users-user-chat .users-user-chat-messages .users-user-chat-message img {
+        width: 50px; }
+      .users-user-chat .users-user-chat-messages .users-user-chat-message .users-user-chat-name {
+        display: inline-block;
+        font-weight: bold; }
+      .users-user-chat .users-user-chat-messages .users-user-chat-message span {
+        color: #c8c8c8; }
   .users-user-chat .users-user-chat-input {
-    border: 1px solid black;
-    height: 100px; }
+    padding: 10px;
+    height: 18%; }
+    .users-user-chat .users-user-chat-input textarea.materialize-textarea {
+      padding: 0; }
+
+@media only screen and (min-width: 993px) {
+  .users-user-chat {
+    margin-left: 250px;
+    width: 77%; } }
 
 .easy-transition {
   transition: transform 1s ease-in-out; }
+
+.md-chat {
+  margin: 20px auto;
+  height: 83vh;
+  width: 100%;
+  padding: 10px; }
+  .md-chat .md-chat-messages {
+    overflow: scroll;
+    height: 90%; }
+    .md-chat .md-chat-messages .md-chat-message {
+      display: flex;
+      padding: 10px; }
+      .md-chat .md-chat-messages .md-chat-message .md-chat-img {
+        flex: 1;
+        width: 40px; }
+      .md-chat .md-chat-messages .md-chat-message .md-chat-text {
+        flex: 15;
+        width: 200px; }
+      .md-chat .md-chat-messages .md-chat-message img {
+        width: 50px; }
+      .md-chat .md-chat-messages .md-chat-message .md-chat-name {
+        display: inline-block;
+        font-weight: bold; }
+      .md-chat .md-chat-messages .md-chat-message span {
+        color: #c8c8c8; }
+  .md-chat .md-chat-input {
+    padding: 10px;
+    height: 18%; }
+    .md-chat .md-chat-input textarea.materialize-textarea {
+      padding: 0;
+      margin-left: 40px; }
+
+@media only screen and (min-width: 993px) {
+  .md-chat {
+    margin-left: 250px;
+    width: 77%; } }
 
 .md-carousel-album {
   margin-top: 80px;

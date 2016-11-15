@@ -337,6 +337,15 @@ define('app4/tests/components/md-carousel-item.jshint', ['exports'], function (e
     assert.ok(false, 'components/md-carousel-item.js should pass jshint.\ncomponents/md-carousel-item.js: line 8, col 39, Missing semicolon.\ncomponents/md-carousel-item.js: line 10, col 36, Missing semicolon.\ncomponents/md-carousel-item.js: line 35, col 17, \'opacity\' is defined but never used.\ncomponents/md-carousel-item.js: line 108, col 10, Missing semicolon.\n\n4 errors');
   });
 });
+define('app4/tests/components/md-chat.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | components/md-chat.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/md-chat.js should pass jshint.');
+  });
+});
 define('app4/tests/components/md-image-collection.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -542,6 +551,15 @@ define('app4/tests/controllers/users/user/charts.jshint', ['exports'], function 
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(false, 'controllers/users/user/charts.js should pass jshint.\ncontrollers/users/user/charts.js: line 42, col 35, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 46, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 50, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 54, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 58, col 57, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 62, col 36, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 66, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 70, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 74, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 78, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 82, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 86, col 60, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 90, col 61, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 93, col 61, \'d3\' is not defined.\ncontrollers/users/user/charts.js: line 96, col 61, \'d3\' is not defined.\n\n15 errors');
+  });
+});
+define('app4/tests/controllers/users/user/chat.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/users/user/chat.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/users/user/chat.js should pass jshint.');
   });
 });
 define('app4/tests/controllers/users/user/dashboard.jshint', ['exports'], function (exports) {
@@ -2059,6 +2077,146 @@ define('app4/tests/integration/components/md-carousel-item-test.jshint', ['expor
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/md-carousel-item-test.js should pass jshint.');
+  });
+});
+define('app4/tests/integration/components/md-chat-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('md-chat', 'Integration | Component | md chat', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template((function () {
+      return {
+        meta: {
+          'revision': 'Ember@2.7.3',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 1,
+              'column': 11
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+          dom.insertBoundary(fragment, 0);
+          dom.insertBoundary(fragment, null);
+          return morphs;
+        },
+        statements: [['content', 'md-chat', ['loc', [null, [1, 0], [1, 11]]], 0, 0, 0, 0]],
+        locals: [],
+        templates: []
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template((function () {
+      var child0 = (function () {
+        return {
+          meta: {
+            'revision': 'Ember@2.7.3',
+            'loc': {
+              'source': null,
+              'start': {
+                'line': 2,
+                'column': 4
+              },
+              'end': {
+                'line': 4,
+                'column': 4
+              }
+            }
+          },
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode('      template block text\n');
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes() {
+            return [];
+          },
+          statements: [],
+          locals: [],
+          templates: []
+        };
+      })();
+
+      return {
+        meta: {
+          'revision': 'Ember@2.7.3',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 5,
+              'column': 2
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode('\n');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode('  ');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          return morphs;
+        },
+        statements: [['block', 'md-chat', [], [], 0, null, ['loc', [null, [2, 4], [4, 16]]]]],
+        locals: [],
+        templates: [child0]
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('app4/tests/integration/components/md-chat-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/md-chat-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/md-chat-test.js should pass jshint.');
   });
 });
 define('app4/tests/integration/components/md-image-collection-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -4564,6 +4722,28 @@ define('app4/tests/unit/controllers/users/user/charts-test.jshint', ['exports'],
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/users/user/charts-test.js should pass jshint.');
+  });
+});
+define('app4/tests/unit/controllers/users/user/chat-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:users/user/chat', 'Unit | Controller | users/user/chat', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('app4/tests/unit/controllers/users/user/chat-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/users/user/chat-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/users/user/chat-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/controllers/users/user/dashboard-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

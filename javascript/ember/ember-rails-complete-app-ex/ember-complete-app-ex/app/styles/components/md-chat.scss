@@ -1,26 +1,26 @@
-.users-user-chat{
+.md-chat{
 	margin: 20px auto;
 	height: 83vh;
 	width: 100%;
 	padding: 10px;
-	.users-user-chat-messages{
+	.md-chat-messages{
 		overflow: scroll;
 		height: 90%;
-		.users-user-chat-message{
+		.md-chat-message{
 			display: flex;
 			padding: 10px;
-			.users-user-chat-img{
+			.md-chat-img{
 				flex: 1;
 				width: 40px;
 			}
-			.users-user-chat-text{
+			.md-chat-text{
 				flex: 15;
 				width: 200px;
 			}
 			img {
 				width: 50px;		
 			}
-			.users-user-chat-name{
+			.md-chat-name{
 				display: inline-block;
 				font-weight: bold;
 			}
@@ -29,9 +29,10 @@
 			}
 		}
 	}
-	.users-user-chat-input{
+	.md-chat-input{
 		textarea.materialize-textarea {
 			padding: 0;
+			margin-left: 40px;
 		}
 		padding: 10px;
 		height: 18%;		
@@ -39,9 +40,8 @@
 }
 
 @media #{$large-and-up}{
-	.users-user-chat{
+	.md-chat{
 		margin-left: 250px;
 		width: 77%;
-
 	}
 }
