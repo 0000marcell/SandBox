@@ -343,7 +343,7 @@ define('app4/tests/components/md-chat.jshint', ['exports'], function (exports) {
   QUnit.module('JSHint | components/md-chat.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'components/md-chat.js should pass jshint.');
+    assert.ok(false, 'components/md-chat.js should pass jshint.\ncomponents/md-chat.js: line 36, col 17, \'consumer\' is defined but never used.\n\n1 error');
   });
 });
 define('app4/tests/components/md-image-collection.jshint', ['exports'], function (exports) {
@@ -4162,24 +4162,6 @@ define('app4/tests/routes/application.jshint', ['exports'], function (exports) {
     assert.ok(true, 'routes/application.js should pass jshint.');
   });
 });
-define('app4/tests/routes/card.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | routes/card.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'routes/card.js should pass jshint.');
-  });
-});
-define('app4/tests/routes/carousel.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | routes/carousel.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'routes/carousel.js should pass jshint.');
-  });
-});
 define('app4/tests/routes/charts.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -5004,48 +4986,6 @@ define('app4/tests/unit/routes/application-test.jshint', ['exports'], function (
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/application-test.js should pass jshint.');
-  });
-});
-define('app4/tests/unit/routes/card-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleFor)('route:card', 'Unit | Route | card', {
-    // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
-  });
-
-  (0, _emberQunit.test)('it exists', function (assert) {
-    var route = this.subject();
-    assert.ok(route);
-  });
-});
-define('app4/tests/unit/routes/card-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | unit/routes/card-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/routes/card-test.js should pass jshint.');
-  });
-});
-define('app4/tests/unit/routes/carousel-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleFor)('route:carousel', 'Unit | Route | carousel', {
-    // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
-  });
-
-  (0, _emberQunit.test)('it exists', function (assert) {
-    var route = this.subject();
-    assert.ok(route);
-  });
-});
-define('app4/tests/unit/routes/carousel-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | unit/routes/carousel-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/routes/carousel-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/routes/charts-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

@@ -4,28 +4,25 @@ materialize:
 check scss files and removed things that are not being used
 orginize again the dashboard login etc:
   chat:
-    creating multiple consumer when comeing back to the chat route, 
-    avoid that, read the code for the consumer.
-    change user image to a default image
-    but a message inside the chat icon to notify a message
+    but a message inside the chat icon to notify for new messages
   settings:
-    put option to change image
-  highlight the selected link on the side-nav.
-  include icons on all the buttons and sidenav links
   check and delete all the extra routes
   check logging push errors
     write validations for the signup form
   suport for pagination in mirage
   suport for search in mirage
-  publish everything make everything work remote
+  publish everything make everything work remotly
 
 json-api messages:
   make the backend respond with the same content as mirage
 
 making layout
 preparing demonstration:
+  software is an investiment
+  cryptography
   websocket broadcasting
   presenve the search state between routes
+  resilience of software
   it takes, time, 1970
   roles, invalidate user token
   mantain session when you close the brower
@@ -38,24 +35,29 @@ preparing demonstration:
   server side rendering
   assynchronous loading
   show https://www.zeitgeistminds.com/
-
-improve session component and navegation component
 create emtra md components and upload to npm
 image-upload:
   modularize image upload 
-carousel:
-  mudularize carousel, make it work
-  learning a good way to comunicate with components from ember materialize
 charts:
-  orginize charts and the dash board in a side nav
   implement d3 calendar with ember http://bl.ocks.org/mbostock/4063318
-color-picker: 
-  implement a color picker
 implement image upload component, upload route
-crete page component maybe? 
 write tests for the img-carousel component
 
 done:
+include icons on all the buttons and sidenav links
+highlight the selected link on the side-nav.
+test chat with two users and with photos
+try to destroy subscription when leaving the chat window:
+  identify if creating more consumer send more msgs.
+  creating multiple consumer when comeing back to the chat route, 
+  avoid that, read the code for the consumer.
+orginize charts and the dash board in a side nav
+carousel:
+  mudularize carousel, make it work
+  learning a good way to comunicate with components from ember materialize
+improve session component and navegation component
+put option to change image
+change user image to a default image
 test the chat with two users
 remake the chat.
 bug on the todo page

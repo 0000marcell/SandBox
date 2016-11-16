@@ -34,10 +34,8 @@ Router.map(function() {
     this.route('link1');
     this.route('link2');
   });
-  this.route('card');
   this.route('image-collenction', {path: 'image'});
   this.route('upload');
-  this.route('carousel');
   this.route('composable');
   this.route('charts');
   this.route('resize');

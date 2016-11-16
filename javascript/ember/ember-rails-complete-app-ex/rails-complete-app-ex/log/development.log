@@ -43357,3 +43357,259 @@ Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-15 17:14:40 -0200
 Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
 MessagesChannel is transmitting the subscription confirmation
 MessagesChannel is streaming from messages
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/marcell/Documents/github/SandBox/javascript/ember/ember-rails-complete-app-ex/rails-complete-app-ex/config/initializers/doorkeeper.rb:1)
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:21:00 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:21:00 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:21:21 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:21:21 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:25:05 -0200
+MessagesChannel stopped streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:25:05 -0200
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:25:08 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:25:08 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:26:03 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:26:03 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:26:25 -0200
+MessagesChannel stopped streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:26:25 -0200
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:26:32 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:26:32 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:26:45 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:26:45 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:28:49 -0200
+MessagesChannel stopped streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:28:49 -0200
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:28:55 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:28:55 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:29:16 -0200
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:29:22 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:29:22 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:29:28 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:29:28 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:31:18 -0200
+MessagesChannel stopped streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:31:18 -0200
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:32:12 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:32:12 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:32:38 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:32:38 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+MessagesChannel#receive({"username"=>"Marcell Monteiro Cruz", "body"=>"k"})
+[ActionCable] Broadcasting to messages: {"username"=>"Marcell Monteiro Cruz", "body"=>"k"}
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"k"} (via streamed from messages)
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"k"} (via streamed from messages)
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:32:53 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:32:53 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+MessagesChannel#receive({"username"=>"Marcell Monteiro Cruz", "body"=>"k"})
+[ActionCable] Broadcasting to messages: {"username"=>"Marcell Monteiro Cruz", "body"=>"k"}
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"k"} (via streamed from messages)
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"k"} (via streamed from messages)
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"k"} (via streamed from messages)
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:33:00 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:33:00 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+MessagesChannel#receive({"username"=>"Marcell Monteiro Cruz", "body"=>"r"})
+[ActionCable] Broadcasting to messages: {"username"=>"Marcell Monteiro Cruz", "body"=>"r"}
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"r"} (via streamed from messages)
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"r"} (via streamed from messages)
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"r"} (via streamed from messages)
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"r"} (via streamed from messages)
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:44:03 -0200
+MessagesChannel stopped streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:44:03 -0200
+MessagesChannel stopped streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:44:03 -0200
+MessagesChannel stopped streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:44:03 -0200
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:44:07 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:44:07 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Unsubscribing from channel: {"channel":"MessagesChannel"}
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:53:42 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:53:42 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+MessagesChannel#receive({"username"=>"Marcell Monteiro Cruz", "body"=>"ok"})
+[ActionCable] Broadcasting to messages: {"username"=>"Marcell Monteiro Cruz", "body"=>"ok"}
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"ok"} (via streamed from messages)
+Unsubscribing from channel: {"channel":"MessagesChannel"}
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:53:49 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:53:49 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+MessagesChannel#receive({"username"=>"Marcell Monteiro Cruz", "body"=>"k"})
+[ActionCable] Broadcasting to messages: {"username"=>"Marcell Monteiro Cruz", "body"=>"k"}
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"k"} (via streamed from messages)
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:59:23 -0200
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:59:23 -0200
+MessagesChannel stopped streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:59:23 -0200
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:59:28 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:59:28 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Unsubscribing from channel: {"channel":"MessagesChannel"}
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:59:31 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:59:31 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+MessagesChannel#receive({"username"=>"Marcell Monteiro Cruz", "body"=>"k"})
+[ActionCable] Broadcasting to messages: {"username"=>"Marcell Monteiro Cruz", "body"=>"k"}
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"k"} (via streamed from messages)
+Unsubscribing from channel: {"channel":"MessagesChannel"}
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 11:59:35 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 11:59:35 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+MessagesChannel#receive({"username"=>"Marcell Monteiro Cruz", "body"=>"k again"})
+[ActionCable] Broadcasting to messages: {"username"=>"Marcell Monteiro Cruz", "body"=>"k again"}
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"k again"} (via streamed from messages)
+Unsubscribing from channel: {"channel":"MessagesChannel"}
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 12:17:39 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:17:39 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 12:18:03 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:18:03 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Unsubscribing from channel: {"channel":"MessagesChannel"}
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 12:18:18 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:18:18 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+MessagesChannel#receive({"username"=>"Marcell Monteiro Cruz", "body"=>"ola joao"})
+[ActionCable] Broadcasting to messages: {"username"=>"Marcell Monteiro Cruz", "body"=>"ola joao"}
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"ola joao"} (via streamed from messages)
+MessagesChannel transmitting {"username"=>"Marcell Monteiro Cruz", "body"=>"ola joao"} (via streamed from messages)
+MessagesChannel#receive({"image"=>nil, "username"=>"Joao da silva", "body"=>"oi marcell"})
+[ActionCable] Broadcasting to messages: {"image"=>nil, "username"=>"Joao da silva", "body"=>"oi marcell"}
+MessagesChannel transmitting {"image"=>nil, "username"=>"Joao da silva", "body"=>"oi marcell"} (via streamed from messages)
+MessagesChannel transmitting {"image"=>nil, "username"=>"Joao da silva", "body"=>"oi marcell"} (via streamed from messages)
+Unsubscribing from channel: {"channel":"MessagesChannel"}
+MessagesChannel stopped streaming from messages
+MessagesChannel#receive({"image"=>nil, "username"=>"Joao da silva", "body"=>"marcell!"})
+[ActionCable] Broadcasting to messages: {"image"=>nil, "username"=>"Joao da silva", "body"=>"marcell!"}
+MessagesChannel transmitting {"image"=>nil, "username"=>"Joao da silva", "body"=>"marcell!"} (via streamed from messages)
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 12:19:45 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:19:45 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Unsubscribing from channel: {"channel":"MessagesChannel"}
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 12:22:01 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:22:01 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+MessagesChannel#receive({"image"=>"https://avatars0.githubusercontent.com/u/4584144?v=3&s=460", "username"=>"Marcell Monteiro Cruz", "body"=>"Joao"})
+[ActionCable] Broadcasting to messages: {"image"=>"https://avatars0.githubusercontent.com/u/4584144?v=3&s=460", "username"=>"Marcell Monteiro Cruz", "body"=>"Joao"}
+MessagesChannel transmitting {"image"=>"https://avatars0.githubusercontent.com/u/4584144?v=3&s=460", "username"=>"Marcell Monteiro Cruz", "body"=>"Joao"} (via streamed from messages)
+MessagesChannel transmitting {"image"=>"https://avatars0.githubusercontent.com/u/4584144?v=3&s=460", "username"=>"Marcell Monteiro Cruz", "body"=>"Joao"} (via streamed from messages)
+MessagesChannel#receive({"image"=>nil, "username"=>"Joao da silva", "body"=>"oi"})
+[ActionCable] Broadcasting to messages: {"image"=>nil, "username"=>"Joao da silva", "body"=>"oi"}
+MessagesChannel transmitting {"image"=>nil, "username"=>"Joao da silva", "body"=>"oi"} (via streamed from messages)
+MessagesChannel transmitting {"image"=>nil, "username"=>"Joao da silva", "body"=>"oi"} (via streamed from messages)
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:23:00 -0200
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:23:00 -0200
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:23:00 -0200
+MessagesChannel stopped streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:23:00 -0200
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:23:00 -0200
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:23:00 -0200
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:23:00 -0200
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:23:01 -0200
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 12:23:03 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:23:03 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Unsubscribing from channel: {"channel":"MessagesChannel"}
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 12:28:43 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:28:43 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Unsubscribing from channel: {"channel":"MessagesChannel"}
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 12:28:48 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:28:48 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Unsubscribing from channel: {"channel":"MessagesChannel"}
+MessagesChannel stopped streaming from messages
+Started GET "/websocket" for 127.0.0.1 at 2016-11-16 12:39:12 -0200
+Started GET "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:39:12 -0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Unsubscribing from channel: {"channel":"MessagesChannel"}
+MessagesChannel stopped streaming from messages
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:46:56 -0200
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:46:56 -0200
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:46:57 -0200
+Finished "/websocket" [WebSocket] for 127.0.0.1 at 2016-11-16 12:46:57 -0200
