@@ -481,15 +481,6 @@ define('app4/tests/controllers/users/user/todos/index.jshint', ['exports'], func
     assert.ok(true, 'controllers/users/user/todos/index.js should pass jshint.');
   });
 });
-define('app4/tests/controllers/users/user/todos/new.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | controllers/users/user/todos/new.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'controllers/users/user/todos/new.js should pass jshint.');
-  });
-});
 define('app4/tests/controllers/users/user/todos/todo.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -497,15 +488,6 @@ define('app4/tests/controllers/users/user/todos/todo.jshint', ['exports'], funct
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'controllers/users/user/todos/todo.js should pass jshint.');
-  });
-});
-define('app4/tests/controllers/users/user/todos/todo/edit.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | controllers/users/user/todos/todo/edit.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'controllers/users/user/todos/todo/edit.js should pass jshint.');
   });
 });
 define('app4/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
@@ -3515,28 +3497,6 @@ define('app4/tests/unit/controllers/users/user/todos/index-test.jshint', ['expor
     assert.ok(true, 'unit/controllers/users/user/todos/index-test.js should pass jshint.');
   });
 });
-define('app4/tests/unit/controllers/users/user/todos/new-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleFor)('controller:users/user/todos/new', 'Unit | Controller | users/user/todos/new', {
-    // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
-  });
-
-  // Replace this with your real tests.
-  (0, _emberQunit.test)('it exists', function (assert) {
-    var controller = this.subject();
-    assert.ok(controller);
-  });
-});
-define('app4/tests/unit/controllers/users/user/todos/new-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | unit/controllers/users/user/todos/new-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/controllers/users/user/todos/new-test.js should pass jshint.');
-  });
-});
 define('app4/tests/unit/controllers/users/user/todos/todo-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleFor)('controller:users/user/todos/todo', 'Unit | Controller | users/user/todos/todo', {
@@ -3557,28 +3517,6 @@ define('app4/tests/unit/controllers/users/user/todos/todo-test.jshint', ['export
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/users/user/todos/todo-test.js should pass jshint.');
-  });
-});
-define('app4/tests/unit/controllers/users/user/todos/todo/edit-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleFor)('controller:users/user/todos/todo/edit', 'Unit | Controller | users/user/todos/todo/edit', {
-    // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
-  });
-
-  // Replace this with your real tests.
-  (0, _emberQunit.test)('it exists', function (assert) {
-    var controller = this.subject();
-    assert.ok(controller);
-  });
-});
-define('app4/tests/unit/controllers/users/user/todos/todo/edit-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | unit/controllers/users/user/todos/todo/edit-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/controllers/users/user/todos/todo/edit-test.js should pass jshint.');
   });
 });
 define('app4/tests/unit/helpers/escape-css-test', ['exports', 'app4/helpers/escape-css', 'qunit'], function (exports, _app4HelpersEscapeCss, _qunit) {

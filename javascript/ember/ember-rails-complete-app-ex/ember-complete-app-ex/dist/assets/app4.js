@@ -547,11 +547,13 @@ define('app4/components/md-abstract-form', ['exports', 'ember'], function (expor
    }
    __cov_wudQiDSsuKg47VPR_ixa0w = __cov_wudQiDSsuKg47VPR_ixa0w.__coverage__;
    if (!__cov_wudQiDSsuKg47VPR_ixa0w['app/components/md-abstract-form.js']) {
-      __cov_wudQiDSsuKg47VPR_ixa0w['app/components/md-abstract-form.js'] = { "path": "app/components/md-abstract-form.js", "s": { "1": 0 }, "b": {}, "f": { "1": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 8, "loc": { "start": { "line": 8, "column": 6 }, "end": { "line": 8, "column": 8 } } } }, "statementMap": { "1": { "start": { "line": 9, "column": 3 }, "end": { "line": 9, "column": 47 } } }, "branchMap": {}, "code": ["import Ember from 'ember';", "", "export default Ember.Component.extend({", "\tloading: false,", "\terrors: [],", "\tmsgs: [],", "\tactions: {", "\t\tsave(){", "\t\t\tthis.get('submit')(this.get('model'), this);\t", "\t\t}", "\t}", "});", ""] };
+      __cov_wudQiDSsuKg47VPR_ixa0w['app/components/md-abstract-form.js'] = { "path": "app/components/md-abstract-form.js", "s": { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0 }, "b": {}, "f": { "1": 0, "2": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 4, "loc": { "start": { "line": 4, "column": 5 }, "end": { "line": 4, "column": 7 } } }, "2": { "name": "(anonymous_2)", "line": 11, "loc": { "start": { "line": 11, "column": 6 }, "end": { "line": 11, "column": 8 } } } }, "statementMap": { "1": { "start": { "line": 5, "column": 2 }, "end": { "line": 5, "column": 28 } }, "2": { "start": { "line": 6, "column": 2 }, "end": { "line": 6, "column": 25 } }, "3": { "start": { "line": 7, "column": 2 }, "end": { "line": 7, "column": 23 } }, "4": { "start": { "line": 8, "column": 2 }, "end": { "line": 8, "column": 29 } }, "5": { "start": { "line": 12, "column": 3 }, "end": { "line": 12, "column": 47 } } }, "branchMap": {}, "code": ["import Ember from 'ember';", "", "export default Ember.Component.extend({", "\tinit(){", "\t\tthis._super(...arguments);\t\t", "\t\tthis.set('errors', []);", "\t\tthis.set('msgs', []);", "\t\tthis.set('loading', false);", "\t},", "\tactions: {", "\t\tsave(){", "\t\t\tthis.get('submit')(this.get('model'), this);\t", "\t\t}", "\t}", "});", ""] };
    }
    __cov_wudQiDSsuKg47VPR_ixa0w = __cov_wudQiDSsuKg47VPR_ixa0w['app/components/md-abstract-form.js'];
-   exports['default'] = _ember['default'].Component.extend({ loading: false, errors: [], msgs: [], actions: { save: function save() {
-            __cov_wudQiDSsuKg47VPR_ixa0w.f['1']++;__cov_wudQiDSsuKg47VPR_ixa0w.s['1']++;this.get('submit')(this.get('model'), this);
+   exports['default'] = _ember['default'].Component.extend({ init: function init() {
+         __cov_wudQiDSsuKg47VPR_ixa0w.f['1']++;__cov_wudQiDSsuKg47VPR_ixa0w.s['1']++;this._super.apply(this, arguments);__cov_wudQiDSsuKg47VPR_ixa0w.s['2']++;this.set('errors', []);__cov_wudQiDSsuKg47VPR_ixa0w.s['3']++;this.set('msgs', []);__cov_wudQiDSsuKg47VPR_ixa0w.s['4']++;this.set('loading', false);
+      }, actions: { save: function save() {
+            __cov_wudQiDSsuKg47VPR_ixa0w.f['2']++;__cov_wudQiDSsuKg47VPR_ixa0w.s['5']++;this.get('submit')(this.get('model'), this);
          } } });
 });
 define('app4/components/md-badge', ['exports', 'ember-cli-materialize/components/md-badge'], function (exports, _emberCliMaterializeComponentsMdBadge) {
@@ -1281,26 +1283,6 @@ define('app4/controllers/users/user/todos/index', ['exports', 'ember'], function
          __cov_47nOOAnQ36OHjmzBzbjeGg.f['1']++;__cov_47nOOAnQ36OHjmzBzbjeGg.s['1']++;var total = (__cov_47nOOAnQ36OHjmzBzbjeGg.b['1'][0]++, this.get('model.meta.pagination.last.number')) || (__cov_47nOOAnQ36OHjmzBzbjeGg.b['1'][1]++, this.get('model.meta.pagination.self.number'));__cov_47nOOAnQ36OHjmzBzbjeGg.s['2']++;return total;
       }) });
 });
-define('app4/controllers/users/user/todos/new', ['exports', 'ember'], function (exports, _ember) {
-   var __cov_lzncyhJqPFYqbZiXSZVtoQ = Function('return this')();
-   if (!__cov_lzncyhJqPFYqbZiXSZVtoQ.__coverage__) {
-      __cov_lzncyhJqPFYqbZiXSZVtoQ.__coverage__ = {};
-   }
-   __cov_lzncyhJqPFYqbZiXSZVtoQ = __cov_lzncyhJqPFYqbZiXSZVtoQ.__coverage__;
-   if (!__cov_lzncyhJqPFYqbZiXSZVtoQ['app/controllers/users/user/todos/new.js']) {
-      __cov_lzncyhJqPFYqbZiXSZVtoQ['app/controllers/users/user/todos/new.js'] = { "path": "app/controllers/users/user/todos/new.js", "s": { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0 }, "b": {}, "f": { "1": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 11, "loc": { "start": { "line": 11, "column": 6 }, "end": { "line": 11, "column": 8 } } } }, "statementMap": { "1": { "start": { "line": 12, "column": 3 }, "end": { "line": 12, "column": 33 } }, "2": { "start": { "line": 13, "column": 3 }, "end": { "line": 13, "column": 76 } }, "3": { "start": { "line": 14, "column": 3 }, "end": { "line": 22, "column": 6 } }, "4": { "start": { "line": 15, "column": 4 }, "end": { "line": 15, "column": 34 } }, "5": { "start": { "line": 16, "column": 4 }, "end": { "line": 16, "column": 43 } }, "6": { "start": { "line": 17, "column": 4 }, "end": { "line": 17, "column": 31 } }, "7": { "start": { "line": 18, "column": 4 }, "end": { "line": 18, "column": 59 } }, "8": { "start": { "line": 20, "column": 4 }, "end": { "line": 20, "column": 41 } }, "9": { "start": { "line": 21, "column": 4 }, "end": { "line": 21, "column": 33 } } }, "branchMap": {}, "code": ["import Ember from 'ember';", "", "export default Ember.Controller.extend({", "\tmsgVisible: false,", "\tmsgColor:\t\t'',", "\tmsgContent: 'Todo not saved!',", "\ttodosController: Ember.inject.controller('users/user/todos'),", "\ttodos: Ember.computed.reads('todosController.model'),", "\tauthManager: Ember.inject.service('session'),", "\tactions: {", "\t\tsave(){", "\t\t\tlet model = this.get('model');", "\t\t\tmodel.set('user_id', this.get('authManager.data.authenticated.user.id'));", "\t\t\tmodel.save().then((model) => {", "\t\t\t\tthis.set('msgVisible', false);", "\t\t\t\tthis.set('msgColor', 'green accent 4');", "\t\t\t\tthis.get('todos').reload();", "\t\t\t\tthis.transitionToRoute('users.user.todos.todo', model); ", "\t\t\t}).catch(() => {", "\t\t\t\tthis.set('msgColor', 'red accent 4');", "\t\t\t\tthis.set('msgVisible', true);", "\t\t\t});", "\t\t}", "\t}", "});", ""] };
-   }
-   __cov_lzncyhJqPFYqbZiXSZVtoQ = __cov_lzncyhJqPFYqbZiXSZVtoQ['app/controllers/users/user/todos/new.js'];
-   exports['default'] = _ember['default'].Controller.extend({ msgVisible: false, msgColor: '', msgContent: 'Todo not saved!', todosController: _ember['default'].inject.controller('users/user/todos'), todos: _ember['default'].computed.reads('todosController.model'), authManager: _ember['default'].inject.service('session'), actions: { save: function save() {
-            var _this = this;
-
-            __cov_lzncyhJqPFYqbZiXSZVtoQ.f['1']++;__cov_lzncyhJqPFYqbZiXSZVtoQ.s['1']++;var model = this.get('model');__cov_lzncyhJqPFYqbZiXSZVtoQ.s['2']++;model.set('user_id', this.get('authManager.data.authenticated.user.id'));__cov_lzncyhJqPFYqbZiXSZVtoQ.s['3']++;model.save().then(function (model) {
-               __cov_lzncyhJqPFYqbZiXSZVtoQ.s['4']++;_this.set('msgVisible', false);__cov_lzncyhJqPFYqbZiXSZVtoQ.s['5']++;_this.set('msgColor', 'green accent 4');__cov_lzncyhJqPFYqbZiXSZVtoQ.s['6']++;_this.get('todos').reload();__cov_lzncyhJqPFYqbZiXSZVtoQ.s['7']++;_this.transitionToRoute('users.user.todos.todo', model);
-            })['catch'](function () {
-               __cov_lzncyhJqPFYqbZiXSZVtoQ.s['8']++;_this.set('msgColor', 'red accent 4');__cov_lzncyhJqPFYqbZiXSZVtoQ.s['9']++;_this.set('msgVisible', true);
-            });
-         } } });
-});
 define('app4/controllers/users/user/todos/todo', ['exports', 'ember'], function (exports, _ember) {
    var __cov_Hbd$rKHHcVLkPZt_P9XqLw = Function('return this')();
    if (!__cov_Hbd$rKHHcVLkPZt_P9XqLw.__coverage__) {
@@ -1312,26 +1294,6 @@ define('app4/controllers/users/user/todos/todo', ['exports', 'ember'], function 
    }
    __cov_Hbd$rKHHcVLkPZt_P9XqLw = __cov_Hbd$rKHHcVLkPZt_P9XqLw['app/controllers/users/user/todos/todo.js'];
    exports['default'] = _ember['default'].Controller.extend({});
-});
-define('app4/controllers/users/user/todos/todo/edit', ['exports', 'ember'], function (exports, _ember) {
-   var __cov_xQhtlcB9Djb3mWCGOc9qDw = Function('return this')();
-   if (!__cov_xQhtlcB9Djb3mWCGOc9qDw.__coverage__) {
-      __cov_xQhtlcB9Djb3mWCGOc9qDw.__coverage__ = {};
-   }
-   __cov_xQhtlcB9Djb3mWCGOc9qDw = __cov_xQhtlcB9Djb3mWCGOc9qDw.__coverage__;
-   if (!__cov_xQhtlcB9Djb3mWCGOc9qDw['app/controllers/users/user/todos/todo/edit.js']) {
-      __cov_xQhtlcB9Djb3mWCGOc9qDw['app/controllers/users/user/todos/todo/edit.js'] = { "path": "app/controllers/users/user/todos/todo/edit.js", "s": { "1": 0, "2": 0, "3": 0 }, "b": {}, "f": { "1": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 5, "loc": { "start": { "line": 5, "column": 6 }, "end": { "line": 5, "column": 8 } } } }, "statementMap": { "1": { "start": { "line": 6, "column": 3 }, "end": { "line": 10, "column": 6 } }, "2": { "start": { "line": 7, "column": 3 }, "end": { "line": 7, "column": 46 } }, "3": { "start": { "line": 9, "column": 4 }, "end": { "line": 9, "column": 49 } } }, "branchMap": {}, "code": ["import Ember from 'ember';", "", "export default Ember.Controller.extend({", "\tactions: {", "\t\tedit(){", "\t\t\tthis.get('model').save().then(() => {", "\t\t\tthis.transitionToRoute('users.user.todos');\t", "\t\t\t}).catch((error) => {", "\t\t\t\tconsole.log('error while saving todo'+error);", "\t\t\t});", "\t\t}", "\t}", "});", ""] };
-   }
-   __cov_xQhtlcB9Djb3mWCGOc9qDw = __cov_xQhtlcB9Djb3mWCGOc9qDw['app/controllers/users/user/todos/todo/edit.js'];
-   exports['default'] = _ember['default'].Controller.extend({ actions: { edit: function edit() {
-            var _this = this;
-
-            __cov_xQhtlcB9Djb3mWCGOc9qDw.f['1']++;__cov_xQhtlcB9Djb3mWCGOc9qDw.s['1']++;this.get('model').save().then(function () {
-               __cov_xQhtlcB9Djb3mWCGOc9qDw.s['2']++;_this.transitionToRoute('users.user.todos');
-            })['catch'](function (error) {
-               __cov_xQhtlcB9Djb3mWCGOc9qDw.s['3']++;console.log('error while saving todo' + error);
-            });
-         } } });
 });
 define('app4/helpers/and', ['exports', 'ember', 'ember-truth-helpers/helpers/and'], function (exports, _ember, _emberTruthHelpersHelpersAnd) {
 
@@ -4492,7 +4454,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("app4/app")["default"].create({"name":"app4","version":"0.0.0+a3c800ee"});
+  require("app4/app")["default"].create({"name":"app4","version":"0.0.0+2976ca5d"});
 }
 
 /* jshint ignore:end */
