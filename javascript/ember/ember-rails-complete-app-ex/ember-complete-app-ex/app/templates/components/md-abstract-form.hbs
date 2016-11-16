@@ -1,9 +1,32 @@
 {{#md-card}}
 	<div class='container'>
-		{{yield}}
-		<a class="waves-effect waves-light btn blue" 
-			{{action 'save'}} 
-			type='submit'>
-			<i class="material-icons left">input</i>Login</a>
+		{{#if loading}}
+			{{md-loader id='spinner' mode='circular'}}
+		{{else}}	
+			{{#if errors}}
+				{{#md-card-panel class="red"
+						bodyClass="white-text"
+						}}
+					{{#each errors as |error|}}
+						<p>
+							{{error}}
+						</p>
+					{{/each}}
+				{{/md-card-panel}}
+			{{/if}}
+			{{#if msgs}}
+				{{#md-card-panel class="green"
+					bodyClass="white-text"}}
+					{{#each msgs as |msg|}}
+						<p>{{msg}}</p>
+					{{/each}}
+				{{/md-card-panel}}
+			{{/if}}
+			{{yield}}
+			<a class="waves-effect waves-light btn blue" 
+				{{action 'save'}} 
+				type='submit'>
+				<i class="material-icons left">input</i>{{text}}</a>
+		{{/if}}
 	</div>
 {{/md-card}}

@@ -1,12 +1,4 @@
-<div class="row">
-	<div>
-		{{#md-card id="image-card"}}
-			<h5>Edit todo</h5>
-			{{md-input label='Name' type="text" class="col s12" value=model.title validate=true}}
-			{{md-btn-submit class='indigo'
-				id='form-submit'
-				action='edit'
-				text='edit'}}
-		{{/md-card}}
-	</div>
-</div>
+{{#md-abstract-form model=model text='Edit' submit=(route-action 'edit')}}
+	<h5>Edit todo</h5>
+	{{md-input label='Title' type="text" class="col s12" value=model.title validate=true}}
+{{/md-abstract-form}}

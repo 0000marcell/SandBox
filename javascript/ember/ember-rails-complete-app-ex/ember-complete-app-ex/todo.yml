@@ -6,7 +6,7 @@ orginize again the dashboard login etc:
   chat:
     but a message inside the chat icon to notify for new messages
   settings:
-  check and delete all the extra routes
+  pass all the todo logic to the routes
   check logging push errors
     write validations for the signup form
   suport for pagination in mirage
@@ -44,6 +44,9 @@ implement image upload component, upload route
 write tests for the img-carousel component
 
 done:
+check and delete extra controllers
+check and delete all the extra components
+check and delete all the extra routes
 include icons on all the buttons and sidenav links
 highlight the selected link on the side-nav.
 test chat with two users and with photos

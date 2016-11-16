@@ -25,20 +25,8 @@ Router.map(function() {
   });
 });
 
-  // OLD ROUTE TO BE DELETED
-  this.route('login');
-  this.route('signup');
   this.route('password-reset');
   this.route('not-found', { path: '/*path' });
-  this.route('sidenav', function() {
-    this.route('link1');
-    this.route('link2');
-  });
-  this.route('image-collenction', {path: 'image'});
-  this.route('upload');
-  this.route('composable');
-  this.route('charts');
-  this.route('resize');
   this.route('contextutal-components');
   this.route('contextual');
 });
