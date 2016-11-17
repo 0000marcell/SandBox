@@ -1,0 +1,8 @@
+<div>
+	{{#each items as |item|}}
+		{{accordion-item
+			item=item
+			activeItem=activeItem
+			headerClicked=(action 'toggleActiveItem' item)}}
+	{{/each}}
+</div>

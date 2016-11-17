@@ -3,7 +3,8 @@ materialize:
     contextual components https://www.mutuallyhuman.com/blog/2016/09/23/creating-an-accordion-with-contextual-components-in-ember
 check scss files and removed things that are not being used
 orginize again the dashboard login etc:
-   publish everything make everything work remotly
+  make the design work properly on mobile
+  publish everything make everything work remotely
   chat:
     but a message inside the chat icon to notify for new messages
 

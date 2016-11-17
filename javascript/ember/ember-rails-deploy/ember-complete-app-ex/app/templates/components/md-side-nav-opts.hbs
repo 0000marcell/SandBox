@@ -1,0 +1,20 @@
+<header>
+	<div class='navbar-fixed'>
+		<nav class={{class}}>
+			<div class='nav-wrapper'>
+				<div class='container'>
+					{{#link-to 'users.user' model class='brand-logo'}}
+						<a class='icon-link'>
+						<i class='material-icons left'>code</i>{{name}}</a>
+					{{/link-to}}
+				</div>
+				<a class="button-collapse" data-activates="sidenav">
+					<i class="material-icons">menu</i>
+				</a>
+				<div class='right-side'>
+					{{yield}}
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>

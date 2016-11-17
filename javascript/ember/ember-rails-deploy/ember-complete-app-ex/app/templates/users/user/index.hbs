@@ -1,0 +1,62 @@
+{{#md-card id="image-card"}}
+	<h5>Bem Vindo, {{model.name}}</h5>
+	{{#link-to 'users.user.todos' model}}
+		<div class='feature-item'>
+			<i class='material-icons'>done</i>
+			Tasks
+			<div class='feature-item-bottom'>
+			</div>
+		</div>
+	{{/link-to}}
+	{{#link-to 'users.user.charts' model}}
+		<div class='feature-item'>
+			<i class='material-icons'>insert_chart</i>
+			Charts
+			<div class='feature-item-bottom'>
+			</div>
+		</div>
+	{{/link-to}}
+	{{#link-to 'users.user.chat' model}}
+		<div class='feature-item'>
+			<i class='material-icons'>aspect_ratio</i>
+			Chat
+			<div class='feature-item-bottom'>
+			</div>
+		</div>
+	{{/link-to}}
+	<div class="divider"></div>
+	<ul class="collection">
+		<li class="collection-item avatar">
+			<img src="https://avatars2.githubusercontent.com/u/4584144?v=3&s=220" alt="" class="circle">
+			<span class="title">Title</span>
+			<p>First Line <br>
+				 Second Line
+			</p>
+			<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+		</li>
+		<li class="collection-item avatar">
+			<i class="material-icons circle">folder</i>
+			<span class="title">Title</span>
+			<p>First Line <br>
+				 Second Line
+			</p>
+			<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+		</li>
+		<li class="collection-item avatar">
+			<i class="material-icons circle green">insert_chart</i>
+			<span class="title">Title</span>
+			<p>First Line <br>
+				 Second Line
+			</p>
+			<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+		</li>
+		<li class="collection-item avatar">
+			<i class="material-icons circle red">play_arrow</i>
+			<span class="title">Title</span>
+			<p>First Line <br>
+				 Second Line
+			</p>
+			<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+		</li>
+	</ul>
+{{/md-card}}

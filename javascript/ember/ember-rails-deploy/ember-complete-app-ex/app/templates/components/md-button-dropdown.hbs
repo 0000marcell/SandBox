@@ -1,0 +1,13 @@
+<a>
+	{{#if model.image}}
+		<img class="circle responsive-img" src={{model.image}}>
+	{{else}}	
+		<img class="circle responsive-img" 
+				 src='https://trackmystack.com/assets/img/user.png'>
+	{{/if}}
+	{{text}}
+</a>
+<ul id='md-button-dropdown-id' 
+		class='md-button-dropdown-list' style={{escapeCSS listIsVisible }}>
+	{{yield}}
+</ul>

@@ -1,0 +1,31 @@
+<div class='md-chat'>
+	<div class='md-chat-messages'>
+		{{#each messages as |message|}}
+			<div class='md-chat-message'>
+				<div class='md-chat-img'>
+					{{#if message.image}}
+						<img class="circle responsive-img" 
+						 src={{message.image}}>
+					{{else}}	
+						<img class="circle responsive-img" 
+						 src='https://trackmystack.com/assets/img/user.png'>
+					{{/if}}
+				</div>
+				<div class='md-chat-text'>
+					<p>{{message.username}}     <span>12:42</span></p>
+					<p>{{message.body}}</p>
+				</div>
+			</div>
+			<div class='divider'></div>
+		{{/each}}
+	</div>
+	<div class='md-chat-input'>
+		<div class='row'>
+			<div class="input-field col s12 m9">
+				<i class="material-icons prefix">mode_edit</i>
+				{{md-textarea
+    			value=body class="col s9"}}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<div class='container'>
+		<div class='icon-text'>
+			<i class='material-icons left'>account_box</i>Login</div>
+	{{#if logging}}
+		{{md-loader id='spinner' mode='circular'}}
+	{{else}}	
+		{{#if errors}}
+			{{#md-card-panel class="red"
+					bodyClass="white-text"
+					}}
+				{{#each errors as |error|}}
+					<p>
+						{{error}}
+					</p>
+				{{/each}}
+			{{/md-card-panel}}
+		{{/if}}
+		<form {{action 'login'  on='submit'}}>
+			{{md-input 
+				value=email
+				data-autoId='email'
+				label="email"
+				icon="perm_identity light-blue-text"
+				class="col s12"
+				validate=true}}
+			{{md-input 
+				value=password
+				type='password'
+				data-autoId='password'
+				label="Password"
+				icon="vpn_key light-blue-text"
+				class="col s12"
+				validate=true}}
+			<a class="waves-effect waves-light btn blue" 
+				 {{action 'login'}} 
+				 type='submit'>
+			<i class="material-icons left">input</i>Login</a>
+			{{#link-to 'password-reset' }}Forgot Password?{{/link-to}}
+		</form>
+	{{/if}}
+</div>

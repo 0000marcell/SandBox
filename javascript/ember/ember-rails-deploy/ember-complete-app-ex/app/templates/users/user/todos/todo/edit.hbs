@@ -1,0 +1,4 @@
+{{#md-abstract-form model=model text='Edit' submit=(route-action 'edit')}}
+	<h5>Edit todo</h5>
+	{{md-input label='Title' type="text" class="col s12" value=model.title validate=true}}
+{{/md-abstract-form}}

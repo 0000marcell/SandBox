@@ -1,0 +1,15 @@
+{{#if authManager.isAuthenticated}}
+	{{#md-btn-dropdown
+		text="Other Button"
+		icon="material-icons"
+		iconBody="arrow_drop_down"
+		iconPosition="right"}}
+		<li><a href="#!">four</a></li>
+		<li><a href="#!">five</a></li>
+		<li class="divider"></li>
+		<li><a href="#!">six</a></li>
+	{{/md-btn-dropdown}}
+{{else}}
+	<a {{action 'login'}}>Login</a>
+	<a {{action 'signup'}}>Signup</a>
+{{/if}}
