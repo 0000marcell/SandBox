@@ -2,7 +2,8 @@
 var str = 
 "grant_type=password&username=asd%40asd.com&password=asdasd"
 console.log('str', str);
-if(/username/.test(str)){
+var regex = 'something';
+if(str.match(new RegExp(regex))){
 	console.log('in the str');
 }else{
 	console.log('not in the str');

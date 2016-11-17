@@ -55,7 +55,31 @@ export default function() {
 		}).models[0];
 	});
 	this.patch('/users/:id');
-	this.get('/todos', { coalesce: true });
+	this.get('/todos', (schema, request) => {
+		let todos,
+				pag = parseInt(request.queryParams['page[number]']),
+				modelsLength = schema.todos.all().models.length,
+				size = parseInt(request.queryParams['page[size]']);
+		if(request.queryParams.search){
+			let search = request.queryParams.search;
+			todos = schema.todos.where((todo) => {
+				return todo.title.match(new RegExp(search));
+			});
+		}else{
+			let sliceF = (pag - 1) * size,
+					sliceL = sliceF + size; 
+			todos = schema.todos.where((todo) => {
+				return (todo.id >= sliceF && todo.id <= sliceL);
+			});
+		}
+		let json = this.serializerOrRegistry.serialize(todos);
+		json.meta = { pagination : { 
+				last: { number: modelsLength/size}, self: { number: pag }
+			}
+		};
+		console.log('meta: ', json);
+		return json;
+	});
 	this.get('/todos/:todo_url', (schema, request) => {
 		return schema.todos.where({ 
 			todo_url: request.params.todo_url
