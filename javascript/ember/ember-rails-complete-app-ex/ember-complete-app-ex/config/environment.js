@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-		useMirage: true,
+		useMirage: false,
 		modulePrefix: 'app4',
     environment: environment,
     baseURL: '/',

@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
 			resources :tasks
-      resources :tasks
     end
   end
   use_doorkeeper do

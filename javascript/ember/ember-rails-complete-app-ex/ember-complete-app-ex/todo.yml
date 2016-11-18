@@ -4,6 +4,8 @@ materialize:
 check scss files and removed things that are not being used
 orginize again the dashboard login etc:
   Publish everything make everything work remotely
+    deploy frontend
+    deploy backend
   Check tests, write more if necessary(tests for the basic functionality)
   chat:
     but a message inside the chat icon to notify for new messages

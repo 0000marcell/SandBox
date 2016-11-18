@@ -4484,7 +4484,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("app4/app")["default"].create({"name":"app4","version":"0.0.0+1d7b8c12"});
+  require("app4/app")["default"].create({"name":"app4","version":"0.0.0+f08d48af"});
 }
 
 /* jshint ignore:end */

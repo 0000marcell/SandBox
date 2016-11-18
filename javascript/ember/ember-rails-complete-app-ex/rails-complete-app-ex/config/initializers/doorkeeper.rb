@@ -10,22 +10,18 @@ Doorkeeper.configure do
   # end
 
 	resource_owner_from_credentials do |routes|
+		puts "### resource owner"
 		user = User.find_by(email: params[:username].downcase)
 		if user && user.authenticate(params[:password])
 			if user.activated?
 				user
-				# log_in user
-				# params[:remember_me] == '1' ? remember(user) : forget(user)
-				# remember(user)
-				# acess_token = Doorkeeper::AccessToken.create!(:application_id => nil, :resource_owner_id => user.id)
-				# render json: { acess_token: acess_token.token }
-				# render json: user
 			else
 				message  = "Account not activated. "
 				message += "Check your email for the activation link."
 				render json: {user: { msg: message } }, status: 404
 			end
 		else
+			#doorkeeper_unauthorized_render_options("shit sack!")
 			render json: {message: 'Invalid email/password combination'}, status: 404
 		end
 	end
