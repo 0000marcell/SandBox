@@ -3,8 +3,8 @@ materialize:
     contextual components https://www.mutuallyhuman.com/blog/2016/09/23/creating-an-accordion-with-contextual-components-in-ember
 check scss files and removed things that are not being used
 orginize again the dashboard login etc:
-  make the design work properly on mobile
-  publish everything make everything work remotely
+  Publish everything make everything work remotely
+  Check tests, write more if necessary(tests for the basic functionality)
   chat:
     but a message inside the chat icon to notify for new messages
 
@@ -40,7 +40,15 @@ implement image upload component, upload route
 write tests for the img-carousel component
 
 done:
-suport for pagination in mirage
+Make the design work properly on mobile
+  users/user/todos/index
+  users/user/todos/edit
+  users/user/todos/new
+  users/user/charts
+  users/user/chat
+  home/login
+  home/signup
+  users/user/ (sidenav etc..)
 suport for search in mirage
 check logging push errors
   write validations for the signup form

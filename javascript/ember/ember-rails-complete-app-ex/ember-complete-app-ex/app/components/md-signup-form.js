@@ -61,6 +61,7 @@ var Validations = buildValidations({
 
 
 export default Ember.Component.extend(Validations,{
+	classNames: ['md-signup-form'],
 	init(){
 		this._super(...arguments);
 		this.set('msgs', []);

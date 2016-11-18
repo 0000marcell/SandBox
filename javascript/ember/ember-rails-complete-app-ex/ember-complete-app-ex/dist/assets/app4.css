@@ -6458,7 +6458,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   padding: 10px; }
   .md-chat .md-chat-messages {
     overflow: scroll;
-    height: 80%; }
+    height: 85%; }
     .md-chat .md-chat-messages .md-chat-message {
       display: flex;
       padding: 10px; }
@@ -6486,6 +6486,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .md-chat {
     margin-left: 250px;
     width: 77%; } }
+
+.md-signup-form {
+  margin: 20px 0 80px; }
 
 .md-carousel-album {
   margin-top: 80px;
@@ -6522,6 +6525,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .md-side-nav {
   top: inherit;
   height: calc(100% - 60px); }
+  .md-side-nav .brand-logo {
+    left: 45%; }
   .md-side-nav .side-nav.fixed .active {
     color: #fff;
     background-color: #2196F3; }
@@ -6530,7 +6535,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     background: url("https://material-design.storage.googleapis.com/publish/material_v_9/0Bx4BSt6jniD7VG9DQVluOFJ4Tnc/materialdesign_principles_metaphor.png") 0% 0%/100%; }
   .md-side-nav .side-nav.fixed {
     position: fixed;
-    top: 62px;
+    top: 56px;
     left: 0px; }
   .md-side-nav .navbar-fixed {
     z-index: 9999;
@@ -6547,15 +6552,27 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     box-shadow: none;
     line-height: inherit; }
   .md-side-nav .right-side {
+    width: 50px;
     padding-top: 10px;
     display: inline-block;
     float: right; }
+    .md-side-nav .right-side span {
+      visibility: hidden; }
 
 .md-side-nav-body {
   padding-top: 50px;
   padding-left: 0; }
   .md-side-nav-body .container {
     max-width: 600px; }
+
+@media only screen and (min-width: 993px) {
+  .md-side-nav .right-side {
+    width: 150px; }
+    .md-side-nav .right-side span {
+      visibility: visible; } }
+
+.md-side-nav-body {
+  margin: 0 0 80px; }
 
 .md-image-collection {
   flex-wrap: wrap;
@@ -6604,11 +6621,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .md-button-dropdown img {
     width: 35px; }
   .md-button-dropdown .md-button-dropdown-list {
+    background-color: #fff;
     width: 200px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     position: absolute;
-    top: 63px;
-    right: 5px; }
+    top: 58px;
+    right: 3px; }
     .md-button-dropdown .md-button-dropdown-list li {
       width: 100%; }
       .md-button-dropdown .md-button-dropdown-list li a {
@@ -6623,6 +6641,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
         background-color: #2196F3; }
         .md-button-dropdown .md-button-dropdown-list li a.active .icon-link {
           color: #fff; }
+
+@media only screen and (min-width: 993px) {
+  .md-button-dropdown .md-button-dropdown-list {
+    top: 67px;
+    right: 5px; } }
 
 .md-user-settings-form .image-container {
   width: 250px;

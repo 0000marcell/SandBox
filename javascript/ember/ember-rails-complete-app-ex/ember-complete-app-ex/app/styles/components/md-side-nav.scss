@@ -1,4 +1,7 @@
 .md-side-nav {
+	.brand-logo{
+		left: 45%;
+	}
 	.side-nav.fixed{
 		.active{
 			color: #fff;
@@ -11,7 +14,7 @@
 	}
 	.side-nav.fixed {
 		position: fixed;
-		top: 62px;
+		top: 56px;
 		left: 0px;
 	}
 	.navbar-fixed {
@@ -35,6 +38,10 @@
 	top: inherit;
 	height: calc(100% - 60px);
 	.right-side {
+		span{
+			visibility: hidden;
+		}
+		width: 50px;
 		padding-top: 10px;
 		display: inline-block;
 		float: right;
@@ -50,5 +57,12 @@
 }
 
 @media #{$large-and-up}{
+	.md-side-nav{
+		.right-side{
+			width: 150px;			
+			span{
+				visibility: visible;	
+			}
+		}
+	}
 }
-

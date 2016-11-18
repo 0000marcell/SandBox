@@ -5,11 +5,12 @@
 		width: 35px;
 	}
 	.md-button-dropdown-list{
+		background-color: #fff;
 		width: 200px;
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 		position: absolute; 
-		top: 63px;
-		right: 5px;
+		top: 58px;
+		right: 3px;
 		li{
 			width: 100%;
 			a{
@@ -32,3 +33,13 @@
 		}
 	}
 }
+
+@media #{$large-and-up} {
+	.md-button-dropdown{
+		.md-button-dropdown-list{
+			top: 67px;
+			right: 5px;
+		}		
+	}
+}
+
