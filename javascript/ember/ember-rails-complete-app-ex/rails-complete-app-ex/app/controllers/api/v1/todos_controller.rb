@@ -5,11 +5,16 @@ class Api::V1::TodosController < ApplicationController
 	# GET /api/v1/todos
   def index
 		if params[:search] != ''
-			@api_v1_todos = Todo.search(params[:search]).order("created_at DESC")
+			@api_v1_todos = current_resource_owner.todos
+												.search(params[:search]).order("created_at DESC")
+			#@api_v1_todos = Todo.search(params[:search]).order("created_at DESC")
 		elsif params[:page]
-			@api_v1_todos = Todo.page(params[:page][:number]).per(params[:page][:size])
+			@api_v1_todos = current_resource_owner.todos.page(params[:page][:number])
+												.per(params[:page][:size])
+			#@api_v1_todos = Todo.page(params[:page][:number]).per(params[:page][:size])
 		else
-			@api_v1_todos = Todo.all
+			@api_v1_todos = current_resource_owner.todos
+			#@api_v1_todos = Todo.all
 		end
 		render json: @api_v1_todos 
   end

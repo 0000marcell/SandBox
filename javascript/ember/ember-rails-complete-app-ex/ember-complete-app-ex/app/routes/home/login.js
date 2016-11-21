@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+	errors: [],
 	authManager: Ember.inject.service('session'),
 	actions: {
 		login(email, password, view){
@@ -15,7 +16,7 @@ export default Ember.Route.extend({
 				});
 			}, (errors) => {
 				view.set('logging', false);
-				view.set('errors', errors.errors.title);
+				view.get('errors').pushObject(errors.error_description);
 			});
 		}
 	}

@@ -4,11 +4,16 @@ materialize:
 check scss files and removed things that are not being used
 orginize again the dashboard login etc:
   Publish everything make everything work remotely
+    solve problem with error on login
     deploy frontend
     deploy backend
   Check tests, write more if necessary(tests for the basic functionality)
   chat:
     but a message inside the chat icon to notify for new messages
+  bugs: 
+    bug on the CRUD pagination, not showing the number
+      of pages when the last page is selected,
+      not recalculating the page number when deleting items
 
 json-api messages:
   make the backend respond with the same content as mirage

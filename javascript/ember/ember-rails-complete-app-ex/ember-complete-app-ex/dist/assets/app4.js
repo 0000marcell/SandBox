@@ -2130,10 +2130,10 @@ define('app4/routes/home/login', ['exports', 'ember'], function (exports, _ember
    }
    __cov_uDEuIWgYua_ncTN4Z2M3WQ = __cov_uDEuIWgYua_ncTN4Z2M3WQ.__coverage__;
    if (!__cov_uDEuIWgYua_ncTN4Z2M3WQ['app/routes/home/login.js']) {
-      __cov_uDEuIWgYua_ncTN4Z2M3WQ['app/routes/home/login.js'] = { "path": "app/routes/home/login.js", "s": { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0 }, "b": {}, "f": { "1": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 6, "loc": { "start": { "line": 6, "column": 7 }, "end": { "line": 6, "column": 30 } } } }, "statementMap": { "1": { "start": { "line": 7, "column": 3 }, "end": { "line": 7, "column": 29 } }, "2": { "start": { "line": 8, "column": 3 }, "end": { "line": 19, "column": 6 } }, "3": { "start": { "line": 11, "column": 4 }, "end": { "line": 11, "column": 76 } }, "4": { "start": { "line": 12, "column": 4 }, "end": { "line": 15, "column": 7 } }, "5": { "start": { "line": 13, "column": 5 }, "end": { "line": 13, "column": 32 } }, "6": { "start": { "line": 14, "column": 5 }, "end": { "line": 14, "column": 43 } }, "7": { "start": { "line": 17, "column": 4 }, "end": { "line": 17, "column": 31 } }, "8": { "start": { "line": 18, "column": 4 }, "end": { "line": 18, "column": 44 } } }, "branchMap": {}, "code": ["import Ember from 'ember';", "", "export default Ember.Route.extend({", "\tauthManager: Ember.inject.service('session'),", "\tactions: {", "\t\tlogin(email, password, view){", "\t\t\tview.set('logging', true);", "\t\t\tthis.get('authManager').authenticate('authenticator:oauth2', ", "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\temail, ", "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tpassword).then(() => {", "\t\t\t\tlet username = this.get('authManager.data.authenticated.user.username');", "\t\t\t\tthis.store.find('user', username).then((user) => {", "\t\t\t\t\tview.set('logging', false);", "\t\t\t\t\tthis.transitionTo('users.user', user);", "\t\t\t\t});", "\t\t\t}, (errors) => {", "\t\t\t\tview.set('logging', false);", "\t\t\t\tview.set('errors', errors.errors.title);", "\t\t\t});", "\t\t}", "\t}", "});", ""] };
+      __cov_uDEuIWgYua_ncTN4Z2M3WQ['app/routes/home/login.js'] = { "path": "app/routes/home/login.js", "s": { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0 }, "b": {}, "f": { "1": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 7, "loc": { "start": { "line": 7, "column": 7 }, "end": { "line": 7, "column": 30 } } } }, "statementMap": { "1": { "start": { "line": 8, "column": 3 }, "end": { "line": 8, "column": 29 } }, "2": { "start": { "line": 9, "column": 3 }, "end": { "line": 20, "column": 6 } }, "3": { "start": { "line": 12, "column": 4 }, "end": { "line": 12, "column": 76 } }, "4": { "start": { "line": 13, "column": 4 }, "end": { "line": 16, "column": 7 } }, "5": { "start": { "line": 14, "column": 5 }, "end": { "line": 14, "column": 32 } }, "6": { "start": { "line": 15, "column": 5 }, "end": { "line": 15, "column": 43 } }, "7": { "start": { "line": 18, "column": 4 }, "end": { "line": 18, "column": 31 } }, "8": { "start": { "line": 19, "column": 4 }, "end": { "line": 19, "column": 60 } } }, "branchMap": {}, "code": ["import Ember from 'ember';", "", "export default Ember.Route.extend({", "\terrors: [],", "\tauthManager: Ember.inject.service('session'),", "\tactions: {", "\t\tlogin(email, password, view){", "\t\t\tview.set('logging', true);", "\t\t\tthis.get('authManager').authenticate('authenticator:oauth2', ", "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\temail, ", "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tpassword).then(() => {", "\t\t\t\tlet username = this.get('authManager.data.authenticated.user.username');", "\t\t\t\tthis.store.find('user', username).then((user) => {", "\t\t\t\t\tview.set('logging', false);", "\t\t\t\t\tthis.transitionTo('users.user', user);", "\t\t\t\t});", "\t\t\t}, (errors) => {", "\t\t\t\tview.set('logging', false);", "\t\t\t\tview.get('errors').pushObject(errors.error_description);", "\t\t\t});", "\t\t}", "\t}", "});", ""] };
    }
    __cov_uDEuIWgYua_ncTN4Z2M3WQ = __cov_uDEuIWgYua_ncTN4Z2M3WQ['app/routes/home/login.js'];
-   exports['default'] = _ember['default'].Route.extend({ authManager: _ember['default'].inject.service('session'), actions: { login: function login(email, password, view) {
+   exports['default'] = _ember['default'].Route.extend({ errors: [], authManager: _ember['default'].inject.service('session'), actions: { login: function login(email, password, view) {
             var _this = this;
 
             __cov_uDEuIWgYua_ncTN4Z2M3WQ.f['1']++;__cov_uDEuIWgYua_ncTN4Z2M3WQ.s['1']++;view.set('logging', true);__cov_uDEuIWgYua_ncTN4Z2M3WQ.s['2']++;this.get('authManager').authenticate('authenticator:oauth2', email, password).then(function () {
@@ -2141,7 +2141,7 @@ define('app4/routes/home/login', ['exports', 'ember'], function (exports, _ember
                   __cov_uDEuIWgYua_ncTN4Z2M3WQ.s['5']++;view.set('logging', false);__cov_uDEuIWgYua_ncTN4Z2M3WQ.s['6']++;_this.transitionTo('users.user', user);
                });
             }, function (errors) {
-               __cov_uDEuIWgYua_ncTN4Z2M3WQ.s['7']++;view.set('logging', false);__cov_uDEuIWgYua_ncTN4Z2M3WQ.s['8']++;view.set('errors', errors.errors.title);
+               __cov_uDEuIWgYua_ncTN4Z2M3WQ.s['7']++;view.set('logging', false);__cov_uDEuIWgYua_ncTN4Z2M3WQ.s['8']++;view.get('errors').pushObject(errors.error_description);
             });
          } } });
 });
@@ -4484,7 +4484,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("app4/app")["default"].create({"name":"app4","version":"0.0.0+f08d48af"});
+  require("app4/app")["default"].create({"name":"app4","version":"0.0.0+949aa6a6"});
 }
 
 /* jshint ignore:end */

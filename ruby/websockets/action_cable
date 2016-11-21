@@ -1,0 +1,11 @@
+Action Cable Under the Hood.
+Action cable can run on a stand-alone
+server, or we can configure it 
+to run its own processes within the 
+main application server.
+
+Action cable uses redis as a 
+data store for transient data,
+syncing content across instances
+of your application
+
