@@ -1,0 +1,14 @@
+1. Read
+	read the read.me, manual, contrib etc...
+	read the changelogs
+	read all the issues
+	follow the repo
+2. answer the questions that you know how to answer
+	start improving the documentation
+		add warning for common mistakes
+		improve the error messages
+3. help with issues, re-read the docs
+4. reproduce bugs
+	write falling tests
+5. writing patches.
+6. improve everything.

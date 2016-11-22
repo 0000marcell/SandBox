@@ -18,6 +18,7 @@ export default function() {
     this.del('/posts/:id');
     http://www.ember-cli-mirage.com/docs/v0.2.0-beta.7/shorthands/
   */
+	this.passthrough('http://0.0.0.0:3000/**');
 	this.passthrough('/write-coverage');
 	this.passthrough('http://pousada-serra-back-end.herokuapp.com/api/images');
 	this.post('/oauth/token', (schema, request) => {

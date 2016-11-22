@@ -1,5 +1,6 @@
 class CustomTokensController < Doorkeeper::TokensController
 	def create
+		puts "### custom tokens "
 		response = strategy.authorize
 		body = response.body
 		if response.status == :ok

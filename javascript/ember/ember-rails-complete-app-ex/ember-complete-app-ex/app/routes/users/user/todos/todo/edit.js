@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 	actions: {
 		edit(model, view){
+			debugger;
 			view.set('loading', true);
 			model.save().then(() => {
 				view.set('loading', false);
