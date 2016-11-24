@@ -4485,7 +4485,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("app4/app")["default"].create({"useMirage":true,"host":"/","oauth2":"/oauth/token","name":"app4","version":"0.0.0+a82bf857"});
+  require("app4/app")["default"].create({"useMirage":true,"host":"/","oauth2":"/oauth/token","name":"app4","version":"0.0.0+8399fa71"});
 }
 
 /* jshint ignore:end */

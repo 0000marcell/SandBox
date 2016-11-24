@@ -37,7 +37,7 @@ module.exports = function(environment) {
 		ENV.APP.useMirage = true;
 		ENV.APP.host = '/';
 		ENV.APP.oauth2 = '/oauth/token';
-		ENV['ember-cli-mirage'].enable = true;
+		ENV['ember-cli-mirage'].enabled = true;
 		ENV['ember-simple-auth'].baseURL = '/';
 		// Testem prefers this...
     ENV.baseURL = '/';
