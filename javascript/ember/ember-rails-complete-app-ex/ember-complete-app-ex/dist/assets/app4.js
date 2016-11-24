@@ -6,17 +6,17 @@
 
 /* jshint ignore:end */
 
-define('app4/adapters/application', ['exports', 'ember-data/adapters/json-api', 'ember-simple-auth/mixins/data-adapter-mixin'], function (exports, _emberDataAdaptersJsonApi, _emberSimpleAuthMixinsDataAdapterMixin) {
+define('app4/adapters/application', ['exports', 'ember-data/adapters/json-api', 'ember-simple-auth/mixins/data-adapter-mixin', 'app4/config/environment'], function (exports, _emberDataAdaptersJsonApi, _emberSimpleAuthMixinsDataAdapterMixin, _app4ConfigEnvironment) {
    var __cov_qYlmtFBdLKVTb_qV_FT4YQ = Function('return this')();
    if (!__cov_qYlmtFBdLKVTb_qV_FT4YQ.__coverage__) {
       __cov_qYlmtFBdLKVTb_qV_FT4YQ.__coverage__ = {};
    }
    __cov_qYlmtFBdLKVTb_qV_FT4YQ = __cov_qYlmtFBdLKVTb_qV_FT4YQ.__coverage__;
    if (!__cov_qYlmtFBdLKVTb_qV_FT4YQ['app/adapters/application.js']) {
-      __cov_qYlmtFBdLKVTb_qV_FT4YQ['app/adapters/application.js'] = { "path": "app/adapters/application.js", "s": { "1": 0, "2": 0, "3": 0 }, "b": {}, "f": { "1": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 9, "loc": { "start": { "line": 9, "column": 21 }, "end": { "line": 9, "column": 44 } } } }, "statementMap": { "1": { "start": { "line": 10, "column": 2 }, "end": { "line": 10, "column": 42 } }, "2": { "start": { "line": 11, "column": 3 }, "end": { "line": 11, "column": 42 } }, "3": { "start": { "line": 12, "column": 4 }, "end": { "line": 12, "column": 16 } } }, "branchMap": {}, "code": ["import JSONAPIAdapter from 'ember-data/adapters/json-api';", "import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';", "", "export default JSONAPIAdapter.extend(DataAdapterMixin, {", "\thost: 'http://0.0.0.0:3000',", "\tnamespace: 'api/v1',", "\tauthorizer: 'authorizer:application',", "\tcoalesceFindRequests: true,", "\tparseErrorResponse: function(responseText) {", "\t\tvar response = JSON.parse(responseText);", "\t \tvar json = {errors: [response.errors]};", "\t \t\treturn json;", "\t}", "});", ""] };
+      __cov_qYlmtFBdLKVTb_qV_FT4YQ['app/adapters/application.js'] = { "path": "app/adapters/application.js", "s": { "1": 0, "2": 0, "3": 0 }, "b": {}, "f": { "1": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 10, "loc": { "start": { "line": 10, "column": 21 }, "end": { "line": 10, "column": 44 } } } }, "statementMap": { "1": { "start": { "line": 11, "column": 2 }, "end": { "line": 11, "column": 42 } }, "2": { "start": { "line": 12, "column": 3 }, "end": { "line": 12, "column": 42 } }, "3": { "start": { "line": 13, "column": 3 }, "end": { "line": 13, "column": 15 } } }, "branchMap": {}, "code": ["import JSONAPIAdapter from 'ember-data/adapters/json-api';", "import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';", "import ENV from 'app4/config/environment';", "", "export default JSONAPIAdapter.extend(DataAdapterMixin, {", "\thost: ENV.APP.host,", "\tnamespace: 'api/v1',", "\tauthorizer: 'authorizer:application',", "\tcoalesceFindRequests: true,", "\tparseErrorResponse: function(responseText) {", "\t\tvar response = JSON.parse(responseText);", "\t \tvar json = {errors: [response.errors]};", "\t \treturn json;", "\t}", "});", ""] };
    }
    __cov_qYlmtFBdLKVTb_qV_FT4YQ = __cov_qYlmtFBdLKVTb_qV_FT4YQ['app/adapters/application.js'];
-   exports['default'] = _emberDataAdaptersJsonApi['default'].extend(_emberSimpleAuthMixinsDataAdapterMixin['default'], { host: 'http://0.0.0.0:3000', namespace: 'api/v1', authorizer: 'authorizer:application', coalesceFindRequests: true, parseErrorResponse: function parseErrorResponse(responseText) {
+   exports['default'] = _emberDataAdaptersJsonApi['default'].extend(_emberSimpleAuthMixinsDataAdapterMixin['default'], { host: _app4ConfigEnvironment['default'].APP.host, namespace: 'api/v1', authorizer: 'authorizer:application', coalesceFindRequests: true, parseErrorResponse: function parseErrorResponse(responseText) {
          __cov_qYlmtFBdLKVTb_qV_FT4YQ.f['1']++;__cov_qYlmtFBdLKVTb_qV_FT4YQ.s['1']++;var response = JSON.parse(responseText);__cov_qYlmtFBdLKVTb_qV_FT4YQ.s['2']++;var json = { errors: [response.errors] };__cov_qYlmtFBdLKVTb_qV_FT4YQ.s['3']++;return json;
       } });
 });
@@ -56,17 +56,17 @@ define('app4/authenticators/application', ['exports', 'ember-simple-auth/authori
    __cov_KmdfYlKvgoRiI8c$vTxAHg = __cov_KmdfYlKvgoRiI8c$vTxAHg['app/authenticators/application.js'];
    exports['default'] = _emberSimpleAuthAuthorizersOauth2Bearer['default'].extend();
 });
-define('app4/authenticators/oauth2', ['exports', 'ember-simple-auth/authenticators/oauth2-password-grant'], function (exports, _emberSimpleAuthAuthenticatorsOauth2PasswordGrant) {
+define('app4/authenticators/oauth2', ['exports', 'ember-simple-auth/authenticators/oauth2-password-grant', 'app4/config/environment'], function (exports, _emberSimpleAuthAuthenticatorsOauth2PasswordGrant, _app4ConfigEnvironment) {
    var __cov_IP4B3FoDCLGLGrD56BAFaw = Function('return this')();
    if (!__cov_IP4B3FoDCLGLGrD56BAFaw.__coverage__) {
       __cov_IP4B3FoDCLGLGrD56BAFaw.__coverage__ = {};
    }
    __cov_IP4B3FoDCLGLGrD56BAFaw = __cov_IP4B3FoDCLGLGrD56BAFaw.__coverage__;
    if (!__cov_IP4B3FoDCLGLGrD56BAFaw['app/authenticators/oauth2.js']) {
-      __cov_IP4B3FoDCLGLGrD56BAFaw['app/authenticators/oauth2.js'] = { "path": "app/authenticators/oauth2.js", "s": {}, "b": {}, "f": {}, "fnMap": {}, "statementMap": {}, "branchMap": {}, "code": ["import OAuth2PasswordGrant from 'ember-simple-auth/authenticators/oauth2-password-grant';", "", "export default OAuth2PasswordGrant.extend({", "\tserverTokenEndpoint: 'http://0.0.0.0:3000/oauth/token'", "});", ""] };
+      __cov_IP4B3FoDCLGLGrD56BAFaw['app/authenticators/oauth2.js'] = { "path": "app/authenticators/oauth2.js", "s": {}, "b": {}, "f": {}, "fnMap": {}, "statementMap": {}, "branchMap": {}, "code": ["import OAuth2PasswordGrant from 'ember-simple-auth/authenticators/oauth2-password-grant';", "import ENV from 'app4/config/environment';", "", "export default OAuth2PasswordGrant.extend({", "\tserverTokenEndpoint: ENV.APP.oauth2", "});", ""] };
    }
    __cov_IP4B3FoDCLGLGrD56BAFaw = __cov_IP4B3FoDCLGLGrD56BAFaw['app/authenticators/oauth2.js'];
-   exports['default'] = _emberSimpleAuthAuthenticatorsOauth2PasswordGrant['default'].extend({ serverTokenEndpoint: 'http://0.0.0.0:3000/oauth/token' });
+   exports['default'] = _emberSimpleAuthAuthenticatorsOauth2PasswordGrant['default'].extend({ serverTokenEndpoint: _app4ConfigEnvironment['default'].APP.oauth2 });
 });
 define('app4/authorizers/application', ['exports', 'ember-simple-auth/authorizers/oauth2-bearer'], function (exports, _emberSimpleAuthAuthorizersOauth2Bearer) {
    var __cov_qnI14vvTGwmnOgpD9vQ23w = Function('return this')();
@@ -2421,14 +2421,14 @@ define('app4/routes/users/user/todos/todo/edit', ['exports', 'ember'], function 
    }
    __cov_2orJG7wrQPOSVSly9ugh9w = __cov_2orJG7wrQPOSVSly9ugh9w.__coverage__;
    if (!__cov_2orJG7wrQPOSVSly9ugh9w['app/routes/users/user/todos/todo/edit.js']) {
-      __cov_2orJG7wrQPOSVSly9ugh9w['app/routes/users/user/todos/todo/edit.js'] = { "path": "app/routes/users/user/todos/todo/edit.js", "s": { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0 }, "b": {}, "f": { "1": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 5, "loc": { "start": { "line": 5, "column": 6 }, "end": { "line": 5, "column": 19 } } } }, "statementMap": { "1": { "start": { "line": 6, "column": 3 }, "end": { "line": 6, "column": 12 } }, "2": { "start": { "line": 7, "column": 3 }, "end": { "line": 7, "column": 29 } }, "3": { "start": { "line": 8, "column": 3 }, "end": { "line": 16, "column": 6 } }, "4": { "start": { "line": 9, "column": 4 }, "end": { "line": 9, "column": 31 } }, "5": { "start": { "line": 10, "column": 4 }, "end": { "line": 11, "column": 38 } }, "6": { "start": { "line": 13, "column": 4 }, "end": { "line": 13, "column": 31 } }, "7": { "start": { "line": 14, "column": 4 }, "end": { "line": 15, "column": 68 } } }, "branchMap": {}, "code": ["import Ember from 'ember';", "", "export default Ember.Route.extend({", "\tactions: {", "\t\tedit(model, view){", "\t\t\tdebugger;", "\t\t\tview.set('loading', true);", "\t\t\tmodel.save().then(() => {", "\t\t\t\tview.set('loading', false);", "\t\t\t\tview.get('msgs')", "\t\t\t\t\t.pushObject('Model was edited!');", "\t\t\t}).catch((errors) => {", "\t\t\t\tview.set('loading', false);", "\t\t\t\tview.get('errors')", "\t\t\t\t\t.pushObject(`Error savind the model : ${errors.errors.title}`);", "\t\t\t});", "\t\t}", "\t}", "});", ""] };
+      __cov_2orJG7wrQPOSVSly9ugh9w['app/routes/users/user/todos/todo/edit.js'] = { "path": "app/routes/users/user/todos/todo/edit.js", "s": { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0 }, "b": {}, "f": { "1": 0 }, "fnMap": { "1": { "name": "(anonymous_1)", "line": 5, "loc": { "start": { "line": 5, "column": 6 }, "end": { "line": 5, "column": 19 } } } }, "statementMap": { "1": { "start": { "line": 6, "column": 3 }, "end": { "line": 6, "column": 29 } }, "2": { "start": { "line": 7, "column": 3 }, "end": { "line": 15, "column": 6 } }, "3": { "start": { "line": 8, "column": 4 }, "end": { "line": 8, "column": 31 } }, "4": { "start": { "line": 9, "column": 4 }, "end": { "line": 10, "column": 38 } }, "5": { "start": { "line": 12, "column": 4 }, "end": { "line": 12, "column": 31 } }, "6": { "start": { "line": 13, "column": 4 }, "end": { "line": 14, "column": 68 } } }, "branchMap": {}, "code": ["import Ember from 'ember';", "", "export default Ember.Route.extend({", "\tactions: {", "\t\tedit(model, view){", "\t\t\tview.set('loading', true);", "\t\t\tmodel.save().then(() => {", "\t\t\t\tview.set('loading', false);", "\t\t\t\tview.get('msgs')", "\t\t\t\t\t.pushObject('Model was edited!');", "\t\t\t}).catch((errors) => {", "\t\t\t\tview.set('loading', false);", "\t\t\t\tview.get('errors')", "\t\t\t\t\t.pushObject(`Error savind the model : ${errors.errors.title}`);", "\t\t\t});", "\t\t}", "\t}", "});", ""] };
    }
    __cov_2orJG7wrQPOSVSly9ugh9w = __cov_2orJG7wrQPOSVSly9ugh9w['app/routes/users/user/todos/todo/edit.js'];
    exports['default'] = _ember['default'].Route.extend({ actions: { edit: function edit(model, view) {
-            __cov_2orJG7wrQPOSVSly9ugh9w.f['1']++;__cov_2orJG7wrQPOSVSly9ugh9w.s['1']++;debugger;__cov_2orJG7wrQPOSVSly9ugh9w.s['2']++;view.set('loading', true);__cov_2orJG7wrQPOSVSly9ugh9w.s['3']++;model.save().then(function () {
-               __cov_2orJG7wrQPOSVSly9ugh9w.s['4']++;view.set('loading', false);__cov_2orJG7wrQPOSVSly9ugh9w.s['5']++;view.get('msgs').pushObject('Model was edited!');
+            __cov_2orJG7wrQPOSVSly9ugh9w.f['1']++;__cov_2orJG7wrQPOSVSly9ugh9w.s['1']++;view.set('loading', true);__cov_2orJG7wrQPOSVSly9ugh9w.s['2']++;model.save().then(function () {
+               __cov_2orJG7wrQPOSVSly9ugh9w.s['3']++;view.set('loading', false);__cov_2orJG7wrQPOSVSly9ugh9w.s['4']++;view.get('msgs').pushObject('Model was edited!');
             })['catch'](function (errors) {
-               __cov_2orJG7wrQPOSVSly9ugh9w.s['6']++;view.set('loading', false);__cov_2orJG7wrQPOSVSly9ugh9w.s['7']++;view.get('errors').pushObject('Error savind the model : ' + errors.errors.title);
+               __cov_2orJG7wrQPOSVSly9ugh9w.s['5']++;view.set('loading', false);__cov_2orJG7wrQPOSVSly9ugh9w.s['6']++;view.get('errors').pushObject('Error savind the model : ' + errors.errors.title);
             });
          } } });
 });
@@ -2451,10 +2451,10 @@ define('app4/serializers/application', ['exports', 'ember', 'ember-data', 'app4/
    }
    __cov_EB_XJFCy$GrR6CZlbL89bg = __cov_EB_XJFCy$GrR6CZlbL89bg.__coverage__;
    if (!__cov_EB_XJFCy$GrR6CZlbL89bg['app/serializers/application.js']) {
-      __cov_EB_XJFCy$GrR6CZlbL89bg['app/serializers/application.js'] = { "path": "app/serializers/application.js", "s": { "1": 0, "2": 0, "3": 0, "4": 0 }, "b": { "1": [0, 0] }, "f": {}, "fnMap": {}, "statementMap": { "1": { "start": { "line": 6, "column": 0 }, "end": { "line": 6, "column": 15 } }, "2": { "start": { "line": 7, "column": 0 }, "end": { "line": 11, "column": 1 } }, "3": { "start": { "line": 8, "column": 1 }, "end": { "line": 8, "column": 46 } }, "4": { "start": { "line": 10, "column": 1 }, "end": { "line": 10, "column": 30 } } }, "branchMap": { "1": { "line": 7, "type": "if", "locations": [{ "start": { "line": 7, "column": 0 }, "end": { "line": 7, "column": 0 } }, { "start": { "line": 7, "column": 0 }, "end": { "line": 7, "column": 0 } }] } }, "code": ["import Ember from 'ember';", "import DS from 'ember-data';", "import ENV from 'app4/config/environment';", "import railsSerializer from './rails-serializer';", "", "let serializer;", "if(ENV.useMirage){", "\tserializer = DS.JSONAPISerializer.extend({});", "}else{", "\tserializer = railsSerializer;", "}", "", "export default serializer;", ""] };
+      __cov_EB_XJFCy$GrR6CZlbL89bg['app/serializers/application.js'] = { "path": "app/serializers/application.js", "s": { "1": 0, "2": 0, "3": 0, "4": 0 }, "b": { "1": [0, 0] }, "f": {}, "fnMap": {}, "statementMap": { "1": { "start": { "line": 6, "column": 0 }, "end": { "line": 6, "column": 15 } }, "2": { "start": { "line": 7, "column": 0 }, "end": { "line": 11, "column": 1 } }, "3": { "start": { "line": 8, "column": 1 }, "end": { "line": 8, "column": 46 } }, "4": { "start": { "line": 10, "column": 1 }, "end": { "line": 10, "column": 30 } } }, "branchMap": { "1": { "line": 7, "type": "if", "locations": [{ "start": { "line": 7, "column": 0 }, "end": { "line": 7, "column": 0 } }, { "start": { "line": 7, "column": 0 }, "end": { "line": 7, "column": 0 } }] } }, "code": ["import Ember from 'ember';", "import DS from 'ember-data';", "import ENV from 'app4/config/environment';", "import railsSerializer from './rails-serializer';", "", "let serializer;", "if(ENV.APP.useMirage){", "\tserializer = DS.JSONAPISerializer.extend({});", "}else{", "\tserializer = railsSerializer;", "}", "", "export default serializer;", ""] };
    }
    __cov_EB_XJFCy$GrR6CZlbL89bg = __cov_EB_XJFCy$GrR6CZlbL89bg['app/serializers/application.js'];
-   __cov_EB_XJFCy$GrR6CZlbL89bg.s['1']++;var serializer = undefined;__cov_EB_XJFCy$GrR6CZlbL89bg.s['2']++;if (_app4ConfigEnvironment['default'].useMirage) {
+   __cov_EB_XJFCy$GrR6CZlbL89bg.s['1']++;var serializer = undefined;__cov_EB_XJFCy$GrR6CZlbL89bg.s['2']++;if (_app4ConfigEnvironment['default'].APP.useMirage) {
       __cov_EB_XJFCy$GrR6CZlbL89bg.b['1'][0]++;__cov_EB_XJFCy$GrR6CZlbL89bg.s['3']++;serializer = _emberData['default'].JSONAPISerializer.extend({});
    } else {
       __cov_EB_XJFCy$GrR6CZlbL89bg.b['1'][1]++;__cov_EB_XJFCy$GrR6CZlbL89bg.s['4']++;serializer = _app4SerializersRailsSerializer['default'];
@@ -4485,7 +4485,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("app4/app")["default"].create({"name":"app4","version":"0.0.0+a1850f99"});
+  require("app4/app")["default"].create({"useMirage":true,"host":"/","oauth2":"/oauth/token","name":"app4","version":"0.0.0+a82bf857"});
 }
 
 /* jshint ignore:end */

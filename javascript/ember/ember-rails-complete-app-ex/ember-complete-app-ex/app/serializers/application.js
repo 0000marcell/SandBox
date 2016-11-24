@@ -4,7 +4,7 @@ import ENV from 'app4/config/environment';
 import railsSerializer from './rails-serializer';
 
 let serializer;
-if(ENV.useMirage){
+if(ENV.APP.useMirage){
 	serializer = DS.JSONAPISerializer.extend({});
 }else{
 	serializer = railsSerializer;

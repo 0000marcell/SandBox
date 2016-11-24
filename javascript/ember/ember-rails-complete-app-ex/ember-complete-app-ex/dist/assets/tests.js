@@ -3304,7 +3304,7 @@ define('app4/tests/routes/users/user/todos/todo/edit.jshint', ['exports'], funct
   QUnit.module('JSHint | routes/users/user/todos/todo/edit.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/users/user/todos/todo/edit.js should pass jshint.\nroutes/users/user/todos/todo/edit.js: line 6, col 13, Forgotten \'debugger\' statement?\n\n1 error');
+    assert.ok(true, 'routes/users/user/todos/todo/edit.js should pass jshint.');
   });
 });
 define('app4/tests/routes/users/user/todos/todo/index.jshint', ['exports'], function (exports) {

@@ -2,48 +2,54 @@
 
 module.exports = function(environment) {
   var ENV = {
-		useMirage: false,
 		modulePrefix: 'app4',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
 		'ember-simple-auth': {
-			authenticationRoute: 'admin/login'
+			baseURL: '/',
+			authenticationRoute: 'home/login'
 		},
-		EmberENV: {
-      FEATURES: {
-        // Here you can enable experimental features on an ember canary build
-        // e.g. 'with-controller': true
-      }
-    },
-    APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
+		'ember-cli-mirage': {
+			enabled: false
+		},
+		APP: {
+			useMirage: false,
+			host: '/',
+			oauth2: '/oauth/token'
     }
   };
-
-  if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
+	
+	if(environment == 'development'){
+		ENV.APP.useMirage = true;
+		ENV.APP.host = '/';
+		ENV.APP.oauth2 = '/oauth/token';
+		ENV['ember-cli-mirage'].enabled = true;
+		ENV['ember-simple-auth'].baseURL = '/';
+		// ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-  }
-
+	}
+	
   if (environment === 'test') {
-    // Testem prefers this...
+		ENV.APP.useMirage = true;
+		ENV.APP.host = '/';
+		ENV.APP.oauth2 = '/oauth/token';
+		ENV['ember-cli-mirage'].enable = true;
+		ENV['ember-simple-auth'].baseURL = '/';
+		// Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';
-
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
-
     ENV.APP.rootElement = '#ember-testing';
   }
 
   if (environment === 'production') {
-  }
+	}
 
   return ENV;
 };
