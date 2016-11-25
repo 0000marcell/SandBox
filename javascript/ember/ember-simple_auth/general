@@ -1,0 +1,2 @@
+ApplicationRouteMixin: is used to invalidate the session on the given route, even when the 
+session is invalidated in another tab
