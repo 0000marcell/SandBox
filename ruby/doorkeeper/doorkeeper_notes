@@ -1,0 +1,7 @@
+doorkeeper can be configure in config/initializers/doorkeeper.rb
+
+doorkeepers adds tables in the db and a use_doorkeeper helper on the routes that 
+adds the necessary routes
+
+One of these routes is oauth/token, you do a post with login information to 
+this endpoint to create a new token
