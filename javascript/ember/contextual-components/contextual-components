@@ -1,0 +1,41 @@
+Yield specific content:
+we can yield specific content in to a component with
+template:
+{{#collapsible-panel as |person|}}
+	{{person.firstName}}
+	{{person.lastName}}
+{{/collapsible-panel}}
+
+using the hash helper
+template collapsible-panel:
+{{yield (hash firstName='Marcell' lastName='Cruz')}}
+
+we can also yield components inside the hash with
+{{yield (hash
+	header=(component 'collapsible-panel-header') 
+	body=(component 'collapsible-panel-body')}}
+
+now we can use the yield components:
+{{#collapsible-panel as |panel|}}
+	{{panel.header on-click=(action (toggle 'isOpen' this))}}
+	{{panel.body isOpen=true}}
+{{/collapsible-panel}}
+
+configuring nested component:
+we can pass aditional options to the nested component 
+{{yield (hash
+	header=(component 'collapsible-panel-header' 
+		on-click=(action (toggle 'isOpen' this))) 
+	body=(component 'collapsible-panel-body' isOpen=true)}}
+
+now we don't have to declare this options everytime we use the contextual
+component, the header must implenent toggle tough
+
+flexibility vs incapsulation:
+you must strive to keep most of the properties private,
+that way you don't lock yourself with these properties in the future
+
+when to use contextual component:
+try to use contextual component as little as possible, 
+only use contextual components when you have nested components that 
+share data.
