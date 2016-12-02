@@ -1,3 +1,11 @@
+Resource Owner ?
+Client ?
+Authorization Server ?
+
+Supported Features:
+	authorization Code Flow
+		
+
 doorkeeper can be configure in config/initializers/doorkeeper.rb
 
 doorkeepers adds tables in the db and a use_doorkeeper helper on the routes that 

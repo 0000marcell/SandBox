@@ -1,4 +1,7 @@
-problem with forms see on flask
+problem with the forms link on the dummy app branch/v1
+	ember-data is not installed so the route transition halts
+		most of the code is commented out and a wierd bug is happening, need to invastigate
+
 issues:
 #92  docs improvement md-badge
 #93  docs improvement md-navbar
@@ -17,3 +20,6 @@ issues:
 #231 possible candidate to replicate
 #225 looks like a simple implementation
 #220 try the code, close this issue if possible
+
+done:
+broken link on readme
