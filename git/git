@@ -1,0 +1,5 @@
+workflow:
+create a new branch for each issue being worked, master will always be updated with remote master of the 
+main project, everytime we wish to work on a issue we will create a new branch from master, work on this 
+new branch, create a remote branch with the same name and push to this remote branch, then make a pr based on 
+this new branch

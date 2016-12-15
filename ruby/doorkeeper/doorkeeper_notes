@@ -13,3 +13,15 @@ adds the necessary routes
 
 One of these routes is oauth/token, you do a post with login information to 
 this endpoint to create a new token
+
+I can use doorkeeper_authorize!() inside a controller to authenticate the user see http://stackoverflow.com/questions/36547315/access-doorkeeper-from-action-rails-controller
+
+We can create token manually via 
+token = Doorkeeper::AccessToken.create(
+  resource_owner_id: new_user.id,
+  application_id: app.id,
+  scopes: 'public'
+)
+
+Difference between devise and doorkeeper:
+devise is a authentication service, doorkeeper is authorization service, giving access to user and application through a token
