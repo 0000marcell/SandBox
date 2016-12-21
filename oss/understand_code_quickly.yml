@@ -1,0 +1,6 @@
+ways to more quickly understand code bases
+
+. find the entry point 
+. create a very simple diagram with the dependencies
+. ignore dependencies that are just utils
+. create tests to observe how data is passed and modified 

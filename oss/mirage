@@ -1,0 +1,69 @@
+understanting the orm:
+1: app/initializers/ember-cli-mirage:
+  read modules: return all ember-cli-mirage modules from ember, and puts them in a 
+  key value object {'factories': {}, 'scenarios': { only default suported } etc ...}
+  _shouldUseMirage: verifies if the user made configuration in the enviroment, or 
+  the default case to run is valid, if any of the two is true mirage will run
+  default conditions to use addon, env development and not using proxy, or env test
+  startMirage: reads the modules and starts the server passing the modules 
+  enviroment and baseConfigs to the server.
+2: server:
+  createPretender server: return new instance of Pretender deal with server logs
+  passthough and unhandled requests
+  create Schema passing the db 
+3: schema:
+4: model:
+
+overview:
+mirage uses pretender to intercept ember requests 
+and mock a http server
+
+organized parts files :
+
+addon/orm/model
+
+
+addon/assert:
+declares mirage own error handling tool based on ember-metal/error 
+extend the Error object and adds more errors
+
+addon/db-collection:
+a collection of db-records a database table
+
+classes:
+IdentityManager: used to identify records on the dbcollection, have methods
+like reset, set, and get 
+used in db-collection remove and insert methods, its mainly used to generate
+ids for the records in the collection
+
+methods:
+constructor: set nextID to 1 and empty the _ids
+get: return nextId
+set n: verifies if the id has already been taken, and sets the id
+inc: gets the current value and increments it, returning the next value
+fetch: sets the _ids[id] value as true and returns the next id using inc()
+reset: resets everything
+
+BaseRouteHandler:
+parse the path returning meaningful information like getting the model from the 
+path and the ids
+
+methods:
+getModelClassFromPath fullPath:returns the model path taken from the last non :id item in the string
+
+_getIdForRequest request jsonApiDoc: gets the id from the request or the jsonApiDoc object, it depends upon the adapter being used 
+
+_getJsonApiDocForRequest request modelName:
+
+_getAttrsForRequest
+
+
+
+keyparts:
+
+db:load fixtures
+model:
+server: starting point, intercept ember request and fakes a http server
+
+questions: whats is _getJsonApiDocForRequest route-handlers base, 
+  what is testConfig in ember-cli-build

@@ -1,0 +1,9 @@
+we include ruby binaries in each project
+
+the binaries can be downloads here https://traveling-ruby.s3-us-west-2.amazonaws.com/list.html
+
+we can automate the proccess using the rakefile in this repo
+
+a example application is in $ghp/traveling-ruby
+
+
