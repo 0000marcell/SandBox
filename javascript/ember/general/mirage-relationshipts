@@ -1,0 +1,23 @@
+a good way to build complex relation ships is to just overwrite 
+the route handles in config.js and create manually all the models and relationships following 
+http://www.ember-cli-mirage.com/docs/v0.2.x/models/
+
+another way is using advanced factories functions
+Factories:
+ids are automatically created in factories
+
+Build Relationships with aftercreate:
+// 
+import { Factory, faker  } from 'ember-cli-mirage';
+
+export default Factory.extend({
+  isAdmin: faker.random.boolean,
+  afterCreate(contact, server) {
+    // Only allow a max of 5 admins to be created
+    if (server.schema.contacts.where({ isAdmin: true  }).models.length >= 5) {
+      contact.update({ isAdmin: false  });
+    }
+  }
+});
+
+

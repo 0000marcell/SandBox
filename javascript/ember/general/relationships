@@ -1,0 +1,62 @@
+Explicit inverses:
+Ember tries to figure out which relation ship is the inverse of which
+if you only have one relation ship its easy to figure out, when you have many
+you need to tell ember which relationship is the inverse
+ex: 
+user: hasMany posts(posts), user hasMany favorites(posts) 
+posts: belongs to user, now we need to say to which user field the posts belongs too
+DS.belongsTo('user', {inverse: 'posts'});
+
+Reflexive relationships:
+A model that has a relationship with itself, 
+ex: 
+// app/models/folder.js
+import DS from 'ember-data';
+
+export default DS.Model.extend({
+  children: DS.hasMany('folder', { inverse: 'parent'  }),
+  parent: DS.belongsTo('folder', { inverse: 'children'  })
+});
+
+ReadOnly Nested Data:
+if we need to use deeply nested propertis of read only objects 
+we can skip the transform and put the whole object in a field of a model like so:
+obj: DS.attr()
+
+Creating Records:
+we can set relationships to newly created models with 
+this.get('store').createRecord('comment', { blogPost: blog });
+we could also set the relationship pushing the new comment in to the blogpost
+blogPost.get('comments').pushObject(comment);
+or using set
+comment.set('blogPost', blogPost);
+
+Retrieving related records:
+
+We can include related relationships with the first query using include
+this.store.find('post', params.post_id, {include: 'comments'});
+
+we can select more than one relationship to be included
+this.store.find('post', params.post_id, {include: 'comments,comments.author'});
+
+we can also use the include option with a query
+this.store.query('artist', {
+  filter: {name: 'Adele'},
+  include: 'albums'
+});
+
+Removing relationships:
+We can set the relationship to null 
+let comment = this.get('store').peekRecord('comment', 1);
+comment.set('blogPost', null);
+comment.save();
+
+or remove from a hasMany relationship:
+let blogPost = this.get('store').peekRecord('blog-post', 1);
+let comment = this.get('store').peekRecord('comment', 1);
+blogPost.get('comments').removeObject(comment);
+blogPost.save();
+
+Relationships as promisses:
+while working with relationships is important to remember
+that they return promises.
