@@ -1,0 +1,7 @@
+we can use vim mode on twiddle
+
+to use mirage:
+modify twiddleconfig, add the ember-cli-mirage addon just like in the packages.json of a 
+standard project
+also adds ember-cli-mirage enable: true
+now everything you need to do is create the mirage folders and all the necessary files

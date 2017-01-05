@@ -2,6 +2,23 @@ Explicit inverses:
 Ember tries to figure out which relation ship is the inverse of which
 if you only have one relation ship its easy to figure out, when you have many
 you need to tell ember which relationship is the inverse
+the inverse can be understood as the name of the relationship on the other side 
+lets say we have a model post, this post has many comments, the name of the connection(relationship)
+between post and comment in the post side is "comments", so we can post.get('comments') and get all the comments
+now imagine if we wanna get the post which a comment belongs to from the comments side, we need to tell
+ember which name the connection has in the post side, so the declared inverse on comments will be comments en:
+
+post{
+  comments: hasMany('comment', {inverse: 'post'})
+}
+
+comment{
+  post: belongsTo('post', {inverse: 'comments'})
+}
+
+In this case we can ommit the inverse because there only one relationship one the same type 
+in the models, but if we had many we would have to tell ember which one is the inverse.
+
 ex: 
 user: hasMany posts(posts), user hasMany favorites(posts) 
 posts: belongs to user, now we need to say to which user field the posts belongs too
