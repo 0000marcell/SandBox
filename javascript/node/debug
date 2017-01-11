@@ -1,0 +1,3 @@
+node debug test.js runs in debug mode 
+debugger in the code stops the execution
+repl enters spection mode

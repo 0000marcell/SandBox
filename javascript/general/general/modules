@@ -1,0 +1,98 @@
+you can have multiple named exports or one single default export
+named exports:
+export const sqrt = Math.sqrt(); 
+exrpot const anotherThing;
+default export:
+export default function(){
+}
+
+we can import all named exports or just one:
+import * as lib from 'something';
+import { sqrt, anotherThing };
+
+imports can be made using relative paths ('../model/user') js can be usually
+omited in these cases
+absolute paths ('/lib/js/helpers')
+names ('util') what modules names refer to has to configured.
+
+Module as singletons even if a module is imported multiple times, only a single
+instance of it exists
+
+implementations 
+commonJS(node.js): Designed for synchronous loading and server
+AMD(requireJS): Asynchronous loading and browsers 
+
+in ES6 are a build in feature and suport AMD and CommonJS
+
+Each of the export default <expressions> is the same as :
+const __default__ = <expression>
+export { __default__ as default };
+
+imports can't be conditional:
+if(something){
+  import 'foo'; //SyntaxError
+}
+
+Module imports are hoisted(moved to the begining of the scope)
+so the following code in valid;
+
+foo();
+import {foo} from 'my-module';
+
+we can rename named imports with "as"
+import { lib as something } from 'lib';
+
+we can combine named imports with default ones:
+import theDefault, { name1, name2 } from 'src/my_lib';
+
+2 ways to export:
+export declarations:
+export var myVar1 = ...;
+export var myVar2 = ...;
+export function myFunc(){
+}
+
+list everything in the end of the file:
+export { MY_CONST as FOO, myFunc };
+
+re-exporting:
+export { foo as myFoo, bar } from 'src/other_module';
+
+Making a re-export the default export
+
+export { myFunc as default } from 'foo';
+
+We can have named exports and default export in the same module.
+
+export default function (obj) {
+}
+
+export function each(){
+}
+
+avoid mixing up default and named exports.
+
+Loaders:
+the System(the system loader) is responsible for loading modules
+
+we can import a module with System.import('some_module').then(someModule => {//use});
+
+we can use modules inside <script> with System.import()
+we can also load modules conditionally with System
+
+System.set(name, mudule) : registers a module 
+System.define(name, source, options?) both evaluates the module code in source
+and registers the result.
+
+Configuring module loading
+the module loader API have variuos hooks for configuring the loading process.
+Use cases include:
+  1. Lint modules on import
+  2. Automatically translate modules on import
+  3. Use legacy modules
+
+Using ES6 modules in browsers
+
+in browsers there are two different kinds of entities scripts and modules
+they have slightly different syntax and work differently
+<script> and <script type="module">

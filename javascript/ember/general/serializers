@@ -1,0 +1,8 @@
+hook serialize: transform the collection model response
+in json
+
+serialize normalize: serialize are used when sending 
+requests, normalize is used when we are receiving requests
+
+snapshot: represents a model that you can inspect without causing side-effects
+          this model is used to serialize the request get relationships etc ...

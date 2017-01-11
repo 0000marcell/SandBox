@@ -1,0 +1,3 @@
+to create a manually  a test in ember we just need to create a file under tests/ and name it *something*-test.js
+
+to load modules from the app

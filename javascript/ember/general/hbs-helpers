@@ -1,0 +1,4 @@
+mut helper change a value based on another one 
+ex:
+<input value={{name}} oninput={{action (mut name) value="target.value"}}>
+name will be changed when value is changed
