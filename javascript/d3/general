@@ -1,0 +1,20 @@
+before inserting an element we need to create a canvas 
+canvas:
+let canvas = d3.select("body")
+                  .append("svg")
+                  .attr("width", 1500)
+                  .attr("height", 1500);
+
+path: 
+lets you draw on the canvas
+<svg height="210" width="400">
+  <path d="M150 0 L75 200 L225 200 Z" />
+</svg>
+
+append:
+we can add element in the canvas with append 
+append("p")
+
+
+
+

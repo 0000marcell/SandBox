@@ -1,0 +1,21 @@
+programming is just state and processes.
+
+to better understand code we need to start from the bottom and make 
+our way up the abstract, we first try to understand the properties
+and what state these properties save, then we understand the processes(methods) that
+change the state of these properties
+
+one of the biggest headache in sofware development is lack of docs and tests,
+when you don't have docs and tests is too hard to understand the code, so we enter try and error mode
+which is a very slow method of programming.
+
+ways to more quickly understand code bases
+
+1 find the entry point 
+2 write a description for every property on the method
+3 write a description for every method
+4 write a description for the entire module
+5 when writing the descriptions first start just writing what the code does
+  then after having a better notion of what the method do rewrite, with what it 
+  accomplishes and not exacly what the code is doing, try to relate it with
+  other parts of the code

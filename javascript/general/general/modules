@@ -96,3 +96,6 @@ Using ES6 modules in browsers
 in browsers there are two different kinds of entities scripts and modules
 they have slightly different syntax and work differently
 <script> and <script type="module">
+
+we can import anything from node_modules using the name of the package 
+import $ from 'jquery';

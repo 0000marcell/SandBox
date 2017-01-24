@@ -1,0 +1,12 @@
+Ember applications run asynchronously. this means that the application doesn't run as 
+a predefined sequence of operations, but rather a dynamic series of events and a queue of operations for each event. this is the Ember RunLoop
+
+it manages the order of fired events(scheduling), eliminating unnecessary duplicate events(debouncing) and 
+making sure that all operations are executed.
+
+The RunLoop has 2 method Ember.run.begin() and Ember.run.end(), Ember.run.begin() causes the RunLoop
+to start listening to asynchronous calls. Ember.run.end() start the RunLoop.
+
+runloop: runs the passet target and method inside a runloop, ensuring any deffered actions bindings and views updates are flushed at the end
+
+methods....

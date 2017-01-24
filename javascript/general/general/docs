@@ -1,0 +1,16 @@
+to write docs using yuidoc first install it
+npm install -g yuidocjs
+
+run yuidoc . in your project, this command will create a out/ folder that
+has index.html in it 
+
+we can write documentation on top of classes, models and functions e.g:
+/**
+ * The belongsTo association adds a fk to the owner of the association
+ * @class BelongsTo
+ * @extends Association
+ * @public
+ */
+
+usefull terms: @class, @extends, @public, @return {String}, @method, 
+@param {Object} <description> 

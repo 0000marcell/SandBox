@@ -1,0 +1,2 @@
+build the code in src with "npm run build"
+run the code with node build/class.js

@@ -1,3 +1,12 @@
-to create a manually  a test in ember we just need to create a file under tests/ and name it *something*-test.js
+to manually create a test in ember we just need to create a file under tests/ and name it *something*-test.js
 
-to load modules from the app
+moduleFor runs a strip down version of ember with just the modules we request throught the needs property
+
+moduleForAcceptance, runs the entire application and we can have access to the ember server
+
+is also possible to use the before hook to inject ember-mirage http://www.ember-cli-mirage.com/docs/v0.2.0-beta.4/manually-starting-mirage/
+
+the container property in the moduleFor is the ember app, we can use lookup to find any container like 'service:store'
+'serializer:application' etc...
+
+another way to tests serializers is through http://thejsguy.com/2015/11/04/testing-serializers-in-ember.html

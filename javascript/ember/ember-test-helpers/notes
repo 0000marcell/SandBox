@@ -1,0 +1,61 @@
+pending:
+  don't know what resolver does
+
+
+Ember-testhelpers:
+  Crate modules for all sorts of tests
+testmodule:
+  dependencies
+    abstractTestModule
+    getResolver
+    buildRegistry
+    hasEmberversion
+  properties:
+    subjectName: string ex: 'route:application/index'
+    description: string ex: 'Unit | Route | application/index'
+    callbacks: obj ex: { needs: ['controller:foo'] }
+    this.name: equal description or subjectName
+    this.resolver: equal callbacks resolver or getRsolver() sets the resolver which will be used to look up objects
+                                                            from each test's container
+    this.callbacks.integration verify if integration is true
+    this.callbacks.needs array of needs in the format ['controller:foo']
+    this.isComponentTestModule boolean
+    this.isLegacy boolean
+    this.isIntegration boolean
+    this.callbacks.subject: equal to callbacks.subject or this.defaultSubject
+    this.needs: array this.subjectName is pushed to the beggining of this array
+               all other callbacks.needs are pushed too
+    this.setupSteps: 
+  methods:
+    init(subjectName, description, callbacks) 
+      sets subjectName, descriptions callbacks, name and the resolver 
+      verify if the callback integration property is true if it is sets the this.isIntegration property to true
+      calls initSubject, initNeeds, initSetupSteps, initTeardownSteps 
+
+    initSubject()
+      sets the this.callbacks.subject = this.callbacks.subject || this.defaultSubject
+
+    initNeeds()
+      but the this.subjectName in the this.needs array if callbacks has more needs
+      concat the callback needs in to the this.needs array, delete needs from this.callbacks 
+    initSetupSteps() 
+      create a this.setupSteps array and a this.contextualizeSetupSteps array 
+      if this.callbacks has beforeSetup property push this.callbacks.beforeSetup to the
+      this.setupSteps array delete callbacks.beforeSetup
+      push setupContainer, setupContext, setupTestElements and setupAJAXListeners 
+      to setupSteps array
+      if this.callbacks.setup push this.callbacks.setup to contextualizedSetupSteps
+      delete this.callbacks.setup
+   initTeardownSteps() 
+      create array this.teardownSteps and this.contextualizedTeardownSteps
+      if callbacks has teardown push callbacks teardown to contextualizedTeardownSteps
+      delete callbacks.teardown
+      push this.teardownSubject, this.teardownContaier, this.teardownContext, this.teardownTestElements
+      and this.teardownAJAXListeners to this.teardownSteps 
+      if this.callbacks.afterTeardown push callbacks.afterTeardown to this.teardownSteps 
+      delete this.callbacks.afterTeardown
+   setupContainer()
+      if this.isIntegration is true or this.isLegacy runs this._setupIntegratedContainer()
+      else runs this_setupIsolatedContainer()
+   setupContext() 
+      sets this.subjectName, 
