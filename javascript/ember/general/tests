@@ -10,3 +10,6 @@ the container property in the moduleFor is the ember app, we can use lookup to f
 'serializer:application' etc...
 
 another way to tests serializers is through http://thejsguy.com/2015/11/04/testing-serializers-in-ember.html
+
+we need to treat components as "boxes" when creating integration tests, we pass some values and expect the 
+view to change, if we want to test properties we use unit tests.
