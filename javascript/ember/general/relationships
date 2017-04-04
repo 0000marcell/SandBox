@@ -1,3 +1,15 @@
+many-to-many in mirage 2.0:
+to make a many-to-many relationship work in mirage we need to create a joinmodel 
+this model will have two belongs to relationships, joining the two models that have many to many relationships
+e.g user hasmany tags, we gonna need to create user-tags model, the name of the model needs to have the first word as the last 
+in alphabetical order, user comes after tag, so we use it first, after that, we need to change the mirage serializer and grab the
+correct relatinship, we need to create a mirage serializer for each model(user and tag) 
+
+one-to-one:
+one to one relationships must have belogsTo in the two model one pointing to the other
+to create one to one relationships in mirage with need to save the sub (e.g user.save()) after changing the 
+property(e.g user.nickId = 1)
+
 Explicit inverses:
 Ember tries to figure out which relation ship is the inverse of which
 if you only have one relation ship its easy to figure out, when you have many

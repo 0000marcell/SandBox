@@ -1,0 +1,5 @@
+Templates are not promise-aware, ember data uses a kind of promise called DS.PromiseArray which really
+is a promise but behaves like an array, in other words, a proxy
+DS.PromiseArray and DS.PromiseObject are used to bind data that is yet to be resolved to the template
+
+
