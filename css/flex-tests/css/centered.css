@@ -1,9 +1,11 @@
 .parent {
+  background-color: #c8c8c8;
   display: flex;
   height: 300px; /* Or whatever */
 }
 
 .child {
+  background-color: #f8f8f8;
   width: 100px;  /* Or whatever */
   height: 100px; /* Or whatever */
   margin: auto;  /* Magic! */
