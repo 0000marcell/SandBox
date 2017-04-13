@@ -9,6 +9,5 @@ const permissions = {
   'perm4': false
 };
 
-const fn = R.compose(R.toPairs);
-
-console.log(fn(permissions));
+let result = R.chain(R.append, R.head)([1, 2, 3]);
+console.log('result: ', result);
