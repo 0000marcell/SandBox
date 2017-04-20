@@ -1,0 +1,18 @@
+.flex-container{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #000;
+}
+
+.flex-item{
+  width: 100px;
+  height: 100px;
+  background-color: #c8c8c8;
+}
+
+.flex-align{
+  align-self: center;
+}

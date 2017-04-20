@@ -1,0 +1,18 @@
+.flex-container{
+  width: 800px;
+  height: 500px;
+  display: flex;
+  border: 1px solid #000;
+  flex-direction: column;
+}
+
+.flex-item{
+  width: 100px;
+  height: 100px;
+  background-color: #c8c8c8;
+  border: 1px solid red;
+}
+
+.grow-2{
+  flex-grow: 2;
+}

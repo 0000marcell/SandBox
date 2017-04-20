@@ -20,7 +20,7 @@
   text-align: center;
 }
 
+// flex-start, flex-end, space-around, space-between, center, stretch
 .flex-end { 
-  -webkit-align-content: flex-end; 
   align-content: flex-end; 
 }
