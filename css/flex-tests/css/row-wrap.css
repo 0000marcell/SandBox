@@ -10,7 +10,7 @@
   flex-flow: row wrap;
 
   /* Then we define how is distributed the remaining space */
-  justify-content: space-around;
+  //justify-content: space-around;
 }
 
 .flex-item{
@@ -19,7 +19,7 @@
   width: 200px;
   height: 150px;
   margin-top: 10px;
-     
+  list-style-type: none; 
   line-height: 150px;
   color: white;
   font-weight: bold;

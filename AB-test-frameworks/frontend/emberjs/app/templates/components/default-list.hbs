@@ -1,0 +1,21 @@
+<h1>Default list</h1>
+{{input type='text' value=name enter=(route-action "add")}}
+<button onclick={{route-action "add" name}}>add</button>
+<button onclick={{action "showActive"}}>
+  Show Active
+</button>
+<button onclick={{action "showInactive"}}>
+  Show Inactive
+</button>
+<ul>
+  {{#each (filter-by "active" showActive todos) as |todo|}}
+    <li>
+      {{todo.active}}
+      {{todo.name}}
+      <button onclick={{route-action 'remove' todo}}>
+        remove</button>
+      <button onclick={{route-action 'toggleActive' todo}}>
+        activate</button>
+    </li>
+  {{/each}}
+</ul>
