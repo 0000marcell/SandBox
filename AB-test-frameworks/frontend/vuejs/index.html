@@ -2,17 +2,16 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>vue-app</title>
+    <title>index</title>
     <meta name="description" content="">
-    <meta name="viewport" 
-      content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div id="app">
-      <todo-list :todos="todos"
-        :new-todo="newTodo"
-        :add-todo="addTodo"
+      <todo-list 
+        :create-todo="createTodo"
         :deactivate-todo="deactivateTodo"
+        :todos="todos"
       >
       </todo-list>
     </div>
@@ -20,4 +19,3 @@
     <script src="js/app.js"></script>
   </body>
 </html>  
-
