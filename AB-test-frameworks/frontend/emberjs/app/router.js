@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('redux');
   this.route('default');
+  this.route('testing');
 });
 
 export default Router;
