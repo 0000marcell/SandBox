@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Calculator from './Calculator';
+import TodoList from './TodoList';
 import './index.css';
 
+const ITEMS_LIST = [{id: 1, name: 'buy sockets!', active: true},
+  {id: 2, name: 'buy water!', active: false}]; 
+
 ReactDOM.render(
-  < Calculator />,
+  < TodoList items={ITEMS_LIST}/>,
   document.getElementById('root')
 );
