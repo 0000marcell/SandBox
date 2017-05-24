@@ -4,7 +4,9 @@ import TodoItem from './TodoItem';
 class TodoList extends Component {
   constructor(props){
     super(props);
-    this.state = {items: props.items, addName: ''};
+    this.state = {allItems: props.items, 
+      filteredItems: props.items,
+      addName: ''};
     this.handleChange = this.handleChange.bind(this);
     this.addTodo = this.addTodo.bind(this);
     this.removeTodo= this.removeTodo.bind(this);
@@ -15,46 +17,48 @@ class TodoList extends Component {
 
   showAll(){
     this.setState({
-      items: this.props.items
+      filteredItems: this.state.allItems
     });
   }
 
   showActive(){
-    let result = this.props.items.filter((item) => {
+    let result = this.state.allItems.filter((item) => {
       return item.active; 
     });
     this.setState({
-      items: result
+      filteredItems: result
     });
   }
 
   showInactive(){
-    let result = this.props.items.filter((item) => {
+    let result = this.state.allItems.filter((item) => {
       return !item.active; 
     });
     this.setState({
-      items: result
+      filteredItems: result
     });
   }
 
   addTodo(){
-    let newItem = {id: this.state.items.length + 1,
+    let newItem = {id: this.state.allItems.length + 1,
                     name: this.state.addName, 
                     active: true};
-    let arr = this.state.items.slice();
+    let arr = this.state.allItems.slice();
     arr.push(newItem);
     this.setState({
-      items: arr 
+      allItems: arr,
+      filteredItems: arr
     }); 
   }
 
   removeTodo(id){
     let result = 
-      this.state.items.filter((item) => {
+      this.state.allItems.filter((item) => {
         return item.id !== id;   
       });
     this.setState({
-      items: result
+      allItems: result,
+      filteredItems: result
     });
   }
 
@@ -91,7 +95,7 @@ class TodoList extends Component {
         </button>
         <ul>
           {
-            this.state.items.map((item) => {
+            this.state.filteredItems.map((item) => {
               return <TodoItem 
                 removeTodo={this.removeTodo}
                 key={item.id} 
