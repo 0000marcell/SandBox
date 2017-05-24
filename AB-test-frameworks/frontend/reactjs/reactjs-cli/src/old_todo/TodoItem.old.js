@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import './TodoItem.css';
 
 class TodoItem extends Component {
   constructor(props){
@@ -6,20 +7,20 @@ class TodoItem extends Component {
     this.removeTodo = this.removeTodo.bind(this);
   }
 
-  removeTodo(){
+  removeTodo(e){
     this.props.removeTodo(this.props.id);
   }
 
   render(){
     return (
       <li>
-        {this.props.name}
-        <button 
+        <p>{this.props.name}</p>
+        <button ref="removeButton"
           onClick={this.removeTodo}>
           remove
         </button>
       </li>
-    )
+    );
   }
 }
 
