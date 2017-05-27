@@ -1,23 +1,16 @@
 import Html exposing (..)
-import Regex exposing (regex, contains)
+import Html.Attributes exposing (class, id)
+import List exposing (map)
 
-main =
-  Html.beginnerProgram { model = "marcellA", view = view,
-                         update = update }
+theArray = [1,2,3,4,5,6]
 
-upperCaseLetter = regex "[A-Z]"
+createListItem item =
+  li [] [ text (toString item) ]
 
-type Msg = Test
+buildList collection =
+  List.map createListItem collection
 
-update msg model = 
-  ""
+builtList = ul [] (buildList theArray)
 
-view model =
-  div [] 
-  [
-    text (toString (contains upperCaseLetter model))
-  ]
-
-
-
-
+main = 
+  builtList
