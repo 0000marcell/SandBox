@@ -1,25 +1,39 @@
-import Html exposing (Html, button, div, text)
+import Html exposing (..)
+import Html.Attributes exposing (class, id)
 import Html.Events exposing (onClick)
+import Random
 
 main =
-  Html.beginnerProgram { model = 0, view = view, update = update  }
+  Html.program
+    { init = init
+    , view = view
+    , update = update
+     }
 
-type Msg = Increment | Decrement | Reset
+type alias Model =
+  { dieFace : Int
+  }
 
+init : (Model, Cmd Msg)
+init =
+  (Model 1, Cmd.none)
+
+type Msg
+  = Roll
+  | NewFace Int
+
+update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
-    Increment ->
-      model + 1
-    Decrement ->
-      model - 1
-    Reset ->
-      0
+    Roll ->
+      (model, Random.generate NewFace (Random.int 1 6))
 
+    NewFace newFace ->
+      (Model newFace, Cmd.none)
 
+view : Model -> Html Msg
 view model =
   div []
-    [ button [ onClick Reset ] [ text "reset" ]
-    , button [ onClick Decrement  ] [ text "-"  ]
-    , div [] [ text (toString model)  ]
-    , button [ onClick Increment  ] [ text "+"  ]
-     ]
+    [ h1 [] [ text (toString model.dieFace) ]
+    , button [ onClick Roll ] [ text "Roll" ]
+    ]
