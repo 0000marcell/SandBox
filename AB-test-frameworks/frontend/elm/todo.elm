@@ -1,45 +1,63 @@
 import Html exposing (..)
-import Html.Events exposing (onClick)
+import Html.Attributes exposing (..)
+import Html.Events exposing (onClick, onInput)
+import List
+import Debug
 
-main = 
-  Html.program
-    { model = model,
-      view = view,
-      update = update,
-      subscriptions = subscriptions
-    }
+main =
+  Html.beginnerProgram
+    { model = model
+    , view = view
+    , update = update
+     }
 
-subscriptions : Model -> Sub Msg
-subscriptions model =
-  Sub.none
 
-type Msg 
-  = createTodo String
-  | newTodo String 
   
-
-type alias Model = List
+type alias Model = 
+  { newTodo : String, 
+    todos : List { id : String, name : String  }  
+  }
+model : Model
 model =
   { newTodo = "", 
-    todos = [{id = 1, name = "buy socks"}, 
-             {id = 2, name = "buy things"}]
+    todos = [{id = "1", name = "buy socks"}, 
+             {id = "2", name = "buy things"}]
   }
 
-update : Msg -> Model
+type Msg 
+  = CreateTodo
+  | NewTodo String 
+  | RemoveTodo String
+  | Test
+update : Msg -> Model -> Model
 update msg model =
   case msg of
-    createTodo -> 
-      { model | todos = model.newTodo :: model.todos }
-    newTodo ->
+    CreateTodo -> 
+      { model | todos = {
+        id = (toString (List.length model.todos + 1)), 
+        name = model.newTodo} :: model.todos 
+      }
+    NewTodo newTodo ->
       { model | newTodo = newTodo }
+    RemoveTodo id ->
+      {model | todos = List.filter(\item -> item.id /= id)
+                        (model.todos)
+      }
+    Test ->
+      Debug.log (toString model)
+      model
+      
 
 view : Model -> Html Msg
 view model =
   div []
-    [ input [ type_ "text", placeholder "Name"
-              , onInput newTodo] []
-     , button [onClick createTodo] [text "add"] 
-     , ul [] List.map 
-              (\item -> li [] [ text (toString item.name) ]) 
-              (model.todos)
+    [ input [ onInput NewTodo ] []
+    , button [ onClick CreateTodo ] [ text "add" ]
+    , ul [] (List.map (\item -> listItem item.name) (model.todos))
     ]
+
+listItem : String -> Html Msg
+listItem name = 
+  li [] [
+    text name, button [onClick Test] [ text "remove" ]
+  ]

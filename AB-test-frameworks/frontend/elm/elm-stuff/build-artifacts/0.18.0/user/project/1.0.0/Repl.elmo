@@ -1,11 +1,48 @@
 var _user$project$Repl$t_s_o_l = {ctor: '_Tuple0'};
-var _user$project$Repl$list = {
-	ctor: '::',
-	_0: {name: 'marcell'},
-	_1: {
-		ctor: '::',
-		_0: {name: 'marcell'},
-		_1: {ctor: '[]'}
-	}
+var _user$project$Repl$isEven = function (n) {
+	return _elm_lang$core$Native_Utils.eq(
+		A2(_elm_lang$core$Basics_ops['%'], n, 2),
+		0);
 };
-var _user$project$Repl$d_e_l_t_r_o_n_3_0_3_0 = _user$project$Repl$list;
+var _user$project$Repl$result = A2(
+	_elm_lang$core$List$filter,
+	_user$project$Repl$isEven,
+	{
+		ctor: '::',
+		_0: 1,
+		_1: {
+			ctor: '::',
+			_0: 2,
+			_1: {
+				ctor: '::',
+				_0: 3,
+				_1: {
+					ctor: '::',
+					_0: 4,
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	});
+var _user$project$Repl$d_e_l_t_r_o_n_3_0_3_0 = A2(
+	_elm_lang$core$List$filter,
+	function (id) {
+		return !_elm_lang$core$Native_Utils.eq(id, 1);
+	},
+	{
+		ctor: '::',
+		_0: 1,
+		_1: {
+			ctor: '::',
+			_0: 2,
+			_1: {
+				ctor: '::',
+				_0: 3,
+				_1: {
+					ctor: '::',
+					_0: 4,
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	});

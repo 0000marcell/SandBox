@@ -1,16 +1,16 @@
 import Html exposing (..)
-import Html.Attributes exposing (class, id)
-import List exposing (map)
+import List exposing (map, filter)
+import Debug exposing (log)
 
-theArray = [1, 2, 3, 4, 5, 6]
-
-createListItem item =
-  li [] [ text (toString item) ]
-
-buildList collection =
-  List.map createListItem collection
-
-builtList = ul [] (buildList theArray)
+{-
+theArray = [{id = 1, name = "marcell"}, 
+            {id = 2, name = "monteiro"}]
 
 main = 
-  builtList
+  ul [] (List.map (\item -> li [] [text (toString item.name)]) 
+          (theArray))
+-}
+
+log (toString (filter isEven [1,2,3,4,5,6] == [2,4,6]))
+
+
