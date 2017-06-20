@@ -22,11 +22,19 @@ public class SimpleProducer {
     }
 
     public static void main(String[] args) {
+      if(args.length == 0){
+        System.out
+          .println("SimpleProducer {topic} {msg}");
+        return;
+      }
       BasicConfigurator.configure();
-      logger.info("main");
+      logger.info("beggining!");
       new SimpleProducer();
+      logger.info("after producer creation!");
       String topic = args[0];
       String msg = args[1];
+      logger.info("topic: "+topic);
+      logger.info("msg "+msg);
       KeyedMessage<Integer, String> data = new KeyedMessage<>(topic, msg);
       producer.send(data);
       producer.close();
