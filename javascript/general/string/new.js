@@ -1,59 +1,59 @@
-// charAt
-console.log('marcell'.charAt(0));
+// length
+let arr = [1, 2, 3];
+console.log(arr.length);
+
+// from
+console.log(Array.from([1, 2, 3], x => x + 2));
+
+// isArray
+console.log(Array.isArray(arr));
+
+// of
+console.log(Array.of(1, 2, 3));
 
 // concat
-console.log('marcell'.concat(' monteiro'));
+let arr2 = [3, 4, 5];
+console.log(arr2.concat(arr2));
 
-// endsWith
-console.log('marcell'.endsWith('cell'));
+// copyWithin
 
-// startsWith
-console.log('marcell'.startsWith('mar'));
+// entries
 
-// includes
-console.log('marcell'.includes('ce'));
+// every
+
+// fill
+
+// filter
+
+// find
+
+// findIndex
+
+// forEach
 
 // indexOf
-console.log('marcell'.indexOf('ce'));
 
-// lastIndexOf
-console.log('marcell'.lastIndexOf('l'));
+// map
 
-// compareLocale
-console.log('marcell'.localeCompare('aaa'));
+// pop
 
-// match
-console.log('marcell'.match(/cel/g));
+// push
 
-// repeat
-console.log('marcell'.repeat(3));
+// reduce
 
-// replace
-console.log('marcell'.replace('mar', 'car'));
+// reduceRight
 
-// search
-console.log('marcell'.search('cel'));
+// shift
 
 // slice
-console.log('marcell'.slice(3, 4));
 
-// split
-console.log('marcell'.split('ce'));
+// sort
 
-// substring
-console.log('marcell'.substr(0, 2));
+// some
 
-// toUpperCase()
-console.log('marcell'.toUpperCase());
+// splice
 
-// toLowerCase()
-console.log('marcell'.toLowerCase());
+// toLocaleString
 
-// toString()
-//
+// unshift
 
-// trim
-console.log('  marcell  '.trim());
-
-// valueOf
-console.log('marcell'.valueOf());

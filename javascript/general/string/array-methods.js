@@ -6,8 +6,7 @@ console.log(arr.length);
 // Array.from(arrayLike[, mapFn[, thisArg]])
 // create a array from any iterable
 console.log(Array.from(arr));
-let s = new Set(["foo", 2]);
-console.log(Array.from(s));
+console.log(Array.from([1, 2, 3], x => x + 1));
 
 // Array.isArray(obj)
 console.log(Array.isArray(arr));
@@ -58,8 +57,45 @@ console.log(arr4.indexOf(5));
 arr = arr4.map(x => x + 1);
 console.log(arr);
 
-// 
+// pop() 
+console.log(arr.pop());
 
+// push(element, element2)
+arr.push(1, 2, 3)
+console.log(arr);
 
+// reduce(callback, initialValue)
+console.log(arr.reduce((sum, value) => sum + value));
 
+// reduceRight(calback[, initialValue]) goes from right to left
+console.log(arr.reduceRight((sum, value) => sum - value));
 
+// reverse() reverses the array in place
+console.log(arr.reverse());
+
+// shift() removed the first element of the array and returns that element
+console.log(arr.shift());
+
+// slice(1, 3) returns a new array  
+console.log(arr.slice(1, 3));
+
+// some(callBack[, thisArg]) // verifies if one of more items in the array passes the test
+console.log(arr.some(x => x > 7));
+
+// sort([compareFunction]) // sort the elements
+console.log(arr.sort());
+console.log(arr.sort((a, b) => b - a));
+
+// splice(start, deleteCount, item1, item2)
+arr = [1, 2, 3, 4, 5];
+arr.splice(0, 1, 'marcell', 'monteiro', 'cruz');
+console.log(arr);
+
+// toLocaleString() apply toLocaleString in the elements
+arr = [1, new Date(), 2];
+console.log(arr.toLocaleString());
+
+// unshift(elements) // add elements to the beggining of the array
+arr = [1, 2];
+arr.unshift(1, 2, 3);
+console.log(arr);
