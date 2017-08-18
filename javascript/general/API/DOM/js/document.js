@@ -1,3 +1,39 @@
+// documentElement returns html element
+// documentURI returns the url
+// styleSheets returns a array of obj representing the style sheets
+// body returns the body
+// cookie returns the cookies, can also be used to set the cookis
+// defaultView , returns the window object
+// readyState
+// domain , returns the domain
+// forms, 
+// head
+// images
+// links
+// location, returns information about the page
+// scripts, 
+// title
+// url
+
+// documentElement
+// documentURI
+// styleSheets
+// body
+// cookie
+// defaultView
+// domain
+// forms
+// head
+// images
+// links
+// location
+// readyState
+// scripts
+// title
+// url
+
+
+
 // contentType
 console.log(document.contentType);
 
@@ -44,3 +80,15 @@ console.log(document.images);
 // links returns a list of all the links
 console.log(document.links);
 
+// location
+console.log(document.location);
+
+console.log(document.readyState);
+
+console.log(document.referrer);
+
+console.log(document.scripts);
+
+console.log(document.title);
+
+console.log(document.url);
