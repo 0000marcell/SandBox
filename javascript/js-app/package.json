@@ -1,0 +1,25 @@
+{
+  "name": "guestlist",
+  "version": "1.0.0",
+  "description": "Ex app book programming javascript applications",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./server.js",
+    "test": "grunt test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery-browserify": "^1.8.1"
+  },
+  "devDependencies": {
+    "browserify": "*",
+    "grunt": "*",
+    "grunt-browserify": "*",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-qunit": "^2.0.0",
+    "qunitjs": "^2.4.0",
+    "traverse": "*"
+  }
+}

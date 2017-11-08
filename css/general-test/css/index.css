@@ -1,0 +1,24 @@
+.testing{
+  height: 100px;
+  width:  100px;
+  background-color: #ffff00;
+  transform: translateX(0);
+}
+
+.testing .testing-2 .testing-3{
+  background-color: #eeeeee !important;
+}
+
+.testing-2{
+  background-color: #ff00ff;
+}
+
+.testing-3{
+  position: fixed;
+  top: 0;
+  background-color: #00ffff !important;
+}
+
+.testing-3 .testing{
+  transform: none !important;
+}

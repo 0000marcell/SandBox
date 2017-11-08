@@ -1,3 +1,5 @@
+// node obj: if the method is han on the parent it used child,
+//            otherwise node
 // baseURI
 // childNodes
 // firstChild
@@ -7,18 +9,19 @@
 // appendChild
 // cloneNode
 // contains
-// hasChildNodes
+// hasChildren
 // insertBefore
 // isEqualNode
 // isSameNode
 // normalize compact all textNode in the same node 
-// removeChild
-// replaceChild old, new
+// removeNode
+// replaceNode old, new
 
 document.onreadystatechange = function(){
   if(document.readyState === 'complete'){
     let firstList = document.querySelector('#first-list'),
       secondList = document.querySelector('#second-list'),
+      thirdList = document.querySelector('.third-list'),
       li = firstList.querySelector('.last-child').cloneNode(true);
     //childNodes returns all child nodes, including text nodes etc
     console.log('baseURI', firstList.baseURI);
@@ -46,5 +49,7 @@ document.onreadystatechange = function(){
     secondListLi.normalize();
     firstList.removeChild(document.querySelector('#first-list > li'))
     secondList.replaceChild(newElement, li);
+    let thirdListClone = thirdList.cloneNode(true);
+    document.body.appendChild(thirdListClone);
   }
 }

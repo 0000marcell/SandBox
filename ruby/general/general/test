@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+VALUE=$(ruby test.rb)
+ruby test2.rb $VALUE

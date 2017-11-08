@@ -7,6 +7,7 @@
 // addEventListener type, event or function, options
 // dispatchEvent event
 // getAttribute 
+// setAttribute
 // getBoundingClientRect
 // getElementsByClassName
 // getElementsByTagName
@@ -17,7 +18,6 @@
 // removeAttribute
 // removeEventListener the parameters have to be the same 
 //                     ones that you created the event
-// setAttribute
 
 function clickRect(){
   alert('click rect!');
