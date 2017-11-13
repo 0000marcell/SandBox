@@ -5,11 +5,12 @@ import React from 'react';
 //import BookList from './BookList';
 //import Newsflash from './Newsflash';
 import Weather from './smarter-weather/weather_project';
+import { Text } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
-     <Weather /> 
+      <Weather />
     );
   }
 }

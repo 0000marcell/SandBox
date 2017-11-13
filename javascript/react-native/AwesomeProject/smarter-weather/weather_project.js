@@ -29,9 +29,14 @@ class WeatherProject extends Component {
   }
 
   componentDidMount() {
+    /*
+    AsyncStorage.removeItem(STORAGE_KEY, 
+      () => { console.log('item removed!')});
+      */
     AsyncStorage
       .getItem(STORAGE_KEY)
       .then(value => {
+        console.log('component did mount');
         if (value !== null) {
           this._getForecastForZip(value);
         }
@@ -47,13 +52,14 @@ class WeatherProject extends Component {
       .then(() => console.log("Saved selection to disk: " + zip))
       .catch(error => console.error("AsyncStorage error: " + error.message))
       .done();
-
+    console.log('zip: ', zip);
     OpenWeatherMap.fetchZipForecast(zip).then(forecast => {
       this.setState({ forecast: forecast });
     });
   };
 
   _getForecastForCoords = (lat, lon) => {
+    console.log('lat: ', lat);
     OpenWeatherMap.fetchLatLonForecast(lat, lon).then(forecast => {
       this.setState({ forecast: forecast });
     });
