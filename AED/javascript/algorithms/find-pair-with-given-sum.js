@@ -1,12 +1,14 @@
 module.exports = function(sum) {
   let arr = [8, 7, 2, 5, 3, 1],
       results = [];
-  for (let i = 0; i < arr.length - 1; i++) {
-    for (let j = i + 1; j < arr.length - 1; j++) {
-      if((arr[i] + arr[j]) === sum){
-        results.push(`found at ${i} and ${j}! \n`);
-      }
+  arr.sort();
+  let low = 0,
+      high = arr.length - 1; 
+  while(low < high){
+    if(arr[low] + arr[high] === sum){
+      results.push(`found at ${low} and ${high}! \n`);
     }
+    (arr[low] + arr[high] > sum) ? --high : ++low;
   }
   if(!results.length){
     return 'no results!';
