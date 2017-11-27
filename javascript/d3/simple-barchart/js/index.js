@@ -4,7 +4,31 @@ var data = [55, 44, 30, 23, 17, 14, 16, 25, 41, 61, 85,
 
 var barWidth = 20, barPadding = 3;
 var maxValue = d3.max(data);
-var width = 500;
+
+var graphWidth = data.length * (barWidth + barPadding) - barPadding;
+var margin = { top: 10, right: 10, bottom: 10, left: 50 };
+
+var totalWidth = graphWidth + margin.left + margin.right;
+var totalHeight = maxValue + margin.top + margin.bottom;
+
+var svg = d3.select('body')
+    .append('svg')
+    .attrs({ width: totalWidth, height: totalHeight });
+
+svg.append('rect').attrs({
+  width: totalWidth, height: totalHeight,
+  fill: 'white',
+  stroke: 'black', 'stroke-width': 1
+});
+
+var mainGroup = svg
+    .append('g')
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ")");
+
+mainGroup.append('rect').attrs({
+    fill: 'rgba(0,0,0,0.1)', width: totalWidth - (margin.left + margin.right),
+    height: totalHeight - (margin.bottom + margin.top)
+});
 
 function xloc(d, i) { return i * (barWidth + barPadding); }
 function yloc(d) { return maxValue - d; }
@@ -12,57 +36,51 @@ function translator(d, i) {
     return "translate(" + xloc(d, i) + "," + yloc(d) + ")";
 }
 
+var barGroup = mainGroup.selectAll('g')
+    .data(data)
+    .enter()
+    .append('g')
+    .attr('transform', translator);
+
+barGroup.append('rect')
+    .attrs({
+        fill: 'steelblue',
+        width: barWidth,
+        height: function (d) { return d; }
+    });
+
 var textTranslator = "translate(" + barWidth / 2 + ",0)";
 
-var svg = d3.select('body')
-            .append('svg')
-            .attr('width', totalWidth)
-            .attr('height', totalHeight) 
-            .append('g');
+barGroup.append('text')
+    .text(function(d) { return d; })
+    .attrs({
+        fill: 'white',
+        'alignment-baseline': 'before-edge',
+        'text-anchor': 'middle',
+        transform: textTranslator
+    })
+    .style('font', '10px sans-serif');
 
-svg.append('rect')
-  .attr('width', totalWidth)
-  .attr('height', totalWidth)
-  .attr('fill', 'white')
-  .attr('stroke', 'black')
-  .attr('stroke-width', 1);
+var leftAxisGroup = svg.append('g');
+var axisPadding = 3;
+leftAxisGroup.attrs({ transform: 'translate(' + (margin.left - axisPadding) + ',' + margin.top + ')' });
+var scale = d3.scaleLinear()
+              .domain([maxValue, 0])
+              .range([0, maxValue]);
 
+var axis = d3.axisLeft()
+    .scale(scale);
 
-
-var graphGroup = svg.append('g')
-                    .attr('transform', 'translate(' + margin.left + ',' +
-                                                     margin.top + ")");
-
-graphGroup.append('rect')
-          .attr('fill', 'rgba(0,0,0,0.1)')
-          .attr('width', totalWidth – (margin.left + margin.right))
-          .attr('height', totalHeight - (margin.bottom + margin.top));
-
-
-var barGroups = mainGroup.selectAll('g')
-               .data(data)
-               .enter()
-               .append('g')
-               .attr('transform', translator);
-
-barGroups.append('rect')
-         .attr('fill', 'steelblue')
-         .attr('width', barWidth)
-         .attr('height', function (d) { return d; })
-
-barGroups.append('text')
-       .text(function(d) { return d; })
-       .attr('fill', 'white')
-       .attr('alignment-baseline', 'before-edge')
-       .attr('text-anchor', 'middle')
-       .attr('transform', textTranslator)
-       .style('font', '10px sans-serif');
-
-var scale = d3.scale
-              .linear()
-              .domain([0, maxValue])
-              .range([0, width]);
-
-var axis = d3.svg.axis().scale(scale);
-svg.call(axis);
-
+var axisNodes = leftAxisGroup.call(axis);
+var domain = axisNodes.selectAll('.domain');
+domain.attrs({
+    fill: 'none',
+    'stroke-width': 1,
+    stroke: 'black'
+});
+var ticks = axisNodes.selectAll('.tick line');
+ticks.attrs({
+    fill: 'none',
+    'stroke-width': 1,
+    stroke: 'black'
+});
