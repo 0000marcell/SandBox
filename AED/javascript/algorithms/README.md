@@ -12,5 +12,5 @@ qunit // to run the tests
 create a new item
 
 ```
-bash generate-item.sh <item-name>
+bash generate-item.sh <item-name> <function-name>
 ```
