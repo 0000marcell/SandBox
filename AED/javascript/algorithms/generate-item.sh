@@ -7,7 +7,7 @@ if [[ -z "$1" || -z "$2" ]]; then
 fi
 
 echo -e "let $2 = require('../$1'); \
-\n\nQunit.test('$1', function(assert){ \
+\n\nQUnit.test('$1', function(assert){ \
 \n\tassert.equal($2, ); \
 \n});" > "./test/$1-test.js"
 
